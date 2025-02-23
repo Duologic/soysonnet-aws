@@ -1,0 +1,5 @@
+vendor
+jsonnetfile.lock.json
+.terraform
+.terraform.lock.hcl
+generator/schema.json
