@@ -3,12 +3,13 @@ SOURCE:="registry.terraform.io/hashicorp/aws"
 VERSION:="5.87.0"
 
 generator/terraform.tf.json:
-	jrsonnet -S -m generator \
+	jrsonnet \
 		-J generator/vendor \
 		-A name=${NAME} \
 		-A source=${SOURCE} \
 		-A version=${VERSION} \
-		-e "(import 'soysonnet/main.libsonnet').requiredProvider"
+		-e "(import 'soysonnet/soy-common/main.libsonnet').requiredProvider" \
+		> generator/terraform.tf.json
 
 generator/schema.json: generator/terraform.tf.json
 	cd generator && \
