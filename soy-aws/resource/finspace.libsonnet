@@ -19,8 +19,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_finspace_kx_cluster: {
+            resource+: {
+              aws_finspace_kx_cluster+: {
                 [tf_resource_key]: this,
               },
             },
@@ -660,8 +660,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_finspace_kx_database: {
+            resource+: {
+              aws_finspace_kx_database+: {
                 [tf_resource_key]: this,
               },
             },
@@ -912,8 +912,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_finspace_kx_dataview: {
+            resource+: {
+              aws_finspace_kx_dataview+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1229,8 +1229,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_finspace_kx_environment: {
+            resource+: {
+              aws_finspace_kx_environment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1635,8 +1635,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_finspace_kx_scaling_group: {
+            resource+: {
+              aws_finspace_kx_scaling_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1911,8 +1911,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_finspace_kx_user: {
+            resource+: {
+              aws_finspace_kx_user+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2155,8 +2155,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_finspace_kx_volume: {
+            resource+: {
+              aws_finspace_kx_volume+: {
                 [tf_resource_key]: this,
               },
             },

@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_location_geofence_collection: {
+            data+: {
+              aws_location_geofence_collection+: {
                 [tf_resource_key]: this,
               },
             },
@@ -90,8 +90,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_location_map: {
+            data+: {
+              aws_location_map+: {
                 [tf_resource_key]: this,
               },
             },
@@ -184,8 +184,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_location_place_index: {
+            data+: {
+              aws_location_place_index+: {
                 [tf_resource_key]: this,
               },
             },
@@ -282,8 +282,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_location_route_calculator: {
+            data+: {
+              aws_location_route_calculator+: {
                 [tf_resource_key]: this,
               },
             },
@@ -358,8 +358,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_location_tracker: {
+            data+: {
+              aws_location_tracker+: {
                 [tf_resource_key]: this,
               },
             },
@@ -439,8 +439,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_location_tracker_association: {
+            data+: {
+              aws_location_tracker_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -491,8 +491,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_location_tracker_associations: {
+            data+: {
+              aws_location_tracker_associations+: {
                 [tf_resource_key]: this,
               },
             },

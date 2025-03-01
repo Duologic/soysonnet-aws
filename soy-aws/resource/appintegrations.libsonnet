@@ -17,8 +17,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appintegrations_data_integration: {
+            resource+: {
+              aws_appintegrations_data_integration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -263,8 +263,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appintegrations_event_integration: {
+            resource+: {
+              aws_appintegrations_event_integration+: {
                 [tf_resource_key]: this,
               },
             },

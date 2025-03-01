@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_glue_catalog_table: {
+            data+: {
+              aws_glue_catalog_table+: {
                 [tf_resource_key]: this,
               },
             },
@@ -505,8 +505,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_glue_connection: {
+            data+: {
+              aws_glue_connection+: {
                 [tf_resource_key]: this,
               },
             },
@@ -639,8 +639,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_glue_data_catalog_encryption_settings: {
+            data+: {
+              aws_glue_data_catalog_encryption_settings+: {
                 [tf_resource_key]: this,
               },
             },
@@ -761,8 +761,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_glue_registry: {
+            data+: {
+              aws_glue_registry+: {
                 [tf_resource_key]: this,
               },
             },
@@ -814,8 +814,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_glue_script: {
+            data+: {
+              aws_glue_script+: {
                 [tf_resource_key]: this,
               },
             },

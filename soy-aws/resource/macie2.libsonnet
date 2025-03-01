@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_macie2_account: {
+            resource+: {
+              aws_macie2_account+: {
                 [tf_resource_key]: this,
               },
             },
@@ -211,8 +211,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_macie2_classification_export_configuration: {
+            resource+: {
+              aws_macie2_classification_export_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -420,8 +420,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_macie2_classification_job: {
+            resource+: {
+              aws_macie2_classification_job+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1380,8 +1380,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_macie2_custom_data_identifier: {
+            resource+: {
+              aws_macie2_custom_data_identifier+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1632,8 +1632,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_macie2_findings_filter: {
+            resource+: {
+              aws_macie2_findings_filter+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1946,8 +1946,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_macie2_invitation_accepter: {
+            resource+: {
+              aws_macie2_invitation_accepter+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2151,8 +2151,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_macie2_member: {
+            resource+: {
+              aws_macie2_member+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2417,8 +2417,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_macie2_organization_admin_account: {
+            resource+: {
+              aws_macie2_organization_admin_account+: {
                 [tf_resource_key]: this,
               },
             },

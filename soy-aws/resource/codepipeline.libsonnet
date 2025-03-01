@@ -17,8 +17,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_codepipeline: {
+            resource+: {
+              aws_codepipeline+: {
                 [tf_resource_key]: this,
               },
             },
@@ -767,8 +767,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_codepipeline_custom_action_type: {
+            resource+: {
+              aws_codepipeline_custom_action_type+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1113,8 +1113,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_codepipeline_webhook: {
+            resource+: {
+              aws_codepipeline_webhook+: {
                 [tf_resource_key]: this,
               },
             },

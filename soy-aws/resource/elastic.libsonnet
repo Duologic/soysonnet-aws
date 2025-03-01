@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_elastic_beanstalk_application: {
+            resource+: {
+              aws_elastic_beanstalk_application+: {
                 [tf_resource_key]: this,
               },
             },
@@ -259,8 +259,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_elastic_beanstalk_application_version: {
+            resource+: {
+              aws_elastic_beanstalk_application_version+: {
                 [tf_resource_key]: this,
               },
             },
@@ -487,8 +487,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_elastic_beanstalk_configuration_template: {
+            resource+: {
+              aws_elastic_beanstalk_configuration_template+: {
                 [tf_resource_key]: this,
               },
             },
@@ -721,8 +721,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_elastic_beanstalk_environment: {
+            resource+: {
+              aws_elastic_beanstalk_environment+: {
                 [tf_resource_key]: this,
               },
             },

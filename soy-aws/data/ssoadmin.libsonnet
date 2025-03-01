@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ssoadmin_application: {
+            data+: {
+              aws_ssoadmin_application+: {
                 [tf_resource_key]: this,
               },
             },
@@ -134,8 +134,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ssoadmin_application_assignments: {
+            data+: {
+              aws_ssoadmin_application_assignments+: {
                 [tf_resource_key]: this,
               },
             },
@@ -211,8 +211,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ssoadmin_application_providers: {
+            data+: {
+              aws_ssoadmin_application_providers+: {
                 [tf_resource_key]: this,
               },
             },
@@ -310,8 +310,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ssoadmin_instances: {
+            data+: {
+              aws_ssoadmin_instances+: {
                 [tf_resource_key]: this,
               },
             },
@@ -382,8 +382,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ssoadmin_permission_set: {
+            data+: {
+              aws_ssoadmin_permission_set+: {
                 [tf_resource_key]: this,
               },
             },
@@ -462,8 +462,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ssoadmin_permission_sets: {
+            data+: {
+              aws_ssoadmin_permission_sets+: {
                 [tf_resource_key]: this,
               },
             },
@@ -526,8 +526,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ssoadmin_principal_application_assignments: {
+            data+: {
+              aws_ssoadmin_principal_application_assignments+: {
                 [tf_resource_key]: this,
               },
             },

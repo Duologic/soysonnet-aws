@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_kinesis_firehose_delivery_stream: {
+            data+: {
+              aws_kinesis_firehose_delivery_stream+: {
                 [tf_resource_key]: this,
               },
             },
@@ -66,8 +66,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_kinesis_stream: {
+            data+: {
+              aws_kinesis_stream+: {
                 [tf_resource_key]: this,
               },
             },
@@ -210,8 +210,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_kinesis_stream_consumer: {
+            data+: {
+              aws_kinesis_stream_consumer+: {
                 [tf_resource_key]: this,
               },
             },

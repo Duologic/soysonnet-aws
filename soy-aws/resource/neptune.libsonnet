@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_neptune_cluster: {
+            resource+: {
+              aws_neptune_cluster+: {
                 [tf_resource_key]: this,
               },
             },
@@ -448,8 +448,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_neptune_cluster_endpoint: {
+            resource+: {
+              aws_neptune_cluster_endpoint+: {
                 [tf_resource_key]: this,
               },
             },
@@ -692,8 +692,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_neptune_cluster_instance: {
+            resource+: {
+              aws_neptune_cluster_instance+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1016,8 +1016,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_neptune_cluster_parameter_group: {
+            resource+: {
+              aws_neptune_cluster_parameter_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1262,8 +1262,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_neptune_cluster_snapshot: {
+            resource+: {
+              aws_neptune_cluster_snapshot+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1528,8 +1528,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_neptune_event_subscription: {
+            resource+: {
+              aws_neptune_event_subscription+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1808,8 +1808,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_neptune_global_cluster: {
+            resource+: {
+              aws_neptune_global_cluster+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2078,8 +2078,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_neptune_parameter_group: {
+            resource+: {
+              aws_neptune_parameter_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2323,8 +2323,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_neptune_subnet_group: {
+            resource+: {
+              aws_neptune_subnet_group+: {
                 [tf_resource_key]: this,
               },
             },

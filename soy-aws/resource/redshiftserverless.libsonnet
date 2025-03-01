@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_redshiftserverless_custom_domain_association: {
+            resource+: {
+              aws_redshiftserverless_custom_domain_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -213,8 +213,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_redshiftserverless_endpoint_access: {
+            resource+: {
+              aws_redshiftserverless_endpoint_access+: {
                 [tf_resource_key]: this,
               },
             },
@@ -504,8 +504,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_redshiftserverless_namespace: {
+            resource+: {
+              aws_redshiftserverless_namespace+: {
                 [tf_resource_key]: this,
               },
             },
@@ -772,8 +772,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_redshiftserverless_resource_policy: {
+            resource+: {
+              aws_redshiftserverless_resource_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -960,8 +960,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_redshiftserverless_snapshot: {
+            resource+: {
+              aws_redshiftserverless_snapshot+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1201,8 +1201,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_redshiftserverless_usage_limit: {
+            resource+: {
+              aws_redshiftserverless_usage_limit+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1405,8 +1405,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_redshiftserverless_workgroup: {
+            resource+: {
+              aws_redshiftserverless_workgroup+: {
                 [tf_resource_key]: this,
               },
             },

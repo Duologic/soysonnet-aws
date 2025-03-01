@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_inspector2_delegated_admin_account: {
+            resource+: {
+              aws_inspector2_delegated_admin_account+: {
                 [tf_resource_key]: this,
               },
             },
@@ -225,8 +225,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_inspector2_enabler: {
+            resource+: {
+              aws_inspector2_enabler+: {
                 [tf_resource_key]: this,
               },
             },
@@ -461,8 +461,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_inspector2_member_association: {
+            resource+: {
+              aws_inspector2_member_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -679,8 +679,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_inspector2_organization_configuration: {
+            resource+: {
+              aws_inspector2_organization_configuration+: {
                 [tf_resource_key]: this,
               },
             },

@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_licensemanager_grants: {
+            data+: {
+              aws_licensemanager_grants+: {
                 [tf_resource_key]: this,
               },
             },
@@ -107,8 +107,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_licensemanager_received_license: {
+            data+: {
+              aws_licensemanager_received_license+: {
                 [tf_resource_key]: this,
               },
             },
@@ -420,8 +420,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_licensemanager_received_licenses: {
+            data+: {
+              aws_licensemanager_received_licenses+: {
                 [tf_resource_key]: this,
               },
             },

@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_grafana_license_association: {
+            resource+: {
+              aws_grafana_license_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -238,8 +238,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_grafana_role_association: {
+            resource+: {
+              aws_grafana_role_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -478,8 +478,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_grafana_workspace: {
+            resource+: {
+              aws_grafana_workspace+: {
                 [tf_resource_key]: this,
               },
             },
@@ -897,8 +897,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_grafana_workspace_api_key: {
+            resource+: {
+              aws_grafana_workspace_api_key+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1097,8 +1097,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_grafana_workspace_saml_configuration: {
+            resource+: {
+              aws_grafana_workspace_saml_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1387,8 +1387,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_grafana_workspace_service_account: {
+            resource+: {
+              aws_grafana_workspace_service_account+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1585,8 +1585,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_grafana_workspace_service_account_token: {
+            resource+: {
+              aws_grafana_workspace_service_account_token+: {
                 [tf_resource_key]: this,
               },
             },

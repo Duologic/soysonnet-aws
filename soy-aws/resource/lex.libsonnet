@@ -17,8 +17,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lex_bot: {
+            resource+: {
+              aws_lex_bot+: {
                 [tf_resource_key]: this,
               },
             },
@@ -433,8 +433,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lex_bot_alias: {
+            resource+: {
+              aws_lex_bot_alias+: {
                 [tf_resource_key]: this,
               },
             },
@@ -733,8 +733,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lex_intent: {
+            resource+: {
+              aws_lex_intent+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1480,8 +1480,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lex_slot_type: {
+            resource+: {
+              aws_lex_slot_type+: {
                 [tf_resource_key]: this,
               },
             },

@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_schemas_discoverer: {
+            resource+: {
+              aws_schemas_discoverer+: {
                 [tf_resource_key]: this,
               },
             },
@@ -221,8 +221,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_schemas_registry: {
+            resource+: {
+              aws_schemas_registry+: {
                 [tf_resource_key]: this,
               },
             },
@@ -429,8 +429,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_schemas_registry_policy: {
+            resource+: {
+              aws_schemas_registry_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -619,8 +619,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_schemas_schema: {
+            resource+: {
+              aws_schemas_schema+: {
                 [tf_resource_key]: this,
               },
             },

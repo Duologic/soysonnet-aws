@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_pricing_product: {
+            data+: {
+              aws_pricing_product+: {
                 [tf_resource_key]: this,
               },
             },

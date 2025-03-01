@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_glue_catalog_database: {
+            resource+: {
+              aws_glue_catalog_database+: {
                 [tf_resource_key]: this,
               },
             },
@@ -339,8 +339,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_glue_catalog_table: {
+            resource+: {
+              aws_glue_catalog_table+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1085,8 +1085,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_glue_catalog_table_optimizer: {
+            resource+: {
+              aws_glue_catalog_table_optimizer+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1394,8 +1394,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_glue_classifier: {
+            resource+: {
+              aws_glue_classifier+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1735,8 +1735,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_glue_connection: {
+            resource+: {
+              aws_glue_connection+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2015,8 +2015,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_glue_crawler: {
+            resource+: {
+              aws_glue_crawler+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2706,8 +2706,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_glue_data_catalog_encryption_settings: {
+            resource+: {
+              aws_glue_data_catalog_encryption_settings+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2971,8 +2971,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_glue_data_quality_ruleset: {
+            resource+: {
+              aws_glue_data_quality_ruleset+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3224,8 +3224,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_glue_dev_endpoint: {
+            resource+: {
+              aws_glue_dev_endpoint+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3537,8 +3537,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_glue_job: {
+            resource+: {
+              aws_glue_job+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3890,8 +3890,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_glue_ml_transform: {
+            resource+: {
+              aws_glue_ml_transform+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4255,8 +4255,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_glue_partition: {
+            resource+: {
+              aws_glue_partition+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4745,8 +4745,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_glue_partition_index: {
+            resource+: {
+              aws_glue_partition_index+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5000,8 +5000,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_glue_registry: {
+            resource+: {
+              aws_glue_registry+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5207,8 +5207,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_glue_resource_policy: {
+            resource+: {
+              aws_glue_resource_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5397,8 +5397,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_glue_schema: {
+            resource+: {
+              aws_glue_schema+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5637,8 +5637,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_glue_security_configuration: {
+            resource+: {
+              aws_glue_security_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5926,8 +5926,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_glue_trigger: {
+            resource+: {
+              aws_glue_trigger+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6334,8 +6334,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_glue_user_defined_function: {
+            resource+: {
+              aws_glue_user_defined_function+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6570,8 +6570,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_glue_workflow: {
+            resource+: {
+              aws_glue_workflow+: {
                 [tf_resource_key]: this,
               },
             },

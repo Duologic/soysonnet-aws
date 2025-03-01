@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53recoverycontrolconfig_cluster: {
+            resource+: {
+              aws_route53recoverycontrolconfig_cluster+: {
                 [tf_resource_key]: this,
               },
             },
@@ -232,8 +232,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53recoverycontrolconfig_control_panel: {
+            resource+: {
+              aws_route53recoverycontrolconfig_control_panel+: {
                 [tf_resource_key]: this,
               },
             },
@@ -436,8 +436,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53recoverycontrolconfig_routing_control: {
+            resource+: {
+              aws_route53recoverycontrolconfig_routing_control+: {
                 [tf_resource_key]: this,
               },
             },
@@ -638,8 +638,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53recoverycontrolconfig_safety_rule: {
+            resource+: {
+              aws_route53recoverycontrolconfig_safety_rule+: {
                 [tf_resource_key]: this,
               },
             },

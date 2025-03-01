@@ -18,8 +18,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_mq_broker: {
+            resource+: {
+              aws_mq_broker+: {
                 [tf_resource_key]: this,
               },
             },
@@ -604,8 +604,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_mq_configuration: {
+            resource+: {
+              aws_mq_configuration+: {
                 [tf_resource_key]: this,
               },
             },

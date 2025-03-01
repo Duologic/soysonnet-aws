@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_timestreamquery_scheduled_query: {
+            resource+: {
+              aws_timestreamquery_scheduled_query+: {
                 [tf_resource_key]: this,
               },
             },

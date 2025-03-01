@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_oam_link: {
+            resource+: {
+              aws_oam_link+: {
                 [tf_resource_key]: this,
               },
             },
@@ -335,8 +335,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_oam_sink: {
+            resource+: {
+              aws_oam_sink+: {
                 [tf_resource_key]: this,
               },
             },
@@ -572,8 +572,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_oam_sink_policy: {
+            resource+: {
+              aws_oam_sink_policy+: {
                 [tf_resource_key]: this,
               },
             },

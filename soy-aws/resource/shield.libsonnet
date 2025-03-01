@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_shield_application_layer_automatic_response: {
+            resource+: {
+              aws_shield_application_layer_automatic_response+: {
                 [tf_resource_key]: this,
               },
             },
@@ -232,8 +232,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_shield_drt_access_log_bucket_association: {
+            resource+: {
+              aws_shield_drt_access_log_bucket_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -442,8 +442,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_shield_drt_access_role_arn_association: {
+            resource+: {
+              aws_shield_drt_access_role_arn_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -654,8 +654,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_shield_proactive_engagement: {
+            resource+: {
+              aws_shield_proactive_engagement+: {
                 [tf_resource_key]: this,
               },
             },
@@ -868,8 +868,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_shield_protection: {
+            resource+: {
+              aws_shield_protection+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1077,8 +1077,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_shield_protection_group: {
+            resource+: {
+              aws_shield_protection_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1307,8 +1307,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_shield_protection_health_check_association: {
+            resource+: {
+              aws_shield_protection_health_check_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1493,8 +1493,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_shield_subscription: {
+            resource+: {
+              aws_shield_subscription+: {
                 [tf_resource_key]: this,
               },
             },

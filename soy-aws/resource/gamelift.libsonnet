@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_gamelift_alias: {
+            resource+: {
+              aws_gamelift_alias+: {
                 [tf_resource_key]: this,
               },
             },
@@ -253,8 +253,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_gamelift_build: {
+            resource+: {
+              aws_gamelift_build+: {
                 [tf_resource_key]: this,
               },
             },
@@ -500,8 +500,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_gamelift_fleet: {
+            resource+: {
+              aws_gamelift_fleet+: {
                 [tf_resource_key]: this,
               },
             },
@@ -930,8 +930,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_gamelift_game_server_group: {
+            resource+: {
+              aws_gamelift_game_server_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1289,8 +1289,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_gamelift_game_session_queue: {
+            resource+: {
+              aws_gamelift_game_session_queue+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1544,8 +1544,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_gamelift_script: {
+            resource+: {
+              aws_gamelift_script+: {
                 [tf_resource_key]: this,
               },
             },

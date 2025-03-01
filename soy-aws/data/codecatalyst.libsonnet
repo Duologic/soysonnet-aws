@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_codecatalyst_dev_environment: {
+            data+: {
+              aws_codecatalyst_dev_environment+: {
                 [tf_resource_key]: this,
               },
             },

@@ -17,8 +17,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_comprehend_document_classifier: {
+            resource+: {
+              aws_comprehend_document_classifier+: {
                 [tf_resource_key]: this,
               },
             },
@@ -447,8 +447,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_comprehend_entity_recognizer: {
+            resource+: {
+              aws_comprehend_entity_recognizer+: {
                 [tf_resource_key]: this,
               },
             },

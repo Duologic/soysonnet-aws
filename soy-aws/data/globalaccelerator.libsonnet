@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_globalaccelerator_accelerator: {
+            data+: {
+              aws_globalaccelerator_accelerator+: {
                 [tf_resource_key]: this,
               },
             },
@@ -158,8 +158,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_globalaccelerator_custom_routing_accelerator: {
+            data+: {
+              aws_globalaccelerator_custom_routing_accelerator+: {
                 [tf_resource_key]: this,
               },
             },

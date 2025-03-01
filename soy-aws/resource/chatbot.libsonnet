@@ -17,8 +17,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_chatbot_slack_channel_configuration: {
+            resource+: {
+              aws_chatbot_slack_channel_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -305,8 +305,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_chatbot_teams_channel_configuration: {
+            resource+: {
+              aws_chatbot_teams_channel_configuration+: {
                 [tf_resource_key]: this,
               },
             },

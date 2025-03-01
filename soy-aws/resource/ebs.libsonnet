@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ebs_default_kms_key: {
+            resource+: {
+              aws_ebs_default_kms_key+: {
                 [tf_resource_key]: this,
               },
             },
@@ -196,8 +196,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ebs_encryption_by_default: {
+            resource+: {
+              aws_ebs_encryption_by_default+: {
                 [tf_resource_key]: this,
               },
             },
@@ -380,8 +380,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ebs_fast_snapshot_restore: {
+            resource+: {
+              aws_ebs_fast_snapshot_restore+: {
                 [tf_resource_key]: this,
               },
             },
@@ -594,8 +594,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ebs_snapshot: {
+            resource+: {
+              aws_ebs_snapshot+: {
                 [tf_resource_key]: this,
               },
             },
@@ -864,8 +864,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ebs_snapshot_block_public_access: {
+            resource+: {
+              aws_ebs_snapshot_block_public_access+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1048,8 +1048,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ebs_snapshot_copy: {
+            resource+: {
+              aws_ebs_snapshot_copy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1330,8 +1330,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ebs_snapshot_import: {
+            resource+: {
+              aws_ebs_snapshot_import+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1699,8 +1699,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ebs_volume: {
+            resource+: {
+              aws_ebs_volume+: {
                 [tf_resource_key]: this,
               },
             },

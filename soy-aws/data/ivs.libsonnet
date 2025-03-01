@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ivs_stream_key: {
+            data+: {
+              aws_ivs_stream_key+: {
                 [tf_resource_key]: this,
               },
             },

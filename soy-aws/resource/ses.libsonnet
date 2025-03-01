@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ses_active_receipt_rule_set: {
+            resource+: {
+              aws_ses_active_receipt_rule_set+: {
                 [tf_resource_key]: this,
               },
             },
@@ -201,8 +201,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ses_configuration_set: {
+            resource+: {
+              aws_ses_configuration_set+: {
                 [tf_resource_key]: this,
               },
             },
@@ -434,8 +434,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ses_domain_dkim: {
+            resource+: {
+              aws_ses_domain_dkim+: {
                 [tf_resource_key]: this,
               },
             },
@@ -631,8 +631,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ses_domain_identity: {
+            resource+: {
+              aws_ses_domain_identity+: {
                 [tf_resource_key]: this,
               },
             },
@@ -822,8 +822,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ses_domain_identity_verification: {
+            resource+: {
+              aws_ses_domain_identity_verification+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1027,8 +1027,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ses_domain_mail_from: {
+            resource+: {
+              aws_ses_domain_mail_from+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1218,8 +1218,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ses_email_identity: {
+            resource+: {
+              aws_ses_email_identity+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1407,8 +1407,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ses_event_destination: {
+            resource+: {
+              aws_ses_event_destination+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1687,8 +1687,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ses_identity_notification_topic: {
+            resource+: {
+              aws_ses_identity_notification_topic+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1884,8 +1884,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ses_identity_policy: {
+            resource+: {
+              aws_ses_identity_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2077,8 +2077,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ses_receipt_filter: {
+            resource+: {
+              aws_ses_receipt_filter+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2273,8 +2273,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ses_receipt_rule: {
+            resource+: {
+              aws_ses_receipt_rule+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2732,8 +2732,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ses_receipt_rule_set: {
+            resource+: {
+              aws_ses_receipt_rule_set+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2919,8 +2919,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ses_template: {
+            resource+: {
+              aws_ses_template+: {
                 [tf_resource_key]: this,
               },
             },

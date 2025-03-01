@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_servicequotas_service: {
+            data+: {
+              aws_servicequotas_service+: {
                 [tf_resource_key]: this,
               },
             },
@@ -66,8 +66,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_servicequotas_service_quota: {
+            data+: {
+              aws_servicequotas_service_quota+: {
                 [tf_resource_key]: this,
               },
             },
@@ -210,8 +210,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_servicequotas_templates: {
+            data+: {
+              aws_servicequotas_templates+: {
                 [tf_resource_key]: this,
               },
             },

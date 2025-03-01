@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_main_route_table_association: {
+            resource+: {
+              aws_main_route_table_association+: {
                 [tf_resource_key]: this,
               },
             },

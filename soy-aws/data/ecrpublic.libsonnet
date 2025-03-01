@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ecrpublic_authorization_token: {
+            data+: {
+              aws_ecrpublic_authorization_token+: {
                 [tf_resource_key]: this,
               },
             },

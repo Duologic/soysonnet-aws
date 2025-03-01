@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_workspaces_bundle: {
+            data+: {
+              aws_workspaces_bundle+: {
                 [tf_resource_key]: this,
               },
             },
@@ -139,8 +139,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_workspaces_directory: {
+            data+: {
+              aws_workspaces_directory+: {
                 [tf_resource_key]: this,
               },
             },
@@ -421,8 +421,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_workspaces_image: {
+            data+: {
+              aws_workspaces_image+: {
                 [tf_resource_key]: this,
               },
             },
@@ -488,8 +488,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_workspaces_workspace: {
+            data+: {
+              aws_workspaces_workspace+: {
                 [tf_resource_key]: this,
               },
             },

@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_globalaccelerator_accelerator: {
+            resource+: {
+              aws_globalaccelerator_accelerator+: {
                 [tf_resource_key]: this,
               },
             },
@@ -339,8 +339,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_globalaccelerator_cross_account_attachment: {
+            resource+: {
+              aws_globalaccelerator_cross_account_attachment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -594,8 +594,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_globalaccelerator_custom_routing_accelerator: {
+            resource+: {
+              aws_globalaccelerator_custom_routing_accelerator+: {
                 [tf_resource_key]: this,
               },
             },
@@ -916,8 +916,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_globalaccelerator_custom_routing_endpoint_group: {
+            resource+: {
+              aws_globalaccelerator_custom_routing_endpoint_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1193,8 +1193,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_globalaccelerator_custom_routing_listener: {
+            resource+: {
+              aws_globalaccelerator_custom_routing_listener+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1435,8 +1435,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_globalaccelerator_endpoint_group: {
+            resource+: {
+              aws_globalaccelerator_endpoint_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1741,8 +1741,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_globalaccelerator_listener: {
+            resource+: {
+              aws_globalaccelerator_listener+: {
                 [tf_resource_key]: this,
               },
             },

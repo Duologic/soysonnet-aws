@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_resourcegroups_group: {
+            resource+: {
+              aws_resourcegroups_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -326,8 +326,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_resourcegroups_resource: {
+            resource+: {
+              aws_resourcegroups_resource+: {
                 [tf_resource_key]: this,
               },
             },

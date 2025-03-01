@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            ephemeral: {
-              aws_eks_cluster_auth: {
+            ephemeral+: {
+              aws_eks_cluster_auth+: {
                 [tf_resource_key]: this,
               },
             },

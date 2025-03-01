@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_networkfirewall_firewall: {
+            data+: {
+              aws_networkfirewall_firewall+: {
                 [tf_resource_key]: this,
               },
             },
@@ -292,8 +292,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_networkfirewall_firewall_policy: {
+            data+: {
+              aws_networkfirewall_firewall_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -604,8 +604,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_networkfirewall_resource_policy: {
+            data+: {
+              aws_networkfirewall_resource_policy+: {
                 [tf_resource_key]: this,
               },
             },

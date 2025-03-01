@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_networkmanager_connection: {
+            data+: {
+              aws_networkmanager_connection+: {
                 [tf_resource_key]: this,
               },
             },
@@ -99,8 +99,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_networkmanager_connections: {
+            data+: {
+              aws_networkmanager_connections+: {
                 [tf_resource_key]: this,
               },
             },
@@ -174,8 +174,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_networkmanager_core_network_policy_document: {
+            data+: {
+              aws_networkmanager_core_network_policy_document+: {
                 [tf_resource_key]: this,
               },
             },
@@ -720,8 +720,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_networkmanager_device: {
+            data+: {
+              aws_networkmanager_device+: {
                 [tf_resource_key]: this,
               },
             },
@@ -864,8 +864,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_networkmanager_devices: {
+            data+: {
+              aws_networkmanager_devices+: {
                 [tf_resource_key]: this,
               },
             },
@@ -938,8 +938,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_networkmanager_global_network: {
+            data+: {
+              aws_networkmanager_global_network+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1001,8 +1001,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_networkmanager_global_networks: {
+            data+: {
+              aws_networkmanager_global_networks+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1068,8 +1068,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_networkmanager_link: {
+            data+: {
+              aws_networkmanager_link+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1174,8 +1174,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_networkmanager_links: {
+            data+: {
+              aws_networkmanager_links+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1257,8 +1257,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_networkmanager_site: {
+            data+: {
+              aws_networkmanager_site+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1355,8 +1355,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_networkmanager_sites: {
+            data+: {
+              aws_networkmanager_sites+: {
                 [tf_resource_key]: this,
               },
             },

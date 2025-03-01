@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_placement_group: {
+            resource+: {
+              aws_placement_group+: {
                 [tf_resource_key]: this,
               },
             },

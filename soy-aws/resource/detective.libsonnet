@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_detective_graph: {
+            resource+: {
+              aws_detective_graph+: {
                 [tf_resource_key]: this,
               },
             },
@@ -216,8 +216,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_detective_invitation_accepter: {
+            resource+: {
+              aws_detective_invitation_accepter+: {
                 [tf_resource_key]: this,
               },
             },
@@ -401,8 +401,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_detective_member: {
+            resource+: {
+              aws_detective_member+: {
                 [tf_resource_key]: this,
               },
             },
@@ -624,8 +624,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_detective_organization_admin_account: {
+            resource+: {
+              aws_detective_organization_admin_account+: {
                 [tf_resource_key]: this,
               },
             },
@@ -808,8 +808,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_detective_organization_configuration: {
+            resource+: {
+              aws_detective_organization_configuration+: {
                 [tf_resource_key]: this,
               },
             },

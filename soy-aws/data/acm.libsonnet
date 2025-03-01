@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_acm_certificate: {
+            data+: {
+              aws_acm_certificate+: {
                 [tf_resource_key]: this,
               },
             },

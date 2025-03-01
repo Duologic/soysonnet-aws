@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_kinesisanalyticsv2_application: {
+            resource+: {
+              aws_kinesisanalyticsv2_application+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1875,8 +1875,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_kinesisanalyticsv2_application_snapshot: {
+            resource+: {
+              aws_kinesisanalyticsv2_application_snapshot+: {
                 [tf_resource_key]: this,
               },
             },

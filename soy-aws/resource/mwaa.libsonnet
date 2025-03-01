@@ -18,8 +18,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_mwaa_environment: {
+            resource+: {
+              aws_mwaa_environment+: {
                 [tf_resource_key]: this,
               },
             },

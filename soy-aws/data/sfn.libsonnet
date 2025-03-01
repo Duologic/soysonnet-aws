@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_sfn_activity: {
+            data+: {
+              aws_sfn_activity+: {
                 [tf_resource_key]: this,
               },
             },
@@ -70,8 +70,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_sfn_alias: {
+            data+: {
+              aws_sfn_alias+: {
                 [tf_resource_key]: this,
               },
             },
@@ -160,8 +160,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_sfn_state_machine: {
+            data+: {
+              aws_sfn_state_machine+: {
                 [tf_resource_key]: this,
               },
             },
@@ -236,8 +236,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_sfn_state_machine_versions: {
+            data+: {
+              aws_sfn_state_machine_versions+: {
                 [tf_resource_key]: this,
               },
             },

@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3tables_namespace: {
+            resource+: {
+              aws_s3tables_namespace+: {
                 [tf_resource_key]: this,
               },
             },
@@ -213,8 +213,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3tables_table: {
+            resource+: {
+              aws_s3tables_table+: {
                 [tf_resource_key]: this,
               },
             },
@@ -569,8 +569,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3tables_table_bucket: {
+            resource+: {
+              aws_s3tables_table_bucket+: {
                 [tf_resource_key]: this,
               },
             },
@@ -834,8 +834,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3tables_table_bucket_policy: {
+            resource+: {
+              aws_s3tables_table_bucket_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1020,8 +1020,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3tables_table_policy: {
+            resource+: {
+              aws_s3tables_table_policy+: {
                 [tf_resource_key]: this,
               },
             },

@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_prometheus_default_scraper_configuration: {
+            data+: {
+              aws_prometheus_default_scraper_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -57,8 +57,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_prometheus_workspace: {
+            data+: {
+              aws_prometheus_workspace+: {
                 [tf_resource_key]: this,
               },
             },
@@ -136,8 +136,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_prometheus_workspaces: {
+            data+: {
+              aws_prometheus_workspaces+: {
                 [tf_resource_key]: this,
               },
             },

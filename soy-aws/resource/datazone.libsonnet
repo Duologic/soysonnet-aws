@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_datazone_asset_type: {
+            resource+: {
+              aws_datazone_asset_type+: {
                 [tf_resource_key]: this,
               },
             },
@@ -271,8 +271,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_datazone_domain: {
+            resource+: {
+              aws_datazone_domain+: {
                 [tf_resource_key]: this,
               },
             },
@@ -546,8 +546,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_datazone_environment: {
+            resource+: {
+              aws_datazone_environment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -948,8 +948,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_datazone_environment_blueprint_configuration: {
+            resource+: {
+              aws_datazone_environment_blueprint_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1165,8 +1165,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_datazone_environment_profile: {
+            resource+: {
+              aws_datazone_environment_profile+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1412,8 +1412,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_datazone_form_type: {
+            resource+: {
+              aws_datazone_form_type+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1694,8 +1694,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_datazone_glossary: {
+            resource+: {
+              aws_datazone_glossary+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1894,8 +1894,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_datazone_glossary_term: {
+            resource+: {
+              aws_datazone_glossary_term+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2169,8 +2169,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_datazone_project: {
+            resource+: {
+              aws_datazone_project+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2444,8 +2444,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_datazone_user_profile: {
+            resource+: {
+              aws_datazone_user_profile+: {
                 [tf_resource_key]: this,
               },
             },

@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_egress_only_internet_gateway: {
+            resource+: {
+              aws_egress_only_internet_gateway+: {
                 [tf_resource_key]: this,
               },
             },

@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_route53profiles_profiles: {
+            data+: {
+              aws_route53profiles_profiles+: {
                 [tf_resource_key]: this,
               },
             },

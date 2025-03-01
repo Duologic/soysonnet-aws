@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_fsx_ontap_file_system: {
+            data+: {
+              aws_fsx_ontap_file_system+: {
                 [tf_resource_key]: this,
               },
             },
@@ -287,8 +287,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_fsx_ontap_storage_virtual_machine: {
+            data+: {
+              aws_fsx_ontap_storage_virtual_machine+: {
                 [tf_resource_key]: this,
               },
             },
@@ -656,8 +656,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_fsx_ontap_storage_virtual_machines: {
+            data+: {
+              aws_fsx_ontap_storage_virtual_machines+: {
                 [tf_resource_key]: this,
               },
             },
@@ -749,8 +749,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_fsx_openzfs_snapshot: {
+            data+: {
+              aws_fsx_openzfs_snapshot+: {
                 [tf_resource_key]: this,
               },
             },
@@ -875,8 +875,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_fsx_windows_file_system: {
+            data+: {
+              aws_fsx_windows_file_system+: {
                 [tf_resource_key]: this,
               },
             },

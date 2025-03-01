@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ssm_document: {
+            data+: {
+              aws_ssm_document+: {
                 [tf_resource_key]: this,
               },
             },
@@ -81,8 +81,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ssm_instances: {
+            data+: {
+              aws_ssm_instances+: {
                 [tf_resource_key]: this,
               },
             },
@@ -174,8 +174,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ssm_maintenance_windows: {
+            data+: {
+              aws_ssm_maintenance_windows+: {
                 [tf_resource_key]: this,
               },
             },
@@ -268,8 +268,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ssm_parameter: {
+            data+: {
+              aws_ssm_parameter+: {
                 [tf_resource_key]: this,
               },
             },
@@ -340,8 +340,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ssm_parameters_by_path: {
+            data+: {
+              aws_ssm_parameters_by_path+: {
                 [tf_resource_key]: this,
               },
             },
@@ -452,8 +452,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ssm_patch_baseline: {
+            data+: {
+              aws_ssm_patch_baseline+: {
                 [tf_resource_key]: this,
               },
             },
@@ -709,8 +709,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ssm_patch_baselines: {
+            data+: {
+              aws_ssm_patch_baselines+: {
                 [tf_resource_key]: this,
               },
             },

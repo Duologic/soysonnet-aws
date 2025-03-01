@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_budgets_budget: {
+            resource+: {
+              aws_budgets_budget+: {
                 [tf_resource_key]: this,
               },
             },
@@ -516,8 +516,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_budgets_budget_action: {
+            resource+: {
+              aws_budgets_budget_action+: {
                 [tf_resource_key]: this,
               },
             },

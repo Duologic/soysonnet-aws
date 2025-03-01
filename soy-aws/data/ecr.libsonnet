@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ecr_authorization_token: {
+            data+: {
+              aws_ecr_authorization_token+: {
                 [tf_resource_key]: this,
               },
             },
@@ -81,8 +81,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ecr_image: {
+            data+: {
+              aws_ecr_image+: {
                 [tf_resource_key]: this,
               },
             },
@@ -170,8 +170,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ecr_lifecycle_policy_document: {
+            data+: {
+              aws_ecr_lifecycle_policy_document+: {
                 [tf_resource_key]: this,
               },
             },
@@ -324,8 +324,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ecr_pull_through_cache_rule: {
+            data+: {
+              aws_ecr_pull_through_cache_rule+: {
                 [tf_resource_key]: this,
               },
             },
@@ -383,8 +383,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ecr_repositories: {
+            data+: {
+              aws_ecr_repositories+: {
                 [tf_resource_key]: this,
               },
             },
@@ -441,8 +441,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ecr_repository: {
+            data+: {
+              aws_ecr_repository+: {
                 [tf_resource_key]: this,
               },
             },
@@ -575,8 +575,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ecr_repository_creation_template: {
+            data+: {
+              aws_ecr_repository_creation_template+: {
                 [tf_resource_key]: this,
               },
             },

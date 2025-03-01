@@ -17,8 +17,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_codestarnotifications_notification_rule: {
+            resource+: {
+              aws_codestarnotifications_notification_rule+: {
                 [tf_resource_key]: this,
               },
             },

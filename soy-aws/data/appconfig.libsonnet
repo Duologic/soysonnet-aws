@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_appconfig_configuration_profile: {
+            data+: {
+              aws_appconfig_configuration_profile+: {
                 [tf_resource_key]: this,
               },
             },
@@ -129,8 +129,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_appconfig_configuration_profiles: {
+            data+: {
+              aws_appconfig_configuration_profiles+: {
                 [tf_resource_key]: this,
               },
             },
@@ -192,8 +192,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_appconfig_environment: {
+            data+: {
+              aws_appconfig_environment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -294,8 +294,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_appconfig_environments: {
+            data+: {
+              aws_appconfig_environments+: {
                 [tf_resource_key]: this,
               },
             },

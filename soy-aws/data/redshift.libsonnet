@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_redshift_cluster: {
+            data+: {
+              aws_redshift_cluster+: {
                 [tf_resource_key]: this,
               },
             },
@@ -279,8 +279,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_redshift_cluster_credentials: {
+            data+: {
+              aws_redshift_cluster_credentials+: {
                 [tf_resource_key]: this,
               },
             },
@@ -364,8 +364,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_redshift_data_shares: {
+            data+: {
+              aws_redshift_data_shares+: {
                 [tf_resource_key]: this,
               },
             },
@@ -437,8 +437,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_redshift_orderable_cluster: {
+            data+: {
+              aws_redshift_orderable_cluster+: {
                 [tf_resource_key]: this,
               },
             },
@@ -521,8 +521,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_redshift_producer_data_shares: {
+            data+: {
+              aws_redshift_producer_data_shares+: {
                 [tf_resource_key]: this,
               },
             },
@@ -602,8 +602,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_redshift_service_account: {
+            data+: {
+              aws_redshift_service_account+: {
                 [tf_resource_key]: this,
               },
             },
@@ -654,8 +654,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_redshift_subnet_group: {
+            data+: {
+              aws_redshift_subnet_group+: {
                 [tf_resource_key]: this,
               },
             },

@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_bedrockagent_agent: {
+            resource+: {
+              aws_bedrockagent_agent+: {
                 [tf_resource_key]: this,
               },
             },
@@ -428,8 +428,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_bedrockagent_agent_action_group: {
+            resource+: {
+              aws_bedrockagent_agent_action_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -837,8 +837,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_bedrockagent_agent_alias: {
+            resource+: {
+              aws_bedrockagent_agent_alias+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1109,8 +1109,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_bedrockagent_agent_collaborator: {
+            resource+: {
+              aws_bedrockagent_agent_collaborator+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1370,8 +1370,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_bedrockagent_agent_knowledge_base_association: {
+            resource+: {
+              aws_bedrockagent_agent_knowledge_base_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1593,8 +1593,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_bedrockagent_data_source: {
+            resource+: {
+              aws_bedrockagent_data_source+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2876,8 +2876,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_bedrockagent_knowledge_base: {
+            resource+: {
+              aws_bedrockagent_knowledge_base+: {
                 [tf_resource_key]: this,
               },
             },

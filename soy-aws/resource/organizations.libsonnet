@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_organizations_account: {
+            resource+: {
+              aws_organizations_account+: {
                 [tf_resource_key]: this,
               },
             },
@@ -282,8 +282,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_organizations_delegated_administrator: {
+            resource+: {
+              aws_organizations_delegated_administrator+: {
                 [tf_resource_key]: this,
               },
             },
@@ -496,8 +496,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_organizations_organization: {
+            resource+: {
+              aws_organizations_organization+: {
                 [tf_resource_key]: this,
               },
             },
@@ -860,8 +860,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_organizations_organizational_unit: {
+            resource+: {
+              aws_organizations_organizational_unit+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1102,8 +1102,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_organizations_policy: {
+            resource+: {
+              aws_organizations_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1322,8 +1322,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_organizations_policy_attachment: {
+            resource+: {
+              aws_organizations_policy_attachment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1513,8 +1513,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_organizations_resource_policy: {
+            resource+: {
+              aws_organizations_resource_policy+: {
                 [tf_resource_key]: this,
               },
             },

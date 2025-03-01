@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_batch_compute_environment: {
+            data+: {
+              aws_batch_compute_environment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -123,8 +123,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_batch_job_definition: {
+            data+: {
+              aws_batch_job_definition+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1465,8 +1465,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_batch_job_queue: {
+            data+: {
+              aws_batch_job_queue+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1605,8 +1605,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_batch_scheduling_policy: {
+            data+: {
+              aws_batch_scheduling_policy+: {
                 [tf_resource_key]: this,
               },
             },

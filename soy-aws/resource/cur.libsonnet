@@ -20,8 +20,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cur_report_definition: {
+            resource+: {
+              aws_cur_report_definition+: {
                 [tf_resource_key]: this,
               },
             },

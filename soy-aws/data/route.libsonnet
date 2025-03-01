@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_route: {
+            data+: {
+              aws_route+: {
                 [tf_resource_key]: this,
               },
             },
@@ -130,8 +130,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_route_table: {
+            data+: {
+              aws_route_table+: {
                 [tf_resource_key]: this,
               },
             },
@@ -370,8 +370,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_route_tables: {
+            data+: {
+              aws_route_tables+: {
                 [tf_resource_key]: this,
               },
             },

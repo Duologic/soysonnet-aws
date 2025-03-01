@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_servicecatalogappregistry_application: {
+            data+: {
+              aws_servicecatalogappregistry_application+: {
                 [tf_resource_key]: this,
               },
             },
@@ -85,8 +85,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_servicecatalogappregistry_attribute_group: {
+            data+: {
+              aws_servicecatalogappregistry_attribute_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -152,8 +152,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_servicecatalogappregistry_attribute_group_associations: {
+            data+: {
+              aws_servicecatalogappregistry_attribute_group_associations+: {
                 [tf_resource_key]: this,
               },
             },

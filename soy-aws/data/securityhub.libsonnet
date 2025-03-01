@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_securityhub_standards_control_associations: {
+            data+: {
+              aws_securityhub_standards_control_associations+: {
                 [tf_resource_key]: this,
               },
             },

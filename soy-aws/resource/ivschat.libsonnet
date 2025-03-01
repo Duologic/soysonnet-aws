@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ivschat_logging_configuration: {
+            resource+: {
+              aws_ivschat_logging_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -328,8 +328,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ivschat_room: {
+            resource+: {
+              aws_ivschat_room+: {
                 [tf_resource_key]: this,
               },
             },

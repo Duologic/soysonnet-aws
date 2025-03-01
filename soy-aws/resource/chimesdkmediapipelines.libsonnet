@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_chimesdkmediapipelines_media_insights_pipeline_configuration: {
+            resource+: {
+              aws_chimesdkmediapipelines_media_insights_pipeline_configuration+: {
                 [tf_resource_key]: this,
               },
             },

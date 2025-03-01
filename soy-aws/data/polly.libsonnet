@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_polly_voices: {
+            data+: {
+              aws_polly_voices+: {
                 [tf_resource_key]: this,
               },
             },

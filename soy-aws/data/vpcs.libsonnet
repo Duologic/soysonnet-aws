@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_vpcs: {
+            data+: {
+              aws_vpcs+: {
                 [tf_resource_key]: this,
               },
             },

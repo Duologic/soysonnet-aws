@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            ephemeral: {
-              aws_secretsmanager_random_password: {
+            ephemeral+: {
+              aws_secretsmanager_random_password+: {
                 [tf_resource_key]: this,
               },
             },
@@ -89,8 +89,8 @@
         {
           local this = self,
           _manifest():: {
-            ephemeral: {
-              aws_secretsmanager_secret_version: {
+            ephemeral+: {
+              aws_secretsmanager_secret_version+: {
                 [tf_resource_key]: this,
               },
             },

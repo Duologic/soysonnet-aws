@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_apigatewayv2_api: {
+            data+: {
+              aws_apigatewayv2_api+: {
                 [tf_resource_key]: this,
               },
             },
@@ -191,8 +191,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_apigatewayv2_apis: {
+            data+: {
+              aws_apigatewayv2_apis+: {
                 [tf_resource_key]: this,
               },
             },
@@ -267,8 +267,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_apigatewayv2_export: {
+            data+: {
+              aws_apigatewayv2_export+: {
                 [tf_resource_key]: this,
               },
             },
@@ -339,8 +339,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_apigatewayv2_vpc_link: {
+            data+: {
+              aws_apigatewayv2_vpc_link+: {
                 [tf_resource_key]: this,
               },
             },

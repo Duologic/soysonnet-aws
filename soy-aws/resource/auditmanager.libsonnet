@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_auditmanager_account_registration: {
+            resource+: {
+              aws_auditmanager_account_registration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -210,8 +210,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_auditmanager_assessment: {
+            resource+: {
+              aws_auditmanager_assessment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -568,8 +568,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_auditmanager_assessment_delegation: {
+            resource+: {
+              aws_auditmanager_assessment_delegation+: {
                 [tf_resource_key]: this,
               },
             },
@@ -776,8 +776,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_auditmanager_assessment_report: {
+            resource+: {
+              aws_auditmanager_assessment_report+: {
                 [tf_resource_key]: this,
               },
             },
@@ -975,8 +975,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_auditmanager_control: {
+            resource+: {
+              aws_auditmanager_control+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1270,8 +1270,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_auditmanager_framework: {
+            resource+: {
+              aws_auditmanager_framework+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1535,8 +1535,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_auditmanager_framework_share: {
+            resource+: {
+              aws_auditmanager_framework_share+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1734,8 +1734,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_auditmanager_organization_admin_account_registration: {
+            resource+: {
+              aws_auditmanager_organization_admin_account_registration+: {
                 [tf_resource_key]: this,
               },
             },

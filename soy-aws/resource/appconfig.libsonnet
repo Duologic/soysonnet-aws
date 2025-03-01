@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appconfig_application: {
+            resource+: {
+              aws_appconfig_application+: {
                 [tf_resource_key]: this,
               },
             },
@@ -223,8 +223,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appconfig_configuration_profile: {
+            resource+: {
+              aws_appconfig_configuration_profile+: {
                 [tf_resource_key]: this,
               },
             },
@@ -484,8 +484,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appconfig_deployment: {
+            resource+: {
+              aws_appconfig_deployment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -726,8 +726,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appconfig_deployment_strategy: {
+            resource+: {
+              aws_appconfig_deployment_strategy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -954,8 +954,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appconfig_environment: {
+            resource+: {
+              aws_appconfig_environment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1200,8 +1200,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appconfig_extension: {
+            resource+: {
+              aws_appconfig_extension+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1498,8 +1498,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appconfig_extension_association: {
+            resource+: {
+              aws_appconfig_extension_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1704,8 +1704,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appconfig_hosted_configuration_version: {
+            resource+: {
+              aws_appconfig_hosted_configuration_version+: {
                 [tf_resource_key]: this,
               },
             },

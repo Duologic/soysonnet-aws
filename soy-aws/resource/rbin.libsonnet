@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_rbin_rule: {
+            resource+: {
+              aws_rbin_rule+: {
                 [tf_resource_key]: this,
               },
             },

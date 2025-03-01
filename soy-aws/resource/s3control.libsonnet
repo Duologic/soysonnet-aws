@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3control_access_grant: {
+            resource+: {
+              aws_s3control_access_grant+: {
                 [tf_resource_key]: this,
               },
             },
@@ -285,8 +285,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3control_access_grants_instance: {
+            resource+: {
+              aws_s3control_access_grants_instance+: {
                 [tf_resource_key]: this,
               },
             },
@@ -500,8 +500,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3control_access_grants_instance_resource_policy: {
+            resource+: {
+              aws_s3control_access_grants_instance_resource_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -688,8 +688,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3control_access_grants_location: {
+            resource+: {
+              aws_s3control_access_grants_location+: {
                 [tf_resource_key]: this,
               },
             },
@@ -904,8 +904,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3control_access_point_policy: {
+            resource+: {
+              aws_s3control_access_point_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1096,8 +1096,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3control_bucket: {
+            resource+: {
+              aws_s3control_bucket+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1312,8 +1312,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3control_bucket_lifecycle_configuration: {
+            resource+: {
+              aws_s3control_bucket_lifecycle_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1597,8 +1597,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3control_bucket_policy: {
+            resource+: {
+              aws_s3control_bucket_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1784,8 +1784,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3control_multi_region_access_point: {
+            resource+: {
+              aws_s3control_multi_region_access_point+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2104,8 +2104,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3control_multi_region_access_point_policy: {
+            resource+: {
+              aws_s3control_multi_region_access_point_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2342,8 +2342,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3control_object_lambda_access_point: {
+            resource+: {
+              aws_s3control_object_lambda_access_point+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2657,8 +2657,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3control_object_lambda_access_point_policy: {
+            resource+: {
+              aws_s3control_object_lambda_access_point_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2853,8 +2853,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3control_storage_lens_configuration: {
+            resource+: {
+              aws_s3control_storage_lens_configuration+: {
                 [tf_resource_key]: this,
               },
             },

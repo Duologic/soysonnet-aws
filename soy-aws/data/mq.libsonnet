@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_mq_broker: {
+            data+: {
+              aws_mq_broker+: {
                 [tf_resource_key]: this,
               },
             },
@@ -400,8 +400,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_mq_broker_engine_types: {
+            data+: {
+              aws_mq_broker_engine_types+: {
                 [tf_resource_key]: this,
               },
             },
@@ -491,8 +491,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_mq_broker_instance_type_offerings: {
+            data+: {
+              aws_mq_broker_instance_type_offerings+: {
                 [tf_resource_key]: this,
               },
             },

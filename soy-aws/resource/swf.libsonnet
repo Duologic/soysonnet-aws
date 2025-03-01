@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_swf_domain: {
+            resource+: {
+              aws_swf_domain+: {
                 [tf_resource_key]: this,
               },
             },

@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_internetmonitor_monitor: {
+            resource+: {
+              aws_internetmonitor_monitor+: {
                 [tf_resource_key]: this,
               },
             },

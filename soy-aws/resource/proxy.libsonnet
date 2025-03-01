@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_proxy_protocol_policy: {
+            resource+: {
+              aws_proxy_protocol_policy+: {
                 [tf_resource_key]: this,
               },
             },

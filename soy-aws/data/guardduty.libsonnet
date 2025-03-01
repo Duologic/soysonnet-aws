@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_guardduty_detector: {
+            data+: {
+              aws_guardduty_detector+: {
                 [tf_resource_key]: this,
               },
             },
@@ -121,8 +121,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_guardduty_finding_ids: {
+            data+: {
+              aws_guardduty_finding_ids+: {
                 [tf_resource_key]: this,
               },
             },

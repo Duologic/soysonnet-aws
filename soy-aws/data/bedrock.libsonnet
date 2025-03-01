@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_bedrock_custom_model: {
+            data+: {
+              aws_bedrock_custom_model+: {
                 [tf_resource_key]: this,
               },
             },
@@ -241,8 +241,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_bedrock_custom_models: {
+            data+: {
+              aws_bedrock_custom_models+: {
                 [tf_resource_key]: this,
               },
             },
@@ -315,8 +315,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_bedrock_foundation_model: {
+            data+: {
+              aws_bedrock_foundation_model+: {
                 [tf_resource_key]: this,
               },
             },
@@ -434,8 +434,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_bedrock_foundation_models: {
+            data+: {
+              aws_bedrock_foundation_models+: {
                 [tf_resource_key]: this,
               },
             },
@@ -588,8 +588,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_bedrock_inference_profile: {
+            data+: {
+              aws_bedrock_inference_profile+: {
                 [tf_resource_key]: this,
               },
             },
@@ -681,8 +681,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_bedrock_inference_profiles: {
+            data+: {
+              aws_bedrock_inference_profiles+: {
                 [tf_resource_key]: this,
               },
             },

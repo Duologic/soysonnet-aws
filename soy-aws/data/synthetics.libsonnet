@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_synthetics_runtime_version: {
+            data+: {
+              aws_synthetics_runtime_version+: {
                 [tf_resource_key]: this,
               },
             },
@@ -85,8 +85,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_synthetics_runtime_versions: {
+            data+: {
+              aws_synthetics_runtime_versions+: {
                 [tf_resource_key]: this,
               },
             },

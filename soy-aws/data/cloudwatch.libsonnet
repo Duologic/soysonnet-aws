@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_cloudwatch_event_bus: {
+            data+: {
+              aws_cloudwatch_event_bus+: {
                 [tf_resource_key]: this,
               },
             },
@@ -73,8 +73,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_cloudwatch_event_buses: {
+            data+: {
+              aws_cloudwatch_event_buses+: {
                 [tf_resource_key]: this,
               },
             },
@@ -159,8 +159,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_cloudwatch_event_connection: {
+            data+: {
+              aws_cloudwatch_event_connection+: {
                 [tf_resource_key]: this,
               },
             },
@@ -218,8 +218,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_cloudwatch_event_source: {
+            data+: {
+              aws_cloudwatch_event_source+: {
                 [tf_resource_key]: this,
               },
             },
@@ -283,8 +283,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_cloudwatch_log_data_protection_policy_document: {
+            data+: {
+              aws_cloudwatch_log_data_protection_policy_document+: {
                 [tf_resource_key]: this,
               },
             },
@@ -560,8 +560,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_cloudwatch_log_group: {
+            data+: {
+              aws_cloudwatch_log_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -635,8 +635,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_cloudwatch_log_groups: {
+            data+: {
+              aws_cloudwatch_log_groups+: {
                 [tf_resource_key]: this,
               },
             },

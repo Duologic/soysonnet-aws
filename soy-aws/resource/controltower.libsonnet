@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_controltower_control: {
+            resource+: {
+              aws_controltower_control+: {
                 [tf_resource_key]: this,
               },
             },
@@ -262,8 +262,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_controltower_landing_zone: {
+            resource+: {
+              aws_controltower_landing_zone+: {
                 [tf_resource_key]: this,
               },
             },

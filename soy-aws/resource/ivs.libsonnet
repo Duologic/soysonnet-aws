@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ivs_channel: {
+            resource+: {
+              aws_ivs_channel+: {
                 [tf_resource_key]: this,
               },
             },
@@ -269,8 +269,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ivs_playback_key_pair: {
+            resource+: {
+              aws_ivs_playback_key_pair+: {
                 [tf_resource_key]: this,
               },
             },
@@ -503,8 +503,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ivs_recording_configuration: {
+            resource+: {
+              aws_ivs_recording_configuration+: {
                 [tf_resource_key]: this,
               },
             },

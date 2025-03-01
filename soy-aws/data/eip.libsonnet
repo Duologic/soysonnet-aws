@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_eip: {
+            data+: {
+              aws_eip+: {
                 [tf_resource_key]: this,
               },
             },

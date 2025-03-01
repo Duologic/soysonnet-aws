@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_cloudformation_export: {
+            data+: {
+              aws_cloudformation_export+: {
                 [tf_resource_key]: this,
               },
             },
@@ -70,8 +70,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_cloudformation_stack: {
+            data+: {
+              aws_cloudformation_stack+: {
                 [tf_resource_key]: this,
               },
             },
@@ -189,8 +189,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_cloudformation_type: {
+            data+: {
+              aws_cloudformation_type+: {
                 [tf_resource_key]: this,
               },
             },

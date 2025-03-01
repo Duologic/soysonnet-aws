@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_kms_alias: {
+            resource+: {
+              aws_kms_alias+: {
                 [tf_resource_key]: this,
               },
             },
@@ -214,8 +214,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_kms_ciphertext: {
+            resource+: {
+              aws_kms_ciphertext+: {
                 [tf_resource_key]: this,
               },
             },
@@ -413,8 +413,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_kms_custom_key_store: {
+            resource+: {
+              aws_kms_custom_key_store+: {
                 [tf_resource_key]: this,
               },
             },
@@ -679,8 +679,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_kms_external_key: {
+            resource+: {
+              aws_kms_external_key+: {
                 [tf_resource_key]: this,
               },
             },
@@ -924,8 +924,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_kms_grant: {
+            resource+: {
+              aws_kms_grant+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1192,8 +1192,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_kms_key: {
+            resource+: {
+              aws_kms_key+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1461,8 +1461,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_kms_key_policy: {
+            resource+: {
+              aws_kms_key_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1652,8 +1652,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_kms_replica_external_key: {
+            resource+: {
+              aws_kms_replica_external_key+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1899,8 +1899,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_kms_replica_key: {
+            resource+: {
+              aws_kms_replica_key+: {
                 [tf_resource_key]: this,
               },
             },

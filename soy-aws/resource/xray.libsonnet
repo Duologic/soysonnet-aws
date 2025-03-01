@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_xray_encryption_config: {
+            resource+: {
+              aws_xray_encryption_config+: {
                 [tf_resource_key]: this,
               },
             },
@@ -202,8 +202,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_xray_group: {
+            resource+: {
+              aws_xray_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -441,8 +441,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_xray_sampling_rule: {
+            resource+: {
+              aws_xray_sampling_rule+: {
                 [tf_resource_key]: this,
               },
             },

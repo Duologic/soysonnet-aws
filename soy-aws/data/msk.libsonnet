@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_msk_bootstrap_brokers: {
+            data+: {
+              aws_msk_bootstrap_brokers+: {
                 [tf_resource_key]: this,
               },
             },
@@ -102,8 +102,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_msk_broker_nodes: {
+            data+: {
+              aws_msk_broker_nodes+: {
                 [tf_resource_key]: this,
               },
             },
@@ -202,8 +202,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_msk_cluster: {
+            data+: {
+              aws_msk_cluster+: {
                 [tf_resource_key]: this,
               },
             },
@@ -536,8 +536,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_msk_configuration: {
+            data+: {
+              aws_msk_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -613,8 +613,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_msk_kafka_version: {
+            data+: {
+              aws_msk_kafka_version+: {
                 [tf_resource_key]: this,
               },
             },
@@ -679,8 +679,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_msk_vpc_connection: {
+            data+: {
+              aws_msk_vpc_connection+: {
                 [tf_resource_key]: this,
               },
             },

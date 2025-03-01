@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_docdb_engine_version: {
+            data+: {
+              aws_docdb_engine_version+: {
                 [tf_resource_key]: this,
               },
             },
@@ -122,8 +122,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_docdb_orderable_db_instance: {
+            data+: {
+              aws_docdb_orderable_db_instance+: {
                 [tf_resource_key]: this,
               },
             },

@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_transfer_connector: {
+            data+: {
+              aws_transfer_connector+: {
                 [tf_resource_key]: this,
               },
             },
@@ -190,8 +190,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_transfer_server: {
+            data+: {
+              aws_transfer_server+: {
                 [tf_resource_key]: this,
               },
             },

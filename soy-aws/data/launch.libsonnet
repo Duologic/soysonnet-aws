@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_launch_configuration: {
+            data+: {
+              aws_launch_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -271,8 +271,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_launch_template: {
+            data+: {
+              aws_launch_template+: {
                 [tf_resource_key]: this,
               },
             },

@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_autoscaling_group: {
+            data+: {
+              aws_autoscaling_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -933,8 +933,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_autoscaling_groups: {
+            data+: {
+              aws_autoscaling_groups+: {
                 [tf_resource_key]: this,
               },
             },

@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iot_authorizer: {
+            resource+: {
+              aws_iot_authorizer+: {
                 [tf_resource_key]: this,
               },
             },
@@ -246,8 +246,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iot_billing_group: {
+            resource+: {
+              aws_iot_billing_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -499,8 +499,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iot_ca_certificate: {
+            resource+: {
+              aws_iot_ca_certificate+: {
                 [tf_resource_key]: this,
               },
             },
@@ -781,8 +781,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iot_certificate: {
+            resource+: {
+              aws_iot_certificate+: {
                 [tf_resource_key]: this,
               },
             },
@@ -992,8 +992,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iot_domain_configuration: {
+            resource+: {
+              aws_iot_domain_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1269,8 +1269,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iot_event_configurations: {
+            resource+: {
+              aws_iot_event_configurations+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1455,8 +1455,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iot_indexing_configuration: {
+            resource+: {
+              aws_iot_indexing_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1844,8 +1844,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iot_logging_options: {
+            resource+: {
+              aws_iot_logging_options+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2036,8 +2036,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iot_policy: {
+            resource+: {
+              aws_iot_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2271,8 +2271,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iot_policy_attachment: {
+            resource+: {
+              aws_iot_policy_attachment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2460,8 +2460,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iot_provisioning_template: {
+            resource+: {
+              aws_iot_provisioning_template+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2711,8 +2711,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iot_role_alias: {
+            resource+: {
+              aws_iot_role_alias+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2922,8 +2922,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iot_thing: {
+            resource+: {
+              aws_iot_thing+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3129,8 +3129,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iot_thing_group: {
+            resource+: {
+              aws_iot_thing_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3441,8 +3441,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iot_thing_group_membership: {
+            resource+: {
+              aws_iot_thing_group_membership+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3633,8 +3633,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iot_thing_principal_attachment: {
+            resource+: {
+              aws_iot_thing_principal_attachment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3820,8 +3820,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iot_thing_type: {
+            resource+: {
+              aws_iot_thing_type+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4065,8 +4065,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iot_topic_rule: {
+            resource+: {
+              aws_iot_topic_rule+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6062,8 +6062,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iot_topic_rule_destination: {
+            resource+: {
+              aws_iot_topic_rule_destination+: {
                 [tf_resource_key]: this,
               },
             },

@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_pinpoint_adm_channel: {
+            resource+: {
+              aws_pinpoint_adm_channel+: {
                 [tf_resource_key]: this,
               },
             },
@@ -211,8 +211,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_pinpoint_apns_channel: {
+            resource+: {
+              aws_pinpoint_apns_channel+: {
                 [tf_resource_key]: this,
               },
             },
@@ -426,8 +426,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_pinpoint_apns_sandbox_channel: {
+            resource+: {
+              aws_pinpoint_apns_sandbox_channel+: {
                 [tf_resource_key]: this,
               },
             },
@@ -641,8 +641,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_pinpoint_apns_voip_channel: {
+            resource+: {
+              aws_pinpoint_apns_voip_channel+: {
                 [tf_resource_key]: this,
               },
             },
@@ -856,8 +856,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_pinpoint_apns_voip_sandbox_channel: {
+            resource+: {
+              aws_pinpoint_apns_voip_sandbox_channel+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1070,8 +1070,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_pinpoint_app: {
+            resource+: {
+              aws_pinpoint_app+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1370,8 +1370,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_pinpoint_baidu_channel: {
+            resource+: {
+              aws_pinpoint_baidu_channel+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1567,8 +1567,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_pinpoint_email_channel: {
+            resource+: {
+              aws_pinpoint_email_channel+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1778,8 +1778,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_pinpoint_email_template: {
+            resource+: {
+              aws_pinpoint_email_template+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2047,8 +2047,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_pinpoint_event_stream: {
+            resource+: {
+              aws_pinpoint_event_stream+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2238,8 +2238,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_pinpoint_gcm_channel: {
+            resource+: {
+              aws_pinpoint_gcm_channel+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2437,8 +2437,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_pinpoint_sms_channel: {
+            resource+: {
+              aws_pinpoint_sms_channel+: {
                 [tf_resource_key]: this,
               },
             },

@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_networkmanager_attachment_accepter: {
+            resource+: {
+              aws_networkmanager_attachment_accepter+: {
                 [tf_resource_key]: this,
               },
             },
@@ -268,8 +268,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_networkmanager_connect_attachment: {
+            resource+: {
+              aws_networkmanager_connect_attachment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -552,8 +552,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_networkmanager_connect_peer: {
+            resource+: {
+              aws_networkmanager_connect_peer+: {
                 [tf_resource_key]: this,
               },
             },
@@ -921,8 +921,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_networkmanager_connection: {
+            resource+: {
+              aws_networkmanager_connection+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1173,8 +1173,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_networkmanager_core_network: {
+            resource+: {
+              aws_networkmanager_core_network+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1534,8 +1534,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_networkmanager_core_network_policy_attachment: {
+            resource+: {
+              aws_networkmanager_core_network_policy_attachment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1744,8 +1744,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_networkmanager_customer_gateway_association: {
+            resource+: {
+              aws_networkmanager_customer_gateway_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1962,8 +1962,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_networkmanager_device: {
+            resource+: {
+              aws_networkmanager_device+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2272,8 +2272,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_networkmanager_dx_gateway_attachment: {
+            resource+: {
+              aws_networkmanager_dx_gateway_attachment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2545,8 +2545,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_networkmanager_global_network: {
+            resource+: {
+              aws_networkmanager_global_network+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2779,8 +2779,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_networkmanager_link: {
+            resource+: {
+              aws_networkmanager_link+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3052,8 +3052,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_networkmanager_link_association: {
+            resource+: {
+              aws_networkmanager_link_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3266,8 +3266,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_networkmanager_site: {
+            resource+: {
+              aws_networkmanager_site+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3532,8 +3532,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_networkmanager_site_to_site_vpn_attachment: {
+            resource+: {
+              aws_networkmanager_site_to_site_vpn_attachment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3802,8 +3802,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_networkmanager_transit_gateway_connect_peer_association: {
+            resource+: {
+              aws_networkmanager_transit_gateway_connect_peer_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4021,8 +4021,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_networkmanager_transit_gateway_peering: {
+            resource+: {
+              aws_networkmanager_transit_gateway_peering+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4276,8 +4276,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_networkmanager_transit_gateway_registration: {
+            resource+: {
+              aws_networkmanager_transit_gateway_registration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4487,8 +4487,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_networkmanager_transit_gateway_route_table_attachment: {
+            resource+: {
+              aws_networkmanager_transit_gateway_route_table_attachment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4755,8 +4755,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_networkmanager_vpc_attachment: {
+            resource+: {
+              aws_networkmanager_vpc_attachment+: {
                 [tf_resource_key]: this,
               },
             },

@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc: {
+            resource+: {
+              aws_vpc+: {
                 [tf_resource_key]: this,
               },
             },
@@ -288,8 +288,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_block_public_access_exclusion: {
+            resource+: {
+              aws_vpc_block_public_access_exclusion+: {
                 [tf_resource_key]: this,
               },
             },
@@ -528,8 +528,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_block_public_access_options: {
+            resource+: {
+              aws_vpc_block_public_access_options+: {
                 [tf_resource_key]: this,
               },
             },
@@ -747,8 +747,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_dhcp_options: {
+            resource+: {
+              aws_vpc_dhcp_options+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1005,8 +1005,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_dhcp_options_association: {
+            resource+: {
+              aws_vpc_dhcp_options_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1192,8 +1192,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_endpoint: {
+            resource+: {
+              aws_vpc_endpoint+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1626,8 +1626,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_endpoint_connection_accepter: {
+            resource+: {
+              aws_vpc_endpoint_connection_accepter+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1818,8 +1818,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_endpoint_connection_notification: {
+            resource+: {
+              aws_vpc_endpoint_connection_notification+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2031,8 +2031,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_endpoint_policy: {
+            resource+: {
+              aws_vpc_endpoint_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2242,8 +2242,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_endpoint_private_dns: {
+            resource+: {
+              aws_vpc_endpoint_private_dns+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2426,8 +2426,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_endpoint_route_table_association: {
+            resource+: {
+              aws_vpc_endpoint_route_table_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2614,8 +2614,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_endpoint_security_group_association: {
+            resource+: {
+              aws_vpc_endpoint_security_group_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2805,8 +2805,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_endpoint_service: {
+            resource+: {
+              aws_vpc_endpoint_service+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3190,8 +3190,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_endpoint_service_allowed_principal: {
+            resource+: {
+              aws_vpc_endpoint_service_allowed_principal+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3377,8 +3377,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_endpoint_service_private_dns_verification: {
+            resource+: {
+              aws_vpc_endpoint_service_private_dns_verification+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3578,8 +3578,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_endpoint_subnet_association: {
+            resource+: {
+              aws_vpc_endpoint_subnet_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3788,8 +3788,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_ipam: {
+            resource+: {
+              aws_vpc_ipam+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4074,8 +4074,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_ipam_organization_admin_account: {
+            resource+: {
+              aws_vpc_ipam_organization_admin_account+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4274,8 +4274,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_ipam_pool: {
+            resource+: {
+              aws_vpc_ipam_pool+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4574,8 +4574,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_ipam_pool_cidr: {
+            resource+: {
+              aws_vpc_ipam_pool_cidr+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4815,8 +4815,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_ipam_pool_cidr_allocation: {
+            resource+: {
+              aws_vpc_ipam_pool_cidr_allocation+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5040,8 +5040,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_ipam_preview_next_cidr: {
+            resource+: {
+              aws_vpc_ipam_preview_next_cidr+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5245,8 +5245,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_ipam_resource_discovery: {
+            resource+: {
+              aws_vpc_ipam_resource_discovery+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5512,8 +5512,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_ipam_resource_discovery_association: {
+            resource+: {
+              aws_vpc_ipam_resource_discovery_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5768,8 +5768,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_ipam_scope: {
+            resource+: {
+              aws_vpc_ipam_scope+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6020,8 +6020,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_ipv4_cidr_block_association: {
+            resource+: {
+              aws_vpc_ipv4_cidr_block_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6238,8 +6238,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_ipv6_cidr_block_association: {
+            resource+: {
+              aws_vpc_ipv6_cidr_block_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6473,8 +6473,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_network_performance_metric_subscription: {
+            resource+: {
+              aws_vpc_network_performance_metric_subscription+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6673,8 +6673,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_peering_connection: {
+            resource+: {
+              aws_vpc_peering_connection+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6955,8 +6955,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_peering_connection_accepter: {
+            resource+: {
+              aws_vpc_peering_connection_accepter+: {
                 [tf_resource_key]: this,
               },
             },
@@ -7235,8 +7235,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_peering_connection_options: {
+            resource+: {
+              aws_vpc_peering_connection_options+: {
                 [tf_resource_key]: this,
               },
             },
@@ -7453,8 +7453,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_security_group_egress_rule: {
+            resource+: {
+              aws_vpc_security_group_egress_rule+: {
                 [tf_resource_key]: this,
               },
             },
@@ -7693,8 +7693,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_security_group_ingress_rule: {
+            resource+: {
+              aws_vpc_security_group_ingress_rule+: {
                 [tf_resource_key]: this,
               },
             },
@@ -7933,8 +7933,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpc_security_group_vpc_association: {
+            resource+: {
+              aws_vpc_security_group_vpc_association+: {
                 [tf_resource_key]: this,
               },
             },

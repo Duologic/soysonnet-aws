@@ -17,8 +17,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appmesh_gateway_route: {
+            resource+: {
+              aws_appmesh_gateway_route+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1526,8 +1526,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appmesh_mesh: {
+            resource+: {
+              aws_appmesh_mesh+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1805,8 +1805,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appmesh_route: {
+            resource+: {
+              aws_appmesh_route+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3884,8 +3884,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appmesh_virtual_gateway: {
+            resource+: {
+              aws_appmesh_virtual_gateway+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5352,8 +5352,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appmesh_virtual_node: {
+            resource+: {
+              aws_appmesh_virtual_node+: {
                 [tf_resource_key]: this,
               },
             },
@@ -7937,8 +7937,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appmesh_virtual_router: {
+            resource+: {
+              aws_appmesh_virtual_router+: {
                 [tf_resource_key]: this,
               },
             },
@@ -8218,8 +8218,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appmesh_virtual_service: {
+            resource+: {
+              aws_appmesh_virtual_service+: {
                 [tf_resource_key]: this,
               },
             },

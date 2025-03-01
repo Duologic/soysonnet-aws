@@ -17,8 +17,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_acmpca_certificate: {
+            resource+: {
+              aws_acmpca_certificate+: {
                 [tf_resource_key]: this,
               },
             },
@@ -251,8 +251,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_acmpca_certificate_authority: {
+            resource+: {
+              aws_acmpca_certificate_authority+: {
                 [tf_resource_key]: this,
               },
             },
@@ -751,8 +751,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_acmpca_certificate_authority_certificate: {
+            resource+: {
+              aws_acmpca_certificate_authority_certificate+: {
                 [tf_resource_key]: this,
               },
             },
@@ -944,8 +944,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_acmpca_permission: {
+            resource+: {
+              aws_acmpca_permission+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1154,8 +1154,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_acmpca_policy: {
+            resource+: {
+              aws_acmpca_policy+: {
                 [tf_resource_key]: this,
               },
             },

@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_route53_delegation_set: {
+            data+: {
+              aws_route53_delegation_set+: {
                 [tf_resource_key]: this,
               },
             },
@@ -80,8 +80,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_route53_records: {
+            data+: {
+              aws_route53_records+: {
                 [tf_resource_key]: this,
               },
             },
@@ -348,8 +348,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_route53_resolver_endpoint: {
+            data+: {
+              aws_route53_resolver_endpoint+: {
                 [tf_resource_key]: this,
               },
             },
@@ -484,8 +484,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_route53_resolver_firewall_config: {
+            data+: {
+              aws_route53_resolver_firewall_config+: {
                 [tf_resource_key]: this,
               },
             },
@@ -540,8 +540,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_route53_resolver_firewall_domain_list: {
+            data+: {
+              aws_route53_resolver_firewall_domain_list+: {
                 [tf_resource_key]: this,
               },
             },
@@ -624,8 +624,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_route53_resolver_firewall_rule_group: {
+            data+: {
+              aws_route53_resolver_firewall_rule_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -712,8 +712,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_route53_resolver_firewall_rule_group_association: {
+            data+: {
+              aws_route53_resolver_firewall_rule_group_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -808,8 +808,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_route53_resolver_firewall_rules: {
+            data+: {
+              aws_route53_resolver_firewall_rules+: {
                 [tf_resource_key]: this,
               },
             },
@@ -929,8 +929,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_route53_resolver_query_log_config: {
+            data+: {
+              aws_route53_resolver_query_log_config+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1040,8 +1040,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_route53_resolver_rule: {
+            data+: {
+              aws_route53_resolver_rule+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1123,8 +1123,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_route53_resolver_rules: {
+            data+: {
+              aws_route53_resolver_rules+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1200,8 +1200,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_route53_traffic_policy_document: {
+            data+: {
+              aws_route53_traffic_policy_document+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1557,8 +1557,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_route53_zone: {
+            data+: {
+              aws_route53_zone+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1666,8 +1666,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_route53_zones: {
+            data+: {
+              aws_route53_zones+: {
                 [tf_resource_key]: this,
               },
             },

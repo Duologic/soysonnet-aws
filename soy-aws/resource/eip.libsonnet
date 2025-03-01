@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_eip: {
+            resource+: {
+              aws_eip+: {
                 [tf_resource_key]: this,
               },
             },
@@ -316,8 +316,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_eip_association: {
+            resource+: {
+              aws_eip_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -520,8 +520,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_eip_domain_name: {
+            resource+: {
+              aws_eip_domain_name+: {
                 [tf_resource_key]: this,
               },
             },

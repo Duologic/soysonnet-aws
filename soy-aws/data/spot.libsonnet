@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_spot_datafeed_subscription: {
+            data+: {
+              aws_spot_datafeed_subscription+: {
                 [tf_resource_key]: this,
               },
             },

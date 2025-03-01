@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_redshiftserverless_credentials: {
+            data+: {
+              aws_redshiftserverless_credentials+: {
                 [tf_resource_key]: this,
               },
             },
@@ -82,8 +82,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_redshiftserverless_namespace: {
+            data+: {
+              aws_redshiftserverless_namespace+: {
                 [tf_resource_key]: this,
               },
             },
@@ -182,8 +182,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_redshiftserverless_workgroup: {
+            data+: {
+              aws_redshiftserverless_workgroup+: {
                 [tf_resource_key]: this,
               },
             },

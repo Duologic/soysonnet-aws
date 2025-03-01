@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_securitylake_aws_log_source: {
+            resource+: {
+              aws_securitylake_aws_log_source+: {
                 [tf_resource_key]: this,
               },
             },
@@ -246,8 +246,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_securitylake_custom_log_source: {
+            resource+: {
+              aws_securitylake_custom_log_source+: {
                 [tf_resource_key]: this,
               },
             },
@@ -569,8 +569,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_securitylake_data_lake: {
+            resource+: {
+              aws_securitylake_data_lake+: {
                 [tf_resource_key]: this,
               },
             },
@@ -950,8 +950,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_securitylake_subscriber: {
+            resource+: {
+              aws_securitylake_subscriber+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1366,8 +1366,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_securitylake_subscriber_notification: {
+            resource+: {
+              aws_securitylake_subscriber_notification+: {
                 [tf_resource_key]: this,
               },
             },

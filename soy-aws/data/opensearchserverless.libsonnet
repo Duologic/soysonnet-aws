@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_opensearchserverless_access_policy: {
+            data+: {
+              aws_opensearchserverless_access_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -78,8 +78,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_opensearchserverless_collection: {
+            data+: {
+              aws_opensearchserverless_collection+: {
                 [tf_resource_key]: this,
               },
             },
@@ -179,8 +179,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_opensearchserverless_lifecycle_policy: {
+            data+: {
+              aws_opensearchserverless_lifecycle_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -251,8 +251,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_opensearchserverless_security_config: {
+            data+: {
+              aws_opensearchserverless_security_config+: {
                 [tf_resource_key]: this,
               },
             },
@@ -351,8 +351,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_opensearchserverless_security_policy: {
+            data+: {
+              aws_opensearchserverless_security_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -423,8 +423,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_opensearchserverless_vpc_endpoint: {
+            data+: {
+              aws_opensearchserverless_vpc_endpoint+: {
                 [tf_resource_key]: this,
               },
             },

@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_codeartifact_domain: {
+            resource+: {
+              aws_codeartifact_domain+: {
                 [tf_resource_key]: this,
               },
             },
@@ -242,8 +242,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_codeartifact_domain_permissions_policy: {
+            resource+: {
+              aws_codeartifact_domain_permissions_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -442,8 +442,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_codeartifact_repository: {
+            resource+: {
+              aws_codeartifact_repository+: {
                 [tf_resource_key]: this,
               },
             },
@@ -714,8 +714,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_codeartifact_repository_permissions_policy: {
+            resource+: {
+              aws_codeartifact_repository_permissions_policy+: {
                 [tf_resource_key]: this,
               },
             },

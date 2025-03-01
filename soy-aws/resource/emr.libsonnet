@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_emr_block_public_access_configuration: {
+            resource+: {
+              aws_emr_block_public_access_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -225,8 +225,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_emr_cluster: {
+            resource+: {
+              aws_emr_cluster+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1451,8 +1451,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_emr_instance_fleet: {
+            resource+: {
+              aws_emr_instance_fleet+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1828,8 +1828,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_emr_instance_group: {
+            resource+: {
+              aws_emr_instance_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2082,8 +2082,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_emr_managed_scaling_policy: {
+            resource+: {
+              aws_emr_managed_scaling_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2303,8 +2303,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_emr_security_configuration: {
+            resource+: {
+              aws_emr_security_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2505,8 +2505,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_emr_studio: {
+            resource+: {
+              aws_emr_studio+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2772,8 +2772,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_emr_studio_session_mapping: {
+            resource+: {
+              aws_emr_studio_session_mapping+: {
                 [tf_resource_key]: this,
               },
             },

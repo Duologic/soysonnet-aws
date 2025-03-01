@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudfront_cache_policy: {
+            resource+: {
+              aws_cloudfront_cache_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -445,8 +445,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudfront_continuous_deployment_policy: {
+            resource+: {
+              aws_cloudfront_continuous_deployment_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -772,8 +772,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudfront_distribution: {
+            resource+: {
+              aws_cloudfront_distribution+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2264,8 +2264,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudfront_field_level_encryption_config: {
+            resource+: {
+              aws_cloudfront_field_level_encryption_config+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2592,8 +2592,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudfront_field_level_encryption_profile: {
+            resource+: {
+              aws_cloudfront_field_level_encryption_profile+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2859,8 +2859,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudfront_function: {
+            resource+: {
+              aws_cloudfront_function+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3089,8 +3089,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudfront_key_group: {
+            resource+: {
+              aws_cloudfront_key_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3294,8 +3294,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudfront_key_value_store: {
+            resource+: {
+              aws_cloudfront_key_value_store+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3511,8 +3511,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudfront_monitoring_subscription: {
+            resource+: {
+              aws_cloudfront_monitoring_subscription+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3731,8 +3731,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudfront_origin_access_control: {
+            resource+: {
+              aws_cloudfront_origin_access_control+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3933,8 +3933,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudfront_origin_access_identity: {
+            resource+: {
+              aws_cloudfront_origin_access_identity+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4139,8 +4139,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudfront_origin_request_policy: {
+            resource+: {
+              aws_cloudfront_origin_request_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4492,8 +4492,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudfront_public_key: {
+            resource+: {
+              aws_cloudfront_public_key+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4698,8 +4698,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudfront_realtime_log_config: {
+            resource+: {
+              aws_cloudfront_realtime_log_config+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4951,8 +4951,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudfront_response_headers_policy: {
+            resource+: {
+              aws_cloudfront_response_headers_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5640,8 +5640,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudfront_vpc_origin: {
+            resource+: {
+              aws_cloudfront_vpc_origin+: {
                 [tf_resource_key]: this,
               },
             },

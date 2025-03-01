@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_redshift_authentication_profile: {
+            resource+: {
+              aws_redshift_authentication_profile+: {
                 [tf_resource_key]: this,
               },
             },
@@ -203,8 +203,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_redshift_cluster: {
+            resource+: {
+              aws_redshift_cluster+: {
                 [tf_resource_key]: this,
               },
             },
@@ -735,8 +735,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_redshift_cluster_iam_roles: {
+            resource+: {
+              aws_redshift_cluster_iam_roles+: {
                 [tf_resource_key]: this,
               },
             },
@@ -966,8 +966,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_redshift_cluster_snapshot: {
+            resource+: {
+              aws_redshift_cluster_snapshot+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1186,8 +1186,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_redshift_data_share_authorization: {
+            resource+: {
+              aws_redshift_data_share_authorization+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1385,8 +1385,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_redshift_data_share_consumer_association: {
+            resource+: {
+              aws_redshift_data_share_consumer_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1594,8 +1594,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_redshift_endpoint_access: {
+            resource+: {
+              aws_redshift_endpoint_access+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1872,8 +1872,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_redshift_endpoint_authorization: {
+            resource+: {
+              aws_redshift_endpoint_authorization+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2094,8 +2094,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_redshift_event_subscription: {
+            resource+: {
+              aws_redshift_event_subscription+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2378,8 +2378,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_redshift_hsm_client_certificate: {
+            resource+: {
+              aws_redshift_hsm_client_certificate+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2590,8 +2590,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_redshift_hsm_configuration: {
+            resource+: {
+              aws_redshift_hsm_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2813,8 +2813,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_redshift_logging: {
+            resource+: {
+              aws_redshift_logging+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3023,8 +3023,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_redshift_parameter_group: {
+            resource+: {
+              aws_redshift_parameter_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3263,8 +3263,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_redshift_partner: {
+            resource+: {
+              aws_redshift_partner+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3467,8 +3467,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_redshift_resource_policy: {
+            resource+: {
+              aws_redshift_resource_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3657,8 +3657,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_redshift_scheduled_action: {
+            resource+: {
+              aws_redshift_scheduled_action+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3977,8 +3977,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_redshift_snapshot_copy: {
+            resource+: {
+              aws_redshift_snapshot_copy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4176,8 +4176,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_redshift_snapshot_copy_grant: {
+            resource+: {
+              aws_redshift_snapshot_copy_grant+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4383,8 +4383,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_redshift_snapshot_schedule: {
+            resource+: {
+              aws_redshift_snapshot_schedule+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4613,8 +4613,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_redshift_snapshot_schedule_association: {
+            resource+: {
+              aws_redshift_snapshot_schedule_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4801,8 +4801,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_redshift_subnet_group: {
+            resource+: {
+              aws_redshift_subnet_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5025,8 +5025,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_redshift_usage_limit: {
+            resource+: {
+              aws_redshift_usage_limit+: {
                 [tf_resource_key]: this,
               },
             },

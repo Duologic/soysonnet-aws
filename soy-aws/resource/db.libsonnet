@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_db_cluster_snapshot: {
+            resource+: {
+              aws_db_cluster_snapshot+: {
                 [tf_resource_key]: this,
               },
             },
@@ -311,8 +311,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_db_event_subscription: {
+            resource+: {
+              aws_db_event_subscription+: {
                 [tf_resource_key]: this,
               },
             },
@@ -591,8 +591,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_db_instance: {
+            resource+: {
+              aws_db_instance+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1306,8 +1306,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_db_instance_automated_backups_replication: {
+            resource+: {
+              aws_db_instance_automated_backups_replication+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1526,8 +1526,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_db_instance_role_association: {
+            resource+: {
+              aws_db_instance_role_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1741,8 +1741,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_db_option_group: {
+            resource+: {
+              aws_db_option_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2065,8 +2065,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_db_parameter_group: {
+            resource+: {
+              aws_db_parameter_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2318,8 +2318,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_db_proxy: {
+            resource+: {
+              aws_db_proxy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2644,8 +2644,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_db_proxy_default_target_group: {
+            resource+: {
+              aws_db_proxy_default_target_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2913,8 +2913,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_db_proxy_endpoint: {
+            resource+: {
+              aws_db_proxy_endpoint+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3194,8 +3194,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_db_proxy_target: {
+            resource+: {
+              aws_db_proxy_target+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3414,8 +3414,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_db_snapshot: {
+            resource+: {
+              aws_db_snapshot+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3717,8 +3717,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_db_snapshot_copy: {
+            resource+: {
+              aws_db_snapshot_copy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4027,8 +4027,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_db_subnet_group: {
+            resource+: {
+              aws_db_subnet_group+: {
                 [tf_resource_key]: this,
               },
             },

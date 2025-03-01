@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_media_convert_queue: {
+            resource+: {
+              aws_media_convert_queue+: {
                 [tf_resource_key]: this,
               },
             },
@@ -262,8 +262,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_media_package_channel: {
+            resource+: {
+              aws_media_package_channel+: {
                 [tf_resource_key]: this,
               },
             },
@@ -517,8 +517,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_media_packagev2_channel_group: {
+            resource+: {
+              aws_media_packagev2_channel_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -724,8 +724,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_media_store_container: {
+            resource+: {
+              aws_media_store_container+: {
                 [tf_resource_key]: this,
               },
             },
@@ -932,8 +932,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_media_store_container_policy: {
+            resource+: {
+              aws_media_store_container_policy+: {
                 [tf_resource_key]: this,
               },
             },

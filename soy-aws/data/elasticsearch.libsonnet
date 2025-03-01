@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_elasticsearch_domain: {
+            data+: {
+              aws_elasticsearch_domain+: {
                 [tf_resource_key]: this,
               },
             },

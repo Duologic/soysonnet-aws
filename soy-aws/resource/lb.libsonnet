@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lb: {
+            resource+: {
+              aws_lb+: {
                 [tf_resource_key]: this,
               },
             },
@@ -467,8 +467,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lb_cookie_stickiness_policy: {
+            resource+: {
+              aws_lb_cookie_stickiness_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -663,8 +663,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lb_listener: {
+            resource+: {
+              aws_lb_listener+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1351,8 +1351,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lb_listener_certificate: {
+            resource+: {
+              aws_lb_listener_certificate+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1540,8 +1540,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lb_listener_rule: {
+            resource+: {
+              aws_lb_listener_rule+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2270,8 +2270,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lb_ssl_negotiation_policy: {
+            resource+: {
+              aws_lb_ssl_negotiation_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2494,8 +2494,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lb_target_group: {
+            resource+: {
+              aws_lb_target_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3005,8 +3005,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lb_target_group_attachment: {
+            resource+: {
+              aws_lb_target_group_attachment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3201,8 +3201,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lb_trust_store: {
+            resource+: {
+              aws_lb_trust_store+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3449,8 +3449,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lb_trust_store_revocation: {
+            resource+: {
+              aws_lb_trust_store_revocation+: {
                 [tf_resource_key]: this,
               },
             },

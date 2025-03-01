@@ -17,8 +17,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_fis_experiment_template: {
+            resource+: {
+              aws_fis_experiment_template+: {
                 [tf_resource_key]: this,
               },
             },

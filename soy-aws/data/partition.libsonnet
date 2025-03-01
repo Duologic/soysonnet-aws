@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_partition: {
+            data+: {
+              aws_partition+: {
                 [tf_resource_key]: this,
               },
             },

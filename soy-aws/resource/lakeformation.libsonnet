@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lakeformation_data_cells_filter: {
+            resource+: {
+              aws_lakeformation_data_cells_filter+: {
                 [tf_resource_key]: this,
               },
             },
@@ -328,8 +328,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lakeformation_data_lake_settings: {
+            resource+: {
+              aws_lakeformation_data_lake_settings+: {
                 [tf_resource_key]: this,
               },
             },
@@ -670,8 +670,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lakeformation_lf_tag: {
+            resource+: {
+              aws_lakeformation_lf_tag+: {
                 [tf_resource_key]: this,
               },
             },
@@ -872,8 +872,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lakeformation_permissions: {
+            resource+: {
+              aws_lakeformation_permissions+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1382,8 +1382,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lakeformation_resource: {
+            resource+: {
+              aws_lakeformation_resource+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1584,8 +1584,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lakeformation_resource_lf_tag: {
+            resource+: {
+              aws_lakeformation_resource_lf_tag+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1956,8 +1956,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lakeformation_resource_lf_tags: {
+            resource+: {
+              aws_lakeformation_resource_lf_tags+: {
                 [tf_resource_key]: this,
               },
             },

@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_iot_endpoint: {
+            data+: {
+              aws_iot_endpoint+: {
                 [tf_resource_key]: this,
               },
             },
@@ -64,8 +64,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_iot_registration_code: {
+            data+: {
+              aws_iot_registration_code+: {
                 [tf_resource_key]: this,
               },
             },

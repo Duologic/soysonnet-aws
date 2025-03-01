@@ -17,8 +17,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appautoscaling_policy: {
+            resource+: {
+              aws_appautoscaling_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -585,8 +585,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appautoscaling_scheduled_action: {
+            resource+: {
+              aws_appautoscaling_scheduled_action+: {
                 [tf_resource_key]: this,
               },
             },
@@ -827,8 +827,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appautoscaling_target: {
+            resource+: {
+              aws_appautoscaling_target+: {
                 [tf_resource_key]: this,
               },
             },

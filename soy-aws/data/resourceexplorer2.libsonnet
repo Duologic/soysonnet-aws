@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_resourceexplorer2_search: {
+            data+: {
+              aws_resourceexplorer2_search+: {
                 [tf_resource_key]: this,
               },
             },

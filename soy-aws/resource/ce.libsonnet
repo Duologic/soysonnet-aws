@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ce_anomaly_monitor: {
+            resource+: {
+              aws_ce_anomaly_monitor+: {
                 [tf_resource_key]: this,
               },
             },
@@ -233,8 +233,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ce_anomaly_subscription: {
+            resource+: {
+              aws_ce_anomaly_subscription+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1317,8 +1317,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ce_cost_allocation_tag: {
+            resource+: {
+              aws_ce_cost_allocation_tag+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1510,8 +1510,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ce_cost_category: {
+            resource+: {
+              aws_ce_cost_category+: {
                 [tf_resource_key]: this,
               },
             },

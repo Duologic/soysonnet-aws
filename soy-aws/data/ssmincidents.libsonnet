@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ssmincidents_replication_set: {
+            data+: {
+              aws_ssmincidents_replication_set+: {
                 [tf_resource_key]: this,
               },
             },
@@ -119,8 +119,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ssmincidents_response_plan: {
+            data+: {
+              aws_ssmincidents_response_plan+: {
                 [tf_resource_key]: this,
               },
             },

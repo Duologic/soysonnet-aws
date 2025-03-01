@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_grafana_workspace: {
+            data+: {
+              aws_grafana_workspace+: {
                 [tf_resource_key]: this,
               },
             },

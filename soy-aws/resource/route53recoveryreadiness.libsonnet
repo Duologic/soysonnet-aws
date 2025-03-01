@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53recoveryreadiness_cell: {
+            resource+: {
+              aws_route53recoveryreadiness_cell+: {
                 [tf_resource_key]: this,
               },
             },
@@ -263,8 +263,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53recoveryreadiness_readiness_check: {
+            resource+: {
+              aws_route53recoveryreadiness_readiness_check+: {
                 [tf_resource_key]: this,
               },
             },
@@ -487,8 +487,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53recoveryreadiness_recovery_group: {
+            resource+: {
+              aws_route53recoveryreadiness_recovery_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -723,8 +723,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53recoveryreadiness_resource_set: {
+            resource+: {
+              aws_route53recoveryreadiness_resource_set+: {
                 [tf_resource_key]: this,
               },
             },

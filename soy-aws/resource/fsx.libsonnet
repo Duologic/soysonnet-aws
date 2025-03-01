@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_fsx_backup: {
+            resource+: {
+              aws_fsx_backup+: {
                 [tf_resource_key]: this,
               },
             },
@@ -257,8 +257,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_fsx_data_repository_association: {
+            resource+: {
+              aws_fsx_data_repository_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -601,8 +601,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_fsx_file_cache: {
+            resource+: {
+              aws_fsx_file_cache+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1111,8 +1111,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_fsx_lustre_file_system: {
+            resource+: {
+              aws_fsx_lustre_file_system+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1565,8 +1565,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_fsx_ontap_file_system: {
+            resource+: {
+              aws_fsx_ontap_file_system+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2027,8 +2027,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_fsx_ontap_storage_virtual_machine: {
+            resource+: {
+              aws_fsx_ontap_storage_virtual_machine+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2536,8 +2536,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_fsx_ontap_volume: {
+            resource+: {
+              aws_fsx_ontap_volume+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3104,8 +3104,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_fsx_openzfs_file_system: {
+            resource+: {
+              aws_fsx_openzfs_file_system+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3638,8 +3638,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_fsx_openzfs_snapshot: {
+            resource+: {
+              aws_fsx_openzfs_snapshot+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3885,8 +3885,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_fsx_openzfs_volume: {
+            resource+: {
+              aws_fsx_openzfs_volume+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4268,8 +4268,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_fsx_windows_file_system: {
+            resource+: {
+              aws_fsx_windows_file_system+: {
                 [tf_resource_key]: this,
               },
             },

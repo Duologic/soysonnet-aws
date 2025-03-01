@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_organizations_delegated_administrators: {
+            data+: {
+              aws_organizations_delegated_administrators+: {
                 [tf_resource_key]: this,
               },
             },
@@ -111,8 +111,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_organizations_delegated_services: {
+            data+: {
+              aws_organizations_delegated_services+: {
                 [tf_resource_key]: this,
               },
             },
@@ -184,8 +184,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_organizations_organization: {
+            data+: {
+              aws_organizations_organization+: {
                 [tf_resource_key]: this,
               },
             },
@@ -413,8 +413,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_organizations_organizational_unit: {
+            data+: {
+              aws_organizations_organizational_unit+: {
                 [tf_resource_key]: this,
               },
             },
@@ -469,8 +469,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_organizations_organizational_unit_child_accounts: {
+            data+: {
+              aws_organizations_organizational_unit_child_accounts+: {
                 [tf_resource_key]: this,
               },
             },
@@ -555,8 +555,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_organizations_organizational_unit_descendant_accounts: {
+            data+: {
+              aws_organizations_organizational_unit_descendant_accounts+: {
                 [tf_resource_key]: this,
               },
             },
@@ -641,8 +641,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_organizations_organizational_unit_descendant_organizational_units: {
+            data+: {
+              aws_organizations_organizational_unit_descendant_organizational_units+: {
                 [tf_resource_key]: this,
               },
             },
@@ -719,8 +719,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_organizations_organizational_units: {
+            data+: {
+              aws_organizations_organizational_units+: {
                 [tf_resource_key]: this,
               },
             },
@@ -797,8 +797,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_organizations_policies: {
+            data+: {
+              aws_organizations_policies+: {
                 [tf_resource_key]: this,
               },
             },
@@ -860,8 +860,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_organizations_policies_for_target: {
+            data+: {
+              aws_organizations_policies_for_target+: {
                 [tf_resource_key]: this,
               },
             },
@@ -926,8 +926,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_organizations_policy: {
+            data+: {
+              aws_organizations_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -998,8 +998,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_organizations_resource_tags: {
+            data+: {
+              aws_organizations_resource_tags+: {
                 [tf_resource_key]: this,
               },
             },

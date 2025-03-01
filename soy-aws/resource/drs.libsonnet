@@ -24,8 +24,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_drs_replication_configuration_template: {
+            resource+: {
+              aws_drs_replication_configuration_template+: {
                 [tf_resource_key]: this,
               },
             },

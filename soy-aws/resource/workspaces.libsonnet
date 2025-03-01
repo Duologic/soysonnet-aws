@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_workspaces_connection_alias: {
+            resource+: {
+              aws_workspaces_connection_alias+: {
                 [tf_resource_key]: this,
               },
             },
@@ -244,8 +244,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_workspaces_directory: {
+            resource+: {
+              aws_workspaces_directory+: {
                 [tf_resource_key]: this,
               },
             },
@@ -683,8 +683,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_workspaces_ip_group: {
+            resource+: {
+              aws_workspaces_ip_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -914,8 +914,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_workspaces_workspace: {
+            resource+: {
+              aws_workspaces_workspace+: {
                 [tf_resource_key]: this,
               },
             },

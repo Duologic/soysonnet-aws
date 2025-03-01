@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_rolesanywhere_profile: {
+            resource+: {
+              aws_rolesanywhere_profile+: {
                 [tf_resource_key]: this,
               },
             },
@@ -262,8 +262,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_rolesanywhere_trust_anchor: {
+            resource+: {
+              aws_rolesanywhere_trust_anchor+: {
                 [tf_resource_key]: this,
               },
             },

@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_efs_access_point: {
+            data+: {
+              aws_efs_access_point+: {
                 [tf_resource_key]: this,
               },
             },
@@ -178,8 +178,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_efs_access_points: {
+            data+: {
+              aws_efs_access_points+: {
                 [tf_resource_key]: this,
               },
             },
@@ -253,8 +253,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_efs_file_system: {
+            data+: {
+              aws_efs_file_system+: {
                 [tf_resource_key]: this,
               },
             },
@@ -408,8 +408,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_efs_mount_target: {
+            data+: {
+              aws_efs_mount_target+: {
                 [tf_resource_key]: this,
               },
             },

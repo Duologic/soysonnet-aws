@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_datasync_agent: {
+            resource+: {
+              aws_datasync_agent+: {
                 [tf_resource_key]: this,
               },
             },
@@ -279,8 +279,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_datasync_location_azure_blob: {
+            resource+: {
+              aws_datasync_location_azure_blob+: {
                 [tf_resource_key]: this,
               },
             },
@@ -534,8 +534,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_datasync_location_efs: {
+            resource+: {
+              aws_datasync_location_efs+: {
                 [tf_resource_key]: this,
               },
             },
@@ -793,8 +793,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_datasync_location_fsx_lustre_file_system: {
+            resource+: {
+              aws_datasync_location_fsx_lustre_file_system+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1024,8 +1024,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_datasync_location_fsx_ontap_file_system: {
+            resource+: {
+              aws_datasync_location_fsx_ontap_file_system+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1382,8 +1382,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_datasync_location_fsx_openzfs_file_system: {
+            resource+: {
+              aws_datasync_location_fsx_openzfs_file_system+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1669,8 +1669,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_datasync_location_fsx_windows_file_system: {
+            resource+: {
+              aws_datasync_location_fsx_windows_file_system+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1911,8 +1911,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_datasync_location_hdfs: {
+            resource+: {
+              aws_datasync_location_hdfs+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2223,8 +2223,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_datasync_location_nfs: {
+            resource+: {
+              aws_datasync_location_nfs+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2482,8 +2482,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_datasync_location_object_storage: {
+            resource+: {
+              aws_datasync_location_object_storage+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2733,8 +2733,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_datasync_location_s3: {
+            resource+: {
+              aws_datasync_location_s3+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2983,8 +2983,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_datasync_location_smb: {
+            resource+: {
+              aws_datasync_location_smb+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3238,8 +3238,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_datasync_task: {
+            resource+: {
+              aws_datasync_task+: {
                 [tf_resource_key]: this,
               },
             },

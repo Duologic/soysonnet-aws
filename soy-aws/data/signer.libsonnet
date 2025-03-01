@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_signer_signing_job: {
+            data+: {
+              aws_signer_signing_job+: {
                 [tf_resource_key]: this,
               },
             },
@@ -232,8 +232,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_signer_signing_profile: {
+            data+: {
+              aws_signer_signing_profile+: {
                 [tf_resource_key]: this,
               },
             },

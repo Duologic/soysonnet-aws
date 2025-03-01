@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_devicefarm_device_pool: {
+            resource+: {
+              aws_devicefarm_device_pool+: {
                 [tf_resource_key]: this,
               },
             },
@@ -265,8 +265,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_devicefarm_instance_profile: {
+            resource+: {
+              aws_devicefarm_instance_profile+: {
                 [tf_resource_key]: this,
               },
             },
@@ -495,8 +495,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_devicefarm_network_profile: {
+            resource+: {
+              aws_devicefarm_network_profile+: {
                 [tf_resource_key]: this,
               },
             },
@@ -742,8 +742,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_devicefarm_project: {
+            resource+: {
+              aws_devicefarm_project+: {
                 [tf_resource_key]: this,
               },
             },
@@ -949,8 +949,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_devicefarm_test_grid_project: {
+            resource+: {
+              aws_devicefarm_test_grid_project+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1211,8 +1211,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_devicefarm_upload: {
+            resource+: {
+              aws_devicefarm_upload+: {
                 [tf_resource_key]: this,
               },
             },

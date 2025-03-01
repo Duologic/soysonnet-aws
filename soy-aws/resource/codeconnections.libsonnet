@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_codeconnections_connection: {
+            resource+: {
+              aws_codeconnections_connection+: {
                 [tf_resource_key]: this,
               },
             },
@@ -264,8 +264,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_codeconnections_host: {
+            resource+: {
+              aws_codeconnections_host+: {
                 [tf_resource_key]: this,
               },
             },

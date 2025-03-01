@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_arn: {
+            data+: {
+              aws_arn+: {
                 [tf_resource_key]: this,
               },
             },

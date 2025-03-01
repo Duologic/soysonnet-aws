@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_emrserverless_application: {
+            resource+: {
+              aws_emrserverless_application+: {
                 [tf_resource_key]: this,
               },
             },

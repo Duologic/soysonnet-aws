@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_snapshot_create_volume_permission: {
+            resource+: {
+              aws_snapshot_create_volume_permission+: {
                 [tf_resource_key]: this,
               },
             },

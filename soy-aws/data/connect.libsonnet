@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_connect_bot_association: {
+            data+: {
+              aws_connect_bot_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -86,8 +86,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_connect_contact_flow: {
+            data+: {
+              aws_connect_contact_flow+: {
                 [tf_resource_key]: this,
               },
             },
@@ -166,8 +166,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_connect_contact_flow_module: {
+            data+: {
+              aws_connect_contact_flow_module+: {
                 [tf_resource_key]: this,
               },
             },
@@ -250,8 +250,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_connect_hours_of_operation: {
+            data+: {
+              aws_connect_hours_of_operation+: {
                 [tf_resource_key]: this,
               },
             },
@@ -399,8 +399,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_connect_instance: {
+            data+: {
+              aws_connect_instance+: {
                 [tf_resource_key]: this,
               },
             },
@@ -509,8 +509,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_connect_instance_storage_config: {
+            data+: {
+              aws_connect_instance_storage_config+: {
                 [tf_resource_key]: this,
               },
             },
@@ -736,8 +736,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_connect_lambda_function_association: {
+            data+: {
+              aws_connect_lambda_function_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -789,8 +789,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_connect_prompt: {
+            data+: {
+              aws_connect_prompt+: {
                 [tf_resource_key]: this,
               },
             },
@@ -849,8 +849,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_connect_queue: {
+            data+: {
+              aws_connect_queue+: {
                 [tf_resource_key]: this,
               },
             },
@@ -963,8 +963,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_connect_quick_connect: {
+            data+: {
+              aws_connect_quick_connect+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1131,8 +1131,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_connect_routing_profile: {
+            data+: {
+              aws_connect_routing_profile+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1275,8 +1275,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_connect_security_profile: {
+            data+: {
+              aws_connect_security_profile+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1365,8 +1365,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_connect_user: {
+            data+: {
+              aws_connect_user+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1523,8 +1523,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_connect_user_hierarchy_group: {
+            data+: {
+              aws_connect_user_hierarchy_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1763,8 +1763,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_connect_user_hierarchy_structure: {
+            data+: {
+              aws_connect_user_hierarchy_structure+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1979,8 +1979,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_connect_vocabulary: {
+            data+: {
+              aws_connect_vocabulary+: {
                 [tf_resource_key]: this,
               },
             },

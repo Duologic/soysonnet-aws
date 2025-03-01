@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_sqs_queue: {
+            data+: {
+              aws_sqs_queue+: {
                 [tf_resource_key]: this,
               },
             },
@@ -77,8 +77,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_sqs_queues: {
+            data+: {
+              aws_sqs_queues+: {
                 [tf_resource_key]: this,
               },
             },

@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dlm_lifecycle_policy: {
+            resource+: {
+              aws_dlm_lifecycle_policy+: {
                 [tf_resource_key]: this,
               },
             },

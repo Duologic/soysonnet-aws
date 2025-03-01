@@ -18,8 +18,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cleanrooms_collaboration: {
+            resource+: {
+              aws_cleanrooms_collaboration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -366,8 +366,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cleanrooms_configured_table: {
+            resource+: {
+              aws_cleanrooms_configured_table+: {
                 [tf_resource_key]: this,
               },
             },
@@ -652,8 +652,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cleanrooms_membership: {
+            resource+: {
+              aws_cleanrooms_membership+: {
                 [tf_resource_key]: this,
               },
             },

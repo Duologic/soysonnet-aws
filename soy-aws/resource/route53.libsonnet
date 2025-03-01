@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53_cidr_collection: {
+            resource+: {
+              aws_route53_cidr_collection+: {
                 [tf_resource_key]: this,
               },
             },
@@ -207,8 +207,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53_cidr_location: {
+            resource+: {
+              aws_route53_cidr_location+: {
                 [tf_resource_key]: this,
               },
             },
@@ -407,8 +407,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53_delegation_set: {
+            resource+: {
+              aws_route53_delegation_set+: {
                 [tf_resource_key]: this,
               },
             },
@@ -608,8 +608,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53_health_check: {
+            resource+: {
+              aws_route53_health_check+: {
                 [tf_resource_key]: this,
               },
             },
@@ -915,8 +915,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53_hosted_zone_dnssec: {
+            resource+: {
+              aws_route53_hosted_zone_dnssec+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1104,8 +1104,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53_key_signing_key: {
+            resource+: {
+              aws_route53_key_signing_key+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1340,8 +1340,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53_query_log: {
+            resource+: {
+              aws_route53_query_log+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1533,8 +1533,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53_record: {
+            resource+: {
+              aws_route53_record+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1954,8 +1954,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53_resolver_config: {
+            resource+: {
+              aws_route53_resolver_config+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2145,8 +2145,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53_resolver_dnssec_config: {
+            resource+: {
+              aws_route53_resolver_dnssec_config+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2342,8 +2342,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53_resolver_endpoint: {
+            resource+: {
+              aws_route53_resolver_endpoint+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2648,8 +2648,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53_resolver_firewall_config: {
+            resource+: {
+              aws_route53_resolver_firewall_config+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2839,8 +2839,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53_resolver_firewall_domain_list: {
+            resource+: {
+              aws_route53_resolver_firewall_domain_list+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3060,8 +3060,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53_resolver_firewall_rule: {
+            resource+: {
+              aws_route53_resolver_firewall_rule+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3283,8 +3283,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53_resolver_firewall_rule_group: {
+            resource+: {
+              aws_route53_resolver_firewall_rule_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3497,8 +3497,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53_resolver_firewall_rule_group_association: {
+            resource+: {
+              aws_route53_resolver_firewall_rule_group_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3717,8 +3717,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53_resolver_query_log_config: {
+            resource+: {
+              aws_route53_resolver_query_log_config+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3933,8 +3933,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53_resolver_query_log_config_association: {
+            resource+: {
+              aws_route53_resolver_query_log_config_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4121,8 +4121,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53_resolver_rule: {
+            resource+: {
+              aws_route53_resolver_rule+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4408,8 +4408,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53_resolver_rule_association: {
+            resource+: {
+              aws_route53_resolver_rule_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4623,8 +4623,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53_traffic_policy: {
+            resource+: {
+              aws_route53_traffic_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4826,8 +4826,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53_traffic_policy_instance: {
+            resource+: {
+              aws_route53_traffic_policy_instance+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5026,8 +5026,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53_vpc_association_authorization: {
+            resource+: {
+              aws_route53_vpc_association_authorization+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5217,8 +5217,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53_zone: {
+            resource+: {
+              aws_route53_zone+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5481,8 +5481,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53_zone_association: {
+            resource+: {
+              aws_route53_zone_association+: {
                 [tf_resource_key]: this,
               },
             },

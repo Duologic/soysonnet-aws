@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ce_cost_category: {
+            data+: {
+              aws_ce_cost_category+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2402,8 +2402,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ce_tags: {
+            data+: {
+              aws_ce_tags+: {
                 [tf_resource_key]: this,
               },
             },

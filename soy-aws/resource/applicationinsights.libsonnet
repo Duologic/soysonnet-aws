@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_applicationinsights_application: {
+            resource+: {
+              aws_applicationinsights_application+: {
                 [tf_resource_key]: this,
               },
             },

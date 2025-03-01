@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_subnet: {
+            resource+: {
+              aws_subnet+: {
                 [tf_resource_key]: this,
               },
             },

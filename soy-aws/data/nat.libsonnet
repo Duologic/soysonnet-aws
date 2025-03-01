@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_nat_gateway: {
+            data+: {
+              aws_nat_gateway+: {
                 [tf_resource_key]: this,
               },
             },
@@ -185,8 +185,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_nat_gateways: {
+            data+: {
+              aws_nat_gateways+: {
                 [tf_resource_key]: this,
               },
             },

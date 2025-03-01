@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_evidently_feature: {
+            resource+: {
+              aws_evidently_feature+: {
                 [tf_resource_key]: this,
               },
             },
@@ -373,8 +373,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_evidently_launch: {
+            resource+: {
+              aws_evidently_launch+: {
                 [tf_resource_key]: this,
               },
             },
@@ -835,8 +835,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_evidently_project: {
+            resource+: {
+              aws_evidently_project+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1169,8 +1169,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_evidently_segment: {
+            resource+: {
+              aws_evidently_segment+: {
                 [tf_resource_key]: this,
               },
             },

@@ -17,8 +17,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_networkfirewall_firewall: {
+            resource+: {
+              aws_networkfirewall_firewall+: {
                 [tf_resource_key]: this,
               },
             },
@@ -393,8 +393,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_networkfirewall_firewall_policy: {
+            resource+: {
+              aws_networkfirewall_firewall_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -992,8 +992,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_networkfirewall_logging_configuration: {
+            resource+: {
+              aws_networkfirewall_logging_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1225,8 +1225,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_networkfirewall_resource_policy: {
+            resource+: {
+              aws_networkfirewall_resource_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1414,8 +1414,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_networkfirewall_rule_group: {
+            resource+: {
+              aws_networkfirewall_rule_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2502,8 +2502,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_networkfirewall_tls_inspection_configuration: {
+            resource+: {
+              aws_networkfirewall_tls_inspection_configuration+: {
                 [tf_resource_key]: this,
               },
             },

@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sesv2_account_suppression_attributes: {
+            resource+: {
+              aws_sesv2_account_suppression_attributes+: {
                 [tf_resource_key]: this,
               },
             },
@@ -207,8 +207,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sesv2_account_vdm_attributes: {
+            resource+: {
+              aws_sesv2_account_vdm_attributes+: {
                 [tf_resource_key]: this,
               },
             },
@@ -424,8 +424,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sesv2_configuration_set: {
+            resource+: {
+              aws_sesv2_configuration_set+: {
                 [tf_resource_key]: this,
               },
             },
@@ -807,8 +807,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sesv2_configuration_set_event_destination: {
+            resource+: {
+              aws_sesv2_configuration_set_event_destination+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1182,8 +1182,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sesv2_contact_list: {
+            resource+: {
+              aws_sesv2_contact_list+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1432,8 +1432,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sesv2_dedicated_ip_assignment: {
+            resource+: {
+              aws_sesv2_dedicated_ip_assignment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1642,8 +1642,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sesv2_dedicated_ip_pool: {
+            resource+: {
+              aws_sesv2_dedicated_ip_pool+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1849,8 +1849,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sesv2_email_identity: {
+            resource+: {
+              aws_sesv2_email_identity+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2135,8 +2135,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sesv2_email_identity_feedback_attributes: {
+            resource+: {
+              aws_sesv2_email_identity_feedback_attributes+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2322,8 +2322,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sesv2_email_identity_mail_from_attributes: {
+            resource+: {
+              aws_sesv2_email_identity_mail_from_attributes+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2515,8 +2515,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sesv2_email_identity_policy: {
+            resource+: {
+              aws_sesv2_email_identity_policy+: {
                 [tf_resource_key]: this,
               },
             },

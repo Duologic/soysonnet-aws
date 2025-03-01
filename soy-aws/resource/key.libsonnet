@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_key_pair: {
+            resource+: {
+              aws_key_pair+: {
                 [tf_resource_key]: this,
               },
             },

@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_accessanalyzer_analyzer: {
+            resource+: {
+              aws_accessanalyzer_analyzer+: {
                 [tf_resource_key]: this,
               },
             },
@@ -257,8 +257,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_accessanalyzer_archive_rule: {
+            resource+: {
+              aws_accessanalyzer_archive_rule+: {
                 [tf_resource_key]: this,
               },
             },

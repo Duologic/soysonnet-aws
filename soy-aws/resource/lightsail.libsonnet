@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lightsail_bucket: {
+            resource+: {
+              aws_lightsail_bucket+: {
                 [tf_resource_key]: this,
               },
             },
@@ -246,8 +246,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lightsail_bucket_access_key: {
+            resource+: {
+              aws_lightsail_bucket_access_key+: {
                 [tf_resource_key]: this,
               },
             },
@@ -446,8 +446,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lightsail_bucket_resource_access: {
+            resource+: {
+              aws_lightsail_bucket_resource_access+: {
                 [tf_resource_key]: this,
               },
             },
@@ -633,8 +633,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lightsail_certificate: {
+            resource+: {
+              aws_lightsail_certificate+: {
                 [tf_resource_key]: this,
               },
             },
@@ -894,8 +894,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lightsail_container_service: {
+            resource+: {
+              aws_lightsail_container_service+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1264,8 +1264,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lightsail_container_service_deployment_version: {
+            resource+: {
+              aws_lightsail_container_service_deployment_version+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1623,8 +1623,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lightsail_database: {
+            resource+: {
+              aws_lightsail_database+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1924,8 +1924,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lightsail_disk: {
+            resource+: {
+              aws_lightsail_disk+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2145,8 +2145,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lightsail_disk_attachment: {
+            resource+: {
+              aws_lightsail_disk_attachment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2339,8 +2339,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lightsail_distribution: {
+            resource+: {
+              aws_lightsail_distribution+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2905,8 +2905,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lightsail_domain: {
+            resource+: {
+              aws_lightsail_domain+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3095,8 +3095,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lightsail_domain_entry: {
+            resource+: {
+              aws_lightsail_domain_entry+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3297,8 +3297,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lightsail_instance: {
+            resource+: {
+              aws_lightsail_instance+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3596,8 +3596,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lightsail_instance_public_ports: {
+            resource+: {
+              aws_lightsail_instance_public_ports+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3850,8 +3850,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lightsail_key_pair: {
+            resource+: {
+              aws_lightsail_key_pair+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4082,8 +4082,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lightsail_lb: {
+            resource+: {
+              aws_lightsail_lb+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4328,8 +4328,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lightsail_lb_attachment: {
+            resource+: {
+              aws_lightsail_lb_attachment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4516,8 +4516,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lightsail_lb_certificate: {
+            resource+: {
+              aws_lightsail_lb_certificate+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4768,8 +4768,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lightsail_lb_certificate_attachment: {
+            resource+: {
+              aws_lightsail_lb_certificate_attachment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4956,8 +4956,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lightsail_lb_https_redirection_policy: {
+            resource+: {
+              aws_lightsail_lb_https_redirection_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5145,8 +5145,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lightsail_lb_stickiness_policy: {
+            resource+: {
+              aws_lightsail_lb_stickiness_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5336,8 +5336,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lightsail_static_ip: {
+            resource+: {
+              aws_lightsail_static_ip+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5532,8 +5532,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lightsail_static_ip_attachment: {
+            resource+: {
+              aws_lightsail_static_ip_attachment+: {
                 [tf_resource_key]: this,
               },
             },

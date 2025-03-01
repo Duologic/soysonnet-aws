@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_simpledb_domain: {
+            resource+: {
+              aws_simpledb_domain+: {
                 [tf_resource_key]: this,
               },
             },

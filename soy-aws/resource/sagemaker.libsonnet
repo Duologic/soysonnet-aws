@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sagemaker_app: {
+            resource+: {
+              aws_sagemaker_app+: {
                 [tf_resource_key]: this,
               },
             },
@@ -276,8 +276,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sagemaker_app_image_config: {
+            resource+: {
+              aws_sagemaker_app_image_config+: {
                 [tf_resource_key]: this,
               },
             },
@@ -810,8 +810,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sagemaker_code_repository: {
+            resource+: {
+              aws_sagemaker_code_repository+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1046,8 +1046,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sagemaker_data_quality_job_definition: {
+            resource+: {
+              aws_sagemaker_data_quality_job_definition+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1784,8 +1784,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sagemaker_device: {
+            resource+: {
+              aws_sagemaker_device+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2006,8 +2006,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sagemaker_device_fleet: {
+            resource+: {
+              aws_sagemaker_device_fleet+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2252,8 +2252,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sagemaker_domain: {
+            resource+: {
+              aws_sagemaker_domain+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5207,8 +5207,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sagemaker_endpoint: {
+            resource+: {
+              aws_sagemaker_endpoint+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5743,8 +5743,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sagemaker_endpoint_configuration: {
+            resource+: {
+              aws_sagemaker_endpoint_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6546,8 +6546,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sagemaker_feature_group: {
+            resource+: {
+              aws_sagemaker_feature_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -7039,8 +7039,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sagemaker_flow_definition: {
+            resource+: {
+              aws_sagemaker_flow_definition+: {
                 [tf_resource_key]: this,
               },
             },
@@ -7456,8 +7456,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sagemaker_hub: {
+            resource+: {
+              aws_sagemaker_hub+: {
                 [tf_resource_key]: this,
               },
             },
@@ -7699,8 +7699,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sagemaker_human_task_ui: {
+            resource+: {
+              aws_sagemaker_human_task_ui+: {
                 [tf_resource_key]: this,
               },
             },
@@ -7932,8 +7932,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sagemaker_image: {
+            resource+: {
+              aws_sagemaker_image+: {
                 [tf_resource_key]: this,
               },
             },
@@ -8148,8 +8148,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sagemaker_image_version: {
+            resource+: {
+              aws_sagemaker_image_version+: {
                 [tf_resource_key]: this,
               },
             },
@@ -8353,8 +8353,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sagemaker_mlflow_tracking_server: {
+            resource+: {
+              aws_sagemaker_mlflow_tracking_server+: {
                 [tf_resource_key]: this,
               },
             },
@@ -8584,8 +8584,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sagemaker_model: {
+            resource+: {
+              aws_sagemaker_model+: {
                 [tf_resource_key]: this,
               },
             },
@@ -9232,8 +9232,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sagemaker_model_package_group: {
+            resource+: {
+              aws_sagemaker_model_package_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -9440,8 +9440,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sagemaker_model_package_group_policy: {
+            resource+: {
+              aws_sagemaker_model_package_group_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -9627,8 +9627,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sagemaker_monitoring_schedule: {
+            resource+: {
+              aws_sagemaker_monitoring_schedule+: {
                 [tf_resource_key]: this,
               },
             },
@@ -9878,8 +9878,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sagemaker_notebook_instance: {
+            resource+: {
+              aws_sagemaker_notebook_instance+: {
                 [tf_resource_key]: this,
               },
             },
@@ -10187,8 +10187,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sagemaker_notebook_instance_lifecycle_configuration: {
+            resource+: {
+              aws_sagemaker_notebook_instance_lifecycle_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -10383,8 +10383,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sagemaker_pipeline: {
+            resource+: {
+              aws_sagemaker_pipeline+: {
                 [tf_resource_key]: this,
               },
             },
@@ -10649,8 +10649,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sagemaker_project: {
+            resource+: {
+              aws_sagemaker_project+: {
                 [tf_resource_key]: this,
               },
             },
@@ -10919,8 +10919,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sagemaker_servicecatalog_portfolio_status: {
+            resource+: {
+              aws_sagemaker_servicecatalog_portfolio_status+: {
                 [tf_resource_key]: this,
               },
             },
@@ -11103,8 +11103,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sagemaker_space: {
+            resource+: {
+              aws_sagemaker_space+: {
                 [tf_resource_key]: this,
               },
             },
@@ -12044,8 +12044,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sagemaker_studio_lifecycle_config: {
+            resource+: {
+              aws_sagemaker_studio_lifecycle_config+: {
                 [tf_resource_key]: this,
               },
             },
@@ -12256,8 +12256,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sagemaker_user_profile: {
+            resource+: {
+              aws_sagemaker_user_profile+: {
                 [tf_resource_key]: this,
               },
             },
@@ -14179,8 +14179,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sagemaker_workforce: {
+            resource+: {
+              aws_sagemaker_workforce+: {
                 [tf_resource_key]: this,
               },
             },
@@ -14560,8 +14560,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sagemaker_workteam: {
+            resource+: {
+              aws_sagemaker_workteam+: {
                 [tf_resource_key]: this,
               },
             },

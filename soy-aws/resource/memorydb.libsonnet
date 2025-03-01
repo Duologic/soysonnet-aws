@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_memorydb_acl: {
+            resource+: {
+              aws_memorydb_acl+: {
                 [tf_resource_key]: this,
               },
             },
@@ -239,8 +239,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_memorydb_cluster: {
+            resource+: {
+              aws_memorydb_cluster+: {
                 [tf_resource_key]: this,
               },
             },
@@ -704,8 +704,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_memorydb_multi_region_cluster: {
+            resource+: {
+              aws_memorydb_multi_region_cluster+: {
                 [tf_resource_key]: this,
               },
             },
@@ -972,8 +972,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_memorydb_parameter_group: {
+            resource+: {
+              aws_memorydb_parameter_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1213,8 +1213,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_memorydb_snapshot: {
+            resource+: {
+              aws_memorydb_snapshot+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1529,8 +1529,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_memorydb_subnet_group: {
+            resource+: {
+              aws_memorydb_subnet_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1760,8 +1760,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_memorydb_user: {
+            resource+: {
+              aws_memorydb_user+: {
                 [tf_resource_key]: this,
               },
             },

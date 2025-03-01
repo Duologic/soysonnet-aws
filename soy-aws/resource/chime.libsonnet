@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_chime_voice_connector: {
+            resource+: {
+              aws_chime_voice_connector+: {
                 [tf_resource_key]: this,
               },
             },
@@ -230,8 +230,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_chime_voice_connector_group: {
+            resource+: {
+              aws_chime_voice_connector_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -439,8 +439,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_chime_voice_connector_logging: {
+            resource+: {
+              aws_chime_voice_connector_logging+: {
                 [tf_resource_key]: this,
               },
             },
@@ -631,8 +631,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_chime_voice_connector_origination: {
+            resource+: {
+              aws_chime_voice_connector_origination+: {
                 [tf_resource_key]: this,
               },
             },
@@ -857,8 +857,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_chime_voice_connector_streaming: {
+            resource+: {
+              aws_chime_voice_connector_streaming+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1087,8 +1087,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_chime_voice_connector_termination: {
+            resource+: {
+              aws_chime_voice_connector_termination+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1311,8 +1311,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_chime_voice_connector_termination_credentials: {
+            resource+: {
+              aws_chime_voice_connector_termination_credentials+: {
                 [tf_resource_key]: this,
               },
             },

@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ram_resource_share: {
+            data+: {
+              aws_ram_resource_share+: {
                 [tf_resource_key]: this,
               },
             },

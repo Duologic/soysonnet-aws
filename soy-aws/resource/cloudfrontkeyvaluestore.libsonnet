@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudfrontkeyvaluestore_key: {
+            resource+: {
+              aws_cloudfrontkeyvaluestore_key+: {
                 [tf_resource_key]: this,
               },
             },

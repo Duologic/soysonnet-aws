@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudtrail: {
+            resource+: {
+              aws_cloudtrail+: {
                 [tf_resource_key]: this,
               },
             },
@@ -496,8 +496,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudtrail_event_data_store: {
+            resource+: {
+              aws_cloudtrail_event_data_store+: {
                 [tf_resource_key]: this,
               },
             },
@@ -884,8 +884,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudtrail_organization_delegated_admin_account: {
+            resource+: {
+              aws_cloudtrail_organization_delegated_admin_account+: {
                 [tf_resource_key]: this,
               },
             },

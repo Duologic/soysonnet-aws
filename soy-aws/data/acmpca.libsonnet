@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_acmpca_certificate: {
+            data+: {
+              aws_acmpca_certificate+: {
                 [tf_resource_key]: this,
               },
             },
@@ -75,8 +75,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_acmpca_certificate_authority: {
+            data+: {
+              aws_acmpca_certificate_authority+: {
                 [tf_resource_key]: this,
               },
             },

@@ -17,8 +17,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_osis_pipeline: {
+            resource+: {
+              aws_osis_pipeline+: {
                 [tf_resource_key]: this,
               },
             },

@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53profiles_association: {
+            resource+: {
+              aws_route53profiles_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -268,8 +268,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53profiles_profile: {
+            resource+: {
+              aws_route53profiles_profile+: {
                 [tf_resource_key]: this,
               },
             },
@@ -518,8 +518,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53profiles_resource_association: {
+            resource+: {
+              aws_route53profiles_resource_association+: {
                 [tf_resource_key]: this,
               },
             },

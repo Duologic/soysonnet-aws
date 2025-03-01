@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_securityhub_account: {
+            resource+: {
+              aws_securityhub_account+: {
                 [tf_resource_key]: this,
               },
             },
@@ -210,8 +210,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_securityhub_action_target: {
+            resource+: {
+              aws_securityhub_action_target+: {
                 [tf_resource_key]: this,
               },
             },
@@ -407,8 +407,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_securityhub_automation_rule: {
+            resource+: {
+              aws_securityhub_automation_rule+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1973,8 +1973,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_securityhub_configuration_policy: {
+            resource+: {
+              aws_securityhub_configuration_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2487,8 +2487,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_securityhub_configuration_policy_association: {
+            resource+: {
+              aws_securityhub_configuration_policy_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2697,8 +2697,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_securityhub_finding_aggregator: {
+            resource+: {
+              aws_securityhub_finding_aggregator+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2896,8 +2896,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_securityhub_insight: {
+            resource+: {
+              aws_securityhub_insight+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6011,8 +6011,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_securityhub_invite_accepter: {
+            resource+: {
+              aws_securityhub_invite_accepter+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6198,8 +6198,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_securityhub_member: {
+            resource+: {
+              aws_securityhub_member+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6397,8 +6397,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_securityhub_organization_admin_account: {
+            resource+: {
+              aws_securityhub_organization_admin_account+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6580,8 +6580,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_securityhub_organization_configuration: {
+            resource+: {
+              aws_securityhub_organization_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6813,8 +6813,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_securityhub_product_subscription: {
+            resource+: {
+              aws_securityhub_product_subscription+: {
                 [tf_resource_key]: this,
               },
             },
@@ -7001,8 +7001,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_securityhub_standards_control: {
+            resource+: {
+              aws_securityhub_standards_control+: {
                 [tf_resource_key]: this,
               },
             },
@@ -7232,8 +7232,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_securityhub_standards_control_association: {
+            resource+: {
+              aws_securityhub_standards_control_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -7427,8 +7427,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_securityhub_standards_subscription: {
+            resource+: {
+              aws_securityhub_standards_subscription+: {
                 [tf_resource_key]: this,
               },
             },

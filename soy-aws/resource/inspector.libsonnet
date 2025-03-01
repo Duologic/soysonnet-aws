@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_inspector_assessment_target: {
+            resource+: {
+              aws_inspector_assessment_target+: {
                 [tf_resource_key]: this,
               },
             },
@@ -208,8 +208,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_inspector_assessment_template: {
+            resource+: {
+              aws_inspector_assessment_template+: {
                 [tf_resource_key]: this,
               },
             },
@@ -459,8 +459,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_inspector_resource_group: {
+            resource+: {
+              aws_inspector_resource_group+: {
                 [tf_resource_key]: this,
               },
             },

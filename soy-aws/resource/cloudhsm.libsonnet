@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudhsm_v2_cluster: {
+            resource+: {
+              aws_cloudhsm_v2_cluster+: {
                 [tf_resource_key]: this,
               },
             },
@@ -319,8 +319,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudhsm_v2_hsm: {
+            resource+: {
+              aws_cloudhsm_v2_hsm+: {
                 [tf_resource_key]: this,
               },
             },

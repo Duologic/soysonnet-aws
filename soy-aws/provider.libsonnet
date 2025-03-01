@@ -13,7 +13,7 @@
         {
           local this = self,
           _manifest():: {
-            provider: {
+            provider+: {
               [tf_resource_key]: this,
             },
           },

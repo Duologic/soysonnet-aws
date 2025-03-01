@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_servicecatalog_constraint: {
+            data+: {
+              aws_servicecatalog_constraint+: {
                 [tf_resource_key]: this,
               },
             },
@@ -107,8 +107,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_servicecatalog_launch_paths: {
+            data+: {
+              aws_servicecatalog_launch_paths+: {
                 [tf_resource_key]: this,
               },
             },
@@ -236,8 +236,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_servicecatalog_portfolio: {
+            data+: {
+              aws_servicecatalog_portfolio+: {
                 [tf_resource_key]: this,
               },
             },
@@ -329,8 +329,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_servicecatalog_portfolio_constraints: {
+            data+: {
+              aws_servicecatalog_portfolio_constraints+: {
                 [tf_resource_key]: this,
               },
             },
@@ -444,8 +444,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_servicecatalog_product: {
+            data+: {
+              aws_servicecatalog_product+: {
                 [tf_resource_key]: this,
               },
             },
@@ -565,8 +565,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_servicecatalog_provisioning_artifacts: {
+            data+: {
+              aws_servicecatalog_provisioning_artifacts+: {
                 [tf_resource_key]: this,
               },
             },

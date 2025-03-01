@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudcontrolapi_resource: {
+            resource+: {
+              aws_cloudcontrolapi_resource+: {
                 [tf_resource_key]: this,
               },
             },

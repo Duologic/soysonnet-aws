@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_worklink_fleet: {
+            resource+: {
+              aws_worklink_fleet+: {
                 [tf_resource_key]: this,
               },
             },
@@ -306,8 +306,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_worklink_website_certificate_authority_association: {
+            resource+: {
+              aws_worklink_website_certificate_authority_association+: {
                 [tf_resource_key]: this,
               },
             },

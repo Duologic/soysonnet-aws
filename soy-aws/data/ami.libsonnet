@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ami: {
+            data+: {
+              aws_ami+: {
                 [tf_resource_key]: this,
               },
             },
@@ -346,8 +346,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ami_ids: {
+            data+: {
+              aws_ami_ids+: {
                 [tf_resource_key]: this,
               },
             },

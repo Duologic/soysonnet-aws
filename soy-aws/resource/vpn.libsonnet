@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpn_connection: {
+            resource+: {
+              aws_vpn_connection+: {
                 [tf_resource_key]: this,
               },
             },
@@ -787,8 +787,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpn_connection_route: {
+            resource+: {
+              aws_vpn_connection_route+: {
                 [tf_resource_key]: this,
               },
             },
@@ -973,8 +973,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpn_gateway: {
+            resource+: {
+              aws_vpn_gateway+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1185,8 +1185,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpn_gateway_attachment: {
+            resource+: {
+              aws_vpn_gateway_attachment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1373,8 +1373,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpn_gateway_route_propagation: {
+            resource+: {
+              aws_vpn_gateway_route_propagation+: {
                 [tf_resource_key]: this,
               },
             },

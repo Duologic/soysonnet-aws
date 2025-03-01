@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_db_cluster_snapshot: {
+            data+: {
+              aws_db_cluster_snapshot+: {
                 [tf_resource_key]: this,
               },
             },
@@ -150,8 +150,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_db_event_categories: {
+            data+: {
+              aws_db_event_categories+: {
                 [tf_resource_key]: this,
               },
             },
@@ -211,8 +211,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_db_instance: {
+            data+: {
+              aws_db_instance+: {
                 [tf_resource_key]: this,
               },
             },
@@ -492,8 +492,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_db_instances: {
+            data+: {
+              aws_db_instances+: {
                 [tf_resource_key]: this,
               },
             },
@@ -608,8 +608,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_db_parameter_group: {
+            data+: {
+              aws_db_parameter_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -668,8 +668,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_db_proxy: {
+            data+: {
+              aws_db_proxy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -817,8 +817,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_db_snapshot: {
+            data+: {
+              aws_db_snapshot+: {
                 [tf_resource_key]: this,
               },
             },
@@ -965,8 +965,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_db_subnet_group: {
+            data+: {
+              aws_db_subnet_group+: {
                 [tf_resource_key]: this,
               },
             },

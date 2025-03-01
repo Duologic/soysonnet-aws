@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_eks_access_entry: {
+            data+: {
+              aws_eks_access_entry+: {
                 [tf_resource_key]: this,
               },
             },
@@ -118,8 +118,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_eks_addon: {
+            data+: {
+              aws_eks_addon+: {
                 [tf_resource_key]: this,
               },
             },
@@ -229,8 +229,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_eks_addon_version: {
+            data+: {
+              aws_eks_addon_version+: {
                 [tf_resource_key]: this,
               },
             },
@@ -289,8 +289,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_eks_cluster: {
+            data+: {
+              aws_eks_cluster+: {
                 [tf_resource_key]: this,
               },
             },
@@ -871,8 +871,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_eks_cluster_auth: {
+            data+: {
+              aws_eks_cluster_auth+: {
                 [tf_resource_key]: this,
               },
             },
@@ -922,8 +922,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_eks_clusters: {
+            data+: {
+              aws_eks_clusters+: {
                 [tf_resource_key]: this,
               },
             },
@@ -981,8 +981,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_eks_node_group: {
+            data+: {
+              aws_eks_node_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1279,8 +1279,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_eks_node_groups: {
+            data+: {
+              aws_eks_node_groups+: {
                 [tf_resource_key]: this,
               },
             },

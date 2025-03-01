@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_efs_access_point: {
+            resource+: {
+              aws_efs_access_point+: {
                 [tf_resource_key]: this,
               },
             },
@@ -323,8 +323,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_efs_backup_policy: {
+            resource+: {
+              aws_efs_backup_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -522,8 +522,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_efs_file_system: {
+            resource+: {
+              aws_efs_file_system+: {
                 [tf_resource_key]: this,
               },
             },
@@ -847,8 +847,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_efs_file_system_policy: {
+            resource+: {
+              aws_efs_file_system_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1039,8 +1039,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_efs_mount_target: {
+            resource+: {
+              aws_efs_mount_target+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1296,8 +1296,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_efs_replication_configuration: {
+            resource+: {
+              aws_efs_replication_configuration+: {
                 [tf_resource_key]: this,
               },
             },

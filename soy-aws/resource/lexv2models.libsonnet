@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lexv2models_bot: {
+            resource+: {
+              aws_lexv2models_bot+: {
                 [tf_resource_key]: this,
               },
             },
@@ -335,8 +335,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lexv2models_bot_locale: {
+            resource+: {
+              aws_lexv2models_bot_locale+: {
                 [tf_resource_key]: this,
               },
             },
@@ -594,8 +594,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lexv2models_bot_version: {
+            resource+: {
+              aws_lexv2models_bot_version+: {
                 [tf_resource_key]: this,
               },
             },
@@ -819,8 +819,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lexv2models_intent: {
+            resource+: {
+              aws_lexv2models_intent+: {
                 [tf_resource_key]: this,
               },
             },
@@ -22513,8 +22513,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lexv2models_slot: {
+            resource+: {
+              aws_lexv2models_slot+: {
                 [tf_resource_key]: this,
               },
             },
@@ -25982,8 +25982,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lexv2models_slot_type: {
+            resource+: {
+              aws_lexv2models_slot_type+: {
                 [tf_resource_key]: this,
               },
             },

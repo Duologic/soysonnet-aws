@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ssm_activation: {
+            resource+: {
+              aws_ssm_activation+: {
                 [tf_resource_key]: this,
               },
             },
@@ -241,8 +241,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ssm_association: {
+            resource+: {
+              aws_ssm_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -566,8 +566,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ssm_default_patch_baseline: {
+            resource+: {
+              aws_ssm_default_patch_baseline+: {
                 [tf_resource_key]: this,
               },
             },
@@ -755,8 +755,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ssm_document: {
+            resource+: {
+              aws_ssm_document+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1117,8 +1117,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ssm_maintenance_window: {
+            resource+: {
+              aws_ssm_maintenance_window+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1358,8 +1358,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ssm_maintenance_window_target: {
+            resource+: {
+              aws_ssm_maintenance_window_target+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1595,8 +1595,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ssm_maintenance_window_task: {
+            resource+: {
+              aws_ssm_maintenance_window_task+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2234,8 +2234,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ssm_parameter: {
+            resource+: {
+              aws_ssm_parameter+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2489,8 +2489,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ssm_patch_baseline: {
+            resource+: {
+              aws_ssm_patch_baseline+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2891,8 +2891,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ssm_patch_group: {
+            resource+: {
+              aws_ssm_patch_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3079,8 +3079,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ssm_resource_data_sync: {
+            resource+: {
+              aws_ssm_resource_data_sync+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3304,8 +3304,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ssm_service_setting: {
+            resource+: {
+              aws_ssm_service_setting+: {
                 [tf_resource_key]: this,
               },
             },

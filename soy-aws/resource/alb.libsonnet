@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_alb: {
+            resource+: {
+              aws_alb+: {
                 [tf_resource_key]: this,
               },
             },
@@ -466,8 +466,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_alb_listener: {
+            resource+: {
+              aws_alb_listener+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1154,8 +1154,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_alb_listener_certificate: {
+            resource+: {
+              aws_alb_listener_certificate+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1343,8 +1343,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_alb_listener_rule: {
+            resource+: {
+              aws_alb_listener_rule+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2070,8 +2070,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_alb_target_group: {
+            resource+: {
+              aws_alb_target_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2581,8 +2581,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_alb_target_group_attachment: {
+            resource+: {
+              aws_alb_target_group_attachment+: {
                 [tf_resource_key]: this,
               },
             },

@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_elasticache_cluster: {
+            data+: {
+              aws_elasticache_cluster+: {
                 [tf_resource_key]: this,
               },
             },
@@ -232,8 +232,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_elasticache_replication_group: {
+            data+: {
+              aws_elasticache_replication_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -395,8 +395,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_elasticache_reserved_cache_node_offering: {
+            data+: {
+              aws_elasticache_reserved_cache_node_offering+: {
                 [tf_resource_key]: this,
               },
             },
@@ -459,8 +459,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_elasticache_serverless_cache: {
+            data+: {
+              aws_elasticache_serverless_cache+: {
                 [tf_resource_key]: this,
               },
             },
@@ -702,8 +702,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_elasticache_subnet_group: {
+            data+: {
+              aws_elasticache_subnet_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -784,8 +784,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_elasticache_user: {
+            data+: {
+              aws_elasticache_user+: {
                 [tf_resource_key]: this,
               },
             },

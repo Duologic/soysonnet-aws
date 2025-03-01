@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_rds_certificate: {
+            data+: {
+              aws_rds_certificate+: {
                 [tf_resource_key]: this,
               },
             },
@@ -93,8 +93,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_rds_cluster: {
+            data+: {
+              aws_rds_cluster+: {
                 [tf_resource_key]: this,
               },
             },
@@ -353,8 +353,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_rds_cluster_parameter_group: {
+            data+: {
+              aws_rds_cluster_parameter_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -408,8 +408,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_rds_clusters: {
+            data+: {
+              aws_rds_clusters+: {
                 [tf_resource_key]: this,
               },
             },
@@ -516,8 +516,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_rds_engine_version: {
+            data+: {
+              aws_rds_engine_version+: {
                 [tf_resource_key]: this,
               },
             },
@@ -834,8 +834,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_rds_orderable_db_instance: {
+            data+: {
+              aws_rds_orderable_db_instance+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1060,8 +1060,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_rds_reserved_instance_offering: {
+            data+: {
+              aws_rds_reserved_instance_offering+: {
                 [tf_resource_key]: this,
               },
             },

@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dynamodb_contributor_insights: {
+            resource+: {
+              aws_dynamodb_contributor_insights+: {
                 [tf_resource_key]: this,
               },
             },
@@ -225,8 +225,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dynamodb_global_table: {
+            resource+: {
+              aws_dynamodb_global_table+: {
                 [tf_resource_key]: this,
               },
             },
@@ -464,8 +464,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dynamodb_kinesis_streaming_destination: {
+            resource+: {
+              aws_dynamodb_kinesis_streaming_destination+: {
                 [tf_resource_key]: this,
               },
             },
@@ -656,8 +656,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dynamodb_resource_policy: {
+            resource+: {
+              aws_dynamodb_resource_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -851,8 +851,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dynamodb_table: {
+            resource+: {
+              aws_dynamodb_table+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1557,8 +1557,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dynamodb_table_export: {
+            resource+: {
+              aws_dynamodb_table_export+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1854,8 +1854,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dynamodb_table_item: {
+            resource+: {
+              aws_dynamodb_table_item+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2049,8 +2049,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dynamodb_table_replica: {
+            resource+: {
+              aws_dynamodb_table_replica+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2299,8 +2299,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dynamodb_tag: {
+            resource+: {
+              aws_dynamodb_tag+: {
                 [tf_resource_key]: this,
               },
             },

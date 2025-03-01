@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sqs_queue: {
+            resource+: {
+              aws_sqs_queue+: {
                 [tf_resource_key]: this,
               },
             },
@@ -314,8 +314,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sqs_queue_policy: {
+            resource+: {
+              aws_sqs_queue_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -502,8 +502,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sqs_queue_redrive_allow_policy: {
+            resource+: {
+              aws_sqs_queue_redrive_allow_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -690,8 +690,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sqs_queue_redrive_policy: {
+            resource+: {
+              aws_sqs_queue_redrive_policy+: {
                 [tf_resource_key]: this,
               },
             },

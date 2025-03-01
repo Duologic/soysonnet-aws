@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_kinesis_analytics_application: {
+            resource+: {
+              aws_kinesis_analytics_application+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1073,8 +1073,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_kinesis_firehose_delivery_stream: {
+            resource+: {
+              aws_kinesis_firehose_delivery_stream+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5591,8 +5591,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_kinesis_resource_policy: {
+            resource+: {
+              aws_kinesis_resource_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5778,8 +5778,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_kinesis_stream: {
+            resource+: {
+              aws_kinesis_stream+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6062,8 +6062,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_kinesis_stream_consumer: {
+            resource+: {
+              aws_kinesis_stream_consumer+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6257,8 +6257,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_kinesis_video_stream: {
+            resource+: {
+              aws_kinesis_video_stream+: {
                 [tf_resource_key]: this,
               },
             },

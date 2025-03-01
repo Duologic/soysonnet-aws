@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_docdb_cluster: {
+            resource+: {
+              aws_docdb_cluster+: {
                 [tf_resource_key]: this,
               },
             },
@@ -437,8 +437,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_docdb_cluster_instance: {
+            resource+: {
+              aws_docdb_cluster_instance+: {
                 [tf_resource_key]: this,
               },
             },
@@ -761,8 +761,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_docdb_cluster_parameter_group: {
+            resource+: {
+              aws_docdb_cluster_parameter_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1007,8 +1007,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_docdb_cluster_snapshot: {
+            resource+: {
+              aws_docdb_cluster_snapshot+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1265,8 +1265,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_docdb_event_subscription: {
+            resource+: {
+              aws_docdb_event_subscription+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1545,8 +1545,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_docdb_global_cluster: {
+            resource+: {
+              aws_docdb_global_cluster+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1819,8 +1819,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_docdb_subnet_group: {
+            resource+: {
+              aws_docdb_subnet_group+: {
                 [tf_resource_key]: this,
               },
             },

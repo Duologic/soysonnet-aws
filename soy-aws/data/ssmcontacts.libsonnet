@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ssmcontacts_contact: {
+            data+: {
+              aws_ssmcontacts_contact+: {
                 [tf_resource_key]: this,
               },
             },
@@ -82,8 +82,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ssmcontacts_contact_channel: {
+            data+: {
+              aws_ssmcontacts_contact_channel+: {
                 [tf_resource_key]: this,
               },
             },
@@ -168,8 +168,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ssmcontacts_plan: {
+            data+: {
+              aws_ssmcontacts_plan+: {
                 [tf_resource_key]: this,
               },
             },
@@ -308,8 +308,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ssmcontacts_rotation: {
+            data+: {
+              aws_ssmcontacts_rotation+: {
                 [tf_resource_key]: this,
               },
             },

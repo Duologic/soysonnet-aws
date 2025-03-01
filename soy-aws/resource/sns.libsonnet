@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sns_platform_application: {
+            resource+: {
+              aws_sns_platform_application+: {
                 [tf_resource_key]: this,
               },
             },
@@ -250,8 +250,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sns_sms_preferences: {
+            resource+: {
+              aws_sns_sms_preferences+: {
                 [tf_resource_key]: this,
               },
             },
@@ -452,8 +452,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sns_topic: {
+            resource+: {
+              aws_sns_topic+: {
                 [tf_resource_key]: this,
               },
             },
@@ -764,8 +764,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sns_topic_data_protection_policy: {
+            resource+: {
+              aws_sns_topic_data_protection_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -952,8 +952,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sns_topic_policy: {
+            resource+: {
+              aws_sns_topic_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1145,8 +1145,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_sns_topic_subscription: {
+            resource+: {
+              aws_sns_topic_subscription+: {
                 [tf_resource_key]: this,
               },
             },

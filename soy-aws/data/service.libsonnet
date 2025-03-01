@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_service: {
+            data+: {
+              aws_service+: {
                 [tf_resource_key]: this,
               },
             },
@@ -86,8 +86,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_service_discovery_dns_namespace: {
+            data+: {
+              aws_service_discovery_dns_namespace+: {
                 [tf_resource_key]: this,
               },
             },
@@ -158,8 +158,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_service_discovery_http_namespace: {
+            data+: {
+              aws_service_discovery_http_namespace+: {
                 [tf_resource_key]: this,
               },
             },
@@ -227,8 +227,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_service_discovery_service: {
+            data+: {
+              aws_service_discovery_service+: {
                 [tf_resource_key]: this,
               },
             },
@@ -407,8 +407,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_service_principal: {
+            data+: {
+              aws_service_principal+: {
                 [tf_resource_key]: this,
               },
             },

@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_kendra_data_source: {
+            resource+: {
+              aws_kendra_data_source+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1319,8 +1319,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_kendra_experience: {
+            resource+: {
+              aws_kendra_experience+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1685,8 +1685,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_kendra_faq: {
+            resource+: {
+              aws_kendra_faq+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1975,8 +1975,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_kendra_index: {
+            resource+: {
+              aws_kendra_index+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2586,8 +2586,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_kendra_query_suggestions_block_list: {
+            resource+: {
+              aws_kendra_query_suggestions_block_list+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2864,8 +2864,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_kendra_thesaurus: {
+            resource+: {
+              aws_kendra_thesaurus+: {
                 [tf_resource_key]: this,
               },
             },

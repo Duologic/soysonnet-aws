@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ecs_cluster: {
+            data+: {
+              aws_ecs_cluster+: {
                 [tf_resource_key]: this,
               },
             },
@@ -137,8 +137,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ecs_clusters: {
+            data+: {
+              aws_ecs_clusters+: {
                 [tf_resource_key]: this,
               },
             },
@@ -192,8 +192,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ecs_container_definition: {
+            data+: {
+              aws_ecs_container_definition+: {
                 [tf_resource_key]: this,
               },
             },
@@ -285,8 +285,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ecs_service: {
+            data+: {
+              aws_ecs_service+: {
                 [tf_resource_key]: this,
               },
             },
@@ -369,8 +369,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ecs_task_definition: {
+            data+: {
+              aws_ecs_task_definition+: {
                 [tf_resource_key]: this,
               },
             },
@@ -810,8 +810,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ecs_task_execution: {
+            data+: {
+              aws_ecs_task_execution+: {
                 [tf_resource_key]: this,
               },
             },

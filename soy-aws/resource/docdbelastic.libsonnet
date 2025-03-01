@@ -19,8 +19,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_docdbelastic_cluster: {
+            resource+: {
+              aws_docdbelastic_cluster+: {
                 [tf_resource_key]: this,
               },
             },

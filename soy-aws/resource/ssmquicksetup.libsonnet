@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ssmquicksetup_configuration_manager: {
+            resource+: {
+              aws_ssmquicksetup_configuration_manager+: {
                 [tf_resource_key]: this,
               },
             },

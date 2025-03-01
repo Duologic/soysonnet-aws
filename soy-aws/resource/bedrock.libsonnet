@@ -18,8 +18,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_bedrock_custom_model: {
+            resource+: {
+              aws_bedrock_custom_model+: {
                 [tf_resource_key]: this,
               },
             },
@@ -456,8 +456,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_bedrock_guardrail: {
+            resource+: {
+              aws_bedrock_guardrail+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1010,8 +1010,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_bedrock_guardrail_version: {
+            resource+: {
+              aws_bedrock_guardrail_version+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1224,8 +1224,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_bedrock_inference_profile: {
+            resource+: {
+              aws_bedrock_inference_profile+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1519,8 +1519,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_bedrock_model_invocation_logging_configuration: {
+            resource+: {
+              aws_bedrock_model_invocation_logging_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1830,8 +1830,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_bedrock_provisioned_model_throughput: {
+            resource+: {
+              aws_bedrock_provisioned_model_throughput+: {
                 [tf_resource_key]: this,
               },
             },

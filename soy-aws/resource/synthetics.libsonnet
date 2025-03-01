@@ -19,8 +19,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_synthetics_canary: {
+            resource+: {
+              aws_synthetics_canary+: {
                 [tf_resource_key]: this,
               },
             },
@@ -475,8 +475,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_synthetics_group: {
+            resource+: {
+              aws_synthetics_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -683,8 +683,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_synthetics_group_association: {
+            resource+: {
+              aws_synthetics_group_association+: {
                 [tf_resource_key]: this,
               },
             },

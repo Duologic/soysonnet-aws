@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_location_geofence_collection: {
+            resource+: {
+              aws_location_geofence_collection+: {
                 [tf_resource_key]: this,
               },
             },
@@ -263,8 +263,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_location_map: {
+            resource+: {
+              aws_location_map+: {
                 [tf_resource_key]: this,
               },
             },
@@ -496,8 +496,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_location_place_index: {
+            resource+: {
+              aws_location_place_index+: {
                 [tf_resource_key]: this,
               },
             },
@@ -733,8 +733,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_location_route_calculator: {
+            resource+: {
+              aws_location_route_calculator+: {
                 [tf_resource_key]: this,
               },
             },
@@ -981,8 +981,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_location_tracker: {
+            resource+: {
+              aws_location_tracker+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1205,8 +1205,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_location_tracker_association: {
+            resource+: {
+              aws_location_tracker_association+: {
                 [tf_resource_key]: this,
               },
             },

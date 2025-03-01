@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_kms_alias: {
+            data+: {
+              aws_kms_alias+: {
                 [tf_resource_key]: this,
               },
             },
@@ -75,8 +75,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_kms_ciphertext: {
+            data+: {
+              aws_kms_ciphertext+: {
                 [tf_resource_key]: this,
               },
             },
@@ -138,8 +138,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_kms_custom_key_store: {
+            data+: {
+              aws_kms_custom_key_store+: {
                 [tf_resource_key]: this,
               },
             },
@@ -206,8 +206,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_kms_key: {
+            data+: {
+              aws_kms_key+: {
                 [tf_resource_key]: this,
               },
             },
@@ -436,8 +436,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_kms_public_key: {
+            data+: {
+              aws_kms_public_key+: {
                 [tf_resource_key]: this,
               },
             },
@@ -546,8 +546,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_kms_secret: {
+            data+: {
+              aws_kms_secret+: {
                 [tf_resource_key]: this,
               },
             },
@@ -638,8 +638,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_kms_secrets: {
+            data+: {
+              aws_kms_secrets+: {
                 [tf_resource_key]: this,
               },
             },

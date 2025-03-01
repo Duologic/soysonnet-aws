@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_emr_release_labels: {
+            data+: {
+              aws_emr_release_labels+: {
                 [tf_resource_key]: this,
               },
             },
@@ -94,8 +94,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_emr_supported_instance_types: {
+            data+: {
+              aws_emr_supported_instance_types+: {
                 [tf_resource_key]: this,
               },
             },

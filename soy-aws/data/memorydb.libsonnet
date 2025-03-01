@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_memorydb_acl: {
+            data+: {
+              aws_memorydb_acl+: {
                 [tf_resource_key]: this,
               },
             },
@@ -92,8 +92,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_memorydb_cluster: {
+            data+: {
+              aws_memorydb_cluster+: {
                 [tf_resource_key]: this,
               },
             },
@@ -358,8 +358,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_memorydb_parameter_group: {
+            data+: {
+              aws_memorydb_parameter_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -452,8 +452,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_memorydb_snapshot: {
+            data+: {
+              aws_memorydb_snapshot+: {
                 [tf_resource_key]: this,
               },
             },
@@ -598,8 +598,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_memorydb_subnet_group: {
+            data+: {
+              aws_memorydb_subnet_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -680,8 +680,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_memorydb_user: {
+            data+: {
+              aws_memorydb_user+: {
                 [tf_resource_key]: this,
               },
             },

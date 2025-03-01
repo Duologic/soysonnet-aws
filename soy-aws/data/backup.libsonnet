@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_backup_framework: {
+            data+: {
+              aws_backup_framework+: {
                 [tf_resource_key]: this,
               },
             },
@@ -192,8 +192,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_backup_plan: {
+            data+: {
+              aws_backup_plan+: {
                 [tf_resource_key]: this,
               },
             },
@@ -396,8 +396,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_backup_report_plan: {
+            data+: {
+              aws_backup_report_plan+: {
                 [tf_resource_key]: this,
               },
             },
@@ -591,8 +591,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_backup_selection: {
+            data+: {
+              aws_backup_selection+: {
                 [tf_resource_key]: this,
               },
             },
@@ -665,8 +665,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_backup_vault: {
+            data+: {
+              aws_backup_vault+: {
                 [tf_resource_key]: this,
               },
             },

@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_storagegateway_local_disk: {
+            data+: {
+              aws_storagegateway_local_disk+: {
                 [tf_resource_key]: this,
               },
             },

@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_chimesdkvoice_global_settings: {
+            resource+: {
+              aws_chimesdkvoice_global_settings+: {
                 [tf_resource_key]: this,
               },
             },
@@ -212,8 +212,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_chimesdkvoice_sip_media_application: {
+            resource+: {
+              aws_chimesdkvoice_sip_media_application+: {
                 [tf_resource_key]: this,
               },
             },
@@ -439,8 +439,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_chimesdkvoice_sip_rule: {
+            resource+: {
+              aws_chimesdkvoice_sip_rule+: {
                 [tf_resource_key]: this,
               },
             },
@@ -665,8 +665,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_chimesdkvoice_voice_profile_domain: {
+            resource+: {
+              aws_chimesdkvoice_voice_profile_domain+: {
                 [tf_resource_key]: this,
               },
             },

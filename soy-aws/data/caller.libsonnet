@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_caller_identity: {
+            data+: {
+              aws_caller_identity+: {
                 [tf_resource_key]: this,
               },
             },

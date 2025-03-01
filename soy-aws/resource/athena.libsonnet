@@ -17,8 +17,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_athena_data_catalog: {
+            resource+: {
+              aws_athena_data_catalog+: {
                 [tf_resource_key]: this,
               },
             },
@@ -236,8 +236,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_athena_database: {
+            resource+: {
+              aws_athena_database+: {
                 [tf_resource_key]: this,
               },
             },
@@ -485,8 +485,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_athena_named_query: {
+            resource+: {
+              aws_athena_named_query+: {
                 [tf_resource_key]: this,
               },
             },
@@ -686,8 +686,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_athena_prepared_statement: {
+            resource+: {
+              aws_athena_prepared_statement+: {
                 [tf_resource_key]: this,
               },
             },
@@ -910,8 +910,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_athena_workgroup: {
+            resource+: {
+              aws_athena_workgroup+: {
                 [tf_resource_key]: this,
               },
             },

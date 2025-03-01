@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_codestarconnections_connection: {
+            data+: {
+              aws_codestarconnections_connection+: {
                 [tf_resource_key]: this,
               },
             },

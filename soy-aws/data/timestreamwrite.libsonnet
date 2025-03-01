@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_timestreamwrite_database: {
+            data+: {
+              aws_timestreamwrite_database+: {
                 [tf_resource_key]: this,
               },
             },
@@ -79,8 +79,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_timestreamwrite_table: {
+            data+: {
+              aws_timestreamwrite_table+: {
                 [tf_resource_key]: this,
               },
             },

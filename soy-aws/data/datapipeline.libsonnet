@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_datapipeline_pipeline: {
+            data+: {
+              aws_datapipeline_pipeline+: {
                 [tf_resource_key]: this,
               },
             },
@@ -78,8 +78,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_datapipeline_pipeline_definition: {
+            data+: {
+              aws_datapipeline_pipeline_definition+: {
                 [tf_resource_key]: this,
               },
             },

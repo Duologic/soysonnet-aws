@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_paymentcryptography_key: {
+            resource+: {
+              aws_paymentcryptography_key+: {
                 [tf_resource_key]: this,
               },
             },
@@ -386,8 +386,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_paymentcryptography_key_alias: {
+            resource+: {
+              aws_paymentcryptography_key_alias+: {
                 [tf_resource_key]: this,
               },
             },

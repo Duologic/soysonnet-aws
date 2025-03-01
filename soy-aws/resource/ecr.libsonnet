@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ecr_account_setting: {
+            resource+: {
+              aws_ecr_account_setting+: {
                 [tf_resource_key]: this,
               },
             },
@@ -199,8 +199,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ecr_lifecycle_policy: {
+            resource+: {
+              aws_ecr_lifecycle_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -391,8 +391,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ecr_pull_through_cache_rule: {
+            resource+: {
+              aws_ecr_pull_through_cache_rule+: {
                 [tf_resource_key]: this,
               },
             },
@@ -586,8 +586,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ecr_registry_policy: {
+            resource+: {
+              aws_ecr_registry_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -773,8 +773,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ecr_registry_scanning_configuration: {
+            resource+: {
+              aws_ecr_registry_scanning_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1007,8 +1007,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ecr_replication_configuration: {
+            resource+: {
+              aws_ecr_replication_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1275,8 +1275,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ecr_repository: {
+            resource+: {
+              aws_ecr_repository+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1555,8 +1555,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ecr_repository_creation_template: {
+            resource+: {
+              aws_ecr_repository_creation_template+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1811,8 +1811,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ecr_repository_policy: {
+            resource+: {
+              aws_ecr_repository_policy+: {
                 [tf_resource_key]: this,
               },
             },

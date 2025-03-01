@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_prefix_list: {
+            data+: {
+              aws_prefix_list+: {
                 [tf_resource_key]: this,
               },
             },

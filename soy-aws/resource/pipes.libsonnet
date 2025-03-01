@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_pipes_pipe: {
+            resource+: {
+              aws_pipes_pipe+: {
                 [tf_resource_key]: this,
               },
             },

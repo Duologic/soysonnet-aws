@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_codedeploy_app: {
+            resource+: {
+              aws_codedeploy_app+: {
                 [tf_resource_key]: this,
               },
             },
@@ -233,8 +233,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_codedeploy_deployment_config: {
+            resource+: {
+              aws_codedeploy_deployment_config+: {
                 [tf_resource_key]: this,
               },
             },
@@ -586,8 +586,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_codedeploy_deployment_group: {
+            resource+: {
+              aws_codedeploy_deployment_group+: {
                 [tf_resource_key]: this,
               },
             },

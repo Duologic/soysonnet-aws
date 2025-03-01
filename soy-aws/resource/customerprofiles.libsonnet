@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_customerprofiles_domain: {
+            resource+: {
+              aws_customerprofiles_domain+: {
                 [tf_resource_key]: this,
               },
             },
@@ -692,8 +692,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_customerprofiles_profile: {
+            resource+: {
+              aws_customerprofiles_profile+: {
                 [tf_resource_key]: this,
               },
             },

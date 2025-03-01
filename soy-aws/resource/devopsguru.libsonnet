@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_devopsguru_event_sources_config: {
+            resource+: {
+              aws_devopsguru_event_sources_config+: {
                 [tf_resource_key]: this,
               },
             },
@@ -231,8 +231,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_devopsguru_notification_channel: {
+            resource+: {
+              aws_devopsguru_notification_channel+: {
                 [tf_resource_key]: this,
               },
             },
@@ -478,8 +478,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_devopsguru_resource_collection: {
+            resource+: {
+              aws_devopsguru_resource_collection+: {
                 [tf_resource_key]: this,
               },
             },
@@ -728,8 +728,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_devopsguru_service_integration: {
+            resource+: {
+              aws_devopsguru_service_integration+: {
                 [tf_resource_key]: this,
               },
             },

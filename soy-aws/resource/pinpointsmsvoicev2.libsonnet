@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_pinpointsmsvoicev2_configuration_set: {
+            resource+: {
+              aws_pinpointsmsvoicev2_configuration_set+: {
                 [tf_resource_key]: this,
               },
             },
@@ -225,8 +225,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_pinpointsmsvoicev2_opt_out_list: {
+            resource+: {
+              aws_pinpointsmsvoicev2_opt_out_list+: {
                 [tf_resource_key]: this,
               },
             },
@@ -431,8 +431,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_pinpointsmsvoicev2_phone_number: {
+            resource+: {
+              aws_pinpointsmsvoicev2_phone_number+: {
                 [tf_resource_key]: this,
               },
             },

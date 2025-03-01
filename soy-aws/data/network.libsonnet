@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_network_acls: {
+            data+: {
+              aws_network_acls+: {
                 [tf_resource_key]: this,
               },
             },
@@ -135,8 +135,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_network_interface: {
+            data+: {
+              aws_network_interface+: {
                 [tf_resource_key]: this,
               },
             },
@@ -409,8 +409,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_network_interfaces: {
+            data+: {
+              aws_network_interfaces+: {
                 [tf_resource_key]: this,
               },
             },

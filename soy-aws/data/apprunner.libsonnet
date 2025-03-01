@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_apprunner_hosted_zone_id: {
+            data+: {
+              aws_apprunner_hosted_zone_id+: {
                 [tf_resource_key]: this,
               },
             },

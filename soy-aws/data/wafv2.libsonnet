@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_wafv2_ip_set: {
+            data+: {
+              aws_wafv2_ip_set+: {
                 [tf_resource_key]: this,
               },
             },
@@ -94,8 +94,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_wafv2_regex_pattern_set: {
+            data+: {
+              aws_wafv2_regex_pattern_set+: {
                 [tf_resource_key]: this,
               },
             },
@@ -177,8 +177,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_wafv2_rule_group: {
+            data+: {
+              aws_wafv2_rule_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -238,8 +238,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_wafv2_web_acl: {
+            data+: {
+              aws_wafv2_web_acl+: {
                 [tf_resource_key]: this,
               },
             },

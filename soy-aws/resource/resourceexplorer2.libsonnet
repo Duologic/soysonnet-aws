@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_resourceexplorer2_index: {
+            resource+: {
+              aws_resourceexplorer2_index+: {
                 [tf_resource_key]: this,
               },
             },
@@ -246,8 +246,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_resourceexplorer2_view: {
+            resource+: {
+              aws_resourceexplorer2_view+: {
                 [tf_resource_key]: this,
               },
             },

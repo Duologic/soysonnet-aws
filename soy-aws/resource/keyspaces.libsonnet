@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_keyspaces_keyspace: {
+            resource+: {
+              aws_keyspaces_keyspace+: {
                 [tf_resource_key]: this,
               },
             },
@@ -277,8 +277,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_keyspaces_table: {
+            resource+: {
+              aws_keyspaces_table+: {
                 [tf_resource_key]: this,
               },
             },

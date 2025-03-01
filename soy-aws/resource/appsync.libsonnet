@@ -17,8 +17,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appsync_api_cache: {
+            resource+: {
+              aws_appsync_api_cache+: {
                 [tf_resource_key]: this,
               },
             },
@@ -220,8 +220,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appsync_api_key: {
+            resource+: {
+              aws_appsync_api_key+: {
                 [tf_resource_key]: this,
               },
             },
@@ -421,8 +421,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appsync_datasource: {
+            resource+: {
+              aws_appsync_datasource+: {
                 [tf_resource_key]: this,
               },
             },
@@ -930,8 +930,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appsync_domain_name: {
+            resource+: {
+              aws_appsync_domain_name+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1130,8 +1130,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appsync_domain_name_api_association: {
+            resource+: {
+              aws_appsync_domain_name_api_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1319,8 +1319,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appsync_function: {
+            resource+: {
+              aws_appsync_function+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1612,8 +1612,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appsync_graphql_api: {
+            resource+: {
+              aws_appsync_graphql_api+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2133,8 +2133,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appsync_resolver: {
+            resource+: {
+              aws_appsync_resolver+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2484,8 +2484,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appsync_source_api_association: {
+            resource+: {
+              aws_appsync_source_api_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2744,8 +2744,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appsync_type: {
+            resource+: {
+              aws_appsync_type+: {
                 [tf_resource_key]: this,
               },
             },

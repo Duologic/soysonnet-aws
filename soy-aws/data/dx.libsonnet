@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_dx_connection: {
+            data+: {
+              aws_dx_connection+: {
                 [tf_resource_key]: this,
               },
             },
@@ -102,8 +102,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_dx_gateway: {
+            data+: {
+              aws_dx_gateway+: {
                 [tf_resource_key]: this,
               },
             },
@@ -162,8 +162,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_dx_location: {
+            data+: {
+              aws_dx_location+: {
                 [tf_resource_key]: this,
               },
             },
@@ -255,8 +255,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_dx_locations: {
+            data+: {
+              aws_dx_locations+: {
                 [tf_resource_key]: this,
               },
             },
@@ -314,8 +314,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_dx_router_configuration: {
+            data+: {
+              aws_dx_router_configuration+: {
                 [tf_resource_key]: this,
               },
             },

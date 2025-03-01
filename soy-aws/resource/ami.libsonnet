@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ami: {
+            resource+: {
+              aws_ami+: {
                 [tf_resource_key]: this,
               },
             },
@@ -424,8 +424,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ami_copy: {
+            resource+: {
+              aws_ami_copy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -853,8 +853,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ami_from_instance: {
+            resource+: {
+              aws_ami_from_instance+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1269,8 +1269,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ami_launch_permission: {
+            resource+: {
+              aws_ami_launch_permission+: {
                 [tf_resource_key]: this,
               },
             },

@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_api_gateway_account: {
+            resource+: {
+              aws_api_gateway_account+: {
                 [tf_resource_key]: this,
               },
             },
@@ -244,8 +244,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_api_gateway_api_key: {
+            resource+: {
+              aws_api_gateway_api_key+: {
                 [tf_resource_key]: this,
               },
             },
@@ -472,8 +472,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_api_gateway_authorizer: {
+            resource+: {
+              aws_api_gateway_authorizer+: {
                 [tf_resource_key]: this,
               },
             },
@@ -702,8 +702,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_api_gateway_base_path_mapping: {
+            resource+: {
+              aws_api_gateway_base_path_mapping+: {
                 [tf_resource_key]: this,
               },
             },
@@ -900,8 +900,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_api_gateway_client_certificate: {
+            resource+: {
+              aws_api_gateway_client_certificate+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1115,8 +1115,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_api_gateway_deployment: {
+            resource+: {
+              aws_api_gateway_deployment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1375,8 +1375,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_api_gateway_documentation_part: {
+            resource+: {
+              aws_api_gateway_documentation_part+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1608,8 +1608,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_api_gateway_documentation_version: {
+            resource+: {
+              aws_api_gateway_documentation_version+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1799,8 +1799,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_api_gateway_domain_name: {
+            resource+: {
+              aws_api_gateway_domain_name+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2120,8 +2120,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_api_gateway_domain_name_access_association: {
+            resource+: {
+              aws_api_gateway_domain_name_access_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2332,8 +2332,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_api_gateway_gateway_response: {
+            resource+: {
+              aws_api_gateway_gateway_response+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2542,8 +2542,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_api_gateway_integration: {
+            resource+: {
+              aws_api_gateway_integration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2823,8 +2823,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_api_gateway_integration_response: {
+            resource+: {
+              aws_api_gateway_integration_response+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3045,8 +3045,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_api_gateway_method: {
+            resource+: {
+              aws_api_gateway_method+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3289,8 +3289,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_api_gateway_method_response: {
+            resource+: {
+              aws_api_gateway_method_response+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3503,8 +3503,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_api_gateway_method_settings: {
+            resource+: {
+              aws_api_gateway_method_settings+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3767,8 +3767,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_api_gateway_model: {
+            resource+: {
+              aws_api_gateway_model+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3967,8 +3967,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_api_gateway_request_validator: {
+            resource+: {
+              aws_api_gateway_request_validator+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4164,8 +4164,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_api_gateway_resource: {
+            resource+: {
+              aws_api_gateway_resource+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4359,8 +4359,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_api_gateway_rest_api: {
+            resource+: {
+              aws_api_gateway_rest_api+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4676,8 +4676,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_api_gateway_rest_api_policy: {
+            resource+: {
+              aws_api_gateway_rest_api_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4865,8 +4865,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_api_gateway_stage: {
+            resource+: {
+              aws_api_gateway_stage+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5184,8 +5184,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_api_gateway_usage_plan: {
+            resource+: {
+              aws_api_gateway_usage_plan+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5505,8 +5505,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_api_gateway_usage_plan_key: {
+            resource+: {
+              aws_api_gateway_usage_plan_key+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5705,8 +5705,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_api_gateway_vpc_link: {
+            resource+: {
+              aws_api_gateway_vpc_link+: {
                 [tf_resource_key]: this,
               },
             },

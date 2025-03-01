@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            ephemeral: {
-              aws_cognito_identity_openid_token_for_developer_identity: {
+            ephemeral+: {
+              aws_cognito_identity_openid_token_for_developer_identity+: {
                 [tf_resource_key]: this,
               },
             },

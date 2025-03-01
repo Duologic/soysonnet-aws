@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_codeguruprofiler_profiling_group: {
+            data+: {
+              aws_codeguruprofiler_profiling_group+: {
                 [tf_resource_key]: this,
               },
             },

@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_bedrockagent_agent_versions: {
+            data+: {
+              aws_bedrockagent_agent_versions+: {
                 [tf_resource_key]: this,
               },
             },

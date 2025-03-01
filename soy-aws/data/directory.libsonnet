@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_directory_service_directory: {
+            data+: {
+              aws_directory_service_directory+: {
                 [tf_resource_key]: this,
               },
             },

@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_amplify_app: {
+            resource+: {
+              aws_amplify_app+: {
                 [tf_resource_key]: this,
               },
             },
@@ -458,8 +458,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_amplify_backend_environment: {
+            resource+: {
+              aws_amplify_backend_environment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -658,8 +658,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_amplify_branch: {
+            resource+: {
+              aws_amplify_branch+: {
                 [tf_resource_key]: this,
               },
             },
@@ -963,8 +963,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_amplify_domain_association: {
+            resource+: {
+              aws_amplify_domain_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1230,8 +1230,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_amplify_webhook: {
+            resource+: {
+              aws_amplify_webhook+: {
                 [tf_resource_key]: this,
               },
             },

@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_lakeformation_data_lake_settings: {
+            data+: {
+              aws_lakeformation_data_lake_settings+: {
                 [tf_resource_key]: this,
               },
             },
@@ -219,8 +219,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_lakeformation_permissions: {
+            data+: {
+              aws_lakeformation_permissions+: {
                 [tf_resource_key]: this,
               },
             },
@@ -594,8 +594,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_lakeformation_resource: {
+            data+: {
+              aws_lakeformation_resource+: {
                 [tf_resource_key]: this,
               },
             },

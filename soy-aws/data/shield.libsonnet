@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_shield_protection: {
+            data+: {
+              aws_shield_protection+: {
                 [tf_resource_key]: this,
               },
             },

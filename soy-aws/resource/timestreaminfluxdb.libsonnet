@@ -22,8 +22,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_timestreaminfluxdb_db_instance: {
+            resource+: {
+              aws_timestreaminfluxdb_db_instance+: {
                 [tf_resource_key]: this,
               },
             },

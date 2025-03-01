@@ -19,8 +19,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_verifiedaccess_endpoint: {
+            resource+: {
+              aws_verifiedaccess_endpoint+: {
                 [tf_resource_key]: this,
               },
             },
@@ -400,8 +400,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_verifiedaccess_group: {
+            resource+: {
+              aws_verifiedaccess_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -653,8 +653,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_verifiedaccess_instance: {
+            resource+: {
+              aws_verifiedaccess_instance+: {
                 [tf_resource_key]: this,
               },
             },
@@ -903,8 +903,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_verifiedaccess_instance_logging_configuration: {
+            resource+: {
+              aws_verifiedaccess_instance_logging_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1219,8 +1219,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_verifiedaccess_instance_trust_provider_attachment: {
+            resource+: {
+              aws_verifiedaccess_instance_trust_provider_attachment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1407,8 +1407,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_verifiedaccess_trust_provider: {
+            resource+: {
+              aws_verifiedaccess_trust_provider+: {
                 [tf_resource_key]: this,
               },
             },

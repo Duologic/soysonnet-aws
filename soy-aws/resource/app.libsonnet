@@ -17,8 +17,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_app_cookie_stickiness_policy: {
+            resource+: {
+              aws_app_cookie_stickiness_policy+: {
                 [tf_resource_key]: this,
               },
             },

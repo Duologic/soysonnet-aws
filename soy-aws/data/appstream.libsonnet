@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_appstream_image: {
+            data+: {
+              aws_appstream_image+: {
                 [tf_resource_key]: this,
               },
             },

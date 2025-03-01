@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_serverlessapplicationrepository_application: {
+            data+: {
+              aws_serverlessapplicationrepository_application+: {
                 [tf_resource_key]: this,
               },
             },

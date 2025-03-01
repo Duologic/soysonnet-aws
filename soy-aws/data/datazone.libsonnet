@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_datazone_environment_blueprint: {
+            data+: {
+              aws_datazone_environment_blueprint+: {
                 [tf_resource_key]: this,
               },
             },

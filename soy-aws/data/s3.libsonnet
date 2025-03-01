@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_s3_account_public_access_block: {
+            data+: {
+              aws_s3_account_public_access_block+: {
                 [tf_resource_key]: this,
               },
             },
@@ -77,8 +77,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_s3_bucket: {
+            data+: {
+              aws_s3_bucket+: {
                 [tf_resource_key]: this,
               },
             },
@@ -154,8 +154,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_s3_bucket_object: {
+            data+: {
+              aws_s3_bucket_object+: {
                 [tf_resource_key]: this,
               },
             },
@@ -310,8 +310,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_s3_bucket_objects: {
+            data+: {
+              aws_s3_bucket_objects+: {
                 [tf_resource_key]: this,
               },
             },
@@ -424,8 +424,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_s3_bucket_policy: {
+            data+: {
+              aws_s3_bucket_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -475,8 +475,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_s3_directory_buckets: {
+            data+: {
+              aws_s3_directory_buckets+: {
                 [tf_resource_key]: this,
               },
             },
@@ -548,8 +548,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_s3_object: {
+            data+: {
+              aws_s3_object+: {
                 [tf_resource_key]: this,
               },
             },
@@ -724,8 +724,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_s3_objects: {
+            data+: {
+              aws_s3_objects+: {
                 [tf_resource_key]: this,
               },
             },

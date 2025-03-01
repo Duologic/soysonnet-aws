@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ebs_default_kms_key: {
+            data+: {
+              aws_ebs_default_kms_key+: {
                 [tf_resource_key]: this,
               },
             },
@@ -77,8 +77,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ebs_encryption_by_default: {
+            data+: {
+              aws_ebs_encryption_by_default+: {
                 [tf_resource_key]: this,
               },
             },
@@ -141,8 +141,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ebs_snapshot: {
+            data+: {
+              aws_ebs_snapshot+: {
                 [tf_resource_key]: this,
               },
             },
@@ -347,8 +347,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ebs_snapshot_ids: {
+            data+: {
+              aws_ebs_snapshot_ids+: {
                 [tf_resource_key]: this,
               },
             },
@@ -485,8 +485,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ebs_volume: {
+            data+: {
+              aws_ebs_volume+: {
                 [tf_resource_key]: this,
               },
             },
@@ -641,8 +641,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ebs_volumes: {
+            data+: {
+              aws_ebs_volumes+: {
                 [tf_resource_key]: this,
               },
             },

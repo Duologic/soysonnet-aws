@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_qldb_ledger: {
+            resource+: {
+              aws_qldb_ledger+: {
                 [tf_resource_key]: this,
               },
             },
@@ -256,8 +256,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_qldb_stream: {
+            resource+: {
+              aws_qldb_stream+: {
                 [tf_resource_key]: this,
               },
             },

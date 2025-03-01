@@ -19,8 +19,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_medialive_channel: {
+            resource+: {
+              aws_medialive_channel+: {
                 [tf_resource_key]: this,
               },
             },
@@ -7950,8 +7950,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_medialive_input: {
+            resource+: {
+              aws_medialive_input+: {
                 [tf_resource_key]: this,
               },
             },
@@ -8383,8 +8383,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_medialive_input_security_group: {
+            resource+: {
+              aws_medialive_input_security_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -8648,8 +8648,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_medialive_multiplex: {
+            resource+: {
+              aws_medialive_multiplex+: {
                 [tf_resource_key]: this,
               },
             },
@@ -8934,8 +8934,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_medialive_multiplex_program: {
+            resource+: {
+              aws_medialive_multiplex_program+: {
                 [tf_resource_key]: this,
               },
             },

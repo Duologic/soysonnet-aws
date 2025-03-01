@@ -18,8 +18,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_account_alternate_contact: {
+            resource+: {
+              aws_account_alternate_contact+: {
                 [tf_resource_key]: this,
               },
             },
@@ -255,8 +255,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_account_primary_contact: {
+            resource+: {
+              aws_account_primary_contact+: {
                 [tf_resource_key]: this,
               },
             },
@@ -487,8 +487,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_account_region: {
+            resource+: {
+              aws_account_region+: {
                 [tf_resource_key]: this,
               },
             },

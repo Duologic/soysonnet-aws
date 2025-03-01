@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_alb: {
+            data+: {
+              aws_alb+: {
                 [tf_resource_key]: this,
               },
             },
@@ -307,8 +307,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_alb_listener: {
+            data+: {
+              aws_alb_listener+: {
                 [tf_resource_key]: this,
               },
             },
@@ -729,8 +729,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_alb_target_group: {
+            data+: {
+              aws_alb_target_group+: {
                 [tf_resource_key]: this,
               },
             },

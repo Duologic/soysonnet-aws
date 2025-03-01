@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_rum_app_monitor: {
+            resource+: {
+              aws_rum_app_monitor+: {
                 [tf_resource_key]: this,
               },
             },
@@ -365,8 +365,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_rum_metrics_destination: {
+            resource+: {
+              aws_rum_metrics_destination+: {
                 [tf_resource_key]: this,
               },
             },

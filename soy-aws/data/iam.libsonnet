@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_iam_access_keys: {
+            data+: {
+              aws_iam_access_keys+: {
                 [tf_resource_key]: this,
               },
             },
@@ -91,8 +91,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_iam_account_alias: {
+            data+: {
+              aws_iam_account_alias+: {
                 [tf_resource_key]: this,
               },
             },
@@ -139,8 +139,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_iam_group: {
+            data+: {
+              aws_iam_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -233,8 +233,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_iam_instance_profile: {
+            data+: {
+              aws_iam_instance_profile+: {
                 [tf_resource_key]: this,
               },
             },
@@ -305,8 +305,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_iam_instance_profiles: {
+            data+: {
+              aws_iam_instance_profiles+: {
                 [tf_resource_key]: this,
               },
             },
@@ -394,8 +394,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_iam_openid_connect_provider: {
+            data+: {
+              aws_iam_openid_connect_provider+: {
                 [tf_resource_key]: this,
               },
             },
@@ -481,8 +481,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_iam_policy: {
+            data+: {
+              aws_iam_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -564,8 +564,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_iam_policy_document: {
+            data+: {
+              aws_iam_policy_document+: {
                 [tf_resource_key]: this,
               },
             },
@@ -855,8 +855,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_iam_principal_policy_simulation: {
+            data+: {
+              aws_iam_principal_policy_simulation+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1101,8 +1101,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_iam_role: {
+            data+: {
+              aws_iam_role+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1214,8 +1214,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_iam_roles: {
+            data+: {
+              aws_iam_roles+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1294,8 +1294,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_iam_saml_provider: {
+            data+: {
+              aws_iam_saml_provider+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1365,8 +1365,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_iam_server_certificate: {
+            data+: {
+              aws_iam_server_certificate+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1449,8 +1449,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_iam_session_context: {
+            data+: {
+              aws_iam_session_context+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1513,8 +1513,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_iam_user: {
+            data+: {
+              aws_iam_user+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1587,8 +1587,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_iam_user_ssh_key: {
+            data+: {
+              aws_iam_user_ssh_key+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1654,8 +1654,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_iam_users: {
+            data+: {
+              aws_iam_users+: {
                 [tf_resource_key]: this,
               },
             },

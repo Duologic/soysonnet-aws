@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_apprunner_auto_scaling_configuration_version: {
+            resource+: {
+              aws_apprunner_auto_scaling_configuration_version+: {
                 [tf_resource_key]: this,
               },
             },
@@ -250,8 +250,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_apprunner_connection: {
+            resource+: {
+              aws_apprunner_connection+: {
                 [tf_resource_key]: this,
               },
             },
@@ -462,8 +462,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_apprunner_custom_domain_association: {
+            resource+: {
+              aws_apprunner_custom_domain_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -695,8 +695,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_apprunner_default_auto_scaling_configuration_version: {
+            resource+: {
+              aws_apprunner_default_auto_scaling_configuration_version+: {
                 [tf_resource_key]: this,
               },
             },
@@ -878,8 +878,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_apprunner_deployment: {
+            resource+: {
+              aws_apprunner_deployment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1086,8 +1086,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_apprunner_observability_configuration: {
+            resource+: {
+              aws_apprunner_observability_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1319,8 +1319,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_apprunner_service: {
+            resource+: {
+              aws_apprunner_service+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2103,8 +2103,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_apprunner_vpc_connector: {
+            resource+: {
+              aws_apprunner_vpc_connector+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2344,8 +2344,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_apprunner_vpc_ingress_connection: {
+            resource+: {
+              aws_apprunner_vpc_ingress_connection+: {
                 [tf_resource_key]: this,
               },
             },

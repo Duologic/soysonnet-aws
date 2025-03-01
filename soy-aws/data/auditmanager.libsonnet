@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_auditmanager_control: {
+            data+: {
+              aws_auditmanager_control+: {
                 [tf_resource_key]: this,
               },
             },
@@ -168,8 +168,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_auditmanager_framework: {
+            data+: {
+              aws_auditmanager_framework+: {
                 [tf_resource_key]: this,
               },
             },

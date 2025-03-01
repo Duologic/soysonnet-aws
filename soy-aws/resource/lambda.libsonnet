@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lambda_alias: {
+            resource+: {
+              aws_lambda_alias+: {
                 [tf_resource_key]: this,
               },
             },
@@ -242,8 +242,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lambda_code_signing_config: {
+            resource+: {
+              aws_lambda_code_signing_config+: {
                 [tf_resource_key]: this,
               },
             },
@@ -499,8 +499,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lambda_event_source_mapping: {
+            resource+: {
+              aws_lambda_event_source_mapping+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1069,8 +1069,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lambda_function: {
+            resource+: {
+              aws_lambda_function+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1722,8 +1722,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lambda_function_event_invoke_config: {
+            resource+: {
+              aws_lambda_function_event_invoke_config+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1975,8 +1975,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lambda_function_recursion_config: {
+            resource+: {
+              aws_lambda_function_recursion_config+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2159,8 +2159,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lambda_function_url: {
+            resource+: {
+              aws_lambda_function_url+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2479,8 +2479,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lambda_invocation: {
+            resource+: {
+              aws_lambda_invocation+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2690,8 +2690,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lambda_layer_version: {
+            resource+: {
+              aws_lambda_layer_version+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2969,8 +2969,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lambda_layer_version_permission: {
+            resource+: {
+              aws_lambda_layer_version_permission+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3186,8 +3186,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lambda_permission: {
+            resource+: {
+              aws_lambda_permission+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3411,8 +3411,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lambda_provisioned_concurrency_config: {
+            resource+: {
+              aws_lambda_provisioned_concurrency_config+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3629,8 +3629,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_lambda_runtime_management_config: {
+            resource+: {
+              aws_lambda_runtime_management_config+: {
                 [tf_resource_key]: this,
               },
             },

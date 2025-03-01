@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3outposts_endpoint: {
+            resource+: {
+              aws_s3outposts_endpoint+: {
                 [tf_resource_key]: this,
               },
             },

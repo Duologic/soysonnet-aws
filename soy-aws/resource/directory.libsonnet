@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_directory_service_conditional_forwarder: {
+            resource+: {
+              aws_directory_service_conditional_forwarder+: {
                 [tf_resource_key]: this,
               },
             },
@@ -218,8 +218,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_directory_service_directory: {
+            resource+: {
+              aws_directory_service_directory+: {
                 [tf_resource_key]: this,
               },
             },
@@ -653,8 +653,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_directory_service_log_subscription: {
+            resource+: {
+              aws_directory_service_log_subscription+: {
                 [tf_resource_key]: this,
               },
             },
@@ -847,8 +847,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_directory_service_radius_settings: {
+            resource+: {
+              aws_directory_service_radius_settings+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1097,8 +1097,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_directory_service_region: {
+            resource+: {
+              aws_directory_service_region+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1369,8 +1369,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_directory_service_shared_directory: {
+            resource+: {
+              aws_directory_service_shared_directory+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1604,8 +1604,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_directory_service_shared_directory_accepter: {
+            resource+: {
+              aws_directory_service_shared_directory_accepter+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1829,8 +1829,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_directory_service_trust: {
+            resource+: {
+              aws_directory_service_trust+: {
                 [tf_resource_key]: this,
               },
             },

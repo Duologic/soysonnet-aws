@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_codecommit_approval_rule_template: {
+            resource+: {
+              aws_codecommit_approval_rule_template+: {
                 [tf_resource_key]: this,
               },
             },
@@ -227,8 +227,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_codecommit_approval_rule_template_association: {
+            resource+: {
+              aws_codecommit_approval_rule_template_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -414,8 +414,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_codecommit_repository: {
+            resource+: {
+              aws_codecommit_repository+: {
                 [tf_resource_key]: this,
               },
             },
@@ -642,8 +642,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_codecommit_trigger: {
+            resource+: {
+              aws_codecommit_trigger+: {
                 [tf_resource_key]: this,
               },
             },

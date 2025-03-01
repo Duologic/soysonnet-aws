@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_redshiftdata_statement: {
+            resource+: {
+              aws_redshiftdata_statement+: {
                 [tf_resource_key]: this,
               },
             },

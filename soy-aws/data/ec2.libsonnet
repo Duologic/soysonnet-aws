@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_capacity_block_offering: {
+            data+: {
+              aws_ec2_capacity_block_offering+: {
                 [tf_resource_key]: this,
               },
             },
@@ -95,8 +95,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_client_vpn_endpoint: {
+            data+: {
+              aws_ec2_client_vpn_endpoint+: {
                 [tf_resource_key]: this,
               },
             },
@@ -399,8 +399,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_coip_pool: {
+            data+: {
+              aws_ec2_coip_pool+: {
                 [tf_resource_key]: this,
               },
             },
@@ -529,8 +529,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_coip_pools: {
+            data+: {
+              aws_ec2_coip_pools+: {
                 [tf_resource_key]: this,
               },
             },
@@ -647,8 +647,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_host: {
+            data+: {
+              aws_ec2_host+: {
                 [tf_resource_key]: this,
               },
             },
@@ -804,8 +804,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_instance_type: {
+            data+: {
+              aws_ec2_instance_type+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1440,8 +1440,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_instance_type_offering: {
+            data+: {
+              aws_ec2_instance_type_offering+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1558,8 +1558,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_instance_type_offerings: {
+            data+: {
+              aws_ec2_instance_type_offerings+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1700,8 +1700,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_instance_types: {
+            data+: {
+              aws_ec2_instance_types+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1810,8 +1810,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_local_gateway: {
+            data+: {
+              aws_ec2_local_gateway+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1926,8 +1926,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_local_gateway_route_table: {
+            data+: {
+              aws_ec2_local_gateway_route_table+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2046,8 +2046,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_local_gateway_route_tables: {
+            data+: {
+              aws_ec2_local_gateway_route_tables+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2164,8 +2164,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_local_gateway_virtual_interface: {
+            data+: {
+              aws_ec2_local_gateway_virtual_interface+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2306,8 +2306,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_local_gateway_virtual_interface_group: {
+            data+: {
+              aws_ec2_local_gateway_virtual_interface_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2428,8 +2428,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_local_gateway_virtual_interface_groups: {
+            data+: {
+              aws_ec2_local_gateway_virtual_interface_groups+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2560,8 +2560,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_local_gateways: {
+            data+: {
+              aws_ec2_local_gateways+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2678,8 +2678,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_managed_prefix_list: {
+            data+: {
+              aws_ec2_managed_prefix_list+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2832,8 +2832,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_managed_prefix_lists: {
+            data+: {
+              aws_ec2_managed_prefix_lists+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2933,8 +2933,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_network_insights_analysis: {
+            data+: {
+              aws_ec2_network_insights_analysis+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5770,8 +5770,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_network_insights_path: {
+            data+: {
+              aws_ec2_network_insights_path+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5898,8 +5898,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_public_ipv4_pool: {
+            data+: {
+              aws_ec2_public_ipv4_pool+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6003,8 +6003,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_public_ipv4_pools: {
+            data+: {
+              aws_ec2_public_ipv4_pools+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6104,8 +6104,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_serial_console_access: {
+            data+: {
+              aws_ec2_serial_console_access+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6168,8 +6168,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_spot_price: {
+            data+: {
+              aws_ec2_spot_price+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6280,8 +6280,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_transit_gateway: {
+            data+: {
+              aws_ec2_transit_gateway+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6450,8 +6450,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_transit_gateway_attachment: {
+            data+: {
+              aws_ec2_transit_gateway_attachment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6577,8 +6577,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_transit_gateway_attachments: {
+            data+: {
+              aws_ec2_transit_gateway_attachments+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6695,8 +6695,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_transit_gateway_connect: {
+            data+: {
+              aws_ec2_transit_gateway_connect+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6815,8 +6815,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_transit_gateway_connect_peer: {
+            data+: {
+              aws_ec2_transit_gateway_connect_peer+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6975,8 +6975,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_transit_gateway_dx_gateway_attachment: {
+            data+: {
+              aws_ec2_transit_gateway_dx_gateway_attachment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -7091,8 +7091,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_transit_gateway_multicast_domain: {
+            data+: {
+              aws_ec2_transit_gateway_multicast_domain+: {
                 [tf_resource_key]: this,
               },
             },
@@ -7309,8 +7309,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_transit_gateway_peering_attachment: {
+            data+: {
+              aws_ec2_transit_gateway_peering_attachment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -7437,8 +7437,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_transit_gateway_peering_attachments: {
+            data+: {
+              aws_ec2_transit_gateway_peering_attachments+: {
                 [tf_resource_key]: this,
               },
             },
@@ -7547,8 +7547,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_transit_gateway_route_table: {
+            data+: {
+              aws_ec2_transit_gateway_route_table+: {
                 [tf_resource_key]: this,
               },
             },
@@ -7668,8 +7668,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_transit_gateway_route_table_associations: {
+            data+: {
+              aws_ec2_transit_gateway_route_table_associations+: {
                 [tf_resource_key]: this,
               },
             },
@@ -7783,8 +7783,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_transit_gateway_route_table_propagations: {
+            data+: {
+              aws_ec2_transit_gateway_route_table_propagations+: {
                 [tf_resource_key]: this,
               },
             },
@@ -7899,8 +7899,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_transit_gateway_route_table_routes: {
+            data+: {
+              aws_ec2_transit_gateway_route_table_routes+: {
                 [tf_resource_key]: this,
               },
             },
@@ -8020,8 +8020,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_transit_gateway_route_tables: {
+            data+: {
+              aws_ec2_transit_gateway_route_tables+: {
                 [tf_resource_key]: this,
               },
             },
@@ -8138,8 +8138,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_transit_gateway_vpc_attachment: {
+            data+: {
+              aws_ec2_transit_gateway_vpc_attachment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -8288,8 +8288,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_transit_gateway_vpc_attachments: {
+            data+: {
+              aws_ec2_transit_gateway_vpc_attachments+: {
                 [tf_resource_key]: this,
               },
             },
@@ -8398,8 +8398,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ec2_transit_gateway_vpn_attachment: {
+            data+: {
+              aws_ec2_transit_gateway_vpn_attachment+: {
                 [tf_resource_key]: this,
               },
             },

@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_outposts_asset: {
+            data+: {
+              aws_outposts_asset+: {
                 [tf_resource_key]: this,
               },
             },
@@ -83,8 +83,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_outposts_assets: {
+            data+: {
+              aws_outposts_assets+: {
                 [tf_resource_key]: this,
               },
             },
@@ -172,8 +172,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_outposts_outpost: {
+            data+: {
+              aws_outposts_outpost+: {
                 [tf_resource_key]: this,
               },
             },
@@ -264,8 +264,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_outposts_outpost_instance_type: {
+            data+: {
+              aws_outposts_outpost_instance_type+: {
                 [tf_resource_key]: this,
               },
             },
@@ -330,8 +330,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_outposts_outpost_instance_types: {
+            data+: {
+              aws_outposts_outpost_instance_types+: {
                 [tf_resource_key]: this,
               },
             },
@@ -391,8 +391,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_outposts_outposts: {
+            data+: {
+              aws_outposts_outposts+: {
                 [tf_resource_key]: this,
               },
             },
@@ -478,8 +478,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_outposts_site: {
+            data+: {
+              aws_outposts_site+: {
                 [tf_resource_key]: this,
               },
             },
@@ -533,8 +533,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_outposts_sites: {
+            data+: {
+              aws_outposts_sites+: {
                 [tf_resource_key]: this,
               },
             },

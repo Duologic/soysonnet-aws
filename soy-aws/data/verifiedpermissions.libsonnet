@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_verifiedpermissions_policy_store: {
+            data+: {
+              aws_verifiedpermissions_policy_store+: {
                 [tf_resource_key]: this,
               },
             },

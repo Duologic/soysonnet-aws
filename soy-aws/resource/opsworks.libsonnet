@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_opsworks_application: {
+            resource+: {
+              aws_opsworks_application+: {
                 [tf_resource_key]: this,
               },
             },
@@ -365,8 +365,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_opsworks_custom_layer: {
+            resource+: {
+              aws_opsworks_custom_layer+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1031,8 +1031,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_opsworks_ecs_cluster_layer: {
+            resource+: {
+              aws_opsworks_ecs_cluster_layer+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1697,8 +1697,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_opsworks_ganglia_layer: {
+            resource+: {
+              aws_opsworks_ganglia_layer+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2371,8 +2371,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_opsworks_haproxy_layer: {
+            resource+: {
+              aws_opsworks_haproxy_layer+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3057,8 +3057,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_opsworks_instance: {
+            resource+: {
+              aws_opsworks_instance+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3555,8 +3555,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_opsworks_java_app_layer: {
+            resource+: {
+              aws_opsworks_java_app_layer+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4236,8 +4236,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_opsworks_memcached_layer: {
+            resource+: {
+              aws_opsworks_memcached_layer+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4901,8 +4901,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_opsworks_mysql_layer: {
+            resource+: {
+              aws_opsworks_mysql_layer+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5570,8 +5570,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_opsworks_nodejs_app_layer: {
+            resource+: {
+              aws_opsworks_nodejs_app_layer+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6236,8 +6236,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_opsworks_permission: {
+            resource+: {
+              aws_opsworks_permission+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6435,8 +6435,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_opsworks_php_app_layer: {
+            resource+: {
+              aws_opsworks_php_app_layer+: {
                 [tf_resource_key]: this,
               },
             },
@@ -7096,8 +7096,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_opsworks_rails_app_layer: {
+            resource+: {
+              aws_opsworks_rails_app_layer+: {
                 [tf_resource_key]: this,
               },
             },
@@ -7784,8 +7784,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_opsworks_rds_db_instance: {
+            resource+: {
+              aws_opsworks_rds_db_instance+: {
                 [tf_resource_key]: this,
               },
             },
@@ -7982,8 +7982,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_opsworks_stack: {
+            resource+: {
+              aws_opsworks_stack+: {
                 [tf_resource_key]: this,
               },
             },
@@ -8329,8 +8329,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_opsworks_static_web_layer: {
+            resource+: {
+              aws_opsworks_static_web_layer+: {
                 [tf_resource_key]: this,
               },
             },
@@ -8991,8 +8991,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_opsworks_user_profile: {
+            resource+: {
+              aws_opsworks_user_profile+: {
                 [tf_resource_key]: this,
               },
             },

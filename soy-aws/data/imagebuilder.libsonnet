@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_imagebuilder_component: {
+            data+: {
+              aws_imagebuilder_component+: {
                 [tf_resource_key]: this,
               },
             },
@@ -127,8 +127,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_imagebuilder_components: {
+            data+: {
+              aws_imagebuilder_components+: {
                 [tf_resource_key]: this,
               },
             },
@@ -239,8 +239,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_imagebuilder_container_recipe: {
+            data+: {
+              aws_imagebuilder_container_recipe+: {
                 [tf_resource_key]: this,
               },
             },
@@ -518,8 +518,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_imagebuilder_container_recipes: {
+            data+: {
+              aws_imagebuilder_container_recipes+: {
                 [tf_resource_key]: this,
               },
             },
@@ -630,8 +630,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_imagebuilder_distribution_configuration: {
+            data+: {
+              aws_imagebuilder_distribution_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1071,8 +1071,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_imagebuilder_distribution_configurations: {
+            data+: {
+              aws_imagebuilder_distribution_configurations+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1179,8 +1179,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_imagebuilder_image: {
+            data+: {
+              aws_imagebuilder_image+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1455,8 +1455,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_imagebuilder_image_pipeline: {
+            data+: {
+              aws_imagebuilder_image_pipeline+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1672,8 +1672,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_imagebuilder_image_pipelines: {
+            data+: {
+              aws_imagebuilder_image_pipelines+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1780,8 +1780,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_imagebuilder_image_recipe: {
+            data+: {
+              aws_imagebuilder_image_recipe+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1999,8 +1999,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_imagebuilder_image_recipes: {
+            data+: {
+              aws_imagebuilder_image_recipes+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2111,8 +2111,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_imagebuilder_infrastructure_configuration: {
+            data+: {
+              aws_imagebuilder_infrastructure_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2308,8 +2308,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_imagebuilder_infrastructure_configurations: {
+            data+: {
+              aws_imagebuilder_infrastructure_configurations+: {
                 [tf_resource_key]: this,
               },
             },

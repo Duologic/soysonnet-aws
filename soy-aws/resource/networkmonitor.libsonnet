@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_networkmonitor_monitor: {
+            resource+: {
+              aws_networkmonitor_monitor+: {
                 [tf_resource_key]: this,
               },
             },
@@ -224,8 +224,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_networkmonitor_probe: {
+            resource+: {
+              aws_networkmonitor_probe+: {
                 [tf_resource_key]: this,
               },
             },

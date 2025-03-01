@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_sesv2_configuration_set: {
+            data+: {
+              aws_sesv2_configuration_set+: {
                 [tf_resource_key]: this,
               },
             },
@@ -272,8 +272,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_sesv2_dedicated_ip_pool: {
+            data+: {
+              aws_sesv2_dedicated_ip_pool+: {
                 [tf_resource_key]: this,
               },
             },
@@ -366,8 +366,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_sesv2_email_identity: {
+            data+: {
+              aws_sesv2_email_identity+: {
                 [tf_resource_key]: this,
               },
             },
@@ -498,8 +498,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_sesv2_email_identity_mail_from_attributes: {
+            data+: {
+              aws_sesv2_email_identity_mail_from_attributes+: {
                 [tf_resource_key]: this,
               },
             },

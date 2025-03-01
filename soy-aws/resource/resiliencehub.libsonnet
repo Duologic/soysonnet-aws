@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_resiliencehub_resiliency_policy: {
+            resource+: {
+              aws_resiliencehub_resiliency_policy+: {
                 [tf_resource_key]: this,
               },
             },

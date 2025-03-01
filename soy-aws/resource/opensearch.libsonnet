@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_opensearch_authorize_vpc_endpoint_access: {
+            resource+: {
+              aws_opensearch_authorize_vpc_endpoint_access+: {
                 [tf_resource_key]: this,
               },
             },
@@ -224,8 +224,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_opensearch_domain: {
+            resource+: {
+              aws_opensearch_domain+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1135,8 +1135,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_opensearch_domain_policy: {
+            resource+: {
+              aws_opensearch_domain_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1345,8 +1345,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_opensearch_domain_saml_options: {
+            resource+: {
+              aws_opensearch_domain_saml_options+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1629,8 +1629,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_opensearch_inbound_connection_accepter: {
+            resource+: {
+              aws_opensearch_inbound_connection_accepter+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1841,8 +1841,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_opensearch_outbound_connection: {
+            resource+: {
+              aws_opensearch_outbound_connection+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2159,8 +2159,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_opensearch_package: {
+            resource+: {
+              aws_opensearch_package+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2382,8 +2382,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_opensearch_package_association: {
+            resource+: {
+              aws_opensearch_package_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2597,8 +2597,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_opensearch_vpc_endpoint: {
+            resource+: {
+              aws_opensearch_vpc_endpoint+: {
                 [tf_resource_key]: this,
               },
             },

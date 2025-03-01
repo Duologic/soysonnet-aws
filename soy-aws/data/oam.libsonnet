@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_oam_link: {
+            data+: {
+              aws_oam_link+: {
                 [tf_resource_key]: this,
               },
             },
@@ -165,8 +165,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_oam_links: {
+            data+: {
+              aws_oam_links+: {
                 [tf_resource_key]: this,
               },
             },
@@ -223,8 +223,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_oam_sink: {
+            data+: {
+              aws_oam_sink+: {
                 [tf_resource_key]: this,
               },
             },
@@ -290,8 +290,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_oam_sinks: {
+            data+: {
+              aws_oam_sinks+: {
                 [tf_resource_key]: this,
               },
             },

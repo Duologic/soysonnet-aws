@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_emrcontainers_virtual_cluster: {
+            data+: {
+              aws_emrcontainers_virtual_cluster+: {
                 [tf_resource_key]: this,
               },
             },

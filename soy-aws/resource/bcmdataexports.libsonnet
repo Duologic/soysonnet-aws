@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_bcmdataexports_export: {
+            resource+: {
+              aws_bcmdataexports_export+: {
                 [tf_resource_key]: this,
               },
             },

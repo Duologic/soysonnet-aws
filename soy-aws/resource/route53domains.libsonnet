@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53domains_delegation_signer_record: {
+            resource+: {
+              aws_route53domains_delegation_signer_record+: {
                 [tf_resource_key]: this,
               },
             },
@@ -254,8 +254,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53domains_domain: {
+            resource+: {
+              aws_route53domains_domain+: {
                 [tf_resource_key]: this,
               },
             },
@@ -976,8 +976,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_route53domains_registered_domain: {
+            resource+: {
+              aws_route53domains_registered_domain+: {
                 [tf_resource_key]: this,
               },
             },

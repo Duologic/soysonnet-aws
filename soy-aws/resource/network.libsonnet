@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_network_acl: {
+            resource+: {
+              aws_network_acl+: {
                 [tf_resource_key]: this,
               },
             },
@@ -344,8 +344,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_network_acl_association: {
+            resource+: {
+              aws_network_acl_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -534,8 +534,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_network_acl_rule: {
+            resource+: {
+              aws_network_acl_rule+: {
                 [tf_resource_key]: this,
               },
             },
@@ -757,8 +757,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_network_interface: {
+            resource+: {
+              aws_network_interface+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1150,8 +1150,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_network_interface_attachment: {
+            resource+: {
+              aws_network_interface_attachment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1350,8 +1350,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_network_interface_sg_attachment: {
+            resource+: {
+              aws_network_interface_sg_attachment+: {
                 [tf_resource_key]: this,
               },
             },

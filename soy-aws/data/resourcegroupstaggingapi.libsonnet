@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_resourcegroupstaggingapi_resources: {
+            data+: {
+              aws_resourcegroupstaggingapi_resources+: {
                 [tf_resource_key]: this,
               },
             },

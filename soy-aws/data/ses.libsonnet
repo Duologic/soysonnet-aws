@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ses_active_receipt_rule_set: {
+            data+: {
+              aws_ses_active_receipt_rule_set+: {
                 [tf_resource_key]: this,
               },
             },
@@ -65,8 +65,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ses_domain_identity: {
+            data+: {
+              aws_ses_domain_identity+: {
                 [tf_resource_key]: this,
               },
             },
@@ -121,8 +121,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ses_email_identity: {
+            data+: {
+              aws_ses_email_identity+: {
                 [tf_resource_key]: this,
               },
             },

@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_controltower_controls: {
+            data+: {
+              aws_controltower_controls+: {
                 [tf_resource_key]: this,
               },
             },

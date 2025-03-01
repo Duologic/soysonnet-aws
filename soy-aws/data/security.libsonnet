@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_security_group: {
+            data+: {
+              aws_security_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -133,8 +133,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_security_groups: {
+            data+: {
+              aws_security_groups+: {
                 [tf_resource_key]: this,
               },
             },

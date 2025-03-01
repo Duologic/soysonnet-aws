@@ -17,8 +17,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appflow_connector_profile: {
+            resource+: {
+              aws_appflow_connector_profile+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2548,8 +2548,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appflow_flow: {
+            resource+: {
+              aws_appflow_flow+: {
                 [tf_resource_key]: this,
               },
             },

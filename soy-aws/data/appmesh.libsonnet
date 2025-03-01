@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_appmesh_gateway_route: {
+            data+: {
+              aws_appmesh_gateway_route+: {
                 [tf_resource_key]: this,
               },
             },
@@ -980,8 +980,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_appmesh_mesh: {
+            data+: {
+              aws_appmesh_mesh+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1120,8 +1120,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_appmesh_route: {
+            data+: {
+              aws_appmesh_route+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2509,8 +2509,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_appmesh_virtual_gateway: {
+            data+: {
+              aws_appmesh_virtual_gateway+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3432,8 +3432,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_appmesh_virtual_node: {
+            data+: {
+              aws_appmesh_virtual_node+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5131,8 +5131,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_appmesh_virtual_router: {
+            data+: {
+              aws_appmesh_virtual_router+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5274,8 +5274,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_appmesh_virtual_service: {
+            data+: {
+              aws_appmesh_virtual_service+: {
                 [tf_resource_key]: this,
               },
             },

@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_medialive_input: {
+            data+: {
+              aws_medialive_input+: {
                 [tf_resource_key]: this,
               },
             },

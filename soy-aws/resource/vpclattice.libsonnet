@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpclattice_access_log_subscription: {
+            resource+: {
+              aws_vpclattice_access_log_subscription+: {
                 [tf_resource_key]: this,
               },
             },
@@ -231,8 +231,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpclattice_auth_policy: {
+            resource+: {
+              aws_vpclattice_auth_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -453,8 +453,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpclattice_listener: {
+            resource+: {
+              aws_vpclattice_listener+: {
                 [tf_resource_key]: this,
               },
             },
@@ -800,8 +800,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpclattice_listener_rule: {
+            resource+: {
+              aws_vpclattice_listener_rule+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1300,8 +1300,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpclattice_resource_configuration: {
+            resource+: {
+              aws_vpclattice_resource_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1656,8 +1656,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpclattice_resource_gateway: {
+            resource+: {
+              aws_vpclattice_resource_gateway+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1929,8 +1929,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpclattice_resource_policy: {
+            resource+: {
+              aws_vpclattice_resource_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2116,8 +2116,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpclattice_service: {
+            resource+: {
+              aws_vpclattice_service+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2390,8 +2390,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpclattice_service_network: {
+            resource+: {
+              aws_vpclattice_service_network+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2598,8 +2598,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpclattice_service_network_resource_association: {
+            resource+: {
+              aws_vpclattice_service_network_resource_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2855,8 +2855,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpclattice_service_network_service_association: {
+            resource+: {
+              aws_vpclattice_service_network_service_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3130,8 +3130,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpclattice_service_network_vpc_association: {
+            resource+: {
+              aws_vpclattice_service_network_vpc_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3389,8 +3389,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpclattice_target_group: {
+            resource+: {
+              aws_vpclattice_target_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3793,8 +3793,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_vpclattice_target_group_attachment: {
+            resource+: {
+              aws_vpclattice_target_group_attachment+: {
                 [tf_resource_key]: this,
               },
             },

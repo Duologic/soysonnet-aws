@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_elastictranscoder_pipeline: {
+            resource+: {
+              aws_elastictranscoder_pipeline+: {
                 [tf_resource_key]: this,
               },
             },
@@ -379,8 +379,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_elastictranscoder_preset: {
+            resource+: {
+              aws_elastictranscoder_preset+: {
                 [tf_resource_key]: this,
               },
             },

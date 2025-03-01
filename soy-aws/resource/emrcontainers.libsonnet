@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_emrcontainers_job_template: {
+            resource+: {
+              aws_emrcontainers_job_template+: {
                 [tf_resource_key]: this,
               },
             },
@@ -588,8 +588,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_emrcontainers_virtual_cluster: {
+            resource+: {
+              aws_emrcontainers_virtual_cluster+: {
                 [tf_resource_key]: this,
               },
             },

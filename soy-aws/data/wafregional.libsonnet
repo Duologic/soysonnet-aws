@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_wafregional_ipset: {
+            data+: {
+              aws_wafregional_ipset+: {
                 [tf_resource_key]: this,
               },
             },
@@ -62,8 +62,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_wafregional_rate_based_rule: {
+            data+: {
+              aws_wafregional_rate_based_rule+: {
                 [tf_resource_key]: this,
               },
             },
@@ -110,8 +110,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_wafregional_rule: {
+            data+: {
+              aws_wafregional_rule+: {
                 [tf_resource_key]: this,
               },
             },
@@ -157,8 +157,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_wafregional_subscribed_rule_group: {
+            data+: {
+              aws_wafregional_subscribed_rule_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -209,8 +209,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_wafregional_web_acl: {
+            data+: {
+              aws_wafregional_web_acl+: {
                 [tf_resource_key]: this,
               },
             },

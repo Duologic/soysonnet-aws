@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ecs_account_setting_default: {
+            resource+: {
+              aws_ecs_account_setting_default+: {
                 [tf_resource_key]: this,
               },
             },
@@ -207,8 +207,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ecs_capacity_provider: {
+            resource+: {
+              aws_ecs_capacity_provider+: {
                 [tf_resource_key]: this,
               },
             },
@@ -494,8 +494,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ecs_cluster: {
+            resource+: {
+              aws_ecs_cluster+: {
                 [tf_resource_key]: this,
               },
             },
@@ -882,8 +882,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ecs_cluster_capacity_providers: {
+            resource+: {
+              aws_ecs_cluster_capacity_providers+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1109,8 +1109,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ecs_service: {
+            resource+: {
+              aws_ecs_service+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2098,8 +2098,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ecs_tag: {
+            resource+: {
+              aws_ecs_tag+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2290,8 +2290,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ecs_task_definition: {
+            resource+: {
+              aws_ecs_task_definition+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2891,8 +2891,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ecs_task_set: {
+            resource+: {
+              aws_ecs_task_set+: {
                 [tf_resource_key]: this,
               },
             },

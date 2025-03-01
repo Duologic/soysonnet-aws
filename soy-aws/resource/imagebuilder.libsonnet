@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_imagebuilder_component: {
+            resource+: {
+              aws_imagebuilder_component+: {
                 [tf_resource_key]: this,
               },
             },
@@ -286,8 +286,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_imagebuilder_container_recipe: {
+            resource+: {
+              aws_imagebuilder_container_recipe+: {
                 [tf_resource_key]: this,
               },
             },
@@ -723,8 +723,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_imagebuilder_distribution_configuration: {
+            resource+: {
+              aws_imagebuilder_distribution_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1343,8 +1343,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_imagebuilder_image: {
+            resource+: {
+              aws_imagebuilder_image+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1837,8 +1837,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_imagebuilder_image_pipeline: {
+            resource+: {
+              aws_imagebuilder_image_pipeline+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2265,8 +2265,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_imagebuilder_image_recipe: {
+            resource+: {
+              aws_imagebuilder_image_recipe+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2655,8 +2655,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_imagebuilder_infrastructure_configuration: {
+            resource+: {
+              aws_imagebuilder_infrastructure_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2993,8 +2993,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_imagebuilder_lifecycle_policy: {
+            resource+: {
+              aws_imagebuilder_lifecycle_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3480,8 +3480,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_imagebuilder_workflow: {
+            resource+: {
+              aws_imagebuilder_workflow+: {
                 [tf_resource_key]: this,
               },
             },

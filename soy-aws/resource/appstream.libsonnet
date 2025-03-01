@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appstream_directory_config: {
+            resource+: {
+              aws_appstream_directory_config+: {
                 [tf_resource_key]: this,
               },
             },
@@ -242,8 +242,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appstream_fleet: {
+            resource+: {
+              aws_appstream_fleet+: {
                 [tf_resource_key]: this,
               },
             },
@@ -617,8 +617,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appstream_fleet_stack_association: {
+            resource+: {
+              aws_appstream_fleet_stack_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -805,8 +805,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appstream_image_builder: {
+            resource+: {
+              aws_appstream_image_builder+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1144,8 +1144,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appstream_stack: {
+            resource+: {
+              aws_appstream_stack+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1514,8 +1514,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appstream_user: {
+            resource+: {
+              aws_appstream_user+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1727,8 +1727,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appstream_user_stack_association: {
+            resource+: {
+              aws_appstream_user_stack_association+: {
                 [tf_resource_key]: this,
               },
             },

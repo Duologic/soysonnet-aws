@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            ephemeral: {
-              aws_kms_secrets: {
+            ephemeral+: {
+              aws_kms_secrets+: {
                 [tf_resource_key]: this,
               },
             },

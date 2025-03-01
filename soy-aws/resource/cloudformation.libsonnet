@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudformation_stack: {
+            resource+: {
+              aws_cloudformation_stack+: {
                 [tf_resource_key]: this,
               },
             },
@@ -318,8 +318,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudformation_stack_instances: {
+            resource+: {
+              aws_cloudformation_stack_instances+: {
                 [tf_resource_key]: this,
               },
             },
@@ -756,8 +756,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudformation_stack_set: {
+            resource+: {
+              aws_cloudformation_stack_set+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1129,8 +1129,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudformation_stack_set_instance: {
+            resource+: {
+              aws_cloudformation_stack_set_instance+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1528,8 +1528,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudformation_type: {
+            resource+: {
+              aws_cloudformation_type+: {
                 [tf_resource_key]: this,
               },
             },

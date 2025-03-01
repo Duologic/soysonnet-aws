@@ -17,8 +17,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_msk_cluster: {
+            resource+: {
+              aws_msk_cluster+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1018,8 +1018,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_msk_cluster_policy: {
+            resource+: {
+              aws_msk_cluster_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1210,8 +1210,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_msk_configuration: {
+            resource+: {
+              aws_msk_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1426,8 +1426,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_msk_replicator: {
+            resource+: {
+              aws_msk_replicator+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1948,8 +1948,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_msk_scram_secret_association: {
+            resource+: {
+              aws_msk_scram_secret_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2147,8 +2147,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_msk_serverless_cluster: {
+            resource+: {
+              aws_msk_serverless_cluster+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2479,8 +2479,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_msk_single_scram_secret_association: {
+            resource+: {
+              aws_msk_single_scram_secret_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2670,8 +2670,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_msk_vpc_connection: {
+            resource+: {
+              aws_msk_vpc_connection+: {
                 [tf_resource_key]: this,
               },
             },

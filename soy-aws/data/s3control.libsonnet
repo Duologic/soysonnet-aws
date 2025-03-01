@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_s3control_multi_region_access_point: {
+            data+: {
+              aws_s3control_multi_region_access_point+: {
                 [tf_resource_key]: this,
               },
             },

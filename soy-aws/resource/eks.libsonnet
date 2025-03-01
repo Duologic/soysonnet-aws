@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_eks_access_entry: {
+            resource+: {
+              aws_eks_access_entry+: {
                 [tf_resource_key]: this,
               },
             },
@@ -278,8 +278,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_eks_access_policy_association: {
+            resource+: {
+              aws_eks_access_policy_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -536,8 +536,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_eks_addon: {
+            resource+: {
+              aws_eks_addon+: {
                 [tf_resource_key]: this,
               },
             },
@@ -836,8 +836,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_eks_cluster: {
+            resource+: {
+              aws_eks_cluster+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1647,8 +1647,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_eks_fargate_profile: {
+            resource+: {
+              aws_eks_fargate_profile+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1930,8 +1930,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_eks_identity_provider_config: {
+            resource+: {
+              aws_eks_identity_provider_config+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2228,8 +2228,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_eks_node_group: {
+            resource+: {
+              aws_eks_node_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2746,8 +2746,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_eks_pod_identity_association: {
+            resource+: {
+              aws_eks_pod_identity_association+: {
                 [tf_resource_key]: this,
               },
             },

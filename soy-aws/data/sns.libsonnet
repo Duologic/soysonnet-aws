@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_sns_topic: {
+            data+: {
+              aws_sns_topic+: {
                 [tf_resource_key]: this,
               },
             },

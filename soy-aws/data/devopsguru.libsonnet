@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_devopsguru_notification_channel: {
+            data+: {
+              aws_devopsguru_notification_channel+: {
                 [tf_resource_key]: this,
               },
             },
@@ -126,8 +126,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_devopsguru_resource_collection: {
+            data+: {
+              aws_devopsguru_resource_collection+: {
                 [tf_resource_key]: this,
               },
             },

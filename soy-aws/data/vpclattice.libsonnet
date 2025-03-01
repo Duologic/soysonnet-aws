@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_vpclattice_auth_policy: {
+            data+: {
+              aws_vpclattice_auth_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -71,8 +71,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_vpclattice_listener: {
+            data+: {
+              aws_vpclattice_listener+: {
                 [tf_resource_key]: this,
               },
             },
@@ -251,8 +251,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_vpclattice_resource_policy: {
+            data+: {
+              aws_vpclattice_resource_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -302,8 +302,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_vpclattice_service: {
+            data+: {
+              aws_vpclattice_service+: {
                 [tf_resource_key]: this,
               },
             },
@@ -408,8 +408,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_vpclattice_service_network: {
+            data+: {
+              aws_vpclattice_service_network+: {
                 [tf_resource_key]: this,
               },
             },

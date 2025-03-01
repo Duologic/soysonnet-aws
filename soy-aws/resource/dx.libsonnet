@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dx_bgp_peer: {
+            resource+: {
+              aws_dx_bgp_peer+: {
                 [tf_resource_key]: this,
               },
             },
@@ -256,8 +256,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dx_connection: {
+            resource+: {
+              aws_dx_connection+: {
                 [tf_resource_key]: this,
               },
             },
@@ -516,8 +516,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dx_connection_association: {
+            resource+: {
+              aws_dx_connection_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -703,8 +703,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dx_connection_confirmation: {
+            resource+: {
+              aws_dx_connection_confirmation+: {
                 [tf_resource_key]: this,
               },
             },
@@ -887,8 +887,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dx_gateway: {
+            resource+: {
+              aws_dx_gateway+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1105,8 +1105,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dx_gateway_association: {
+            resource+: {
+              aws_dx_gateway_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1361,8 +1361,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dx_gateway_association_proposal: {
+            resource+: {
+              aws_dx_gateway_association_proposal+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1578,8 +1578,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dx_hosted_connection: {
+            resource+: {
+              aws_dx_hosted_connection+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1822,8 +1822,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dx_hosted_private_virtual_interface: {
+            resource+: {
+              aws_dx_hosted_private_virtual_interface+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2080,8 +2080,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dx_hosted_private_virtual_interface_accepter: {
+            resource+: {
+              aws_dx_hosted_private_virtual_interface_accepter+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2320,8 +2320,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dx_hosted_public_virtual_interface: {
+            resource+: {
+              aws_dx_hosted_public_virtual_interface+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2584,8 +2584,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dx_hosted_public_virtual_interface_accepter: {
+            resource+: {
+              aws_dx_hosted_public_virtual_interface_accepter+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2815,8 +2815,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dx_hosted_transit_virtual_interface: {
+            resource+: {
+              aws_dx_hosted_transit_virtual_interface+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3074,8 +3074,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dx_hosted_transit_virtual_interface_accepter: {
+            resource+: {
+              aws_dx_hosted_transit_virtual_interface_accepter+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3306,8 +3306,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dx_lag: {
+            resource+: {
+              aws_dx_lag+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3541,8 +3541,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dx_macsec_key_association: {
+            resource+: {
+              aws_dx_macsec_key_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3748,8 +3748,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dx_private_virtual_interface: {
+            resource+: {
+              aws_dx_private_virtual_interface+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4041,8 +4041,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dx_public_virtual_interface: {
+            resource+: {
+              aws_dx_public_virtual_interface+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4322,8 +4322,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dx_transit_virtual_interface: {
+            resource+: {
+              aws_dx_transit_virtual_interface+: {
                 [tf_resource_key]: this,
               },
             },

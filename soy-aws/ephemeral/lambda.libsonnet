@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            ephemeral: {
-              aws_lambda_invocation: {
+            ephemeral+: {
+              aws_lambda_invocation+: {
                 [tf_resource_key]: this,
               },
             },

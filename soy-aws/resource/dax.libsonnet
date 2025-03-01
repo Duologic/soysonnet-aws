@@ -17,8 +17,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dax_cluster: {
+            resource+: {
+              aws_dax_cluster+: {
                 [tf_resource_key]: this,
               },
             },
@@ -376,8 +376,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dax_parameter_group: {
+            resource+: {
+              aws_dax_parameter_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -590,8 +590,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dax_subnet_group: {
+            resource+: {
+              aws_dax_subnet_group+: {
                 [tf_resource_key]: this,
               },
             },

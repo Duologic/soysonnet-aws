@@ -17,8 +17,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_codebuild_fleet: {
+            resource+: {
+              aws_codebuild_fleet+: {
                 [tf_resource_key]: this,
               },
             },
@@ -430,8 +430,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_codebuild_project: {
+            resource+: {
+              aws_codebuild_project+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1463,8 +1463,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_codebuild_report_group: {
+            resource+: {
+              aws_codebuild_report_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1751,8 +1751,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_codebuild_resource_policy: {
+            resource+: {
+              aws_codebuild_resource_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1940,8 +1940,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_codebuild_source_credential: {
+            resource+: {
+              aws_codebuild_source_credential+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2139,8 +2139,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_codebuild_webhook: {
+            resource+: {
+              aws_codebuild_webhook+: {
                 [tf_resource_key]: this,
               },
             },

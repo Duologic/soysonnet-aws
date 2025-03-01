@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3_access_point: {
+            resource+: {
+              aws_s3_access_point+: {
                 [tf_resource_key]: this,
               },
             },
@@ -293,8 +293,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3_account_public_access_block: {
+            resource+: {
+              aws_s3_account_public_access_block+: {
                 [tf_resource_key]: this,
               },
             },
@@ -491,8 +491,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3_bucket: {
+            resource+: {
+              aws_s3_bucket+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1525,8 +1525,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3_bucket_accelerate_configuration: {
+            resource+: {
+              aws_s3_bucket_accelerate_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1716,8 +1716,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3_bucket_acl: {
+            resource+: {
+              aws_s3_bucket_acl+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2017,8 +2017,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3_bucket_analytics_configuration: {
+            resource+: {
+              aws_s3_bucket_analytics_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2358,8 +2358,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3_bucket_cors_configuration: {
+            resource+: {
+              aws_s3_bucket_cors_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2629,8 +2629,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3_bucket_intelligent_tiering_configuration: {
+            resource+: {
+              aws_s3_bucket_intelligent_tiering_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2879,8 +2879,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3_bucket_inventory: {
+            resource+: {
+              aws_s3_bucket_inventory+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3254,8 +3254,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3_bucket_lifecycle_configuration: {
+            resource+: {
+              aws_s3_bucket_lifecycle_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3732,8 +3732,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3_bucket_logging: {
+            resource+: {
+              aws_s3_bucket_logging+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4037,8 +4037,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3_bucket_metric: {
+            resource+: {
+              aws_s3_bucket_metric+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4259,8 +4259,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3_bucket_notification: {
+            resource+: {
+              aws_s3_bucket_notification+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4591,8 +4591,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3_bucket_object: {
+            resource+: {
+              aws_s3_bucket_object+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4890,8 +4890,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3_bucket_object_lock_configuration: {
+            resource+: {
+              aws_s3_bucket_object_lock_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5136,8 +5136,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3_bucket_ownership_controls: {
+            resource+: {
+              aws_s3_bucket_ownership_controls+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5337,8 +5337,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3_bucket_policy: {
+            resource+: {
+              aws_s3_bucket_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5524,8 +5524,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3_bucket_public_access_block: {
+            resource+: {
+              aws_s3_bucket_public_access_block+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5725,8 +5725,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3_bucket_replication_configuration: {
+            resource+: {
+              aws_s3_bucket_replication_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6308,8 +6308,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3_bucket_request_payment_configuration: {
+            resource+: {
+              aws_s3_bucket_request_payment_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6500,8 +6500,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3_bucket_server_side_encryption_configuration: {
+            resource+: {
+              aws_s3_bucket_server_side_encryption_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6733,8 +6733,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3_bucket_versioning: {
+            resource+: {
+              aws_s3_bucket_versioning+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6947,8 +6947,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3_bucket_website_configuration: {
+            resource+: {
+              aws_s3_bucket_website_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -7285,8 +7285,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3_directory_bucket: {
+            resource+: {
+              aws_s3_directory_bucket+: {
                 [tf_resource_key]: this,
               },
             },
@@ -7511,8 +7511,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3_object: {
+            resource+: {
+              aws_s3_object+: {
                 [tf_resource_key]: this,
               },
             },
@@ -7874,8 +7874,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_s3_object_copy: {
+            resource+: {
+              aws_s3_object_copy+: {
                 [tf_resource_key]: this,
               },
             },

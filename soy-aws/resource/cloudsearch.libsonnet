@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudsearch_domain: {
+            resource+: {
+              aws_cloudsearch_domain+: {
                 [tf_resource_key]: this,
               },
             },
@@ -357,8 +357,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudsearch_domain_service_access_policy: {
+            resource+: {
+              aws_cloudsearch_domain_service_access_policy+: {
                 [tf_resource_key]: this,
               },
             },

@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_rds_certificate: {
+            resource+: {
+              aws_rds_certificate+: {
                 [tf_resource_key]: this,
               },
             },
@@ -197,8 +197,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_rds_cluster: {
+            resource+: {
+              aws_rds_cluster+: {
                 [tf_resource_key]: this,
               },
             },
@@ -917,8 +917,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_rds_cluster_activity_stream: {
+            resource+: {
+              aws_rds_cluster_activity_stream+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1118,8 +1118,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_rds_cluster_endpoint: {
+            resource+: {
+              aws_rds_cluster_endpoint+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1363,8 +1363,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_rds_cluster_instance: {
+            resource+: {
+              aws_rds_cluster_instance+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1719,8 +1719,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_rds_cluster_parameter_group: {
+            resource+: {
+              aws_rds_cluster_parameter_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1966,8 +1966,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_rds_cluster_role_association: {
+            resource+: {
+              aws_rds_cluster_role_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2181,8 +2181,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_rds_cluster_snapshot_copy: {
+            resource+: {
+              aws_rds_cluster_snapshot_copy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2468,8 +2468,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_rds_custom_db_engine_version: {
+            resource+: {
+              aws_rds_custom_db_engine_version+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2764,8 +2764,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_rds_export_task: {
+            resource+: {
+              aws_rds_export_task+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3036,8 +3036,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_rds_global_cluster: {
+            resource+: {
+              aws_rds_global_cluster+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3339,8 +3339,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_rds_instance_state: {
+            resource+: {
+              aws_rds_instance_state+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3547,8 +3547,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_rds_integration: {
+            resource+: {
+              aws_rds_integration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3797,8 +3797,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_rds_reserved_instance: {
+            resource+: {
+              aws_rds_reserved_instance+: {
                 [tf_resource_key]: this,
               },
             },

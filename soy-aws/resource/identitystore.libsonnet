@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_identitystore_group: {
+            resource+: {
+              aws_identitystore_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -238,8 +238,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_identitystore_group_membership: {
+            resource+: {
+              aws_identitystore_group_membership+: {
                 [tf_resource_key]: this,
               },
             },
@@ -436,8 +436,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_identitystore_user: {
+            resource+: {
+              aws_identitystore_user+: {
                 [tf_resource_key]: this,
               },
             },

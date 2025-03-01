@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_media_convert_queue: {
+            data+: {
+              aws_media_convert_queue+: {
                 [tf_resource_key]: this,
               },
             },

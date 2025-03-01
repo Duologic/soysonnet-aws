@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_waf_byte_match_set: {
+            resource+: {
+              aws_waf_byte_match_set+: {
                 [tf_resource_key]: this,
               },
             },
@@ -250,8 +250,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_waf_geo_match_set: {
+            resource+: {
+              aws_waf_geo_match_set+: {
                 [tf_resource_key]: this,
               },
             },
@@ -463,8 +463,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_waf_ipset: {
+            resource+: {
+              aws_waf_ipset+: {
                 [tf_resource_key]: this,
               },
             },
@@ -679,8 +679,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_waf_rate_based_rule: {
+            resource+: {
+              aws_waf_rate_based_rule+: {
                 [tf_resource_key]: this,
               },
             },
@@ -924,8 +924,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_waf_regex_match_set: {
+            resource+: {
+              aws_waf_regex_match_set+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1160,8 +1160,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_waf_regex_pattern_set: {
+            resource+: {
+              aws_waf_regex_pattern_set+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1362,8 +1362,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_waf_rule: {
+            resource+: {
+              aws_waf_rule+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1600,8 +1600,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_waf_rule_group: {
+            resource+: {
+              aws_waf_rule_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1854,8 +1854,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_waf_size_constraint_set: {
+            resource+: {
+              aws_waf_size_constraint_set+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2094,8 +2094,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_waf_sql_injection_match_set: {
+            resource+: {
+              aws_waf_sql_injection_match_set+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2324,8 +2324,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_waf_web_acl: {
+            resource+: {
+              aws_waf_web_acl+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2678,8 +2678,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_waf_xss_match_set: {
+            resource+: {
+              aws_waf_xss_match_set+: {
                 [tf_resource_key]: this,
               },
             },

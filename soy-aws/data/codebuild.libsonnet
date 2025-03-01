@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_codebuild_fleet: {
+            data+: {
+              aws_codebuild_fleet+: {
                 [tf_resource_key]: this,
               },
             },

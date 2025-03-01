@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_transfer_access: {
+            resource+: {
+              aws_transfer_access+: {
                 [tf_resource_key]: this,
               },
             },
@@ -289,8 +289,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_transfer_agreement: {
+            resource+: {
+              aws_transfer_agreement+: {
                 [tf_resource_key]: this,
               },
             },
@@ -521,8 +521,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_transfer_certificate: {
+            resource+: {
+              aws_transfer_certificate+: {
                 [tf_resource_key]: this,
               },
             },
@@ -753,8 +753,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_transfer_connector: {
+            resource+: {
+              aws_transfer_connector+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1067,8 +1067,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_transfer_profile: {
+            resource+: {
+              aws_transfer_profile+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1291,8 +1291,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_transfer_server: {
+            resource+: {
+              aws_transfer_server+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1802,8 +1802,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_transfer_ssh_key: {
+            resource+: {
+              aws_transfer_ssh_key+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1999,8 +1999,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_transfer_tag: {
+            resource+: {
+              aws_transfer_tag+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2192,8 +2192,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_transfer_user: {
+            resource+: {
+              aws_transfer_user+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2499,8 +2499,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_transfer_workflow: {
+            resource+: {
+              aws_transfer_workflow+: {
                 [tf_resource_key]: this,
               },
             },

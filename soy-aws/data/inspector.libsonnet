@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_inspector_rules_packages: {
+            data+: {
+              aws_inspector_rules_packages+: {
                 [tf_resource_key]: this,
               },
             },

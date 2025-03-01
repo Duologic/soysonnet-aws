@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_elb: {
+            data+: {
+              aws_elb+: {
                 [tf_resource_key]: this,
               },
             },
@@ -279,8 +279,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_elb_hosted_zone_id: {
+            data+: {
+              aws_elb_hosted_zone_id+: {
                 [tf_resource_key]: this,
               },
             },
@@ -326,8 +326,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_elb_service_account: {
+            data+: {
+              aws_elb_service_account+: {
                 [tf_resource_key]: this,
               },
             },

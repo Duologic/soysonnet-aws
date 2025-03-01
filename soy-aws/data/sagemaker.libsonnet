@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_sagemaker_prebuilt_ecr_image: {
+            data+: {
+              aws_sagemaker_prebuilt_ecr_image+: {
                 [tf_resource_key]: this,
               },
             },

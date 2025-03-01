@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appfabric_app_authorization: {
+            resource+: {
+              aws_appfabric_app_authorization+: {
                 [tf_resource_key]: this,
               },
             },
@@ -365,8 +365,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appfabric_app_authorization_connection: {
+            resource+: {
+              aws_appfabric_app_authorization_connection+: {
                 [tf_resource_key]: this,
               },
             },
@@ -624,8 +624,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appfabric_app_bundle: {
+            resource+: {
+              aws_appfabric_app_bundle+: {
                 [tf_resource_key]: this,
               },
             },
@@ -830,8 +830,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appfabric_ingestion: {
+            resource+: {
+              aws_appfabric_ingestion+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1046,8 +1046,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_appfabric_ingestion_destination: {
+            resource+: {
+              aws_appfabric_ingestion_destination+: {
                 [tf_resource_key]: this,
               },
             },

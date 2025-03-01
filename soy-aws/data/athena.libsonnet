@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_athena_named_query: {
+            data+: {
+              aws_athena_named_query+: {
                 [tf_resource_key]: this,
               },
             },

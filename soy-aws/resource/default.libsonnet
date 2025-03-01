@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_default_network_acl: {
+            resource+: {
+              aws_default_network_acl+: {
                 [tf_resource_key]: this,
               },
             },
@@ -347,8 +347,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_default_route_table: {
+            resource+: {
+              aws_default_route_table+: {
                 [tf_resource_key]: this,
               },
             },
@@ -660,8 +660,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_default_security_group: {
+            resource+: {
+              aws_default_security_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1071,8 +1071,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_default_subnet: {
+            resource+: {
+              aws_default_subnet+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1372,8 +1372,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_default_vpc: {
+            resource+: {
+              aws_default_vpc+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1646,8 +1646,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_default_vpc_dhcp_options: {
+            resource+: {
+              aws_default_vpc_dhcp_options+: {
                 [tf_resource_key]: this,
               },
             },

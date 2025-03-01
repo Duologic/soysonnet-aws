@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_storagegateway_cache: {
+            resource+: {
+              aws_storagegateway_cache+: {
                 [tf_resource_key]: this,
               },
             },
@@ -205,8 +205,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_storagegateway_cached_iscsi_volume: {
+            resource+: {
+              aws_storagegateway_cached_iscsi_volume+: {
                 [tf_resource_key]: this,
               },
             },
@@ -463,8 +463,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_storagegateway_file_system_association: {
+            resource+: {
+              aws_storagegateway_file_system_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -729,8 +729,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_storagegateway_gateway: {
+            resource+: {
+              aws_storagegateway_gateway+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1142,8 +1142,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_storagegateway_nfs_file_share: {
+            resource+: {
+              aws_storagegateway_nfs_file_share+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1510,8 +1510,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_storagegateway_smb_file_share: {
+            resource+: {
+              aws_storagegateway_smb_file_share+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1889,8 +1889,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_storagegateway_stored_iscsi_volume: {
+            resource+: {
+              aws_storagegateway_stored_iscsi_volume+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2157,8 +2157,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_storagegateway_tape_pool: {
+            resource+: {
+              aws_storagegateway_tape_pool+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2372,8 +2372,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_storagegateway_upload_buffer: {
+            resource+: {
+              aws_storagegateway_upload_buffer+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2564,8 +2564,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_storagegateway_working_storage: {
+            resource+: {
+              aws_storagegateway_working_storage+: {
                 [tf_resource_key]: this,
               },
             },

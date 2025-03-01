@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_default_tags: {
+            data+: {
+              aws_default_tags+: {
                 [tf_resource_key]: this,
               },
             },

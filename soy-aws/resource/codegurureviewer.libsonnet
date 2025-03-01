@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_codegurureviewer_repository_association: {
+            resource+: {
+              aws_codegurureviewer_repository_association+: {
                 [tf_resource_key]: this,
               },
             },

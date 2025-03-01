@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_spot_datafeed_subscription: {
+            resource+: {
+              aws_spot_datafeed_subscription+: {
                 [tf_resource_key]: this,
               },
             },
@@ -202,8 +202,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_spot_fleet_request: {
+            resource+: {
+              aws_spot_fleet_request+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1356,8 +1356,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_spot_instance_request: {
+            resource+: {
+              aws_spot_instance_request+: {
                 [tf_resource_key]: this,
               },
             },

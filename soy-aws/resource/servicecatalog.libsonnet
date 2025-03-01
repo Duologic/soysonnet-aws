@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_servicecatalog_budget_resource_association: {
+            resource+: {
+              aws_servicecatalog_budget_resource_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -234,8 +234,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_servicecatalog_constraint: {
+            resource+: {
+              aws_servicecatalog_constraint+: {
                 [tf_resource_key]: this,
               },
             },
@@ -480,8 +480,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_servicecatalog_organizations_access: {
+            resource+: {
+              aws_servicecatalog_organizations_access+: {
                 [tf_resource_key]: this,
               },
             },
@@ -681,8 +681,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_servicecatalog_portfolio: {
+            resource+: {
+              aws_servicecatalog_portfolio+: {
                 [tf_resource_key]: this,
               },
             },
@@ -933,8 +933,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_servicecatalog_portfolio_share: {
+            resource+: {
+              aws_servicecatalog_portfolio_share+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1180,8 +1180,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_servicecatalog_principal_portfolio_association: {
+            resource+: {
+              aws_servicecatalog_principal_portfolio_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1407,8 +1407,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_servicecatalog_product: {
+            resource+: {
+              aws_servicecatalog_product+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1737,8 +1737,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_servicecatalog_product_portfolio_association: {
+            resource+: {
+              aws_servicecatalog_product_portfolio_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1961,8 +1961,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_servicecatalog_provisioned_product: {
+            resource+: {
+              aws_servicecatalog_provisioned_product+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2426,8 +2426,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_servicecatalog_provisioning_artifact: {
+            resource+: {
+              aws_servicecatalog_provisioning_artifact+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2689,8 +2689,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_servicecatalog_service_action: {
+            resource+: {
+              aws_servicecatalog_service_action+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2957,8 +2957,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_servicecatalog_tag_option: {
+            resource+: {
+              aws_servicecatalog_tag_option+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3188,8 +3188,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_servicecatalog_tag_option_resource_association: {
+            resource+: {
+              aws_servicecatalog_tag_option_resource_association+: {
                 [tf_resource_key]: this,
               },
             },

@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_prometheus_alert_manager_definition: {
+            resource+: {
+              aws_prometheus_alert_manager_definition+: {
                 [tf_resource_key]: this,
               },
             },
@@ -204,8 +204,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_prometheus_rule_group_namespace: {
+            resource+: {
+              aws_prometheus_rule_group_namespace+: {
                 [tf_resource_key]: this,
               },
             },
@@ -395,8 +395,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_prometheus_scraper: {
+            resource+: {
+              aws_prometheus_scraper+: {
                 [tf_resource_key]: this,
               },
             },
@@ -736,8 +736,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_prometheus_workspace: {
+            resource+: {
+              aws_prometheus_workspace+: {
                 [tf_resource_key]: this,
               },
             },

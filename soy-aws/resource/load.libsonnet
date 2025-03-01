@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_load_balancer_backend_server_policy: {
+            resource+: {
+              aws_load_balancer_backend_server_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -217,8 +217,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_load_balancer_listener_policy: {
+            resource+: {
+              aws_load_balancer_listener_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -428,8 +428,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_load_balancer_policy: {
+            resource+: {
+              aws_load_balancer_policy+: {
                 [tf_resource_key]: this,
               },
             },

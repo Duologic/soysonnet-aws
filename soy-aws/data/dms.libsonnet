@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_dms_certificate: {
+            data+: {
+              aws_dms_certificate+: {
                 [tf_resource_key]: this,
               },
             },
@@ -106,8 +106,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_dms_endpoint: {
+            data+: {
+              aws_dms_endpoint+: {
                 [tf_resource_key]: this,
               },
             },
@@ -786,8 +786,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_dms_replication_instance: {
+            data+: {
+              aws_dms_replication_instance+: {
                 [tf_resource_key]: this,
               },
             },
@@ -932,8 +932,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_dms_replication_subnet_group: {
+            data+: {
+              aws_dms_replication_subnet_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1018,8 +1018,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_dms_replication_task: {
+            data+: {
+              aws_dms_replication_task+: {
                 [tf_resource_key]: this,
               },
             },

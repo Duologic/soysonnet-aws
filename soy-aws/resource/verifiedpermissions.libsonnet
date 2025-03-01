@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_verifiedpermissions_identity_source: {
+            resource+: {
+              aws_verifiedpermissions_identity_source+: {
                 [tf_resource_key]: this,
               },
             },
@@ -419,8 +419,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_verifiedpermissions_policy: {
+            resource+: {
+              aws_verifiedpermissions_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -727,8 +727,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_verifiedpermissions_policy_store: {
+            resource+: {
+              aws_verifiedpermissions_policy_store+: {
                 [tf_resource_key]: this,
               },
             },
@@ -941,8 +941,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_verifiedpermissions_policy_template: {
+            resource+: {
+              aws_verifiedpermissions_policy_template+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1140,8 +1140,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_verifiedpermissions_schema: {
+            resource+: {
+              aws_verifiedpermissions_schema+: {
                 [tf_resource_key]: this,
               },
             },

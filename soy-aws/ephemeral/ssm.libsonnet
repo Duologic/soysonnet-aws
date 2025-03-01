@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            ephemeral: {
-              aws_ssm_parameter: {
+            ephemeral+: {
+              aws_ssm_parameter+: {
                 [tf_resource_key]: this,
               },
             },

@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_lb: {
+            data+: {
+              aws_lb+: {
                 [tf_resource_key]: this,
               },
             },
@@ -307,8 +307,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_lb_hosted_zone_id: {
+            data+: {
+              aws_lb_hosted_zone_id+: {
                 [tf_resource_key]: this,
               },
             },
@@ -358,8 +358,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_lb_listener: {
+            data+: {
+              aws_lb_listener+: {
                 [tf_resource_key]: this,
               },
             },
@@ -780,8 +780,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_lb_listener_rule: {
+            data+: {
+              aws_lb_listener_rule+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1365,8 +1365,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_lb_target_group: {
+            data+: {
+              aws_lb_target_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1603,8 +1603,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_lb_trust_store: {
+            data+: {
+              aws_lb_trust_store+: {
                 [tf_resource_key]: this,
               },
             },

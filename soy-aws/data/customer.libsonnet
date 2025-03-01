@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_customer_gateway: {
+            data+: {
+              aws_customer_gateway+: {
                 [tf_resource_key]: this,
               },
             },

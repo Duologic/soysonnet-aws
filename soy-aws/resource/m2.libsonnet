@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_m2_application: {
+            resource+: {
+              aws_m2_application+: {
                 [tf_resource_key]: this,
               },
             },
@@ -300,8 +300,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_m2_deployment: {
+            resource+: {
+              aws_m2_deployment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -534,8 +534,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_m2_environment: {
+            resource+: {
+              aws_m2_environment+: {
                 [tf_resource_key]: this,
               },
             },

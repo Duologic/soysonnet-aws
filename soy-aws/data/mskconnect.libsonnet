@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_mskconnect_connector: {
+            data+: {
+              aws_mskconnect_connector+: {
                 [tf_resource_key]: this,
               },
             },
@@ -82,8 +82,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_mskconnect_custom_plugin: {
+            data+: {
+              aws_mskconnect_custom_plugin+: {
                 [tf_resource_key]: this,
               },
             },
@@ -154,8 +154,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_mskconnect_worker_configuration: {
+            data+: {
+              aws_mskconnect_worker_configuration+: {
                 [tf_resource_key]: this,
               },
             },

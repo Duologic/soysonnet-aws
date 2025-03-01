@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_glacier_vault: {
+            resource+: {
+              aws_glacier_vault+: {
                 [tf_resource_key]: this,
               },
             },
@@ -262,8 +262,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_glacier_vault_lock: {
+            resource+: {
+              aws_glacier_vault_lock+: {
                 [tf_resource_key]: this,
               },
             },

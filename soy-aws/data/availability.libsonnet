@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_availability_zone: {
+            data+: {
+              aws_availability_zone+: {
                 [tf_resource_key]: this,
               },
             },
@@ -157,8 +157,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_availability_zones: {
+            data+: {
+              aws_availability_zones+: {
                 [tf_resource_key]: this,
               },
             },

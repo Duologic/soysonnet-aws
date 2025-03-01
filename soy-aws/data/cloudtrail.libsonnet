@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_cloudtrail_service_account: {
+            data+: {
+              aws_cloudtrail_service_account+: {
                 [tf_resource_key]: this,
               },
             },

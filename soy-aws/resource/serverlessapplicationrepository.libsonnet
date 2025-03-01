@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_serverlessapplicationrepository_cloudformation_stack: {
+            resource+: {
+              aws_serverlessapplicationrepository_cloudformation_stack+: {
                 [tf_resource_key]: this,
               },
             },

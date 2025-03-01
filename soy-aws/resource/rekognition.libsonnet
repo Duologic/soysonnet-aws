@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_rekognition_collection: {
+            resource+: {
+              aws_rekognition_collection+: {
                 [tf_resource_key]: this,
               },
             },
@@ -238,8 +238,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_rekognition_project: {
+            resource+: {
+              aws_rekognition_project+: {
                 [tf_resource_key]: this,
               },
             },
@@ -473,8 +473,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_rekognition_stream_processor: {
+            resource+: {
+              aws_rekognition_stream_processor+: {
                 [tf_resource_key]: this,
               },
             },

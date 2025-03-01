@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_elasticsearch_domain: {
+            resource+: {
+              aws_elasticsearch_domain+: {
                 [tf_resource_key]: this,
               },
             },
@@ -799,8 +799,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_elasticsearch_domain_policy: {
+            resource+: {
+              aws_elasticsearch_domain_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1009,8 +1009,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_elasticsearch_domain_saml_options: {
+            resource+: {
+              aws_elasticsearch_domain_saml_options+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1294,8 +1294,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_elasticsearch_vpc_endpoint: {
+            resource+: {
+              aws_elasticsearch_vpc_endpoint+: {
                 [tf_resource_key]: this,
               },
             },

@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_config_aggregate_authorization: {
+            resource+: {
+              aws_config_aggregate_authorization+: {
                 [tf_resource_key]: this,
               },
             },
@@ -223,8 +223,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_config_config_rule: {
+            resource+: {
+              aws_config_config_rule+: {
                 [tf_resource_key]: this,
               },
             },
@@ -607,8 +607,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_config_configuration_aggregator: {
+            resource+: {
+              aws_config_configuration_aggregator+: {
                 [tf_resource_key]: this,
               },
             },
@@ -904,8 +904,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_config_configuration_recorder: {
+            resource+: {
+              aws_config_configuration_recorder+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1265,8 +1265,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_config_configuration_recorder_status: {
+            resource+: {
+              aws_config_configuration_recorder_status+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1452,8 +1452,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_config_conformance_pack: {
+            resource+: {
+              aws_config_conformance_pack+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1681,8 +1681,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_config_delivery_channel: {
+            resource+: {
+              aws_config_delivery_channel+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1897,8 +1897,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_config_organization_conformance_pack: {
+            resource+: {
+              aws_config_organization_conformance_pack+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2172,8 +2172,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_config_organization_custom_policy_rule: {
+            resource+: {
+              aws_config_organization_custom_policy_rule+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2478,8 +2478,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_config_organization_custom_rule: {
+            resource+: {
+              aws_config_organization_custom_rule+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2765,8 +2765,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_config_organization_managed_rule: {
+            resource+: {
+              aws_config_organization_managed_rule+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3039,8 +3039,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_config_remediation_configuration: {
+            resource+: {
+              aws_config_remediation_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3340,8 +3340,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_config_retention_configuration: {
+            resource+: {
+              aws_config_retention_configuration+: {
                 [tf_resource_key]: this,
               },
             },

@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_secretsmanager_random_password: {
+            data+: {
+              aws_secretsmanager_random_password+: {
                 [tf_resource_key]: this,
               },
             },
@@ -92,8 +92,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_secretsmanager_secret: {
+            data+: {
+              aws_secretsmanager_secret+: {
                 [tf_resource_key]: this,
               },
             },
@@ -172,8 +172,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_secretsmanager_secret_rotation: {
+            data+: {
+              aws_secretsmanager_secret_rotation+: {
                 [tf_resource_key]: this,
               },
             },
@@ -258,8 +258,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_secretsmanager_secret_version: {
+            data+: {
+              aws_secretsmanager_secret_version+: {
                 [tf_resource_key]: this,
               },
             },
@@ -344,8 +344,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_secretsmanager_secret_versions: {
+            data+: {
+              aws_secretsmanager_secret_versions+: {
                 [tf_resource_key]: this,
               },
             },
@@ -443,8 +443,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_secretsmanager_secrets: {
+            data+: {
+              aws_secretsmanager_secrets+: {
                 [tf_resource_key]: this,
               },
             },

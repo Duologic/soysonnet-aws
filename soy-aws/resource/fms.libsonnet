@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_fms_admin_account: {
+            resource+: {
+              aws_fms_admin_account+: {
                 [tf_resource_key]: this,
               },
             },
@@ -221,8 +221,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_fms_policy: {
+            resource+: {
+              aws_fms_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -955,8 +955,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_fms_resource_set: {
+            resource+: {
+              aws_fms_resource_set+: {
                 [tf_resource_key]: this,
               },
             },

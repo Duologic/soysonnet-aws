@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_elb: {
+            resource+: {
+              aws_elb+: {
                 [tf_resource_key]: this,
               },
             },
@@ -455,8 +455,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_elb_attachment: {
+            resource+: {
+              aws_elb_attachment+: {
                 [tf_resource_key]: this,
               },
             },

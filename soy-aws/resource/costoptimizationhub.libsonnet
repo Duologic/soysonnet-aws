@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_costoptimizationhub_enrollment_status: {
+            resource+: {
+              aws_costoptimizationhub_enrollment_status+: {
                 [tf_resource_key]: this,
               },
             },
@@ -199,8 +199,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_costoptimizationhub_preferences: {
+            resource+: {
+              aws_costoptimizationhub_preferences+: {
                 [tf_resource_key]: this,
               },
             },

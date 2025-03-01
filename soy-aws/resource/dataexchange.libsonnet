@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dataexchange_data_set: {
+            resource+: {
+              aws_dataexchange_data_set+: {
                 [tf_resource_key]: this,
               },
             },
@@ -227,8 +227,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_dataexchange_revision: {
+            resource+: {
+              aws_dataexchange_revision+: {
                 [tf_resource_key]: this,
               },
             },

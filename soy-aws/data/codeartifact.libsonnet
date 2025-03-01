@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_codeartifact_authorization_token: {
+            data+: {
+              aws_codeartifact_authorization_token+: {
                 [tf_resource_key]: this,
               },
             },
@@ -80,8 +80,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_codeartifact_repository_endpoint: {
+            data+: {
+              aws_codeartifact_repository_endpoint+: {
                 [tf_resource_key]: this,
               },
             },

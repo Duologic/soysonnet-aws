@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_access_key: {
+            resource+: {
+              aws_iam_access_key+: {
                 [tf_resource_key]: this,
               },
             },
@@ -229,8 +229,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_account_alias: {
+            resource+: {
+              aws_iam_account_alias+: {
                 [tf_resource_key]: this,
               },
             },
@@ -411,8 +411,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_account_password_policy: {
+            resource+: {
+              aws_iam_account_password_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -630,8 +630,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_group: {
+            resource+: {
+              aws_iam_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -827,8 +827,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_group_membership: {
+            resource+: {
+              aws_iam_group_membership+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1029,8 +1029,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_group_policies_exclusive: {
+            resource+: {
+              aws_iam_group_policies_exclusive+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1223,8 +1223,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_group_policy: {
+            resource+: {
+              aws_iam_group_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1419,8 +1419,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_group_policy_attachment: {
+            resource+: {
+              aws_iam_group_policy_attachment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1607,8 +1607,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_group_policy_attachments_exclusive: {
+            resource+: {
+              aws_iam_group_policy_attachments_exclusive+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1799,8 +1799,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_instance_profile: {
+            resource+: {
+              aws_iam_instance_profile+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2023,8 +2023,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_openid_connect_provider: {
+            resource+: {
+              aws_iam_openid_connect_provider+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2254,8 +2254,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_organizations_features: {
+            resource+: {
+              aws_iam_organizations_features+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2447,8 +2447,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_policy: {
+            resource+: {
+              aws_iam_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2675,8 +2675,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_policy_attachment: {
+            resource+: {
+              aws_iam_policy_attachment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2904,8 +2904,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_role: {
+            resource+: {
+              aws_iam_role+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3184,8 +3184,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_role_policies_exclusive: {
+            resource+: {
+              aws_iam_role_policies_exclusive+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3378,8 +3378,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_role_policy: {
+            resource+: {
+              aws_iam_role_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3574,8 +3574,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_role_policy_attachment: {
+            resource+: {
+              aws_iam_role_policy_attachment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3762,8 +3762,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_role_policy_attachments_exclusive: {
+            resource+: {
+              aws_iam_role_policy_attachments_exclusive+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3956,8 +3956,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_saml_provider: {
+            resource+: {
+              aws_iam_saml_provider+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4167,8 +4167,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_security_token_service_preferences: {
+            resource+: {
+              aws_iam_security_token_service_preferences+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4351,8 +4351,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_server_certificate: {
+            resource+: {
+              aws_iam_server_certificate+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4599,8 +4599,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_service_linked_role: {
+            resource+: {
+              aws_iam_service_linked_role+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4827,8 +4827,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_service_specific_credential: {
+            resource+: {
+              aws_iam_service_specific_credential+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5031,8 +5031,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_signing_certificate: {
+            resource+: {
+              aws_iam_signing_certificate+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5226,8 +5226,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_user: {
+            resource+: {
+              aws_iam_user+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5446,8 +5446,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_user_group_membership: {
+            resource+: {
+              aws_iam_user_group_membership+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5643,8 +5643,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_user_login_profile: {
+            resource+: {
+              aws_iam_user_login_profile+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5851,8 +5851,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_user_policies_exclusive: {
+            resource+: {
+              aws_iam_user_policies_exclusive+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6045,8 +6045,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_user_policy: {
+            resource+: {
+              aws_iam_user_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6241,8 +6241,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_user_policy_attachment: {
+            resource+: {
+              aws_iam_user_policy_attachment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6429,8 +6429,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_user_policy_attachments_exclusive: {
+            resource+: {
+              aws_iam_user_policy_attachments_exclusive+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6624,8 +6624,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_user_ssh_key: {
+            resource+: {
+              aws_iam_user_ssh_key+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6827,8 +6827,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_iam_virtual_mfa_device: {
+            resource+: {
+              aws_iam_virtual_mfa_device+: {
                 [tf_resource_key]: this,
               },
             },

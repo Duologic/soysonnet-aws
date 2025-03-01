@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ecrpublic_repository: {
+            resource+: {
+              aws_ecrpublic_repository+: {
                 [tf_resource_key]: this,
               },
             },
@@ -318,8 +318,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ecrpublic_repository_policy: {
+            resource+: {
+              aws_ecrpublic_repository_policy+: {
                 [tf_resource_key]: this,
               },
             },

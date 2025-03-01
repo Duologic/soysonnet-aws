@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ram_principal_association: {
+            resource+: {
+              aws_ram_principal_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -203,8 +203,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ram_resource_association: {
+            resource+: {
+              aws_ram_resource_association+: {
                 [tf_resource_key]: this,
               },
             },
@@ -390,8 +390,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ram_resource_share: {
+            resource+: {
+              aws_ram_resource_share+: {
                 [tf_resource_key]: this,
               },
             },
@@ -634,8 +634,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ram_resource_share_accepter: {
+            resource+: {
+              aws_ram_resource_share_accepter+: {
                 [tf_resource_key]: this,
               },
             },
@@ -877,8 +877,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ram_sharing_with_organization: {
+            resource+: {
+              aws_ram_sharing_with_organization+: {
                 [tf_resource_key]: this,
               },
             },

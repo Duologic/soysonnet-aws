@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_autoscaling_attachment: {
+            resource+: {
+              aws_autoscaling_attachment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -206,8 +206,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_autoscaling_group: {
+            resource+: {
+              aws_autoscaling_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1696,8 +1696,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_autoscaling_group_tag: {
+            resource+: {
+              aws_autoscaling_group_tag+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1910,8 +1910,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_autoscaling_lifecycle_hook: {
+            resource+: {
+              aws_autoscaling_lifecycle_hook+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2123,8 +2123,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_autoscaling_notification: {
+            resource+: {
+              aws_autoscaling_notification+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2335,8 +2335,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_autoscaling_policy: {
+            resource+: {
+              aws_autoscaling_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3494,8 +3494,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_autoscaling_schedule: {
+            resource+: {
+              aws_autoscaling_schedule+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3713,8 +3713,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_autoscaling_traffic_source_attachment: {
+            resource+: {
+              aws_autoscaling_traffic_source_attachment+: {
                 [tf_resource_key]: this,
               },
             },

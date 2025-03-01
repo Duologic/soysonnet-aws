@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_dynamodb_table: {
+            data+: {
+              aws_dynamodb_table+: {
                 [tf_resource_key]: this,
               },
             },
@@ -394,8 +394,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_dynamodb_table_item: {
+            data+: {
+              aws_dynamodb_table_item+: {
                 [tf_resource_key]: this,
               },
             },

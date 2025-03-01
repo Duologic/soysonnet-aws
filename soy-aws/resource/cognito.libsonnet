@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cognito_identity_pool: {
+            resource+: {
+              aws_cognito_identity_pool+: {
                 [tf_resource_key]: this,
               },
             },
@@ -296,8 +296,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cognito_identity_pool_provider_principal_tag: {
+            resource+: {
+              aws_cognito_identity_pool_provider_principal_tag+: {
                 [tf_resource_key]: this,
               },
             },
@@ -496,8 +496,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cognito_identity_pool_roles_attachment: {
+            resource+: {
+              aws_cognito_identity_pool_roles_attachment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -754,8 +754,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cognito_identity_provider: {
+            resource+: {
+              aws_cognito_identity_provider+: {
                 [tf_resource_key]: this,
               },
             },
@@ -975,8 +975,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cognito_managed_user_pool_client: {
+            resource+: {
+              aws_cognito_managed_user_pool_client+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1392,8 +1392,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cognito_resource_server: {
+            resource+: {
+              aws_cognito_resource_server+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1623,8 +1623,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cognito_risk_configuration: {
+            resource+: {
+              aws_cognito_risk_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2239,8 +2239,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cognito_user: {
+            resource+: {
+              aws_cognito_user+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2519,8 +2519,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cognito_user_group: {
+            resource+: {
+              aws_cognito_user_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2720,8 +2720,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cognito_user_in_group: {
+            resource+: {
+              aws_cognito_user_in_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2911,8 +2911,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cognito_user_pool: {
+            resource+: {
+              aws_cognito_user_pool+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3908,8 +3908,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cognito_user_pool_client: {
+            resource+: {
+              aws_cognito_user_pool_client+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4320,8 +4320,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cognito_user_pool_domain: {
+            resource+: {
+              aws_cognito_user_pool_domain+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4535,8 +4535,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cognito_user_pool_ui_customization: {
+            resource+: {
+              aws_cognito_user_pool_ui_customization+: {
                 [tf_resource_key]: this,
               },
             },

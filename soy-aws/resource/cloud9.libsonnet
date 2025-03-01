@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloud9_environment_ec2: {
+            resource+: {
+              aws_cloud9_environment_ec2+: {
                 [tf_resource_key]: this,
               },
             },
@@ -253,8 +253,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloud9_environment_membership: {
+            resource+: {
+              aws_cloud9_environment_membership+: {
                 [tf_resource_key]: this,
               },
             },

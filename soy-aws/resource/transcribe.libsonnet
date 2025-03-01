@@ -17,8 +17,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_transcribe_language_model: {
+            resource+: {
+              aws_transcribe_language_model+: {
                 [tf_resource_key]: this,
               },
             },
@@ -276,8 +276,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_transcribe_medical_vocabulary: {
+            resource+: {
+              aws_transcribe_medical_vocabulary+: {
                 [tf_resource_key]: this,
               },
             },
@@ -521,8 +521,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_transcribe_vocabulary: {
+            resource+: {
+              aws_transcribe_vocabulary+: {
                 [tf_resource_key]: this,
               },
             },
@@ -780,8 +780,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_transcribe_vocabulary_filter: {
+            resource+: {
+              aws_transcribe_vocabulary_filter+: {
                 [tf_resource_key]: this,
               },
             },

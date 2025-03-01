@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_autoscalingplans_scaling_plan: {
+            resource+: {
+              aws_autoscalingplans_scaling_plan+: {
                 [tf_resource_key]: this,
               },
             },

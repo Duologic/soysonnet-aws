@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_scheduler_schedule: {
+            resource+: {
+              aws_scheduler_schedule+: {
                 [tf_resource_key]: this,
               },
             },
@@ -760,8 +760,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_scheduler_schedule_group: {
+            resource+: {
+              aws_scheduler_schedule_group+: {
                 [tf_resource_key]: this,
               },
             },

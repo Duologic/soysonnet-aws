@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_lambda_alias: {
+            data+: {
+              aws_lambda_alias+: {
                 [tf_resource_key]: this,
               },
             },
@@ -83,8 +83,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_lambda_code_signing_config: {
+            data+: {
+              aws_lambda_code_signing_config+: {
                 [tf_resource_key]: this,
               },
             },
@@ -197,8 +197,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_lambda_function: {
+            data+: {
+              aws_lambda_function+: {
                 [tf_resource_key]: this,
               },
             },
@@ -575,8 +575,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_lambda_function_url: {
+            data+: {
+              aws_lambda_function_url+: {
                 [tf_resource_key]: this,
               },
             },
@@ -736,8 +736,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_lambda_functions: {
+            data+: {
+              aws_lambda_functions+: {
                 [tf_resource_key]: this,
               },
             },
@@ -809,8 +809,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_lambda_invocation: {
+            data+: {
+              aws_lambda_invocation+: {
                 [tf_resource_key]: this,
               },
             },
@@ -869,8 +869,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_lambda_layer_version: {
+            data+: {
+              aws_lambda_layer_version+: {
                 [tf_resource_key]: this,
               },
             },

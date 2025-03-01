@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudwatch_composite_alarm: {
+            resource+: {
+              aws_cloudwatch_composite_alarm+: {
                 [tf_resource_key]: this,
               },
             },
@@ -302,8 +302,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudwatch_contributor_insight_rule: {
+            resource+: {
+              aws_cloudwatch_contributor_insight_rule+: {
                 [tf_resource_key]: this,
               },
             },
@@ -510,8 +510,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudwatch_dashboard: {
+            resource+: {
+              aws_cloudwatch_dashboard+: {
                 [tf_resource_key]: this,
               },
             },
@@ -704,8 +704,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudwatch_event_api_destination: {
+            resource+: {
+              aws_cloudwatch_event_api_destination+: {
                 [tf_resource_key]: this,
               },
             },
@@ -912,8 +912,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudwatch_event_archive: {
+            resource+: {
+              aws_cloudwatch_event_archive+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1115,8 +1115,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudwatch_event_bus: {
+            resource+: {
+              aws_cloudwatch_event_bus+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1330,8 +1330,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudwatch_event_bus_policy: {
+            resource+: {
+              aws_cloudwatch_event_bus_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1519,8 +1519,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudwatch_event_connection: {
+            resource+: {
+              aws_cloudwatch_event_connection+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2179,8 +2179,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudwatch_event_endpoint: {
+            resource+: {
+              aws_cloudwatch_event_endpoint+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2502,8 +2502,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudwatch_event_permission: {
+            resource+: {
+              aws_cloudwatch_event_permission+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2725,8 +2725,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudwatch_event_rule: {
+            resource+: {
+              aws_cloudwatch_event_rule+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2965,8 +2965,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudwatch_event_target: {
+            resource+: {
+              aws_cloudwatch_event_target+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3742,8 +3742,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudwatch_log_account_policy: {
+            resource+: {
+              aws_cloudwatch_log_account_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3942,8 +3942,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudwatch_log_anomaly_detector: {
+            resource+: {
+              aws_cloudwatch_log_anomaly_detector+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4176,8 +4176,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudwatch_log_data_protection_policy: {
+            resource+: {
+              aws_cloudwatch_log_data_protection_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4364,8 +4364,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudwatch_log_delivery: {
+            resource+: {
+              aws_cloudwatch_log_delivery+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4615,8 +4615,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudwatch_log_delivery_destination: {
+            resource+: {
+              aws_cloudwatch_log_delivery_destination+: {
                 [tf_resource_key]: this,
               },
             },
@@ -4845,8 +4845,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudwatch_log_delivery_destination_policy: {
+            resource+: {
+              aws_cloudwatch_log_delivery_destination_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5030,8 +5030,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudwatch_log_delivery_source: {
+            resource+: {
+              aws_cloudwatch_log_delivery_source+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5243,8 +5243,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudwatch_log_destination: {
+            resource+: {
+              aws_cloudwatch_log_destination+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5455,8 +5455,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudwatch_log_destination_policy: {
+            resource+: {
+              aws_cloudwatch_log_destination_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5645,8 +5645,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudwatch_log_group: {
+            resource+: {
+              aws_cloudwatch_log_group+: {
                 [tf_resource_key]: this,
               },
             },
@@ -5869,8 +5869,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudwatch_log_index_policy: {
+            resource+: {
+              aws_cloudwatch_log_index_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6055,8 +6055,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudwatch_log_metric_filter: {
+            resource+: {
+              aws_cloudwatch_log_metric_filter+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6300,8 +6300,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudwatch_log_resource_policy: {
+            resource+: {
+              aws_cloudwatch_log_resource_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6488,8 +6488,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudwatch_log_stream: {
+            resource+: {
+              aws_cloudwatch_log_stream+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6682,8 +6682,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudwatch_log_subscription_filter: {
+            resource+: {
+              aws_cloudwatch_log_subscription_filter+: {
                 [tf_resource_key]: this,
               },
             },
@@ -6887,8 +6887,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudwatch_metric_alarm: {
+            resource+: {
+              aws_cloudwatch_metric_alarm+: {
                 [tf_resource_key]: this,
               },
             },
@@ -7297,8 +7297,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudwatch_metric_stream: {
+            resource+: {
+              aws_cloudwatch_metric_stream+: {
                 [tf_resource_key]: this,
               },
             },
@@ -7692,8 +7692,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_cloudwatch_query_definition: {
+            resource+: {
+              aws_cloudwatch_query_definition+: {
                 [tf_resource_key]: this,
               },
             },

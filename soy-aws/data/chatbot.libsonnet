@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_chatbot_slack_workspace: {
+            data+: {
+              aws_chatbot_slack_workspace+: {
                 [tf_resource_key]: this,
               },
             },

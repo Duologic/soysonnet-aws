@@ -16,8 +16,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_volume_attachment: {
+            resource+: {
+              aws_volume_attachment+: {
                 [tf_resource_key]: this,
               },
             },

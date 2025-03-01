@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_guardduty_detector: {
+            resource+: {
+              aws_guardduty_detector+: {
                 [tf_resource_key]: this,
               },
             },
@@ -373,8 +373,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_guardduty_detector_feature: {
+            resource+: {
+              aws_guardduty_detector_feature+: {
                 [tf_resource_key]: this,
               },
             },
@@ -594,8 +594,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_guardduty_filter: {
+            resource+: {
+              aws_guardduty_filter+: {
                 [tf_resource_key]: this,
               },
             },
@@ -895,8 +895,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_guardduty_invite_accepter: {
+            resource+: {
+              aws_guardduty_invite_accepter+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1103,8 +1103,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_guardduty_ipset: {
+            resource+: {
+              aws_guardduty_ipset+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1322,8 +1322,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_guardduty_malware_protection_plan: {
+            resource+: {
+              aws_guardduty_malware_protection_plan+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1629,8 +1629,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_guardduty_member: {
+            resource+: {
+              aws_guardduty_member+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1862,8 +1862,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_guardduty_member_detector_feature: {
+            resource+: {
+              aws_guardduty_member_detector_feature+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2079,8 +2079,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_guardduty_organization_admin_account: {
+            resource+: {
+              aws_guardduty_organization_admin_account+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2262,8 +2262,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_guardduty_organization_configuration: {
+            resource+: {
+              aws_guardduty_organization_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2602,8 +2602,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_guardduty_organization_configuration_feature: {
+            resource+: {
+              aws_guardduty_organization_configuration_feature+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2821,8 +2821,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_guardduty_publishing_destination: {
+            resource+: {
+              aws_guardduty_publishing_destination+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3020,8 +3020,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_guardduty_threatintelset: {
+            resource+: {
+              aws_guardduty_threatintelset+: {
                 [tf_resource_key]: this,
               },
             },

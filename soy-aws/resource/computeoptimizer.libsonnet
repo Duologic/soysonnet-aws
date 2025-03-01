@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_computeoptimizer_enrollment_status: {
+            resource+: {
+              aws_computeoptimizer_enrollment_status+: {
                 [tf_resource_key]: this,
               },
             },
@@ -228,8 +228,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_computeoptimizer_recommendation_preferences: {
+            resource+: {
+              aws_computeoptimizer_recommendation_preferences+: {
                 [tf_resource_key]: this,
               },
             },

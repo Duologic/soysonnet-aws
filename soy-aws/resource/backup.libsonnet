@@ -15,8 +15,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_backup_framework: {
+            resource+: {
+              aws_backup_framework+: {
                 [tf_resource_key]: this,
               },
             },
@@ -370,8 +370,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_backup_global_settings: {
+            resource+: {
+              aws_backup_global_settings+: {
                 [tf_resource_key]: this,
               },
             },
@@ -559,8 +559,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_backup_logically_air_gapped_vault: {
+            resource+: {
+              aws_backup_logically_air_gapped_vault+: {
                 [tf_resource_key]: this,
               },
             },
@@ -788,8 +788,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_backup_plan: {
+            resource+: {
+              aws_backup_plan+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1159,8 +1159,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_backup_region_settings: {
+            resource+: {
+              aws_backup_region_settings+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1356,8 +1356,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_backup_report_plan: {
+            resource+: {
+              aws_backup_report_plan+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1708,8 +1708,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_backup_restore_testing_plan: {
+            resource+: {
+              aws_backup_restore_testing_plan+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1990,8 +1990,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_backup_restore_testing_selection: {
+            resource+: {
+              aws_backup_restore_testing_selection+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2279,8 +2279,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_backup_selection: {
+            resource+: {
+              aws_backup_selection+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2650,8 +2650,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_backup_vault: {
+            resource+: {
+              aws_backup_vault+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2882,8 +2882,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_backup_vault_lock_configuration: {
+            resource+: {
+              aws_backup_vault_lock_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3083,8 +3083,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_backup_vault_notifications: {
+            resource+: {
+              aws_backup_vault_notifications+: {
                 [tf_resource_key]: this,
               },
             },
@@ -3289,8 +3289,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_backup_vault_policy: {
+            resource+: {
+              aws_backup_vault_policy+: {
                 [tf_resource_key]: this,
               },
             },

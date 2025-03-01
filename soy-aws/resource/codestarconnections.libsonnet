@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_codestarconnections_connection: {
+            resource+: {
+              aws_codestarconnections_connection+: {
                 [tf_resource_key]: this,
               },
             },
@@ -231,8 +231,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_codestarconnections_host: {
+            resource+: {
+              aws_codestarconnections_host+: {
                 [tf_resource_key]: this,
               },
             },

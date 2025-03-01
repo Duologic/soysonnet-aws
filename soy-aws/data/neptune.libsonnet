@@ -13,8 +13,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_neptune_engine_version: {
+            data+: {
+              aws_neptune_engine_version+: {
                 [tf_resource_key]: this,
               },
             },
@@ -140,8 +140,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_neptune_orderable_db_instance: {
+            data+: {
+              aws_neptune_orderable_db_instance+: {
                 [tf_resource_key]: this,
               },
             },

@@ -18,8 +18,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ssoadmin_account_assignment: {
+            resource+: {
+              aws_ssoadmin_account_assignment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -246,8 +246,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ssoadmin_application: {
+            resource+: {
+              aws_ssoadmin_application+: {
                 [tf_resource_key]: this,
               },
             },
@@ -522,8 +522,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ssoadmin_application_access_scope: {
+            resource+: {
+              aws_ssoadmin_application_access_scope+: {
                 [tf_resource_key]: this,
               },
             },
@@ -725,8 +725,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ssoadmin_application_assignment: {
+            resource+: {
+              aws_ssoadmin_application_assignment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -917,8 +917,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ssoadmin_application_assignment_configuration: {
+            resource+: {
+              aws_ssoadmin_application_assignment_configuration+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1106,8 +1106,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ssoadmin_customer_managed_policy_attachment: {
+            resource+: {
+              aws_ssoadmin_customer_managed_policy_attachment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1340,8 +1340,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ssoadmin_instance_access_control_attributes: {
+            resource+: {
+              aws_ssoadmin_instance_access_control_attributes+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1587,8 +1587,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ssoadmin_managed_policy_attachment: {
+            resource+: {
+              aws_ssoadmin_managed_policy_attachment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -1806,8 +1806,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ssoadmin_permission_set: {
+            resource+: {
+              aws_ssoadmin_permission_set+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2048,8 +2048,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ssoadmin_permission_set_inline_policy: {
+            resource+: {
+              aws_ssoadmin_permission_set_inline_policy+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2264,8 +2264,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ssoadmin_permissions_boundary_attachment: {
+            resource+: {
+              aws_ssoadmin_permissions_boundary_attachment+: {
                 [tf_resource_key]: this,
               },
             },
@@ -2524,8 +2524,8 @@
         {
           local this = self,
           _manifest():: {
-            resource: {
-              aws_ssoadmin_trusted_token_issuer: {
+            resource+: {
+              aws_ssoadmin_trusted_token_issuer+: {
                 [tf_resource_key]: this,
               },
             },

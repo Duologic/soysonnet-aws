@@ -14,8 +14,8 @@
         {
           local this = self,
           _manifest():: {
-            data: {
-              aws_ip_ranges: {
+            data+: {
+              aws_ip_ranges+: {
                 [tf_resource_key]: this,
               },
             },
