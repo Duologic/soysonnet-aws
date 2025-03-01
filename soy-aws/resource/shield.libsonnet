@@ -8,276 +8,215 @@
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'action', type: 'string' }, { default: null, enums: null, name: 'resource_arn', type: 'string' }], help: '' } },
       new(tf_resource_key, action, resource_arn):
-        {
-          local this = self,
-          resource: {
-            aws_shield_application_layer_automatic_response: {
-              [this.tf_resource_key]: this.spec,
-            },
-          },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
+        self.withTfResourceKey(tf_resource_key)
         + self.withAction(action)
         + self.withResourceArn(resource_arn),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+      withTfResourceKey(tf_resource_key):
+        {
+          local this = self,
+          _manifest():: {
+            resource: {
+              aws_shield_application_layer_automatic_response: {
+                [tf_resource_key]: this,
+              },
+            },
+          },
+        },
       '#withAction': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withAction(value): {
-        spec+: {
-          action: value,
-        },
+        action: value,
       },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withLifecycle': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withLifecycle(value): {
-        spec+: {
-          lifecycle: value,
-        },
+        lifecycle: value,
       },
       '#withLifecycleMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withLifecycleMixin(value): {
-        spec+: {
-          lifecycle+: value,
-        },
+        lifecycle+: value,
       },
       lifecycle+:
         {
           '#withCreateBeforeDestroy': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
           withCreateBeforeDestroy(value=true): {
-            spec+: {
-              lifecycle+: {
-                create_before_destroy: value,
-              },
+            lifecycle+: {
+              create_before_destroy: value,
             },
           },
           '#withIgnoreChanges': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withIgnoreChanges(value): {
-            spec+: {
-              lifecycle+: {
-                ignore_changes:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              ignore_changes:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           '#withIgnoreChangesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withIgnoreChangesMixin(value): {
-            spec+: {
-              lifecycle+: {
-                ignore_changes+:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              ignore_changes+:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           '#withPostcondition': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPostcondition(value): {
-            spec+: {
-              lifecycle+: {
-                postcondition: value,
-              },
+            lifecycle+: {
+              postcondition: value,
             },
           },
           '#withPostconditionMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPostconditionMixin(value): {
-            spec+: {
-              lifecycle+: {
-                postcondition+: value,
-              },
+            lifecycle+: {
+              postcondition+: value,
             },
           },
           postcondition+:
             {
               '#withCondition': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
               withCondition(value=true): {
-                spec+: {
-                  lifecycle+: {
-                    postcondition+: {
-                      condition: value,
-                    },
+                lifecycle+: {
+                  postcondition+: {
+                    condition: value,
                   },
                 },
               },
               '#withErrorMessage': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withErrorMessage(value): {
-                spec+: {
-                  lifecycle+: {
-                    postcondition+: {
-                      error_message: value,
-                    },
+                lifecycle+: {
+                  postcondition+: {
+                    error_message: value,
                   },
                 },
               },
             },
           '#withPrecondition': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPrecondition(value): {
-            spec+: {
-              lifecycle+: {
-                precondition: value,
-              },
+            lifecycle+: {
+              precondition: value,
             },
           },
           '#withPreconditionMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPreconditionMixin(value): {
-            spec+: {
-              lifecycle+: {
-                precondition+: value,
-              },
+            lifecycle+: {
+              precondition+: value,
             },
           },
           precondition+:
             {
               '#withCondition': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
               withCondition(value=true): {
-                spec+: {
-                  lifecycle+: {
-                    precondition+: {
-                      condition: value,
-                    },
+                lifecycle+: {
+                  precondition+: {
+                    condition: value,
                   },
                 },
               },
               '#withErrorMessage': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withErrorMessage(value): {
-                spec+: {
-                  lifecycle+: {
-                    precondition+: {
-                      error_message: value,
-                    },
+                lifecycle+: {
+                  precondition+: {
+                    error_message: value,
                   },
                 },
               },
             },
           '#withPreventDestroy': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
           withPreventDestroy(value=true): {
-            spec+: {
-              lifecycle+: {
-                prevent_destroy: value,
-              },
+            lifecycle+: {
+              prevent_destroy: value,
             },
           },
           '#withReplaceTriggeredBy': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withReplaceTriggeredBy(value): {
-            spec+: {
-              lifecycle+: {
-                replace_triggered_by:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              replace_triggered_by:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           '#withReplaceTriggeredByMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withReplaceTriggeredByMixin(value): {
-            spec+: {
-              lifecycle+: {
-                replace_triggered_by+:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              replace_triggered_by+:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
         },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withProvisioner': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withProvisioner(value): {
-        spec+: {
-          provisioner:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        provisioner:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withProvisionerMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withProvisionerMixin(value): {
-        spec+: {
-          provisioner+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        provisioner+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withResourceArn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withResourceArn(value): {
-        spec+: {
-          resource_arn: value,
-        },
+        resource_arn: value,
       },
       '#withTimeouts': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTimeouts(value): {
-        spec+: {
-          timeouts: value,
-        },
+        timeouts: value,
       },
       '#withTimeoutsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTimeoutsMixin(value): {
-        spec+: {
-          timeouts+: value,
-        },
+        timeouts+: value,
       },
       timeouts+:
         {
           '#withCreate': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).' } },
           withCreate(value): {
-            spec+: {
-              timeouts+: {
-                create: value,
-              },
+            timeouts+: {
+              create: value,
             },
           },
           '#withDelete': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.' } },
           withDelete(value): {
-            spec+: {
-              timeouts+: {
-                delete: value,
-              },
+            timeouts+: {
+              delete: value,
             },
           },
           '#withUpdate': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).' } },
           withUpdate(value): {
-            spec+: {
-              timeouts+: {
-                update: value,
-              },
+            timeouts+: {
+              update: value,
             },
           },
         },
@@ -286,268 +225,209 @@
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'log_bucket', type: 'string' }, { default: null, enums: null, name: 'role_arn_association_id', type: 'string' }], help: '' } },
       new(tf_resource_key, log_bucket, role_arn_association_id):
-        {
-          local this = self,
-          resource: {
-            aws_shield_drt_access_log_bucket_association: {
-              [this.tf_resource_key]: this.spec,
-            },
-          },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
+        self.withTfResourceKey(tf_resource_key)
         + self.withLogBucket(log_bucket)
         + self.withRoleArnAssociationId(role_arn_association_id),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+      withTfResourceKey(tf_resource_key):
+        {
+          local this = self,
+          _manifest():: {
+            resource: {
+              aws_shield_drt_access_log_bucket_association: {
+                [tf_resource_key]: this,
+              },
+            },
+          },
+        },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withLifecycle': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withLifecycle(value): {
-        spec+: {
-          lifecycle: value,
-        },
+        lifecycle: value,
       },
       '#withLifecycleMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withLifecycleMixin(value): {
-        spec+: {
-          lifecycle+: value,
-        },
+        lifecycle+: value,
       },
       lifecycle+:
         {
           '#withCreateBeforeDestroy': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
           withCreateBeforeDestroy(value=true): {
-            spec+: {
-              lifecycle+: {
-                create_before_destroy: value,
-              },
+            lifecycle+: {
+              create_before_destroy: value,
             },
           },
           '#withIgnoreChanges': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withIgnoreChanges(value): {
-            spec+: {
-              lifecycle+: {
-                ignore_changes:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              ignore_changes:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           '#withIgnoreChangesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withIgnoreChangesMixin(value): {
-            spec+: {
-              lifecycle+: {
-                ignore_changes+:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              ignore_changes+:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           '#withPostcondition': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPostcondition(value): {
-            spec+: {
-              lifecycle+: {
-                postcondition: value,
-              },
+            lifecycle+: {
+              postcondition: value,
             },
           },
           '#withPostconditionMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPostconditionMixin(value): {
-            spec+: {
-              lifecycle+: {
-                postcondition+: value,
-              },
+            lifecycle+: {
+              postcondition+: value,
             },
           },
           postcondition+:
             {
               '#withCondition': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
               withCondition(value=true): {
-                spec+: {
-                  lifecycle+: {
-                    postcondition+: {
-                      condition: value,
-                    },
+                lifecycle+: {
+                  postcondition+: {
+                    condition: value,
                   },
                 },
               },
               '#withErrorMessage': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withErrorMessage(value): {
-                spec+: {
-                  lifecycle+: {
-                    postcondition+: {
-                      error_message: value,
-                    },
+                lifecycle+: {
+                  postcondition+: {
+                    error_message: value,
                   },
                 },
               },
             },
           '#withPrecondition': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPrecondition(value): {
-            spec+: {
-              lifecycle+: {
-                precondition: value,
-              },
+            lifecycle+: {
+              precondition: value,
             },
           },
           '#withPreconditionMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPreconditionMixin(value): {
-            spec+: {
-              lifecycle+: {
-                precondition+: value,
-              },
+            lifecycle+: {
+              precondition+: value,
             },
           },
           precondition+:
             {
               '#withCondition': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
               withCondition(value=true): {
-                spec+: {
-                  lifecycle+: {
-                    precondition+: {
-                      condition: value,
-                    },
+                lifecycle+: {
+                  precondition+: {
+                    condition: value,
                   },
                 },
               },
               '#withErrorMessage': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withErrorMessage(value): {
-                spec+: {
-                  lifecycle+: {
-                    precondition+: {
-                      error_message: value,
-                    },
+                lifecycle+: {
+                  precondition+: {
+                    error_message: value,
                   },
                 },
               },
             },
           '#withPreventDestroy': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
           withPreventDestroy(value=true): {
-            spec+: {
-              lifecycle+: {
-                prevent_destroy: value,
-              },
+            lifecycle+: {
+              prevent_destroy: value,
             },
           },
           '#withReplaceTriggeredBy': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withReplaceTriggeredBy(value): {
-            spec+: {
-              lifecycle+: {
-                replace_triggered_by:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              replace_triggered_by:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           '#withReplaceTriggeredByMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withReplaceTriggeredByMixin(value): {
-            spec+: {
-              lifecycle+: {
-                replace_triggered_by+:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              replace_triggered_by+:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
         },
       '#withLogBucket': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withLogBucket(value): {
-        spec+: {
-          log_bucket: value,
-        },
+        log_bucket: value,
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withProvisioner': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withProvisioner(value): {
-        spec+: {
-          provisioner:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        provisioner:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withProvisionerMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withProvisionerMixin(value): {
-        spec+: {
-          provisioner+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        provisioner+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withRoleArnAssociationId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Unused' } },
       withRoleArnAssociationId(value): {
-        spec+: {
-          role_arn_association_id: value,
-        },
+        role_arn_association_id: value,
       },
       '#withTimeouts': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTimeouts(value): {
-        spec+: {
-          timeouts: value,
-        },
+        timeouts: value,
       },
       '#withTimeoutsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTimeoutsMixin(value): {
-        spec+: {
-          timeouts+: value,
-        },
+        timeouts+: value,
       },
       timeouts+:
         {
           '#withCreate': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).' } },
           withCreate(value): {
-            spec+: {
-              timeouts+: {
-                create: value,
-              },
+            timeouts+: {
+              create: value,
             },
           },
           '#withDelete': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.' } },
           withDelete(value): {
-            spec+: {
-              timeouts+: {
-                delete: value,
-              },
+            timeouts+: {
+              delete: value,
             },
           },
         },
@@ -556,269 +436,210 @@
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'role_arn', type: 'string' }], help: '' } },
       new(tf_resource_key, role_arn):
+        self.withTfResourceKey(tf_resource_key)
+        + self.withRoleArn(role_arn),
+      withTfResourceKey(tf_resource_key):
         {
           local this = self,
-          resource: {
-            aws_shield_drt_access_role_arn_association: {
-              [this.tf_resource_key]: this.spec,
+          _manifest():: {
+            resource: {
+              aws_shield_drt_access_role_arn_association: {
+                [tf_resource_key]: this,
+              },
             },
           },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
-        + self.withRoleArn(role_arn),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+        },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withLifecycle': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withLifecycle(value): {
-        spec+: {
-          lifecycle: value,
-        },
+        lifecycle: value,
       },
       '#withLifecycleMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withLifecycleMixin(value): {
-        spec+: {
-          lifecycle+: value,
-        },
+        lifecycle+: value,
       },
       lifecycle+:
         {
           '#withCreateBeforeDestroy': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
           withCreateBeforeDestroy(value=true): {
-            spec+: {
-              lifecycle+: {
-                create_before_destroy: value,
-              },
+            lifecycle+: {
+              create_before_destroy: value,
             },
           },
           '#withIgnoreChanges': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withIgnoreChanges(value): {
-            spec+: {
-              lifecycle+: {
-                ignore_changes:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              ignore_changes:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           '#withIgnoreChangesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withIgnoreChangesMixin(value): {
-            spec+: {
-              lifecycle+: {
-                ignore_changes+:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              ignore_changes+:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           '#withPostcondition': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPostcondition(value): {
-            spec+: {
-              lifecycle+: {
-                postcondition: value,
-              },
+            lifecycle+: {
+              postcondition: value,
             },
           },
           '#withPostconditionMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPostconditionMixin(value): {
-            spec+: {
-              lifecycle+: {
-                postcondition+: value,
-              },
+            lifecycle+: {
+              postcondition+: value,
             },
           },
           postcondition+:
             {
               '#withCondition': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
               withCondition(value=true): {
-                spec+: {
-                  lifecycle+: {
-                    postcondition+: {
-                      condition: value,
-                    },
+                lifecycle+: {
+                  postcondition+: {
+                    condition: value,
                   },
                 },
               },
               '#withErrorMessage': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withErrorMessage(value): {
-                spec+: {
-                  lifecycle+: {
-                    postcondition+: {
-                      error_message: value,
-                    },
+                lifecycle+: {
+                  postcondition+: {
+                    error_message: value,
                   },
                 },
               },
             },
           '#withPrecondition': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPrecondition(value): {
-            spec+: {
-              lifecycle+: {
-                precondition: value,
-              },
+            lifecycle+: {
+              precondition: value,
             },
           },
           '#withPreconditionMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPreconditionMixin(value): {
-            spec+: {
-              lifecycle+: {
-                precondition+: value,
-              },
+            lifecycle+: {
+              precondition+: value,
             },
           },
           precondition+:
             {
               '#withCondition': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
               withCondition(value=true): {
-                spec+: {
-                  lifecycle+: {
-                    precondition+: {
-                      condition: value,
-                    },
+                lifecycle+: {
+                  precondition+: {
+                    condition: value,
                   },
                 },
               },
               '#withErrorMessage': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withErrorMessage(value): {
-                spec+: {
-                  lifecycle+: {
-                    precondition+: {
-                      error_message: value,
-                    },
+                lifecycle+: {
+                  precondition+: {
+                    error_message: value,
                   },
                 },
               },
             },
           '#withPreventDestroy': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
           withPreventDestroy(value=true): {
-            spec+: {
-              lifecycle+: {
-                prevent_destroy: value,
-              },
+            lifecycle+: {
+              prevent_destroy: value,
             },
           },
           '#withReplaceTriggeredBy': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withReplaceTriggeredBy(value): {
-            spec+: {
-              lifecycle+: {
-                replace_triggered_by:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              replace_triggered_by:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           '#withReplaceTriggeredByMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withReplaceTriggeredByMixin(value): {
-            spec+: {
-              lifecycle+: {
-                replace_triggered_by+:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              replace_triggered_by+:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
         },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withProvisioner': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withProvisioner(value): {
-        spec+: {
-          provisioner:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        provisioner:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withProvisionerMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withProvisionerMixin(value): {
-        spec+: {
-          provisioner+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        provisioner+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withRoleArn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withRoleArn(value): {
-        spec+: {
-          role_arn: value,
-        },
+        role_arn: value,
       },
       '#withTimeouts': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTimeouts(value): {
-        spec+: {
-          timeouts: value,
-        },
+        timeouts: value,
       },
       '#withTimeoutsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTimeoutsMixin(value): {
-        spec+: {
-          timeouts+: value,
-        },
+        timeouts+: value,
       },
       timeouts+:
         {
           '#withCreate': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).' } },
           withCreate(value): {
-            spec+: {
-              timeouts+: {
-                create: value,
-              },
+            timeouts+: {
+              create: value,
             },
           },
           '#withDelete': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours). Setting a timeout for a Delete operation is only applicable if changes are saved into state before the destroy operation occurs.' } },
           withDelete(value): {
-            spec+: {
-              timeouts+: {
-                delete: value,
-              },
+            timeouts+: {
+              delete: value,
             },
           },
           '#withUpdate': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'A string that can be [parsed as a duration](https://pkg.go.dev/time#ParseDuration) consisting of numbers and unit suffixes, such as "30s" or "2h45m". Valid time units are "s" (seconds), "m" (minutes), "h" (hours).' } },
           withUpdate(value): {
-            spec+: {
-              timeouts+: {
-                update: value,
-              },
+            timeouts+: {
+              update: value,
             },
           },
         },
@@ -827,61 +648,50 @@
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'enabled', type: 'boolean' }], help: '' } },
       new(tf_resource_key, enabled):
+        self.withTfResourceKey(tf_resource_key)
+        + self.withEnabled(enabled),
+      withTfResourceKey(tf_resource_key):
         {
           local this = self,
-          resource: {
-            aws_shield_proactive_engagement: {
-              [this.tf_resource_key]: this.spec,
+          _manifest():: {
+            resource: {
+              aws_shield_proactive_engagement: {
+                [tf_resource_key]: this,
+              },
             },
           },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
-        + self.withEnabled(enabled),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+        },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withEmergencyContact': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withEmergencyContact(value): {
-        spec+: {
-          emergency_contact:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        emergency_contact:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withEmergencyContactMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withEmergencyContactMixin(value): {
-        spec+: {
-          emergency_contact+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        emergency_contact+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       emergency_contact+:
         {
@@ -901,1237 +711,963 @@
         },
       '#withEnabled': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
       withEnabled(value=true): {
-        spec+: {
-          enabled: value,
-        },
+        enabled: value,
       },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withLifecycle': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withLifecycle(value): {
-        spec+: {
-          lifecycle: value,
-        },
+        lifecycle: value,
       },
       '#withLifecycleMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withLifecycleMixin(value): {
-        spec+: {
-          lifecycle+: value,
-        },
+        lifecycle+: value,
       },
       lifecycle+:
         {
           '#withCreateBeforeDestroy': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
           withCreateBeforeDestroy(value=true): {
-            spec+: {
-              lifecycle+: {
-                create_before_destroy: value,
-              },
+            lifecycle+: {
+              create_before_destroy: value,
             },
           },
           '#withIgnoreChanges': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withIgnoreChanges(value): {
-            spec+: {
-              lifecycle+: {
-                ignore_changes:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              ignore_changes:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           '#withIgnoreChangesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withIgnoreChangesMixin(value): {
-            spec+: {
-              lifecycle+: {
-                ignore_changes+:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              ignore_changes+:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           '#withPostcondition': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPostcondition(value): {
-            spec+: {
-              lifecycle+: {
-                postcondition: value,
-              },
+            lifecycle+: {
+              postcondition: value,
             },
           },
           '#withPostconditionMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPostconditionMixin(value): {
-            spec+: {
-              lifecycle+: {
-                postcondition+: value,
-              },
+            lifecycle+: {
+              postcondition+: value,
             },
           },
           postcondition+:
             {
               '#withCondition': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
               withCondition(value=true): {
-                spec+: {
-                  lifecycle+: {
-                    postcondition+: {
-                      condition: value,
-                    },
+                lifecycle+: {
+                  postcondition+: {
+                    condition: value,
                   },
                 },
               },
               '#withErrorMessage': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withErrorMessage(value): {
-                spec+: {
-                  lifecycle+: {
-                    postcondition+: {
-                      error_message: value,
-                    },
+                lifecycle+: {
+                  postcondition+: {
+                    error_message: value,
                   },
                 },
               },
             },
           '#withPrecondition': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPrecondition(value): {
-            spec+: {
-              lifecycle+: {
-                precondition: value,
-              },
+            lifecycle+: {
+              precondition: value,
             },
           },
           '#withPreconditionMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPreconditionMixin(value): {
-            spec+: {
-              lifecycle+: {
-                precondition+: value,
-              },
+            lifecycle+: {
+              precondition+: value,
             },
           },
           precondition+:
             {
               '#withCondition': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
               withCondition(value=true): {
-                spec+: {
-                  lifecycle+: {
-                    precondition+: {
-                      condition: value,
-                    },
+                lifecycle+: {
+                  precondition+: {
+                    condition: value,
                   },
                 },
               },
               '#withErrorMessage': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withErrorMessage(value): {
-                spec+: {
-                  lifecycle+: {
-                    precondition+: {
-                      error_message: value,
-                    },
+                lifecycle+: {
+                  precondition+: {
+                    error_message: value,
                   },
                 },
               },
             },
           '#withPreventDestroy': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
           withPreventDestroy(value=true): {
-            spec+: {
-              lifecycle+: {
-                prevent_destroy: value,
-              },
+            lifecycle+: {
+              prevent_destroy: value,
             },
           },
           '#withReplaceTriggeredBy': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withReplaceTriggeredBy(value): {
-            spec+: {
-              lifecycle+: {
-                replace_triggered_by:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              replace_triggered_by:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           '#withReplaceTriggeredByMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withReplaceTriggeredByMixin(value): {
-            spec+: {
-              lifecycle+: {
-                replace_triggered_by+:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              replace_triggered_by+:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
         },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withProvisioner': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withProvisioner(value): {
-        spec+: {
-          provisioner:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        provisioner:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withProvisionerMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withProvisionerMixin(value): {
-        spec+: {
-          provisioner+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        provisioner+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
     },
   aws_shield_protection:
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'name', type: 'string' }, { default: null, enums: null, name: 'resource_arn', type: 'string' }], help: '' } },
       new(tf_resource_key, name, resource_arn):
-        {
-          local this = self,
-          resource: {
-            aws_shield_protection: {
-              [this.tf_resource_key]: this.spec,
-            },
-          },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
+        self.withTfResourceKey(tf_resource_key)
         + self.withName(name)
         + self.withResourceArn(resource_arn),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+      withTfResourceKey(tf_resource_key):
+        {
+          local this = self,
+          _manifest():: {
+            resource: {
+              aws_shield_protection: {
+                [tf_resource_key]: this,
+              },
+            },
+          },
+        },
       '#withArn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withArn(value): {
-        spec+: {
-          arn: value,
-        },
+        arn: value,
       },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withLifecycle': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withLifecycle(value): {
-        spec+: {
-          lifecycle: value,
-        },
+        lifecycle: value,
       },
       '#withLifecycleMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withLifecycleMixin(value): {
-        spec+: {
-          lifecycle+: value,
-        },
+        lifecycle+: value,
       },
       lifecycle+:
         {
           '#withCreateBeforeDestroy': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
           withCreateBeforeDestroy(value=true): {
-            spec+: {
-              lifecycle+: {
-                create_before_destroy: value,
-              },
+            lifecycle+: {
+              create_before_destroy: value,
             },
           },
           '#withIgnoreChanges': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withIgnoreChanges(value): {
-            spec+: {
-              lifecycle+: {
-                ignore_changes:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              ignore_changes:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           '#withIgnoreChangesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withIgnoreChangesMixin(value): {
-            spec+: {
-              lifecycle+: {
-                ignore_changes+:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              ignore_changes+:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           '#withPostcondition': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPostcondition(value): {
-            spec+: {
-              lifecycle+: {
-                postcondition: value,
-              },
+            lifecycle+: {
+              postcondition: value,
             },
           },
           '#withPostconditionMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPostconditionMixin(value): {
-            spec+: {
-              lifecycle+: {
-                postcondition+: value,
-              },
+            lifecycle+: {
+              postcondition+: value,
             },
           },
           postcondition+:
             {
               '#withCondition': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
               withCondition(value=true): {
-                spec+: {
-                  lifecycle+: {
-                    postcondition+: {
-                      condition: value,
-                    },
+                lifecycle+: {
+                  postcondition+: {
+                    condition: value,
                   },
                 },
               },
               '#withErrorMessage': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withErrorMessage(value): {
-                spec+: {
-                  lifecycle+: {
-                    postcondition+: {
-                      error_message: value,
-                    },
+                lifecycle+: {
+                  postcondition+: {
+                    error_message: value,
                   },
                 },
               },
             },
           '#withPrecondition': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPrecondition(value): {
-            spec+: {
-              lifecycle+: {
-                precondition: value,
-              },
+            lifecycle+: {
+              precondition: value,
             },
           },
           '#withPreconditionMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPreconditionMixin(value): {
-            spec+: {
-              lifecycle+: {
-                precondition+: value,
-              },
+            lifecycle+: {
+              precondition+: value,
             },
           },
           precondition+:
             {
               '#withCondition': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
               withCondition(value=true): {
-                spec+: {
-                  lifecycle+: {
-                    precondition+: {
-                      condition: value,
-                    },
+                lifecycle+: {
+                  precondition+: {
+                    condition: value,
                   },
                 },
               },
               '#withErrorMessage': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withErrorMessage(value): {
-                spec+: {
-                  lifecycle+: {
-                    precondition+: {
-                      error_message: value,
-                    },
+                lifecycle+: {
+                  precondition+: {
+                    error_message: value,
                   },
                 },
               },
             },
           '#withPreventDestroy': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
           withPreventDestroy(value=true): {
-            spec+: {
-              lifecycle+: {
-                prevent_destroy: value,
-              },
+            lifecycle+: {
+              prevent_destroy: value,
             },
           },
           '#withReplaceTriggeredBy': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withReplaceTriggeredBy(value): {
-            spec+: {
-              lifecycle+: {
-                replace_triggered_by:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              replace_triggered_by:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           '#withReplaceTriggeredByMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withReplaceTriggeredByMixin(value): {
-            spec+: {
-              lifecycle+: {
-                replace_triggered_by+:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              replace_triggered_by+:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
         },
       '#withName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withName(value): {
-        spec+: {
-          name: value,
-        },
+        name: value,
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withProvisioner': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withProvisioner(value): {
-        spec+: {
-          provisioner:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        provisioner:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withProvisionerMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withProvisionerMixin(value): {
-        spec+: {
-          provisioner+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        provisioner+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withResourceArn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withResourceArn(value): {
-        spec+: {
-          resource_arn: value,
-        },
+        resource_arn: value,
       },
       '#withTags': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTags(value): {
-        spec+: {
-          tags: value,
-        },
+        tags: value,
       },
       '#withTagsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTagsMixin(value): {
-        spec+: {
-          tags+: value,
-        },
+        tags+: value,
       },
       '#withTagsAll': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTagsAll(value): {
-        spec+: {
-          tags_all: value,
-        },
+        tags_all: value,
       },
       '#withTagsAllMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTagsAllMixin(value): {
-        spec+: {
-          tags_all+: value,
-        },
+        tags_all+: value,
       },
     },
   aws_shield_protection_group:
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'aggregation', type: 'string' }, { default: null, enums: null, name: 'pattern', type: 'string' }, { default: null, enums: null, name: 'protection_group_id', type: 'string' }], help: '' } },
       new(tf_resource_key, aggregation, pattern, protection_group_id):
-        {
-          local this = self,
-          resource: {
-            aws_shield_protection_group: {
-              [this.tf_resource_key]: this.spec,
-            },
-          },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
+        self.withTfResourceKey(tf_resource_key)
         + self.withAggregation(aggregation)
         + self.withPattern(pattern)
         + self.withProtectionGroupId(protection_group_id),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+      withTfResourceKey(tf_resource_key):
+        {
+          local this = self,
+          _manifest():: {
+            resource: {
+              aws_shield_protection_group: {
+                [tf_resource_key]: this,
+              },
+            },
+          },
+        },
       '#withAggregation': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withAggregation(value): {
-        spec+: {
-          aggregation: value,
-        },
+        aggregation: value,
       },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withLifecycle': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withLifecycle(value): {
-        spec+: {
-          lifecycle: value,
-        },
+        lifecycle: value,
       },
       '#withLifecycleMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withLifecycleMixin(value): {
-        spec+: {
-          lifecycle+: value,
-        },
+        lifecycle+: value,
       },
       lifecycle+:
         {
           '#withCreateBeforeDestroy': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
           withCreateBeforeDestroy(value=true): {
-            spec+: {
-              lifecycle+: {
-                create_before_destroy: value,
-              },
+            lifecycle+: {
+              create_before_destroy: value,
             },
           },
           '#withIgnoreChanges': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withIgnoreChanges(value): {
-            spec+: {
-              lifecycle+: {
-                ignore_changes:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              ignore_changes:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           '#withIgnoreChangesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withIgnoreChangesMixin(value): {
-            spec+: {
-              lifecycle+: {
-                ignore_changes+:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              ignore_changes+:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           '#withPostcondition': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPostcondition(value): {
-            spec+: {
-              lifecycle+: {
-                postcondition: value,
-              },
+            lifecycle+: {
+              postcondition: value,
             },
           },
           '#withPostconditionMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPostconditionMixin(value): {
-            spec+: {
-              lifecycle+: {
-                postcondition+: value,
-              },
+            lifecycle+: {
+              postcondition+: value,
             },
           },
           postcondition+:
             {
               '#withCondition': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
               withCondition(value=true): {
-                spec+: {
-                  lifecycle+: {
-                    postcondition+: {
-                      condition: value,
-                    },
+                lifecycle+: {
+                  postcondition+: {
+                    condition: value,
                   },
                 },
               },
               '#withErrorMessage': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withErrorMessage(value): {
-                spec+: {
-                  lifecycle+: {
-                    postcondition+: {
-                      error_message: value,
-                    },
+                lifecycle+: {
+                  postcondition+: {
+                    error_message: value,
                   },
                 },
               },
             },
           '#withPrecondition': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPrecondition(value): {
-            spec+: {
-              lifecycle+: {
-                precondition: value,
-              },
+            lifecycle+: {
+              precondition: value,
             },
           },
           '#withPreconditionMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPreconditionMixin(value): {
-            spec+: {
-              lifecycle+: {
-                precondition+: value,
-              },
+            lifecycle+: {
+              precondition+: value,
             },
           },
           precondition+:
             {
               '#withCondition': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
               withCondition(value=true): {
-                spec+: {
-                  lifecycle+: {
-                    precondition+: {
-                      condition: value,
-                    },
+                lifecycle+: {
+                  precondition+: {
+                    condition: value,
                   },
                 },
               },
               '#withErrorMessage': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withErrorMessage(value): {
-                spec+: {
-                  lifecycle+: {
-                    precondition+: {
-                      error_message: value,
-                    },
+                lifecycle+: {
+                  precondition+: {
+                    error_message: value,
                   },
                 },
               },
             },
           '#withPreventDestroy': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
           withPreventDestroy(value=true): {
-            spec+: {
-              lifecycle+: {
-                prevent_destroy: value,
-              },
+            lifecycle+: {
+              prevent_destroy: value,
             },
           },
           '#withReplaceTriggeredBy': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withReplaceTriggeredBy(value): {
-            spec+: {
-              lifecycle+: {
-                replace_triggered_by:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              replace_triggered_by:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           '#withReplaceTriggeredByMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withReplaceTriggeredByMixin(value): {
-            spec+: {
-              lifecycle+: {
-                replace_triggered_by+:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              replace_triggered_by+:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
         },
       '#withMembers': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withMembers(value): {
-        spec+: {
-          members:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        members:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withMembersMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withMembersMixin(value): {
-        spec+: {
-          members+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        members+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withPattern': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withPattern(value): {
-        spec+: {
-          pattern: value,
-        },
+        pattern: value,
       },
       '#withProtectionGroupArn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProtectionGroupArn(value): {
-        spec+: {
-          protection_group_arn: value,
-        },
+        protection_group_arn: value,
       },
       '#withProtectionGroupId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProtectionGroupId(value): {
-        spec+: {
-          protection_group_id: value,
-        },
+        protection_group_id: value,
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withProvisioner': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withProvisioner(value): {
-        spec+: {
-          provisioner:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        provisioner:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withProvisionerMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withProvisionerMixin(value): {
-        spec+: {
-          provisioner+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        provisioner+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withResourceType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withResourceType(value): {
-        spec+: {
-          resource_type: value,
-        },
+        resource_type: value,
       },
       '#withTags': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTags(value): {
-        spec+: {
-          tags: value,
-        },
+        tags: value,
       },
       '#withTagsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTagsMixin(value): {
-        spec+: {
-          tags+: value,
-        },
+        tags+: value,
       },
       '#withTagsAll': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTagsAll(value): {
-        spec+: {
-          tags_all: value,
-        },
+        tags_all: value,
       },
       '#withTagsAllMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTagsAllMixin(value): {
-        spec+: {
-          tags_all+: value,
-        },
+        tags_all+: value,
       },
     },
   aws_shield_protection_health_check_association:
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'health_check_arn', type: 'string' }, { default: null, enums: null, name: 'shield_protection_id', type: 'string' }], help: '' } },
       new(tf_resource_key, health_check_arn, shield_protection_id):
-        {
-          local this = self,
-          resource: {
-            aws_shield_protection_health_check_association: {
-              [this.tf_resource_key]: this.spec,
-            },
-          },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
+        self.withTfResourceKey(tf_resource_key)
         + self.withHealthCheckArn(health_check_arn)
         + self.withShieldProtectionId(shield_protection_id),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+      withTfResourceKey(tf_resource_key):
+        {
+          local this = self,
+          _manifest():: {
+            resource: {
+              aws_shield_protection_health_check_association: {
+                [tf_resource_key]: this,
+              },
+            },
+          },
+        },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withHealthCheckArn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withHealthCheckArn(value): {
-        spec+: {
-          health_check_arn: value,
-        },
+        health_check_arn: value,
       },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withLifecycle': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withLifecycle(value): {
-        spec+: {
-          lifecycle: value,
-        },
+        lifecycle: value,
       },
       '#withLifecycleMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withLifecycleMixin(value): {
-        spec+: {
-          lifecycle+: value,
-        },
+        lifecycle+: value,
       },
       lifecycle+:
         {
           '#withCreateBeforeDestroy': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
           withCreateBeforeDestroy(value=true): {
-            spec+: {
-              lifecycle+: {
-                create_before_destroy: value,
-              },
+            lifecycle+: {
+              create_before_destroy: value,
             },
           },
           '#withIgnoreChanges': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withIgnoreChanges(value): {
-            spec+: {
-              lifecycle+: {
-                ignore_changes:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              ignore_changes:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           '#withIgnoreChangesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withIgnoreChangesMixin(value): {
-            spec+: {
-              lifecycle+: {
-                ignore_changes+:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              ignore_changes+:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           '#withPostcondition': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPostcondition(value): {
-            spec+: {
-              lifecycle+: {
-                postcondition: value,
-              },
+            lifecycle+: {
+              postcondition: value,
             },
           },
           '#withPostconditionMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPostconditionMixin(value): {
-            spec+: {
-              lifecycle+: {
-                postcondition+: value,
-              },
+            lifecycle+: {
+              postcondition+: value,
             },
           },
           postcondition+:
             {
               '#withCondition': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
               withCondition(value=true): {
-                spec+: {
-                  lifecycle+: {
-                    postcondition+: {
-                      condition: value,
-                    },
+                lifecycle+: {
+                  postcondition+: {
+                    condition: value,
                   },
                 },
               },
               '#withErrorMessage': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withErrorMessage(value): {
-                spec+: {
-                  lifecycle+: {
-                    postcondition+: {
-                      error_message: value,
-                    },
+                lifecycle+: {
+                  postcondition+: {
+                    error_message: value,
                   },
                 },
               },
             },
           '#withPrecondition': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPrecondition(value): {
-            spec+: {
-              lifecycle+: {
-                precondition: value,
-              },
+            lifecycle+: {
+              precondition: value,
             },
           },
           '#withPreconditionMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPreconditionMixin(value): {
-            spec+: {
-              lifecycle+: {
-                precondition+: value,
-              },
+            lifecycle+: {
+              precondition+: value,
             },
           },
           precondition+:
             {
               '#withCondition': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
               withCondition(value=true): {
-                spec+: {
-                  lifecycle+: {
-                    precondition+: {
-                      condition: value,
-                    },
+                lifecycle+: {
+                  precondition+: {
+                    condition: value,
                   },
                 },
               },
               '#withErrorMessage': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withErrorMessage(value): {
-                spec+: {
-                  lifecycle+: {
-                    precondition+: {
-                      error_message: value,
-                    },
+                lifecycle+: {
+                  precondition+: {
+                    error_message: value,
                   },
                 },
               },
             },
           '#withPreventDestroy': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
           withPreventDestroy(value=true): {
-            spec+: {
-              lifecycle+: {
-                prevent_destroy: value,
-              },
+            lifecycle+: {
+              prevent_destroy: value,
             },
           },
           '#withReplaceTriggeredBy': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withReplaceTriggeredBy(value): {
-            spec+: {
-              lifecycle+: {
-                replace_triggered_by:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              replace_triggered_by:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           '#withReplaceTriggeredByMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withReplaceTriggeredByMixin(value): {
-            spec+: {
-              lifecycle+: {
-                replace_triggered_by+:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              replace_triggered_by+:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
         },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withProvisioner': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withProvisioner(value): {
-        spec+: {
-          provisioner:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        provisioner:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withProvisionerMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withProvisionerMixin(value): {
-        spec+: {
-          provisioner+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        provisioner+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withShieldProtectionId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withShieldProtectionId(value): {
-        spec+: {
-          shield_protection_id: value,
-        },
+        shield_protection_id: value,
       },
     },
   aws_shield_subscription:
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }], help: '' } },
       new(tf_resource_key):
+        self.withTfResourceKey(tf_resource_key),
+      withTfResourceKey(tf_resource_key):
         {
           local this = self,
-          resource: {
-            aws_shield_subscription: {
-              [this.tf_resource_key]: this.spec,
+          _manifest():: {
+            resource: {
+              aws_shield_subscription: {
+                [tf_resource_key]: this,
+              },
             },
           },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+        },
       '#withAutoRenew': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Whether to automatically renew the subscription when it expires.' } },
       withAutoRenew(value): {
-        spec+: {
-          auto_renew: value,
-        },
+        auto_renew: value,
       },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withLifecycle': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withLifecycle(value): {
-        spec+: {
-          lifecycle: value,
-        },
+        lifecycle: value,
       },
       '#withLifecycleMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withLifecycleMixin(value): {
-        spec+: {
-          lifecycle+: value,
-        },
+        lifecycle+: value,
       },
       lifecycle+:
         {
           '#withCreateBeforeDestroy': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
           withCreateBeforeDestroy(value=true): {
-            spec+: {
-              lifecycle+: {
-                create_before_destroy: value,
-              },
+            lifecycle+: {
+              create_before_destroy: value,
             },
           },
           '#withIgnoreChanges': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withIgnoreChanges(value): {
-            spec+: {
-              lifecycle+: {
-                ignore_changes:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              ignore_changes:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           '#withIgnoreChangesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withIgnoreChangesMixin(value): {
-            spec+: {
-              lifecycle+: {
-                ignore_changes+:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              ignore_changes+:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           '#withPostcondition': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPostcondition(value): {
-            spec+: {
-              lifecycle+: {
-                postcondition: value,
-              },
+            lifecycle+: {
+              postcondition: value,
             },
           },
           '#withPostconditionMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPostconditionMixin(value): {
-            spec+: {
-              lifecycle+: {
-                postcondition+: value,
-              },
+            lifecycle+: {
+              postcondition+: value,
             },
           },
           postcondition+:
             {
               '#withCondition': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
               withCondition(value=true): {
-                spec+: {
-                  lifecycle+: {
-                    postcondition+: {
-                      condition: value,
-                    },
+                lifecycle+: {
+                  postcondition+: {
+                    condition: value,
                   },
                 },
               },
               '#withErrorMessage': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withErrorMessage(value): {
-                spec+: {
-                  lifecycle+: {
-                    postcondition+: {
-                      error_message: value,
-                    },
+                lifecycle+: {
+                  postcondition+: {
+                    error_message: value,
                   },
                 },
               },
             },
           '#withPrecondition': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPrecondition(value): {
-            spec+: {
-              lifecycle+: {
-                precondition: value,
-              },
+            lifecycle+: {
+              precondition: value,
             },
           },
           '#withPreconditionMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPreconditionMixin(value): {
-            spec+: {
-              lifecycle+: {
-                precondition+: value,
-              },
+            lifecycle+: {
+              precondition+: value,
             },
           },
           precondition+:
             {
               '#withCondition': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
               withCondition(value=true): {
-                spec+: {
-                  lifecycle+: {
-                    precondition+: {
-                      condition: value,
-                    },
+                lifecycle+: {
+                  precondition+: {
+                    condition: value,
                   },
                 },
               },
               '#withErrorMessage': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withErrorMessage(value): {
-                spec+: {
-                  lifecycle+: {
-                    precondition+: {
-                      error_message: value,
-                    },
+                lifecycle+: {
+                  precondition+: {
+                    error_message: value,
                   },
                 },
               },
             },
           '#withPreventDestroy': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
           withPreventDestroy(value=true): {
-            spec+: {
-              lifecycle+: {
-                prevent_destroy: value,
-              },
+            lifecycle+: {
+              prevent_destroy: value,
             },
           },
           '#withReplaceTriggeredBy': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withReplaceTriggeredBy(value): {
-            spec+: {
-              lifecycle+: {
-                replace_triggered_by:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              replace_triggered_by:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           '#withReplaceTriggeredByMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withReplaceTriggeredByMixin(value): {
-            spec+: {
-              lifecycle+: {
-                replace_triggered_by+:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              replace_triggered_by+:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
         },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withProvisioner': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withProvisioner(value): {
-        spec+: {
-          provisioner:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        provisioner:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withProvisionerMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withProvisionerMixin(value): {
-        spec+: {
-          provisioner+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        provisioner+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withSkipDestroy': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
       withSkipDestroy(value=true): {
-        spec+: {
-          skip_destroy: value,
-        },
+        skip_destroy: value,
       },
     },
 }

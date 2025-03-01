@@ -8,110 +8,81 @@
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'function_name', type: 'string' }, { default: null, enums: null, name: 'payload', type: 'string' }], help: '' } },
       new(tf_resource_key, function_name, payload):
-        {
-          local this = self,
-          ephemeral: {
-            aws_lambda_invocation: {
-              [this.tf_resource_key]: this.spec,
-            },
-          },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
+        self.withTfResourceKey(tf_resource_key)
         + self.withFunctionName(function_name)
         + self.withPayload(payload),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+      withTfResourceKey(tf_resource_key):
+        {
+          local this = self,
+          _manifest():: {
+            ephemeral: {
+              aws_lambda_invocation: {
+                [tf_resource_key]: this,
+              },
+            },
+          },
+        },
       '#withClientContext': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withClientContext(value): {
-        spec+: {
-          client_context: value,
-        },
+        client_context: value,
       },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withExecutedVersion': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withExecutedVersion(value): {
-        spec+: {
-          executed_version: value,
-        },
+        executed_version: value,
       },
       '#withFunctionError': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withFunctionError(value): {
-        spec+: {
-          function_error: value,
-        },
+        function_error: value,
       },
       '#withFunctionName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withFunctionName(value): {
-        spec+: {
-          function_name: value,
-        },
+        function_name: value,
       },
       '#withLogResult': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withLogResult(value): {
-        spec+: {
-          log_result: value,
-        },
+        log_result: value,
       },
       '#withLogType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withLogType(value): {
-        spec+: {
-          log_type: value,
-        },
+        log_type: value,
       },
       '#withPayload': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withPayload(value): {
-        spec+: {
-          payload: value,
-        },
+        payload: value,
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withQualifier': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withQualifier(value): {
-        spec+: {
-          qualifier: value,
-        },
+        qualifier: value,
       },
       '#withResult': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withResult(value): {
-        spec+: {
-          result: value,
-        },
+        result: value,
       },
       '#withStatusCode': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withStatusCode(value): {
-        spec+: {
-          status_code: value,
-        },
+        status_code: value,
       },
     },
 }

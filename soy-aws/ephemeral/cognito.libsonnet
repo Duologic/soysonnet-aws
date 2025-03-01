@@ -8,98 +8,73 @@
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'identity_pool_id', type: 'string' }, { default: null, enums: null, name: 'logins', type: 'object' }], help: '' } },
       new(tf_resource_key, identity_pool_id, logins):
-        {
-          local this = self,
-          ephemeral: {
-            aws_cognito_identity_openid_token_for_developer_identity: {
-              [this.tf_resource_key]: this.spec,
-            },
-          },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
+        self.withTfResourceKey(tf_resource_key)
         + self.withIdentityPoolId(identity_pool_id)
         + self.withLogins(logins),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+      withTfResourceKey(tf_resource_key):
+        {
+          local this = self,
+          _manifest():: {
+            ephemeral: {
+              aws_cognito_identity_openid_token_for_developer_identity: {
+                [tf_resource_key]: this,
+              },
+            },
+          },
+        },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withIdentityId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withIdentityId(value): {
-        spec+: {
-          identity_id: value,
-        },
+        identity_id: value,
       },
       '#withIdentityPoolId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withIdentityPoolId(value): {
-        spec+: {
-          identity_pool_id: value,
-        },
+        identity_pool_id: value,
       },
       '#withLogins': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withLogins(value): {
-        spec+: {
-          logins: value,
-        },
+        logins: value,
       },
       '#withLoginsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withLoginsMixin(value): {
-        spec+: {
-          logins+: value,
-        },
+        logins+: value,
       },
       '#withPrincipalTags': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withPrincipalTags(value): {
-        spec+: {
-          principal_tags: value,
-        },
+        principal_tags: value,
       },
       '#withPrincipalTagsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withPrincipalTagsMixin(value): {
-        spec+: {
-          principal_tags+: value,
-        },
+        principal_tags+: value,
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withToken': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withToken(value): {
-        spec+: {
-          token: value,
-        },
+        token: value,
       },
       '#withTokenDuration': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withTokenDuration(value): {
-        spec+: {
-          token_duration: value,
-        },
+        token_duration: value,
       },
     },
 }

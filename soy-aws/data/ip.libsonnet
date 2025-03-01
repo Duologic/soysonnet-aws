@@ -8,145 +8,112 @@
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'services', type: 'array' }], help: '' } },
       new(tf_resource_key, services):
+        self.withTfResourceKey(tf_resource_key)
+        + self.withServices(services),
+      withTfResourceKey(tf_resource_key):
         {
           local this = self,
-          data: {
-            aws_ip_ranges: {
-              [this.tf_resource_key]: this.spec,
+          _manifest():: {
+            data: {
+              aws_ip_ranges: {
+                [tf_resource_key]: this,
+              },
             },
           },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
-        + self.withServices(services),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+        },
       '#withCidrBlocks': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withCidrBlocks(value): {
-        spec+: {
-          cidr_blocks:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        cidr_blocks:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withCidrBlocksMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withCidrBlocksMixin(value): {
-        spec+: {
-          cidr_blocks+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        cidr_blocks+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withCreateDate': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withCreateDate(value): {
-        spec+: {
-          create_date: value,
-        },
+        create_date: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withIpv6CidrBlocks': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withIpv6CidrBlocks(value): {
-        spec+: {
-          ipv6_cidr_blocks:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        ipv6_cidr_blocks:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withIpv6CidrBlocksMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withIpv6CidrBlocksMixin(value): {
-        spec+: {
-          ipv6_cidr_blocks+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        ipv6_cidr_blocks+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withRegions': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withRegions(value): {
-        spec+: {
-          regions:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        regions:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withRegionsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withRegionsMixin(value): {
-        spec+: {
-          regions+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        regions+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withServices': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withServices(value): {
-        spec+: {
-          services:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        services:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withServicesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withServicesMixin(value): {
-        spec+: {
-          services+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        services+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withSyncToken': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withSyncToken(value): {
-        spec+: {
-          sync_token: value,
-        },
+        sync_token: value,
       },
       '#withUrl': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withUrl(value): {
-        spec+: {
-          url: value,
-        },
+        url: value,
       },
     },
 }

@@ -8,132 +8,97 @@
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }], help: '' } },
       new(tf_resource_key):
+        self.withTfResourceKey(tf_resource_key),
+      withTfResourceKey(tf_resource_key):
         {
           local this = self,
-          data: {
-            aws_subnet: {
-              [this.tf_resource_key]: this.spec,
+          _manifest():: {
+            data: {
+              aws_subnet: {
+                [tf_resource_key]: this,
+              },
             },
           },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+        },
       '#withArn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withArn(value): {
-        spec+: {
-          arn: value,
-        },
+        arn: value,
       },
       '#withAssignIpv6AddressOnCreation': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
       withAssignIpv6AddressOnCreation(value=true): {
-        spec+: {
-          assign_ipv6_address_on_creation: value,
-        },
+        assign_ipv6_address_on_creation: value,
       },
       '#withAvailabilityZone': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withAvailabilityZone(value): {
-        spec+: {
-          availability_zone: value,
-        },
+        availability_zone: value,
       },
       '#withAvailabilityZoneId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withAvailabilityZoneId(value): {
-        spec+: {
-          availability_zone_id: value,
-        },
+        availability_zone_id: value,
       },
       '#withAvailableIpAddressCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withAvailableIpAddressCount(value): {
-        spec+: {
-          available_ip_address_count: value,
-        },
+        available_ip_address_count: value,
       },
       '#withCidrBlock': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withCidrBlock(value): {
-        spec+: {
-          cidr_block: value,
-        },
+        cidr_block: value,
       },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withCustomerOwnedIpv4Pool': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withCustomerOwnedIpv4Pool(value): {
-        spec+: {
-          customer_owned_ipv4_pool: value,
-        },
+        customer_owned_ipv4_pool: value,
       },
       '#withDefaultForAz': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
       withDefaultForAz(value=true): {
-        spec+: {
-          default_for_az: value,
-        },
+        default_for_az: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withEnableDns64': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
       withEnableDns64(value=true): {
-        spec+: {
-          enable_dns64: value,
-        },
+        enable_dns64: value,
       },
       '#withEnableLniAtDeviceIndex': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withEnableLniAtDeviceIndex(value): {
-        spec+: {
-          enable_lni_at_device_index: value,
-        },
+        enable_lni_at_device_index: value,
       },
       '#withEnableResourceNameDnsARecordOnLaunch': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
       withEnableResourceNameDnsARecordOnLaunch(value=true): {
-        spec+: {
-          enable_resource_name_dns_a_record_on_launch: value,
-        },
+        enable_resource_name_dns_a_record_on_launch: value,
       },
       '#withEnableResourceNameDnsAaaaRecordOnLaunch': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
       withEnableResourceNameDnsAaaaRecordOnLaunch(value=true): {
-        spec+: {
-          enable_resource_name_dns_aaaa_record_on_launch: value,
-        },
+        enable_resource_name_dns_aaaa_record_on_launch: value,
       },
       '#withFilter': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withFilter(value): {
-        spec+: {
-          filter:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        filter:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withFilterMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withFilterMixin(value): {
-        spec+: {
-          filter+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        filter+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       filter+:
         {
@@ -159,110 +124,76 @@
         },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withIpv6CidrBlock': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withIpv6CidrBlock(value): {
-        spec+: {
-          ipv6_cidr_block: value,
-        },
+        ipv6_cidr_block: value,
       },
       '#withIpv6CidrBlockAssociationId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withIpv6CidrBlockAssociationId(value): {
-        spec+: {
-          ipv6_cidr_block_association_id: value,
-        },
+        ipv6_cidr_block_association_id: value,
       },
       '#withIpv6Native': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
       withIpv6Native(value=true): {
-        spec+: {
-          ipv6_native: value,
-        },
+        ipv6_native: value,
       },
       '#withMapCustomerOwnedIpOnLaunch': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
       withMapCustomerOwnedIpOnLaunch(value=true): {
-        spec+: {
-          map_customer_owned_ip_on_launch: value,
-        },
+        map_customer_owned_ip_on_launch: value,
       },
       '#withMapPublicIpOnLaunch': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
       withMapPublicIpOnLaunch(value=true): {
-        spec+: {
-          map_public_ip_on_launch: value,
-        },
+        map_public_ip_on_launch: value,
       },
       '#withOutpostArn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withOutpostArn(value): {
-        spec+: {
-          outpost_arn: value,
-        },
+        outpost_arn: value,
       },
       '#withOwnerId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withOwnerId(value): {
-        spec+: {
-          owner_id: value,
-        },
+        owner_id: value,
       },
       '#withPrivateDnsHostnameTypeOnLaunch': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withPrivateDnsHostnameTypeOnLaunch(value): {
-        spec+: {
-          private_dns_hostname_type_on_launch: value,
-        },
+        private_dns_hostname_type_on_launch: value,
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withState': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withState(value): {
-        spec+: {
-          state: value,
-        },
+        state: value,
       },
       '#withTags': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTags(value): {
-        spec+: {
-          tags: value,
-        },
+        tags: value,
       },
       '#withTagsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTagsMixin(value): {
-        spec+: {
-          tags+: value,
-        },
+        tags+: value,
       },
       '#withTimeouts': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTimeouts(value): {
-        spec+: {
-          timeouts: value,
-        },
+        timeouts: value,
       },
       '#withTimeoutsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTimeoutsMixin(value): {
-        spec+: {
-          timeouts+: value,
-        },
+        timeouts+: value,
       },
       timeouts+:
         {
           '#withRead': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
           withRead(value): {
-            spec+: {
-              timeouts+: {
-                read: value,
-              },
+            timeouts+: {
+              read: value,
             },
           },
         },
       '#withVpcId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withVpcId(value): {
-        spec+: {
-          vpc_id: value,
-        },
+        vpc_id: value,
       },
     },
 }

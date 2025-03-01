@@ -8,91 +8,68 @@
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'repository_name', type: 'string' }], help: '' } },
       new(tf_resource_key, repository_name):
+        self.withTfResourceKey(tf_resource_key)
+        + self.withRepositoryName(repository_name),
+      withTfResourceKey(tf_resource_key):
         {
           local this = self,
-          data: {
-            aws_sagemaker_prebuilt_ecr_image: {
-              [this.tf_resource_key]: this.spec,
+          _manifest():: {
+            data: {
+              aws_sagemaker_prebuilt_ecr_image: {
+                [tf_resource_key]: this,
+              },
             },
           },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
-        + self.withRepositoryName(repository_name),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+        },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDnsSuffix': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withDnsSuffix(value): {
-        spec+: {
-          dns_suffix: value,
-        },
+        dns_suffix: value,
       },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withImageTag': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withImageTag(value): {
-        spec+: {
-          image_tag: value,
-        },
+        image_tag: value,
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withRegion': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withRegion(value): {
-        spec+: {
-          region: value,
-        },
+        region: value,
       },
       '#withRegistryId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withRegistryId(value): {
-        spec+: {
-          registry_id: value,
-        },
+        registry_id: value,
       },
       '#withRegistryPath': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withRegistryPath(value): {
-        spec+: {
-          registry_path: value,
-        },
+        registry_path: value,
       },
       '#withRepositoryName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withRepositoryName(value): {
-        spec+: {
-          repository_name: value,
-        },
+        repository_name: value,
       },
     },
 }

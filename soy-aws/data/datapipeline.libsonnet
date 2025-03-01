@@ -8,152 +8,118 @@
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'pipeline_id', type: 'string' }], help: '' } },
       new(tf_resource_key, pipeline_id):
+        self.withTfResourceKey(tf_resource_key)
+        + self.withPipelineId(pipeline_id),
+      withTfResourceKey(tf_resource_key):
         {
           local this = self,
-          data: {
-            aws_datapipeline_pipeline: {
-              [this.tf_resource_key]: this.spec,
+          _manifest():: {
+            data: {
+              aws_datapipeline_pipeline: {
+                [tf_resource_key]: this,
+              },
             },
           },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
-        + self.withPipelineId(pipeline_id),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+        },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDescription': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withDescription(value): {
-        spec+: {
-          description: value,
-        },
+        description: value,
       },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withName(value): {
-        spec+: {
-          name: value,
-        },
+        name: value,
       },
       '#withPipelineId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withPipelineId(value): {
-        spec+: {
-          pipeline_id: value,
-        },
+        pipeline_id: value,
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withTags': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTags(value): {
-        spec+: {
-          tags: value,
-        },
+        tags: value,
       },
       '#withTagsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTagsMixin(value): {
-        spec+: {
-          tags+: value,
-        },
+        tags+: value,
       },
     },
   aws_datapipeline_pipeline_definition:
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'pipeline_id', type: 'string' }], help: '' } },
       new(tf_resource_key, pipeline_id):
+        self.withTfResourceKey(tf_resource_key)
+        + self.withPipelineId(pipeline_id),
+      withTfResourceKey(tf_resource_key):
         {
           local this = self,
-          data: {
-            aws_datapipeline_pipeline_definition: {
-              [this.tf_resource_key]: this.spec,
+          _manifest():: {
+            data: {
+              aws_datapipeline_pipeline_definition: {
+                [tf_resource_key]: this,
+              },
             },
           },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
-        + self.withPipelineId(pipeline_id),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+        },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withParameterObject': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withParameterObject(value): {
-        spec+: {
-          parameter_object:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        parameter_object:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withParameterObjectMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withParameterObjectMixin(value): {
-        spec+: {
-          parameter_object+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        parameter_object+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       parameter_object+:
         {
@@ -191,21 +157,17 @@
         },
       '#withParameterValue': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withParameterValue(value): {
-        spec+: {
-          parameter_value:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        parameter_value:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withParameterValueMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withParameterValueMixin(value): {
-        spec+: {
-          parameter_value+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        parameter_value+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       parameter_value+:
         {
@@ -221,27 +183,21 @@
         },
       '#withPipelineId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withPipelineId(value): {
-        spec+: {
-          pipeline_id: value,
-        },
+        pipeline_id: value,
       },
       '#withPipelineObject': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withPipelineObject(value): {
-        spec+: {
-          pipeline_object:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        pipeline_object:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withPipelineObjectMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withPipelineObjectMixin(value): {
-        spec+: {
-          pipeline_object+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        pipeline_object+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       pipeline_object+:
         {
@@ -287,9 +243,7 @@
         },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
     },
 }

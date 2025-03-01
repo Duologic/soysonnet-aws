@@ -8,188 +8,142 @@
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'service_name', type: 'string' }], help: '' } },
       new(tf_resource_key, service_name):
+        self.withTfResourceKey(tf_resource_key)
+        + self.withServiceName(service_name),
+      withTfResourceKey(tf_resource_key):
         {
           local this = self,
-          data: {
-            aws_servicequotas_service: {
-              [this.tf_resource_key]: this.spec,
+          _manifest():: {
+            data: {
+              aws_servicequotas_service: {
+                [tf_resource_key]: this,
+              },
             },
           },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
-        + self.withServiceName(service_name),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+        },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withServiceCode': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withServiceCode(value): {
-        spec+: {
-          service_code: value,
-        },
+        service_code: value,
       },
       '#withServiceName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withServiceName(value): {
-        spec+: {
-          service_name: value,
-        },
+        service_name: value,
       },
     },
   aws_servicequotas_service_quota:
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'service_code', type: 'string' }], help: '' } },
       new(tf_resource_key, service_code):
+        self.withTfResourceKey(tf_resource_key)
+        + self.withServiceCode(service_code),
+      withTfResourceKey(tf_resource_key):
         {
           local this = self,
-          data: {
-            aws_servicequotas_service_quota: {
-              [this.tf_resource_key]: this.spec,
+          _manifest():: {
+            data: {
+              aws_servicequotas_service_quota: {
+                [tf_resource_key]: this,
+              },
             },
           },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
-        + self.withServiceCode(service_code),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+        },
       '#withAdjustable': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
       withAdjustable(value=true): {
-        spec+: {
-          adjustable: value,
-        },
+        adjustable: value,
       },
       '#withArn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withArn(value): {
-        spec+: {
-          arn: value,
-        },
+        arn: value,
       },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDefaultValue': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withDefaultValue(value): {
-        spec+: {
-          default_value: value,
-        },
+        default_value: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withGlobalQuota': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
       withGlobalQuota(value=true): {
-        spec+: {
-          global_quota: value,
-        },
+        global_quota: value,
       },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withQuotaCode': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withQuotaCode(value): {
-        spec+: {
-          quota_code: value,
-        },
+        quota_code: value,
       },
       '#withQuotaName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withQuotaName(value): {
-        spec+: {
-          quota_name: value,
-        },
+        quota_name: value,
       },
       '#withServiceCode': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withServiceCode(value): {
-        spec+: {
-          service_code: value,
-        },
+        service_code: value,
       },
       '#withServiceName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withServiceName(value): {
-        spec+: {
-          service_name: value,
-        },
+        service_name: value,
       },
       '#withUsageMetric': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withUsageMetric(value): {
-        spec+: {
-          usage_metric:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        usage_metric:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withUsageMetricMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withUsageMetricMixin(value): {
-        spec+: {
-          usage_metric+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        usage_metric+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       usage_metric+:
         {
@@ -243,88 +197,69 @@
         },
       '#withValue': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withValue(value): {
-        spec+: {
-          value: value,
-        },
+        value: value,
       },
     },
   aws_servicequotas_templates:
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'region', type: 'string' }], help: '' } },
       new(tf_resource_key, region):
+        self.withTfResourceKey(tf_resource_key)
+        + self.withRegion(region),
+      withTfResourceKey(tf_resource_key):
         {
           local this = self,
-          data: {
-            aws_servicequotas_templates: {
-              [this.tf_resource_key]: this.spec,
+          _manifest():: {
+            data: {
+              aws_servicequotas_templates: {
+                [tf_resource_key]: this,
+              },
             },
           },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
-        + self.withRegion(region),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+        },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withRegion': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withRegion(value): {
-        spec+: {
-          region: value,
-        },
+        region: value,
       },
       '#withTemplates': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withTemplates(value): {
-        spec+: {
-          templates:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        templates:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withTemplatesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withTemplatesMixin(value): {
-        spec+: {
-          templates+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        templates+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       templates+:
         {

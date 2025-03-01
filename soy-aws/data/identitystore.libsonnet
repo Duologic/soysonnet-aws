@@ -8,108 +8,87 @@
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'identity_store_id', type: 'string' }], help: '' } },
       new(tf_resource_key, identity_store_id):
+        self.withTfResourceKey(tf_resource_key)
+        + self.withIdentityStoreId(identity_store_id),
+      withTfResourceKey(tf_resource_key):
         {
           local this = self,
-          data: {
-            aws_identitystore_group: {
-              [this.tf_resource_key]: this.spec,
+          _manifest():: {
+            data: {
+              aws_identitystore_group: {
+                [tf_resource_key]: this,
+              },
             },
           },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
-        + self.withIdentityStoreId(identity_store_id),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+        },
       '#withAlternateIdentifier': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withAlternateIdentifier(value): {
-        spec+: {
-          alternate_identifier: value,
-        },
+        alternate_identifier: value,
       },
       '#withAlternateIdentifierMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withAlternateIdentifierMixin(value): {
-        spec+: {
-          alternate_identifier+: value,
-        },
+        alternate_identifier+: value,
       },
       alternate_identifier+:
         {
           '#withExternalId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withExternalId(value): {
-            spec+: {
-              alternate_identifier+: {
-                external_id: value,
-              },
+            alternate_identifier+: {
+              external_id: value,
             },
           },
           '#withExternalIdMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withExternalIdMixin(value): {
-            spec+: {
-              alternate_identifier+: {
-                external_id+: value,
-              },
+            alternate_identifier+: {
+              external_id+: value,
             },
           },
           external_id+:
             {
               '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withId(value): {
-                spec+: {
-                  alternate_identifier+: {
-                    external_id+: {
-                      id: value,
-                    },
+                alternate_identifier+: {
+                  external_id+: {
+                    id: value,
                   },
                 },
               },
               '#withIssuer': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withIssuer(value): {
-                spec+: {
-                  alternate_identifier+: {
-                    external_id+: {
-                      issuer: value,
-                    },
+                alternate_identifier+: {
+                  external_id+: {
+                    issuer: value,
                   },
                 },
               },
             },
           '#withUniqueAttribute': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withUniqueAttribute(value): {
-            spec+: {
-              alternate_identifier+: {
-                unique_attribute: value,
-              },
+            alternate_identifier+: {
+              unique_attribute: value,
             },
           },
           '#withUniqueAttributeMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withUniqueAttributeMixin(value): {
-            spec+: {
-              alternate_identifier+: {
-                unique_attribute+: value,
-              },
+            alternate_identifier+: {
+              unique_attribute+: value,
             },
           },
           unique_attribute+:
             {
               '#withAttributePath': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withAttributePath(value): {
-                spec+: {
-                  alternate_identifier+: {
-                    unique_attribute+: {
-                      attribute_path: value,
-                    },
+                alternate_identifier+: {
+                  unique_attribute+: {
+                    attribute_path: value,
                   },
                 },
               },
               '#withAttributeValue': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withAttributeValue(value): {
-                spec+: {
-                  alternate_identifier+: {
-                    unique_attribute+: {
-                      attribute_value: value,
-                    },
+                alternate_identifier+: {
+                  unique_attribute+: {
+                    attribute_value: value,
                   },
                 },
               },
@@ -117,57 +96,43 @@
         },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDescription': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withDescription(value): {
-        spec+: {
-          description: value,
-        },
+        description: value,
       },
       '#withDisplayName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withDisplayName(value): {
-        spec+: {
-          display_name: value,
-        },
+        display_name: value,
       },
       '#withExternalIds': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withExternalIds(value): {
-        spec+: {
-          external_ids:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        external_ids:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withExternalIdsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withExternalIdsMixin(value): {
-        spec+: {
-          external_ids+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        external_ids+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       external_ids+:
         {
@@ -183,119 +148,92 @@
         },
       '#withFilter': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withFilter(value): {
-        spec+: {
-          filter: value,
-        },
+        filter: value,
       },
       '#withFilterMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withFilterMixin(value): {
-        spec+: {
-          filter+: value,
-        },
+        filter+: value,
       },
       filter+:
         {
           '#withAttributePath': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
           withAttributePath(value): {
-            spec+: {
-              filter+: {
-                attribute_path: value,
-              },
+            filter+: {
+              attribute_path: value,
             },
           },
           '#withAttributeValue': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
           withAttributeValue(value): {
-            spec+: {
-              filter+: {
-                attribute_value: value,
-              },
+            filter+: {
+              attribute_value: value,
             },
           },
         },
       '#withGroupId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withGroupId(value): {
-        spec+: {
-          group_id: value,
-        },
+        group_id: value,
       },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withIdentityStoreId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withIdentityStoreId(value): {
-        spec+: {
-          identity_store_id: value,
-        },
+        identity_store_id: value,
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
     },
   aws_identitystore_groups:
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'identity_store_id', type: 'string' }], help: '' } },
       new(tf_resource_key, identity_store_id):
+        self.withTfResourceKey(tf_resource_key)
+        + self.withIdentityStoreId(identity_store_id),
+      withTfResourceKey(tf_resource_key):
         {
           local this = self,
-          data: {
-            aws_identitystore_groups: {
-              [this.tf_resource_key]: this.spec,
+          _manifest():: {
+            data: {
+              aws_identitystore_groups: {
+                [tf_resource_key]: this,
+              },
             },
           },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
-        + self.withIdentityStoreId(identity_store_id),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+        },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withGroups': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withGroups(value): {
-        spec+: {
-          groups:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        groups:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withGroupsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withGroupsMixin(value): {
-        spec+: {
-          groups+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        groups+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       groups+:
         {
@@ -345,52 +283,43 @@
         },
       '#withIdentityStoreId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withIdentityStoreId(value): {
-        spec+: {
-          identity_store_id: value,
-        },
+        identity_store_id: value,
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
     },
   aws_identitystore_user:
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'identity_store_id', type: 'string' }], help: '' } },
       new(tf_resource_key, identity_store_id):
+        self.withTfResourceKey(tf_resource_key)
+        + self.withIdentityStoreId(identity_store_id),
+      withTfResourceKey(tf_resource_key):
         {
           local this = self,
-          data: {
-            aws_identitystore_user: {
-              [this.tf_resource_key]: this.spec,
+          _manifest():: {
+            data: {
+              aws_identitystore_user: {
+                [tf_resource_key]: this,
+              },
             },
           },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
-        + self.withIdentityStoreId(identity_store_id),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+        },
       '#withAddresses': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withAddresses(value): {
-        spec+: {
-          addresses:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        addresses:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withAddressesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withAddressesMixin(value): {
-        spec+: {
-          addresses+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        addresses+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       addresses+:
         {
@@ -430,92 +359,72 @@
         },
       '#withAlternateIdentifier': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withAlternateIdentifier(value): {
-        spec+: {
-          alternate_identifier: value,
-        },
+        alternate_identifier: value,
       },
       '#withAlternateIdentifierMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withAlternateIdentifierMixin(value): {
-        spec+: {
-          alternate_identifier+: value,
-        },
+        alternate_identifier+: value,
       },
       alternate_identifier+:
         {
           '#withExternalId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withExternalId(value): {
-            spec+: {
-              alternate_identifier+: {
-                external_id: value,
-              },
+            alternate_identifier+: {
+              external_id: value,
             },
           },
           '#withExternalIdMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withExternalIdMixin(value): {
-            spec+: {
-              alternate_identifier+: {
-                external_id+: value,
-              },
+            alternate_identifier+: {
+              external_id+: value,
             },
           },
           external_id+:
             {
               '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withId(value): {
-                spec+: {
-                  alternate_identifier+: {
-                    external_id+: {
-                      id: value,
-                    },
+                alternate_identifier+: {
+                  external_id+: {
+                    id: value,
                   },
                 },
               },
               '#withIssuer': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withIssuer(value): {
-                spec+: {
-                  alternate_identifier+: {
-                    external_id+: {
-                      issuer: value,
-                    },
+                alternate_identifier+: {
+                  external_id+: {
+                    issuer: value,
                   },
                 },
               },
             },
           '#withUniqueAttribute': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withUniqueAttribute(value): {
-            spec+: {
-              alternate_identifier+: {
-                unique_attribute: value,
-              },
+            alternate_identifier+: {
+              unique_attribute: value,
             },
           },
           '#withUniqueAttributeMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withUniqueAttributeMixin(value): {
-            spec+: {
-              alternate_identifier+: {
-                unique_attribute+: value,
-              },
+            alternate_identifier+: {
+              unique_attribute+: value,
             },
           },
           unique_attribute+:
             {
               '#withAttributePath': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withAttributePath(value): {
-                spec+: {
-                  alternate_identifier+: {
-                    unique_attribute+: {
-                      attribute_path: value,
-                    },
+                alternate_identifier+: {
+                  unique_attribute+: {
+                    attribute_path: value,
                   },
                 },
               },
               '#withAttributeValue': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withAttributeValue(value): {
-                spec+: {
-                  alternate_identifier+: {
-                    unique_attribute+: {
-                      attribute_value: value,
-                    },
+                alternate_identifier+: {
+                  unique_attribute+: {
+                    attribute_value: value,
                   },
                 },
               },
@@ -523,51 +432,39 @@
         },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDisplayName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withDisplayName(value): {
-        spec+: {
-          display_name: value,
-        },
+        display_name: value,
       },
       '#withEmails': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withEmails(value): {
-        spec+: {
-          emails:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        emails:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withEmailsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withEmailsMixin(value): {
-        spec+: {
-          emails+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        emails+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       emails+:
         {
@@ -587,21 +484,17 @@
         },
       '#withExternalIds': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withExternalIds(value): {
-        spec+: {
-          external_ids:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        external_ids:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withExternalIdsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withExternalIdsMixin(value): {
-        spec+: {
-          external_ids+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        external_ids+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       external_ids+:
         {
@@ -617,70 +510,52 @@
         },
       '#withFilter': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withFilter(value): {
-        spec+: {
-          filter: value,
-        },
+        filter: value,
       },
       '#withFilterMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withFilterMixin(value): {
-        spec+: {
-          filter+: value,
-        },
+        filter+: value,
       },
       filter+:
         {
           '#withAttributePath': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
           withAttributePath(value): {
-            spec+: {
-              filter+: {
-                attribute_path: value,
-              },
+            filter+: {
+              attribute_path: value,
             },
           },
           '#withAttributeValue': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
           withAttributeValue(value): {
-            spec+: {
-              filter+: {
-                attribute_value: value,
-              },
+            filter+: {
+              attribute_value: value,
             },
           },
         },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withIdentityStoreId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withIdentityStoreId(value): {
-        spec+: {
-          identity_store_id: value,
-        },
+        identity_store_id: value,
       },
       '#withLocale': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withLocale(value): {
-        spec+: {
-          locale: value,
-        },
+        locale: value,
       },
       '#withName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withName(value): {
-        spec+: {
-          name:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        name:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withNameMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withNameMixin(value): {
-        spec+: {
-          name+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        name+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       name+:
         {
@@ -712,27 +587,21 @@
         },
       '#withNickname': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withNickname(value): {
-        spec+: {
-          nickname: value,
-        },
+        nickname: value,
       },
       '#withPhoneNumbers': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withPhoneNumbers(value): {
-        spec+: {
-          phone_numbers:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        phone_numbers:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withPhoneNumbersMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withPhoneNumbersMixin(value): {
-        spec+: {
-          phone_numbers+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        phone_numbers+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       phone_numbers+:
         {
@@ -752,51 +621,35 @@
         },
       '#withPreferredLanguage': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withPreferredLanguage(value): {
-        spec+: {
-          preferred_language: value,
-        },
+        preferred_language: value,
       },
       '#withProfileUrl': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProfileUrl(value): {
-        spec+: {
-          profile_url: value,
-        },
+        profile_url: value,
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withTimezone': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withTimezone(value): {
-        spec+: {
-          timezone: value,
-        },
+        timezone: value,
       },
       '#withTitle': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withTitle(value): {
-        spec+: {
-          title: value,
-        },
+        title: value,
       },
       '#withUserId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withUserId(value): {
-        spec+: {
-          user_id: value,
-        },
+        user_id: value,
       },
       '#withUserName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withUserName(value): {
-        spec+: {
-          user_name: value,
-        },
+        user_name: value,
       },
       '#withUserType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withUserType(value): {
-        spec+: {
-          user_type: value,
-        },
+        user_type: value,
       },
     },
 }

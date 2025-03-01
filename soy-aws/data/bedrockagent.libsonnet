@@ -8,43 +8,36 @@
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'agent_id', type: 'string' }], help: '' } },
       new(tf_resource_key, agent_id):
+        self.withTfResourceKey(tf_resource_key)
+        + self.withAgentId(agent_id),
+      withTfResourceKey(tf_resource_key):
         {
           local this = self,
-          data: {
-            aws_bedrockagent_agent_versions: {
-              [this.tf_resource_key]: this.spec,
+          _manifest():: {
+            data: {
+              aws_bedrockagent_agent_versions: {
+                [tf_resource_key]: this,
+              },
             },
           },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
-        + self.withAgentId(agent_id),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+        },
       '#withAgentId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withAgentId(value): {
-        spec+: {
-          agent_id: value,
-        },
+        agent_id: value,
       },
       '#withAgentVersionSummaries': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withAgentVersionSummaries(value): {
-        spec+: {
-          agent_version_summaries:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        agent_version_summaries:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withAgentVersionSummariesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withAgentVersionSummariesMixin(value): {
-        spec+: {
-          agent_version_summaries+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        agent_version_summaries+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       agent_version_summaries+:
         {
@@ -102,33 +95,25 @@
         },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
     },
 }

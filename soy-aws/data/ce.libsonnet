@@ -8,103 +8,78 @@
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'cost_category_arn', type: 'string' }], help: '' } },
       new(tf_resource_key, cost_category_arn):
+        self.withTfResourceKey(tf_resource_key)
+        + self.withCostCategoryArn(cost_category_arn),
+      withTfResourceKey(tf_resource_key):
         {
           local this = self,
-          data: {
-            aws_ce_cost_category: {
-              [this.tf_resource_key]: this.spec,
+          _manifest():: {
+            data: {
+              aws_ce_cost_category: {
+                [tf_resource_key]: this,
+              },
             },
           },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
-        + self.withCostCategoryArn(cost_category_arn),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+        },
       '#withCostCategoryArn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withCostCategoryArn(value): {
-        spec+: {
-          cost_category_arn: value,
-        },
+        cost_category_arn: value,
       },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDefaultValue': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withDefaultValue(value): {
-        spec+: {
-          default_value: value,
-        },
+        default_value: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withEffectiveEnd': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withEffectiveEnd(value): {
-        spec+: {
-          effective_end: value,
-        },
+        effective_end: value,
       },
       '#withEffectiveStart': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withEffectiveStart(value): {
-        spec+: {
-          effective_start: value,
-        },
+        effective_start: value,
       },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withName(value): {
-        spec+: {
-          name: value,
-        },
+        name: value,
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withRule': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withRule(value): {
-        spec+: {
-          rule:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        rule:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withRuleMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withRuleMixin(value): {
-        spec+: {
-          rule+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        rule+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       rule+:
         {
@@ -2330,27 +2305,21 @@
         },
       '#withRuleVersion': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withRuleVersion(value): {
-        spec+: {
-          rule_version: value,
-        },
+        rule_version: value,
       },
       '#withSplitChargeRule': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withSplitChargeRule(value): {
-        spec+: {
-          split_charge_rule:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        split_charge_rule:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withSplitChargeRuleMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withSplitChargeRuleMixin(value): {
-        spec+: {
-          split_charge_rule+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        split_charge_rule+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       split_charge_rule+:
         {
@@ -2416,93 +2385,74 @@
         },
       '#withTags': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTags(value): {
-        spec+: {
-          tags: value,
-        },
+        tags: value,
       },
       '#withTagsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTagsMixin(value): {
-        spec+: {
-          tags+: value,
-        },
+        tags+: value,
       },
     },
   aws_ce_tags:
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'time_period', type: 'object' }], help: '' } },
       new(tf_resource_key, time_period):
+        self.withTfResourceKey(tf_resource_key)
+        + self.withTimePeriod(time_period),
+      withTfResourceKey(tf_resource_key):
         {
           local this = self,
-          data: {
-            aws_ce_tags: {
-              [this.tf_resource_key]: this.spec,
+          _manifest():: {
+            data: {
+              aws_ce_tags: {
+                [tf_resource_key]: this,
+              },
             },
           },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
-        + self.withTimePeriod(time_period),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+        },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withFilter': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withFilter(value): {
-        spec+: {
-          filter: value,
-        },
+        filter: value,
       },
       '#withFilterMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withFilterMixin(value): {
-        spec+: {
-          filter+: value,
-        },
+        filter+: value,
       },
       filter+:
         {
           '#withAnd': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withAnd(value): {
-            spec+: {
-              filter+: {
-                and:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            filter+: {
+              and:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           '#withAndMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withAndMixin(value): {
-            spec+: {
-              filter+: {
-                and+:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            filter+: {
+              and+:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           and+:
@@ -2670,201 +2620,165 @@
             },
           '#withCostCategory': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withCostCategory(value): {
-            spec+: {
-              filter+: {
-                cost_category: value,
-              },
+            filter+: {
+              cost_category: value,
             },
           },
           '#withCostCategoryMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withCostCategoryMixin(value): {
-            spec+: {
-              filter+: {
-                cost_category+: value,
-              },
+            filter+: {
+              cost_category+: value,
             },
           },
           cost_category+:
             {
               '#withKey': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withKey(value): {
-                spec+: {
-                  filter+: {
-                    cost_category+: {
-                      key: value,
-                    },
+                filter+: {
+                  cost_category+: {
+                    key: value,
                   },
                 },
               },
               '#withMatchOptions': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
               withMatchOptions(value): {
-                spec+: {
-                  filter+: {
-                    cost_category+: {
-                      match_options:
-                        (if std.isArray(value)
-                         then value
-                         else [value]),
-                    },
+                filter+: {
+                  cost_category+: {
+                    match_options:
+                      (if std.isArray(value)
+                       then value
+                       else [value]),
                   },
                 },
               },
               '#withMatchOptionsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
               withMatchOptionsMixin(value): {
-                spec+: {
-                  filter+: {
-                    cost_category+: {
-                      match_options+:
-                        (if std.isArray(value)
-                         then value
-                         else [value]),
-                    },
+                filter+: {
+                  cost_category+: {
+                    match_options+:
+                      (if std.isArray(value)
+                       then value
+                       else [value]),
                   },
                 },
               },
               '#withValues': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
               withValues(value): {
-                spec+: {
-                  filter+: {
-                    cost_category+: {
-                      values:
-                        (if std.isArray(value)
-                         then value
-                         else [value]),
-                    },
+                filter+: {
+                  cost_category+: {
+                    values:
+                      (if std.isArray(value)
+                       then value
+                       else [value]),
                   },
                 },
               },
               '#withValuesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
               withValuesMixin(value): {
-                spec+: {
-                  filter+: {
-                    cost_category+: {
-                      values+:
-                        (if std.isArray(value)
-                         then value
-                         else [value]),
-                    },
+                filter+: {
+                  cost_category+: {
+                    values+:
+                      (if std.isArray(value)
+                       then value
+                       else [value]),
                   },
                 },
               },
             },
           '#withDimension': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withDimension(value): {
-            spec+: {
-              filter+: {
-                dimension: value,
-              },
+            filter+: {
+              dimension: value,
             },
           },
           '#withDimensionMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withDimensionMixin(value): {
-            spec+: {
-              filter+: {
-                dimension+: value,
-              },
+            filter+: {
+              dimension+: value,
             },
           },
           dimension+:
             {
               '#withKey': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withKey(value): {
-                spec+: {
-                  filter+: {
-                    dimension+: {
-                      key: value,
-                    },
+                filter+: {
+                  dimension+: {
+                    key: value,
                   },
                 },
               },
               '#withMatchOptions': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
               withMatchOptions(value): {
-                spec+: {
-                  filter+: {
-                    dimension+: {
-                      match_options:
-                        (if std.isArray(value)
-                         then value
-                         else [value]),
-                    },
+                filter+: {
+                  dimension+: {
+                    match_options:
+                      (if std.isArray(value)
+                       then value
+                       else [value]),
                   },
                 },
               },
               '#withMatchOptionsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
               withMatchOptionsMixin(value): {
-                spec+: {
-                  filter+: {
-                    dimension+: {
-                      match_options+:
-                        (if std.isArray(value)
-                         then value
-                         else [value]),
-                    },
+                filter+: {
+                  dimension+: {
+                    match_options+:
+                      (if std.isArray(value)
+                       then value
+                       else [value]),
                   },
                 },
               },
               '#withValues': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
               withValues(value): {
-                spec+: {
-                  filter+: {
-                    dimension+: {
-                      values:
-                        (if std.isArray(value)
-                         then value
-                         else [value]),
-                    },
+                filter+: {
+                  dimension+: {
+                    values:
+                      (if std.isArray(value)
+                       then value
+                       else [value]),
                   },
                 },
               },
               '#withValuesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
               withValuesMixin(value): {
-                spec+: {
-                  filter+: {
-                    dimension+: {
-                      values+:
-                        (if std.isArray(value)
-                         then value
-                         else [value]),
-                    },
+                filter+: {
+                  dimension+: {
+                    values+:
+                      (if std.isArray(value)
+                       then value
+                       else [value]),
                   },
                 },
               },
             },
           '#withNot': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withNot(value): {
-            spec+: {
-              filter+: {
-                not: value,
-              },
+            filter+: {
+              not: value,
             },
           },
           '#withNotMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withNotMixin(value): {
-            spec+: {
-              filter+: {
-                not+: value,
-              },
+            filter+: {
+              not+: value,
             },
           },
           not+:
             {
               '#withCostCategory': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withCostCategory(value): {
-                spec+: {
-                  filter+: {
-                    not+: {
-                      cost_category: value,
-                    },
+                filter+: {
+                  not+: {
+                    cost_category: value,
                   },
                 },
               },
               '#withCostCategoryMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withCostCategoryMixin(value): {
-                spec+: {
-                  filter+: {
-                    not+: {
-                      cost_category+: value,
-                    },
+                filter+: {
+                  not+: {
+                    cost_category+: value,
                   },
                 },
               },
@@ -2872,72 +2786,62 @@
                 {
                   '#withKey': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withKey(value): {
-                    spec+: {
-                      filter+: {
-                        not+: {
-                          cost_category+: {
-                            key: value,
-                          },
+                    filter+: {
+                      not+: {
+                        cost_category+: {
+                          key: value,
                         },
                       },
                     },
                   },
                   '#withMatchOptions': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
                   withMatchOptions(value): {
-                    spec+: {
-                      filter+: {
-                        not+: {
-                          cost_category+: {
-                            match_options:
-                              (if std.isArray(value)
-                               then value
-                               else [value]),
-                          },
+                    filter+: {
+                      not+: {
+                        cost_category+: {
+                          match_options:
+                            (if std.isArray(value)
+                             then value
+                             else [value]),
                         },
                       },
                     },
                   },
                   '#withMatchOptionsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
                   withMatchOptionsMixin(value): {
-                    spec+: {
-                      filter+: {
-                        not+: {
-                          cost_category+: {
-                            match_options+:
-                              (if std.isArray(value)
-                               then value
-                               else [value]),
-                          },
+                    filter+: {
+                      not+: {
+                        cost_category+: {
+                          match_options+:
+                            (if std.isArray(value)
+                             then value
+                             else [value]),
                         },
                       },
                     },
                   },
                   '#withValues': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
                   withValues(value): {
-                    spec+: {
-                      filter+: {
-                        not+: {
-                          cost_category+: {
-                            values:
-                              (if std.isArray(value)
-                               then value
-                               else [value]),
-                          },
+                    filter+: {
+                      not+: {
+                        cost_category+: {
+                          values:
+                            (if std.isArray(value)
+                             then value
+                             else [value]),
                         },
                       },
                     },
                   },
                   '#withValuesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
                   withValuesMixin(value): {
-                    spec+: {
-                      filter+: {
-                        not+: {
-                          cost_category+: {
-                            values+:
-                              (if std.isArray(value)
-                               then value
-                               else [value]),
-                          },
+                    filter+: {
+                      not+: {
+                        cost_category+: {
+                          values+:
+                            (if std.isArray(value)
+                             then value
+                             else [value]),
                         },
                       },
                     },
@@ -2945,21 +2849,17 @@
                 },
               '#withDimension': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withDimension(value): {
-                spec+: {
-                  filter+: {
-                    not+: {
-                      dimension: value,
-                    },
+                filter+: {
+                  not+: {
+                    dimension: value,
                   },
                 },
               },
               '#withDimensionMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withDimensionMixin(value): {
-                spec+: {
-                  filter+: {
-                    not+: {
-                      dimension+: value,
-                    },
+                filter+: {
+                  not+: {
+                    dimension+: value,
                   },
                 },
               },
@@ -2967,72 +2867,62 @@
                 {
                   '#withKey': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withKey(value): {
-                    spec+: {
-                      filter+: {
-                        not+: {
-                          dimension+: {
-                            key: value,
-                          },
+                    filter+: {
+                      not+: {
+                        dimension+: {
+                          key: value,
                         },
                       },
                     },
                   },
                   '#withMatchOptions': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
                   withMatchOptions(value): {
-                    spec+: {
-                      filter+: {
-                        not+: {
-                          dimension+: {
-                            match_options:
-                              (if std.isArray(value)
-                               then value
-                               else [value]),
-                          },
+                    filter+: {
+                      not+: {
+                        dimension+: {
+                          match_options:
+                            (if std.isArray(value)
+                             then value
+                             else [value]),
                         },
                       },
                     },
                   },
                   '#withMatchOptionsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
                   withMatchOptionsMixin(value): {
-                    spec+: {
-                      filter+: {
-                        not+: {
-                          dimension+: {
-                            match_options+:
-                              (if std.isArray(value)
-                               then value
-                               else [value]),
-                          },
+                    filter+: {
+                      not+: {
+                        dimension+: {
+                          match_options+:
+                            (if std.isArray(value)
+                             then value
+                             else [value]),
                         },
                       },
                     },
                   },
                   '#withValues': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
                   withValues(value): {
-                    spec+: {
-                      filter+: {
-                        not+: {
-                          dimension+: {
-                            values:
-                              (if std.isArray(value)
-                               then value
-                               else [value]),
-                          },
+                    filter+: {
+                      not+: {
+                        dimension+: {
+                          values:
+                            (if std.isArray(value)
+                             then value
+                             else [value]),
                         },
                       },
                     },
                   },
                   '#withValuesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
                   withValuesMixin(value): {
-                    spec+: {
-                      filter+: {
-                        not+: {
-                          dimension+: {
-                            values+:
-                              (if std.isArray(value)
-                               then value
-                               else [value]),
-                          },
+                    filter+: {
+                      not+: {
+                        dimension+: {
+                          values+:
+                            (if std.isArray(value)
+                             then value
+                             else [value]),
                         },
                       },
                     },
@@ -3040,21 +2930,17 @@
                 },
               '#withTags': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withTags(value): {
-                spec+: {
-                  filter+: {
-                    not+: {
-                      tags: value,
-                    },
+                filter+: {
+                  not+: {
+                    tags: value,
                   },
                 },
               },
               '#withTagsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withTagsMixin(value): {
-                spec+: {
-                  filter+: {
-                    not+: {
-                      tags+: value,
-                    },
+                filter+: {
+                  not+: {
+                    tags+: value,
                   },
                 },
               },
@@ -3062,72 +2948,62 @@
                 {
                   '#withKey': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withKey(value): {
-                    spec+: {
-                      filter+: {
-                        not+: {
-                          tags+: {
-                            key: value,
-                          },
+                    filter+: {
+                      not+: {
+                        tags+: {
+                          key: value,
                         },
                       },
                     },
                   },
                   '#withMatchOptions': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
                   withMatchOptions(value): {
-                    spec+: {
-                      filter+: {
-                        not+: {
-                          tags+: {
-                            match_options:
-                              (if std.isArray(value)
-                               then value
-                               else [value]),
-                          },
+                    filter+: {
+                      not+: {
+                        tags+: {
+                          match_options:
+                            (if std.isArray(value)
+                             then value
+                             else [value]),
                         },
                       },
                     },
                   },
                   '#withMatchOptionsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
                   withMatchOptionsMixin(value): {
-                    spec+: {
-                      filter+: {
-                        not+: {
-                          tags+: {
-                            match_options+:
-                              (if std.isArray(value)
-                               then value
-                               else [value]),
-                          },
+                    filter+: {
+                      not+: {
+                        tags+: {
+                          match_options+:
+                            (if std.isArray(value)
+                             then value
+                             else [value]),
                         },
                       },
                     },
                   },
                   '#withValues': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
                   withValues(value): {
-                    spec+: {
-                      filter+: {
-                        not+: {
-                          tags+: {
-                            values:
-                              (if std.isArray(value)
-                               then value
-                               else [value]),
-                          },
+                    filter+: {
+                      not+: {
+                        tags+: {
+                          values:
+                            (if std.isArray(value)
+                             then value
+                             else [value]),
                         },
                       },
                     },
                   },
                   '#withValuesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
                   withValuesMixin(value): {
-                    spec+: {
-                      filter+: {
-                        not+: {
-                          tags+: {
-                            values+:
-                              (if std.isArray(value)
-                               then value
-                               else [value]),
-                          },
+                    filter+: {
+                      not+: {
+                        tags+: {
+                          values+:
+                            (if std.isArray(value)
+                             then value
+                             else [value]),
                         },
                       },
                     },
@@ -3136,24 +3012,20 @@
             },
           '#withOr': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withOr(value): {
-            spec+: {
-              filter+: {
-                or:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            filter+: {
+              or:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           '#withOrMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withOrMixin(value): {
-            spec+: {
-              filter+: {
-                or+:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            filter+: {
+              or+:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           or+:
@@ -3321,81 +3193,67 @@
             },
           '#withTags': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withTags(value): {
-            spec+: {
-              filter+: {
-                tags: value,
-              },
+            filter+: {
+              tags: value,
             },
           },
           '#withTagsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withTagsMixin(value): {
-            spec+: {
-              filter+: {
-                tags+: value,
-              },
+            filter+: {
+              tags+: value,
             },
           },
           tags+:
             {
               '#withKey': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withKey(value): {
-                spec+: {
-                  filter+: {
-                    tags+: {
-                      key: value,
-                    },
+                filter+: {
+                  tags+: {
+                    key: value,
                   },
                 },
               },
               '#withMatchOptions': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
               withMatchOptions(value): {
-                spec+: {
-                  filter+: {
-                    tags+: {
-                      match_options:
-                        (if std.isArray(value)
-                         then value
-                         else [value]),
-                    },
+                filter+: {
+                  tags+: {
+                    match_options:
+                      (if std.isArray(value)
+                       then value
+                       else [value]),
                   },
                 },
               },
               '#withMatchOptionsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
               withMatchOptionsMixin(value): {
-                spec+: {
-                  filter+: {
-                    tags+: {
-                      match_options+:
-                        (if std.isArray(value)
-                         then value
-                         else [value]),
-                    },
+                filter+: {
+                  tags+: {
+                    match_options+:
+                      (if std.isArray(value)
+                       then value
+                       else [value]),
                   },
                 },
               },
               '#withValues': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
               withValues(value): {
-                spec+: {
-                  filter+: {
-                    tags+: {
-                      values:
-                        (if std.isArray(value)
-                         then value
-                         else [value]),
-                    },
+                filter+: {
+                  tags+: {
+                    values:
+                      (if std.isArray(value)
+                       then value
+                       else [value]),
                   },
                 },
               },
               '#withValuesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
               withValuesMixin(value): {
-                spec+: {
-                  filter+: {
-                    tags+: {
-                      values+:
-                        (if std.isArray(value)
-                         then value
-                         else [value]),
-                    },
+                filter+: {
+                  tags+: {
+                    values+:
+                      (if std.isArray(value)
+                       then value
+                       else [value]),
                   },
                 },
               },
@@ -3403,39 +3261,29 @@
         },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withSearchString': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withSearchString(value): {
-        spec+: {
-          search_string: value,
-        },
+        search_string: value,
       },
       '#withSortBy': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withSortBy(value): {
-        spec+: {
-          sort_by:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        sort_by:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withSortByMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withSortByMixin(value): {
-        spec+: {
-          sort_by+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        sort_by+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       sort_by+:
         {
@@ -3451,56 +3299,42 @@
         },
       '#withTagKey': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withTagKey(value): {
-        spec+: {
-          tag_key: value,
-        },
+        tag_key: value,
       },
       '#withTags': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withTags(value): {
-        spec+: {
-          tags:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        tags:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withTagsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withTagsMixin(value): {
-        spec+: {
-          tags+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        tags+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withTimePeriod': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTimePeriod(value): {
-        spec+: {
-          time_period: value,
-        },
+        time_period: value,
       },
       '#withTimePeriodMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTimePeriodMixin(value): {
-        spec+: {
-          time_period+: value,
-        },
+        time_period+: value,
       },
       time_period+:
         {
           '#withEnd': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
           withEnd(value): {
-            spec+: {
-              time_period+: {
-                end: value,
-              },
+            time_period+: {
+              end: value,
             },
           },
           '#withStart': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
           withStart(value): {
-            spec+: {
-              time_period+: {
-                start: value,
-              },
+            time_period+: {
+              start: value,
             },
           },
         },

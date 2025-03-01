@@ -8,64 +8,51 @@
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }], help: '' } },
       new(tf_resource_key):
+        self.withTfResourceKey(tf_resource_key),
+      withTfResourceKey(tf_resource_key):
         {
           local this = self,
-          provider: {
-            [this.tf_resource_key]: this.spec,
+          _manifest():: {
+            provider: {
+              [tf_resource_key]: this,
+            },
           },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+        },
       '#withAccessKey': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: "The access key for API operations. You can retrieve this\nfrom the 'Security & Credentials' section of the AWS console." } },
       withAccessKey(value): {
-        spec+: {
-          access_key: value,
-        },
+        access_key: value,
       },
       '#withAlias': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withAlias(value): {
-        spec+: {
-          alias: value,
-        },
+        alias: value,
       },
       '#withAllowedAccountIds': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withAllowedAccountIds(value): {
-        spec+: {
-          allowed_account_ids:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        allowed_account_ids:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withAllowedAccountIdsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withAllowedAccountIdsMixin(value): {
-        spec+: {
-          allowed_account_ids+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        allowed_account_ids+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withAssumeRole': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withAssumeRole(value): {
-        spec+: {
-          assume_role:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        assume_role:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withAssumeRoleMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withAssumeRoleMixin(value): {
-        spec+: {
-          assume_role+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        assume_role+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       assume_role+:
         {
@@ -133,21 +120,17 @@
         },
       '#withAssumeRoleWithWebIdentity': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withAssumeRoleWithWebIdentity(value): {
-        spec+: {
-          assume_role_with_web_identity:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        assume_role_with_web_identity:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withAssumeRoleWithWebIdentityMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withAssumeRoleWithWebIdentityMixin(value): {
-        spec+: {
-          assume_role_with_web_identity+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        assume_role_with_web_identity+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       assume_role_with_web_identity+:
         {
@@ -193,27 +176,21 @@
         },
       '#withCustomCaBundle': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'File containing custom root and intermediate certificates. Can also be configured using the `AWS_CA_BUNDLE` environment variable. (Setting `ca_bundle` in the shared config file is not supported.)' } },
       withCustomCaBundle(value): {
-        spec+: {
-          custom_ca_bundle: value,
-        },
+        custom_ca_bundle: value,
       },
       '#withDefaultTags': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDefaultTags(value): {
-        spec+: {
-          default_tags:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        default_tags:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDefaultTagsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDefaultTagsMixin(value): {
-        spec+: {
-          default_tags+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        default_tags+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       default_tags+:
         {
@@ -229,33 +206,25 @@
         },
       '#withEc2MetadataServiceEndpoint': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Address of the EC2 metadata service endpoint to use. Can also be configured using the `AWS_EC2_METADATA_SERVICE_ENDPOINT` environment variable.' } },
       withEc2MetadataServiceEndpoint(value): {
-        spec+: {
-          ec2_metadata_service_endpoint: value,
-        },
+        ec2_metadata_service_endpoint: value,
       },
       '#withEc2MetadataServiceEndpointMode': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Protocol to use with EC2 metadata service endpoint.Valid values are `IPv4` and `IPv6`. Can also be configured using the `AWS_EC2_METADATA_SERVICE_ENDPOINT_MODE` environment variable.' } },
       withEc2MetadataServiceEndpointMode(value): {
-        spec+: {
-          ec2_metadata_service_endpoint_mode: value,
-        },
+        ec2_metadata_service_endpoint_mode: value,
       },
       '#withEndpoints': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withEndpoints(value): {
-        spec+: {
-          endpoints:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        endpoints:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withEndpointsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withEndpointsMixin(value): {
-        spec+: {
-          endpoints+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        endpoints+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       endpoints+:
         {
@@ -1455,51 +1424,39 @@
         },
       '#withForbiddenAccountIds': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withForbiddenAccountIds(value): {
-        spec+: {
-          forbidden_account_ids:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        forbidden_account_ids:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withForbiddenAccountIdsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withForbiddenAccountIdsMixin(value): {
-        spec+: {
-          forbidden_account_ids+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        forbidden_account_ids+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withHttpProxy': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'URL of a proxy to use for HTTP requests when accessing the AWS API. Can also be set using the `HTTP_PROXY` or `http_proxy` environment variables.' } },
       withHttpProxy(value): {
-        spec+: {
-          http_proxy: value,
-        },
+        http_proxy: value,
       },
       '#withHttpsProxy': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'URL of a proxy to use for HTTPS requests when accessing the AWS API. Can also be set using the `HTTPS_PROXY` or `https_proxy` environment variables.' } },
       withHttpsProxy(value): {
-        spec+: {
-          https_proxy: value,
-        },
+        https_proxy: value,
       },
       '#withIgnoreTags': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withIgnoreTags(value): {
-        spec+: {
-          ignore_tags:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        ignore_tags:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withIgnoreTagsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withIgnoreTagsMixin(value): {
-        spec+: {
-          ignore_tags+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        ignore_tags+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       ignore_tags+:
         {
@@ -1535,147 +1492,103 @@
         },
       '#withInsecure': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: 'Explicitly allow the provider to perform "insecure" SSL requests. If omitted, default value is `false`' } },
       withInsecure(value=true): {
-        spec+: {
-          insecure: value,
-        },
+        insecure: value,
       },
       '#withMaxRetries': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: 'The maximum number of times an AWS API request is\nbeing executed. If the API request still fails, an error is\nthrown.' } },
       withMaxRetries(value): {
-        spec+: {
-          max_retries: value,
-        },
+        max_retries: value,
       },
       '#withNoProxy': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Comma-separated list of hosts that should not use HTTP or HTTPS proxies. Can also be set using the `NO_PROXY` or `no_proxy` environment variables.' } },
       withNoProxy(value): {
-        spec+: {
-          no_proxy: value,
-        },
+        no_proxy: value,
       },
       '#withProfile': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'The profile for API operations. If not set, the default profile\ncreated with `aws configure` will be used.' } },
       withProfile(value): {
-        spec+: {
-          profile: value,
-        },
+        profile: value,
       },
       '#withRegion': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'The region where AWS operations will take place. Examples\nare us-east-1, us-west-2, etc.' } },
       withRegion(value): {
-        spec+: {
-          region: value,
-        },
+        region: value,
       },
       '#withRetryMode': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Specifies how retries are attempted. Valid values are `standard` and `adaptive`. Can also be configured using the `AWS_RETRY_MODE` environment variable.' } },
       withRetryMode(value): {
-        spec+: {
-          retry_mode: value,
-        },
+        retry_mode: value,
       },
       '#withS3UsEast1RegionalEndpoint': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Specifies whether S3 API calls in the `us-east-1` region use the legacy global endpoint or a regional endpoint. Valid values are `legacy` or `regional`. Can also be configured using the `AWS_S3_US_EAST_1_REGIONAL_ENDPOINT` environment variable or the `s3_us_east_1_regional_endpoint` shared config file parameter' } },
       withS3UsEast1RegionalEndpoint(value): {
-        spec+: {
-          s3_us_east_1_regional_endpoint: value,
-        },
+        s3_us_east_1_regional_endpoint: value,
       },
       '#withS3UsePathStyle': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: 'Set this to true to enable the request to use path-style addressing,\ni.e., https://s3.amazonaws.com/BUCKET/KEY. By default, the S3 client will\nuse virtual hosted bucket addressing when possible\n(https://BUCKET.s3.amazonaws.com/KEY). Specific to the Amazon S3 service.' } },
       withS3UsePathStyle(value=true): {
-        spec+: {
-          s3_use_path_style: value,
-        },
+        s3_use_path_style: value,
       },
       '#withSecretKey': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: "The secret key for API operations. You can retrieve this\nfrom the 'Security & Credentials' section of the AWS console." } },
       withSecretKey(value): {
-        spec+: {
-          secret_key: value,
-        },
+        secret_key: value,
       },
       '#withSharedConfigFiles': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: 'List of paths to shared config files. If not set, defaults to [~/.aws/config].' } },
       withSharedConfigFiles(value): {
-        spec+: {
-          shared_config_files:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        shared_config_files:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withSharedConfigFilesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: 'List of paths to shared config files. If not set, defaults to [~/.aws/config].' } },
       withSharedConfigFilesMixin(value): {
-        spec+: {
-          shared_config_files+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        shared_config_files+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withSharedCredentialsFiles': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: 'List of paths to shared credentials files. If not set, defaults to [~/.aws/credentials].' } },
       withSharedCredentialsFiles(value): {
-        spec+: {
-          shared_credentials_files:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        shared_credentials_files:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withSharedCredentialsFilesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: 'List of paths to shared credentials files. If not set, defaults to [~/.aws/credentials].' } },
       withSharedCredentialsFilesMixin(value): {
-        spec+: {
-          shared_credentials_files+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        shared_credentials_files+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withSkipCredentialsValidation': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: 'Skip the credentials validation via STS API. Used for AWS API implementations that do not have STS available/implemented.' } },
       withSkipCredentialsValidation(value=true): {
-        spec+: {
-          skip_credentials_validation: value,
-        },
+        skip_credentials_validation: value,
       },
       '#withSkipMetadataApiCheck': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Skip the AWS Metadata API check. Used for AWS API implementations that do not have a metadata api endpoint.' } },
       withSkipMetadataApiCheck(value): {
-        spec+: {
-          skip_metadata_api_check: value,
-        },
+        skip_metadata_api_check: value,
       },
       '#withSkipRegionValidation': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: 'Skip static validation of region name. Used by users of alternative AWS-like APIs or users w/ access to regions that are not public (yet).' } },
       withSkipRegionValidation(value=true): {
-        spec+: {
-          skip_region_validation: value,
-        },
+        skip_region_validation: value,
       },
       '#withSkipRequestingAccountId': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: 'Skip requesting the account ID. Used for AWS API implementations that do not have IAM/STS API and/or metadata API.' } },
       withSkipRequestingAccountId(value=true): {
-        spec+: {
-          skip_requesting_account_id: value,
-        },
+        skip_requesting_account_id: value,
       },
       '#withStsRegion': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'The region where AWS STS operations will take place. Examples\nare us-east-1 and us-west-2.' } },
       withStsRegion(value): {
-        spec+: {
-          sts_region: value,
-        },
+        sts_region: value,
       },
       '#withToken': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'session token. A session token is only required if you are\nusing temporary security credentials.' } },
       withToken(value): {
-        spec+: {
-          token: value,
-        },
+        token: value,
       },
       '#withTokenBucketRateLimiterCapacity': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: "The capacity of the AWS SDK's token bucket rate limiter." } },
       withTokenBucketRateLimiterCapacity(value): {
-        spec+: {
-          token_bucket_rate_limiter_capacity: value,
-        },
+        token_bucket_rate_limiter_capacity: value,
       },
       '#withUseDualstackEndpoint': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: 'Resolve an endpoint with DualStack capability' } },
       withUseDualstackEndpoint(value=true): {
-        spec+: {
-          use_dualstack_endpoint: value,
-        },
+        use_dualstack_endpoint: value,
       },
       '#withUseFipsEndpoint': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: 'Resolve an endpoint with FIPS capability' } },
       withUseFipsEndpoint(value=true): {
-        spec+: {
-          use_fips_endpoint: value,
-        },
+        use_fips_endpoint: value,
       },
     },
 }

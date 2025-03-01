@@ -8,55 +8,44 @@
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'identity_pool_name', type: 'string' }], help: '' } },
       new(tf_resource_key, identity_pool_name):
+        self.withTfResourceKey(tf_resource_key)
+        + self.withIdentityPoolName(identity_pool_name),
+      withTfResourceKey(tf_resource_key):
         {
           local this = self,
-          data: {
-            aws_cognito_identity_pool: {
-              [this.tf_resource_key]: this.spec,
+          _manifest():: {
+            data: {
+              aws_cognito_identity_pool: {
+                [tf_resource_key]: this,
+              },
             },
           },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
-        + self.withIdentityPoolName(identity_pool_name),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+        },
       '#withAllowClassicFlow': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
       withAllowClassicFlow(value=true): {
-        spec+: {
-          allow_classic_flow: value,
-        },
+        allow_classic_flow: value,
       },
       '#withAllowUnauthenticatedIdentities': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
       withAllowUnauthenticatedIdentities(value=true): {
-        spec+: {
-          allow_unauthenticated_identities: value,
-        },
+        allow_unauthenticated_identities: value,
       },
       '#withArn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withArn(value): {
-        spec+: {
-          arn: value,
-        },
+        arn: value,
       },
       '#withCognitoIdentityProviders': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withCognitoIdentityProviders(value): {
-        spec+: {
-          cognito_identity_providers:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        cognito_identity_providers:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withCognitoIdentityProvidersMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withCognitoIdentityProvidersMixin(value): {
-        spec+: {
-          cognito_identity_providers+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        cognito_identity_providers+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       cognito_identity_providers+:
         {
@@ -76,258 +65,196 @@
         },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDeveloperProviderName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withDeveloperProviderName(value): {
-        spec+: {
-          developer_provider_name: value,
-        },
+        developer_provider_name: value,
       },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withIdentityPoolName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withIdentityPoolName(value): {
-        spec+: {
-          identity_pool_name: value,
-        },
+        identity_pool_name: value,
       },
       '#withOpenidConnectProviderArns': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withOpenidConnectProviderArns(value): {
-        spec+: {
-          openid_connect_provider_arns:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        openid_connect_provider_arns:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withOpenidConnectProviderArnsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withOpenidConnectProviderArnsMixin(value): {
-        spec+: {
-          openid_connect_provider_arns+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        openid_connect_provider_arns+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withSamlProviderArns': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withSamlProviderArns(value): {
-        spec+: {
-          saml_provider_arns:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        saml_provider_arns:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withSamlProviderArnsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withSamlProviderArnsMixin(value): {
-        spec+: {
-          saml_provider_arns+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        saml_provider_arns+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withSupportedLoginProviders': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withSupportedLoginProviders(value): {
-        spec+: {
-          supported_login_providers: value,
-        },
+        supported_login_providers: value,
       },
       '#withSupportedLoginProvidersMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withSupportedLoginProvidersMixin(value): {
-        spec+: {
-          supported_login_providers+: value,
-        },
+        supported_login_providers+: value,
       },
       '#withTags': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTags(value): {
-        spec+: {
-          tags: value,
-        },
+        tags: value,
       },
       '#withTagsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTagsMixin(value): {
-        spec+: {
-          tags+: value,
-        },
+        tags+: value,
       },
     },
   aws_cognito_user_group:
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'name', type: 'string' }, { default: null, enums: null, name: 'user_pool_id', type: 'string' }], help: '' } },
       new(tf_resource_key, name, user_pool_id):
-        {
-          local this = self,
-          data: {
-            aws_cognito_user_group: {
-              [this.tf_resource_key]: this.spec,
-            },
-          },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
+        self.withTfResourceKey(tf_resource_key)
         + self.withName(name)
         + self.withUserPoolId(user_pool_id),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+      withTfResourceKey(tf_resource_key):
+        {
+          local this = self,
+          _manifest():: {
+            data: {
+              aws_cognito_user_group: {
+                [tf_resource_key]: this,
+              },
+            },
+          },
+        },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDescription': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withDescription(value): {
-        spec+: {
-          description: value,
-        },
+        description: value,
       },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withName(value): {
-        spec+: {
-          name: value,
-        },
+        name: value,
       },
       '#withPrecedence': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withPrecedence(value): {
-        spec+: {
-          precedence: value,
-        },
+        precedence: value,
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withRoleArn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withRoleArn(value): {
-        spec+: {
-          role_arn: value,
-        },
+        role_arn: value,
       },
       '#withUserPoolId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withUserPoolId(value): {
-        spec+: {
-          user_pool_id: value,
-        },
+        user_pool_id: value,
       },
     },
   aws_cognito_user_groups:
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'user_pool_id', type: 'string' }], help: '' } },
       new(tf_resource_key, user_pool_id):
+        self.withTfResourceKey(tf_resource_key)
+        + self.withUserPoolId(user_pool_id),
+      withTfResourceKey(tf_resource_key):
         {
           local this = self,
-          data: {
-            aws_cognito_user_groups: {
-              [this.tf_resource_key]: this.spec,
+          _manifest():: {
+            data: {
+              aws_cognito_user_groups: {
+                [tf_resource_key]: this,
+              },
             },
           },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
-        + self.withUserPoolId(user_pool_id),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+        },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withGroups': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withGroups(value): {
-        spec+: {
-          groups:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        groups:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withGroupsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withGroupsMixin(value): {
-        spec+: {
-          groups+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        groups+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       groups+:
         {
@@ -351,58 +278,47 @@
         },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withUserPoolId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withUserPoolId(value): {
-        spec+: {
-          user_pool_id: value,
-        },
+        user_pool_id: value,
       },
     },
   aws_cognito_user_pool:
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'user_pool_id', type: 'string' }], help: '' } },
       new(tf_resource_key, user_pool_id):
+        self.withTfResourceKey(tf_resource_key)
+        + self.withUserPoolId(user_pool_id),
+      withTfResourceKey(tf_resource_key):
         {
           local this = self,
-          data: {
-            aws_cognito_user_pool: {
-              [this.tf_resource_key]: this.spec,
+          _manifest():: {
+            data: {
+              aws_cognito_user_pool: {
+                [tf_resource_key]: this,
+              },
             },
           },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
-        + self.withUserPoolId(user_pool_id),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+        },
       '#withAccountRecoverySetting': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withAccountRecoverySetting(value): {
-        spec+: {
-          account_recovery_setting:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        account_recovery_setting:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withAccountRecoverySettingMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withAccountRecoverySettingMixin(value): {
-        spec+: {
-          account_recovery_setting+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        account_recovery_setting+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       account_recovery_setting+:
         {
@@ -436,21 +352,17 @@
         },
       '#withAdminCreateUserConfig': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withAdminCreateUserConfig(value): {
-        spec+: {
-          admin_create_user_config:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        admin_create_user_config:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withAdminCreateUserConfigMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withAdminCreateUserConfigMixin(value): {
-        spec+: {
-          admin_create_user_config+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        admin_create_user_config+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       admin_create_user_config+:
         {
@@ -496,87 +408,65 @@
         },
       '#withArn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withArn(value): {
-        spec+: {
-          arn: value,
-        },
+        arn: value,
       },
       '#withAutoVerifiedAttributes': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withAutoVerifiedAttributes(value): {
-        spec+: {
-          auto_verified_attributes:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        auto_verified_attributes:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withAutoVerifiedAttributesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withAutoVerifiedAttributesMixin(value): {
-        spec+: {
-          auto_verified_attributes+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        auto_verified_attributes+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withCreationDate': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withCreationDate(value): {
-        spec+: {
-          creation_date: value,
-        },
+        creation_date: value,
       },
       '#withCustomDomain': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withCustomDomain(value): {
-        spec+: {
-          custom_domain: value,
-        },
+        custom_domain: value,
       },
       '#withDeletionProtection': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withDeletionProtection(value): {
-        spec+: {
-          deletion_protection: value,
-        },
+        deletion_protection: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDeviceConfiguration': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDeviceConfiguration(value): {
-        spec+: {
-          device_configuration:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        device_configuration:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDeviceConfigurationMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDeviceConfigurationMixin(value): {
-        spec+: {
-          device_configuration+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        device_configuration+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       device_configuration+:
         {
@@ -592,27 +482,21 @@
         },
       '#withDomain': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withDomain(value): {
-        spec+: {
-          domain: value,
-        },
+        domain: value,
       },
       '#withEmailConfiguration': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withEmailConfiguration(value): {
-        spec+: {
-          email_configuration:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        email_configuration:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withEmailConfigurationMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withEmailConfigurationMixin(value): {
-        spec+: {
-          email_configuration+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        email_configuration+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       email_configuration+:
         {
@@ -640,33 +524,25 @@
         },
       '#withEstimatedNumberOfUsers': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withEstimatedNumberOfUsers(value): {
-        spec+: {
-          estimated_number_of_users: value,
-        },
+        estimated_number_of_users: value,
       },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withLambdaConfig': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withLambdaConfig(value): {
-        spec+: {
-          lambda_config:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        lambda_config:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withLambdaConfigMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withLambdaConfigMixin(value): {
-        spec+: {
-          lambda_config+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        lambda_config+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       lambda_config+:
         {
@@ -796,45 +672,33 @@
         },
       '#withLastModifiedDate': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withLastModifiedDate(value): {
-        spec+: {
-          last_modified_date: value,
-        },
+        last_modified_date: value,
       },
       '#withMfaConfiguration': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withMfaConfiguration(value): {
-        spec+: {
-          mfa_configuration: value,
-        },
+        mfa_configuration: value,
       },
       '#withName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withName(value): {
-        spec+: {
-          name: value,
-        },
+        name: value,
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withSchemaAttributes': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withSchemaAttributes(value): {
-        spec+: {
-          schema_attributes:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        schema_attributes:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withSchemaAttributesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withSchemaAttributesMixin(value): {
-        spec+: {
-          schema_attributes+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        schema_attributes+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       schema_attributes+:
         {
@@ -914,155 +778,118 @@
         },
       '#withSmsAuthenticationMessage': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withSmsAuthenticationMessage(value): {
-        spec+: {
-          sms_authentication_message: value,
-        },
+        sms_authentication_message: value,
       },
       '#withSmsConfigurationFailure': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withSmsConfigurationFailure(value): {
-        spec+: {
-          sms_configuration_failure: value,
-        },
+        sms_configuration_failure: value,
       },
       '#withSmsVerificationMessage': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withSmsVerificationMessage(value): {
-        spec+: {
-          sms_verification_message: value,
-        },
+        sms_verification_message: value,
       },
       '#withTags': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTags(value): {
-        spec+: {
-          tags: value,
-        },
+        tags: value,
       },
       '#withTagsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTagsMixin(value): {
-        spec+: {
-          tags+: value,
-        },
+        tags+: value,
       },
       '#withUserPoolId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withUserPoolId(value): {
-        spec+: {
-          user_pool_id: value,
-        },
+        user_pool_id: value,
       },
       '#withUserPoolTags': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withUserPoolTags(value): {
-        spec+: {
-          user_pool_tags: value,
-        },
+        user_pool_tags: value,
       },
       '#withUserPoolTagsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withUserPoolTagsMixin(value): {
-        spec+: {
-          user_pool_tags+: value,
-        },
+        user_pool_tags+: value,
       },
       '#withUsernameAttributes': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withUsernameAttributes(value): {
-        spec+: {
-          username_attributes:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        username_attributes:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withUsernameAttributesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withUsernameAttributesMixin(value): {
-        spec+: {
-          username_attributes+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        username_attributes+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
     },
   aws_cognito_user_pool_client:
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'client_id', type: 'string' }, { default: null, enums: null, name: 'user_pool_id', type: 'string' }], help: '' } },
       new(tf_resource_key, client_id, user_pool_id):
-        {
-          local this = self,
-          data: {
-            aws_cognito_user_pool_client: {
-              [this.tf_resource_key]: this.spec,
-            },
-          },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
+        self.withTfResourceKey(tf_resource_key)
         + self.withClientId(client_id)
         + self.withUserPoolId(user_pool_id),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+      withTfResourceKey(tf_resource_key):
+        {
+          local this = self,
+          _manifest():: {
+            data: {
+              aws_cognito_user_pool_client: {
+                [tf_resource_key]: this,
+              },
+            },
+          },
+        },
       '#withAccessTokenValidity': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withAccessTokenValidity(value): {
-        spec+: {
-          access_token_validity: value,
-        },
+        access_token_validity: value,
       },
       '#withAllowedOauthFlows': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withAllowedOauthFlows(value): {
-        spec+: {
-          allowed_oauth_flows:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        allowed_oauth_flows:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withAllowedOauthFlowsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withAllowedOauthFlowsMixin(value): {
-        spec+: {
-          allowed_oauth_flows+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        allowed_oauth_flows+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withAllowedOauthFlowsUserPoolClient': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
       withAllowedOauthFlowsUserPoolClient(value=true): {
-        spec+: {
-          allowed_oauth_flows_user_pool_client: value,
-        },
+        allowed_oauth_flows_user_pool_client: value,
       },
       '#withAllowedOauthScopes': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withAllowedOauthScopes(value): {
-        spec+: {
-          allowed_oauth_scopes:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        allowed_oauth_scopes:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withAllowedOauthScopesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withAllowedOauthScopesMixin(value): {
-        spec+: {
-          allowed_oauth_scopes+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        allowed_oauth_scopes+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withAnalyticsConfiguration': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withAnalyticsConfiguration(value): {
-        spec+: {
-          analytics_configuration:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        analytics_configuration:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withAnalyticsConfigurationMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withAnalyticsConfigurationMixin(value): {
-        spec+: {
-          analytics_configuration+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        analytics_configuration+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       analytics_configuration+:
         {
@@ -1090,207 +917,153 @@
         },
       '#withCallbackUrls': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withCallbackUrls(value): {
-        spec+: {
-          callback_urls:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        callback_urls:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withCallbackUrlsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withCallbackUrlsMixin(value): {
-        spec+: {
-          callback_urls+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        callback_urls+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withClientId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withClientId(value): {
-        spec+: {
-          client_id: value,
-        },
+        client_id: value,
       },
       '#withClientSecret': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withClientSecret(value): {
-        spec+: {
-          client_secret: value,
-        },
+        client_secret: value,
       },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDefaultRedirectUri': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withDefaultRedirectUri(value): {
-        spec+: {
-          default_redirect_uri: value,
-        },
+        default_redirect_uri: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withEnablePropagateAdditionalUserContextData': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
       withEnablePropagateAdditionalUserContextData(value=true): {
-        spec+: {
-          enable_propagate_additional_user_context_data: value,
-        },
+        enable_propagate_additional_user_context_data: value,
       },
       '#withEnableTokenRevocation': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
       withEnableTokenRevocation(value=true): {
-        spec+: {
-          enable_token_revocation: value,
-        },
+        enable_token_revocation: value,
       },
       '#withExplicitAuthFlows': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withExplicitAuthFlows(value): {
-        spec+: {
-          explicit_auth_flows:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        explicit_auth_flows:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withExplicitAuthFlowsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withExplicitAuthFlowsMixin(value): {
-        spec+: {
-          explicit_auth_flows+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        explicit_auth_flows+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withGenerateSecret': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
       withGenerateSecret(value=true): {
-        spec+: {
-          generate_secret: value,
-        },
+        generate_secret: value,
       },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withIdTokenValidity': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withIdTokenValidity(value): {
-        spec+: {
-          id_token_validity: value,
-        },
+        id_token_validity: value,
       },
       '#withLogoutUrls': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withLogoutUrls(value): {
-        spec+: {
-          logout_urls:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        logout_urls:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withLogoutUrlsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withLogoutUrlsMixin(value): {
-        spec+: {
-          logout_urls+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        logout_urls+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withName(value): {
-        spec+: {
-          name: value,
-        },
+        name: value,
       },
       '#withPreventUserExistenceErrors': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withPreventUserExistenceErrors(value): {
-        spec+: {
-          prevent_user_existence_errors: value,
-        },
+        prevent_user_existence_errors: value,
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withReadAttributes': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withReadAttributes(value): {
-        spec+: {
-          read_attributes:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        read_attributes:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withReadAttributesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withReadAttributesMixin(value): {
-        spec+: {
-          read_attributes+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        read_attributes+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withRefreshTokenValidity': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withRefreshTokenValidity(value): {
-        spec+: {
-          refresh_token_validity: value,
-        },
+        refresh_token_validity: value,
       },
       '#withSupportedIdentityProviders': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withSupportedIdentityProviders(value): {
-        spec+: {
-          supported_identity_providers:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        supported_identity_providers:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withSupportedIdentityProvidersMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withSupportedIdentityProvidersMixin(value): {
-        spec+: {
-          supported_identity_providers+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        supported_identity_providers+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withTokenValidityUnits': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withTokenValidityUnits(value): {
-        spec+: {
-          token_validity_units:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        token_validity_units:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withTokenValidityUnitsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withTokenValidityUnitsMixin(value): {
-        spec+: {
-          token_validity_units+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        token_validity_units+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       token_validity_units+:
         {
@@ -1310,288 +1083,225 @@
         },
       '#withUserPoolId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withUserPoolId(value): {
-        spec+: {
-          user_pool_id: value,
-        },
+        user_pool_id: value,
       },
       '#withWriteAttributes': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withWriteAttributes(value): {
-        spec+: {
-          write_attributes:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        write_attributes:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withWriteAttributesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withWriteAttributesMixin(value): {
-        spec+: {
-          write_attributes+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        write_attributes+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
     },
   aws_cognito_user_pool_clients:
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'user_pool_id', type: 'string' }], help: '' } },
       new(tf_resource_key, user_pool_id):
+        self.withTfResourceKey(tf_resource_key)
+        + self.withUserPoolId(user_pool_id),
+      withTfResourceKey(tf_resource_key):
         {
           local this = self,
-          data: {
-            aws_cognito_user_pool_clients: {
-              [this.tf_resource_key]: this.spec,
+          _manifest():: {
+            data: {
+              aws_cognito_user_pool_clients: {
+                [tf_resource_key]: this,
+              },
             },
           },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
-        + self.withUserPoolId(user_pool_id),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+        },
       '#withClientIds': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withClientIds(value): {
-        spec+: {
-          client_ids:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        client_ids:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withClientIdsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withClientIdsMixin(value): {
-        spec+: {
-          client_ids+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        client_ids+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withClientNames': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withClientNames(value): {
-        spec+: {
-          client_names:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        client_names:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withClientNamesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withClientNamesMixin(value): {
-        spec+: {
-          client_names+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        client_names+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withUserPoolId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withUserPoolId(value): {
-        spec+: {
-          user_pool_id: value,
-        },
+        user_pool_id: value,
       },
     },
   aws_cognito_user_pool_signing_certificate:
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'user_pool_id', type: 'string' }], help: '' } },
       new(tf_resource_key, user_pool_id):
+        self.withTfResourceKey(tf_resource_key)
+        + self.withUserPoolId(user_pool_id),
+      withTfResourceKey(tf_resource_key):
         {
           local this = self,
-          data: {
-            aws_cognito_user_pool_signing_certificate: {
-              [this.tf_resource_key]: this.spec,
+          _manifest():: {
+            data: {
+              aws_cognito_user_pool_signing_certificate: {
+                [tf_resource_key]: this,
+              },
             },
           },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
-        + self.withUserPoolId(user_pool_id),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+        },
       '#withCertificate': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withCertificate(value): {
-        spec+: {
-          certificate: value,
-        },
+        certificate: value,
       },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withUserPoolId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withUserPoolId(value): {
-        spec+: {
-          user_pool_id: value,
-        },
+        user_pool_id: value,
       },
     },
   aws_cognito_user_pools:
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'name', type: 'string' }], help: '' } },
       new(tf_resource_key, name):
+        self.withTfResourceKey(tf_resource_key)
+        + self.withName(name),
+      withTfResourceKey(tf_resource_key):
         {
           local this = self,
-          data: {
-            aws_cognito_user_pools: {
-              [this.tf_resource_key]: this.spec,
+          _manifest():: {
+            data: {
+              aws_cognito_user_pools: {
+                [tf_resource_key]: this,
+              },
             },
           },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
-        + self.withName(name),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+        },
       '#withArns': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withArns(value): {
-        spec+: {
-          arns:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        arns:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withArnsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withArnsMixin(value): {
-        spec+: {
-          arns+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        arns+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withIds': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withIds(value): {
-        spec+: {
-          ids:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        ids:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withIdsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withIdsMixin(value): {
-        spec+: {
-          ids+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        ids+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withName(value): {
-        spec+: {
-          name: value,
-        },
+        name: value,
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
     },
 }

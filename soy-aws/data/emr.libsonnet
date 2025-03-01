@@ -8,182 +8,142 @@
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }], help: '' } },
       new(tf_resource_key):
+        self.withTfResourceKey(tf_resource_key),
+      withTfResourceKey(tf_resource_key):
         {
           local this = self,
-          data: {
-            aws_emr_release_labels: {
-              [this.tf_resource_key]: this.spec,
+          _manifest():: {
+            data: {
+              aws_emr_release_labels: {
+                [tf_resource_key]: this,
+              },
             },
           },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+        },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withFilters': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withFilters(value): {
-        spec+: {
-          filters: value,
-        },
+        filters: value,
       },
       '#withFiltersMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withFiltersMixin(value): {
-        spec+: {
-          filters+: value,
-        },
+        filters+: value,
       },
       filters+:
         {
           '#withApplication': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
           withApplication(value): {
-            spec+: {
-              filters+: {
-                application: value,
-              },
+            filters+: {
+              application: value,
             },
           },
           '#withPrefix': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
           withPrefix(value): {
-            spec+: {
-              filters+: {
-                prefix: value,
-              },
+            filters+: {
+              prefix: value,
             },
           },
         },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withReleaseLabels': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withReleaseLabels(value): {
-        spec+: {
-          release_labels:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        release_labels:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withReleaseLabelsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withReleaseLabelsMixin(value): {
-        spec+: {
-          release_labels+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        release_labels+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
     },
   aws_emr_supported_instance_types:
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'release_label', type: 'string' }], help: '' } },
       new(tf_resource_key, release_label):
+        self.withTfResourceKey(tf_resource_key)
+        + self.withReleaseLabel(release_label),
+      withTfResourceKey(tf_resource_key):
         {
           local this = self,
-          data: {
-            aws_emr_supported_instance_types: {
-              [this.tf_resource_key]: this.spec,
+          _manifest():: {
+            data: {
+              aws_emr_supported_instance_types: {
+                [tf_resource_key]: this,
+              },
             },
           },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
-        + self.withReleaseLabel(release_label),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+        },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withReleaseLabel': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withReleaseLabel(value): {
-        spec+: {
-          release_label: value,
-        },
+        release_label: value,
       },
       '#withSupportedInstanceTypes': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withSupportedInstanceTypes(value): {
-        spec+: {
-          supported_instance_types:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        supported_instance_types:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withSupportedInstanceTypesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withSupportedInstanceTypesMixin(value): {
-        spec+: {
-          supported_instance_types+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        supported_instance_types+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       supported_instance_types+:
         {

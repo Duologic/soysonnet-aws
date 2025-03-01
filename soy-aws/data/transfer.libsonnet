@@ -8,49 +8,40 @@
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'id', type: 'string' }], help: '' } },
       new(tf_resource_key, id):
+        self.withTfResourceKey(tf_resource_key)
+        + self.withId(id),
+      withTfResourceKey(tf_resource_key):
         {
           local this = self,
-          data: {
-            aws_transfer_connector: {
-              [this.tf_resource_key]: this.spec,
+          _manifest():: {
+            data: {
+              aws_transfer_connector: {
+                [tf_resource_key]: this,
+              },
             },
           },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
-        + self.withId(id),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+        },
       '#withAccessRole': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withAccessRole(value): {
-        spec+: {
-          access_role: value,
-        },
+        access_role: value,
       },
       '#withArn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withArn(value): {
-        spec+: {
-          arn: value,
-        },
+        arn: value,
       },
       '#withAs2Config': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withAs2Config(value): {
-        spec+: {
-          as2_config:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        as2_config:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withAs2ConfigMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withAs2ConfigMixin(value): {
-        spec+: {
-          as2_config+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        as2_config+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       as2_config+:
         {
@@ -94,87 +85,65 @@
         },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withLoggingRole': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withLoggingRole(value): {
-        spec+: {
-          logging_role: value,
-        },
+        logging_role: value,
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withSecurityPolicyName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withSecurityPolicyName(value): {
-        spec+: {
-          security_policy_name: value,
-        },
+        security_policy_name: value,
       },
       '#withServiceManagedEgressIpAddresses': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withServiceManagedEgressIpAddresses(value): {
-        spec+: {
-          service_managed_egress_ip_addresses:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        service_managed_egress_ip_addresses:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withServiceManagedEgressIpAddressesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withServiceManagedEgressIpAddressesMixin(value): {
-        spec+: {
-          service_managed_egress_ip_addresses+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        service_managed_egress_ip_addresses+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withSftpConfig': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withSftpConfig(value): {
-        spec+: {
-          sftp_config:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        sftp_config:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withSftpConfigMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withSftpConfigMixin(value): {
-        spec+: {
-          sftp_config+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        sftp_config+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       sftp_config+:
         {
@@ -200,190 +169,139 @@
         },
       '#withTags': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTags(value): {
-        spec+: {
-          tags: value,
-        },
+        tags: value,
       },
       '#withTagsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTagsMixin(value): {
-        spec+: {
-          tags+: value,
-        },
+        tags+: value,
       },
       '#withUrl': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withUrl(value): {
-        spec+: {
-          url: value,
-        },
+        url: value,
       },
     },
   aws_transfer_server:
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'server_id', type: 'string' }], help: '' } },
       new(tf_resource_key, server_id):
+        self.withTfResourceKey(tf_resource_key)
+        + self.withServerId(server_id),
+      withTfResourceKey(tf_resource_key):
         {
           local this = self,
-          data: {
-            aws_transfer_server: {
-              [this.tf_resource_key]: this.spec,
+          _manifest():: {
+            data: {
+              aws_transfer_server: {
+                [tf_resource_key]: this,
+              },
             },
           },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
-        + self.withServerId(server_id),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+        },
       '#withArn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withArn(value): {
-        spec+: {
-          arn: value,
-        },
+        arn: value,
       },
       '#withCertificate': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withCertificate(value): {
-        spec+: {
-          certificate: value,
-        },
+        certificate: value,
       },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDomain': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withDomain(value): {
-        spec+: {
-          domain: value,
-        },
+        domain: value,
       },
       '#withEndpoint': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withEndpoint(value): {
-        spec+: {
-          endpoint: value,
-        },
+        endpoint: value,
       },
       '#withEndpointType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withEndpointType(value): {
-        spec+: {
-          endpoint_type: value,
-        },
+        endpoint_type: value,
       },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withIdentityProviderType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withIdentityProviderType(value): {
-        spec+: {
-          identity_provider_type: value,
-        },
+        identity_provider_type: value,
       },
       '#withInvocationRole': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withInvocationRole(value): {
-        spec+: {
-          invocation_role: value,
-        },
+        invocation_role: value,
       },
       '#withLoggingRole': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withLoggingRole(value): {
-        spec+: {
-          logging_role: value,
-        },
+        logging_role: value,
       },
       '#withProtocols': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withProtocols(value): {
-        spec+: {
-          protocols:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        protocols:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withProtocolsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withProtocolsMixin(value): {
-        spec+: {
-          protocols+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        protocols+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withSecurityPolicyName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withSecurityPolicyName(value): {
-        spec+: {
-          security_policy_name: value,
-        },
+        security_policy_name: value,
       },
       '#withServerId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withServerId(value): {
-        spec+: {
-          server_id: value,
-        },
+        server_id: value,
       },
       '#withStructuredLogDestinations': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withStructuredLogDestinations(value): {
-        spec+: {
-          structured_log_destinations:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        structured_log_destinations:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withStructuredLogDestinationsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withStructuredLogDestinationsMixin(value): {
-        spec+: {
-          structured_log_destinations+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        structured_log_destinations+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withTags': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTags(value): {
-        spec+: {
-          tags: value,
-        },
+        tags: value,
       },
       '#withTagsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTagsMixin(value): {
-        spec+: {
-          tags+: value,
-        },
+        tags+: value,
       },
       '#withUrl': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withUrl(value): {
-        spec+: {
-          url: value,
-        },
+        url: value,
       },
     },
 }

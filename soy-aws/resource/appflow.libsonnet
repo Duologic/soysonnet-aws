@@ -8,90 +8,71 @@
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'connection_mode', type: 'string' }, { default: null, enums: null, name: 'connector_profile_config', type: 'object' }, { default: null, enums: null, name: 'connector_type', type: 'string' }, { default: null, enums: null, name: 'name', type: 'string' }], help: '' } },
       new(tf_resource_key, connection_mode, connector_profile_config, connector_type, name):
-        {
-          local this = self,
-          resource: {
-            aws_appflow_connector_profile: {
-              [this.tf_resource_key]: this.spec,
-            },
-          },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
+        self.withTfResourceKey(tf_resource_key)
         + self.withConnectionMode(connection_mode)
         + self.withConnectorProfileConfig(connector_profile_config)
         + self.withConnectorType(connector_type)
         + self.withName(name),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+      withTfResourceKey(tf_resource_key):
+        {
+          local this = self,
+          _manifest():: {
+            resource: {
+              aws_appflow_connector_profile: {
+                [tf_resource_key]: this,
+              },
+            },
+          },
+        },
       '#withArn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withArn(value): {
-        spec+: {
-          arn: value,
-        },
+        arn: value,
       },
       '#withConnectionMode': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withConnectionMode(value): {
-        spec+: {
-          connection_mode: value,
-        },
+        connection_mode: value,
       },
       '#withConnectorLabel': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withConnectorLabel(value): {
-        spec+: {
-          connector_label: value,
-        },
+        connector_label: value,
       },
       '#withConnectorProfileConfig': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withConnectorProfileConfig(value): {
-        spec+: {
-          connector_profile_config: value,
-        },
+        connector_profile_config: value,
       },
       '#withConnectorProfileConfigMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withConnectorProfileConfigMixin(value): {
-        spec+: {
-          connector_profile_config+: value,
-        },
+        connector_profile_config+: value,
       },
       connector_profile_config+:
         {
           '#withConnectorProfileCredentials': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withConnectorProfileCredentials(value): {
-            spec+: {
-              connector_profile_config+: {
-                connector_profile_credentials: value,
-              },
+            connector_profile_config+: {
+              connector_profile_credentials: value,
             },
           },
           '#withConnectorProfileCredentialsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withConnectorProfileCredentialsMixin(value): {
-            spec+: {
-              connector_profile_config+: {
-                connector_profile_credentials+: value,
-              },
+            connector_profile_config+: {
+              connector_profile_credentials+: value,
             },
           },
           connector_profile_credentials+:
             {
               '#withAmplitude': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withAmplitude(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      amplitude: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    amplitude: value,
                   },
                 },
               },
               '#withAmplitudeMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withAmplitudeMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      amplitude+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    amplitude+: value,
                   },
                 },
               },
@@ -99,24 +80,20 @@
                 {
                   '#withApiKey': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withApiKey(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          amplitude+: {
-                            api_key: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        amplitude+: {
+                          api_key: value,
                         },
                       },
                     },
                   },
                   '#withSecretKey': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withSecretKey(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          amplitude+: {
-                            secret_key: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        amplitude+: {
+                          secret_key: value,
                         },
                       },
                     },
@@ -124,21 +101,17 @@
                 },
               '#withCustomConnector': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withCustomConnector(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      custom_connector: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    custom_connector: value,
                   },
                 },
               },
               '#withCustomConnectorMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withCustomConnectorMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      custom_connector+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    custom_connector+: value,
                   },
                 },
               },
@@ -146,24 +119,20 @@
                 {
                   '#withApiKey': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withApiKey(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          custom_connector+: {
-                            api_key: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        custom_connector+: {
+                          api_key: value,
                         },
                       },
                     },
                   },
                   '#withApiKeyMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withApiKeyMixin(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          custom_connector+: {
-                            api_key+: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        custom_connector+: {
+                          api_key+: value,
                         },
                       },
                     },
@@ -172,25 +141,21 @@
                     {
                       '#withApiKey': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                       withApiKey(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              custom_connector+: {
-                                api_key: value,
-                              },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            custom_connector+: {
+                              api_key: value,
                             },
                           },
                         },
                       },
                       '#withApiSecretKey': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                       withApiSecretKey(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              custom_connector+: {
-                                api_key+: {
-                                  api_secret_key: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            custom_connector+: {
+                              api_key+: {
+                                api_secret_key: value,
                               },
                             },
                           },
@@ -199,36 +164,30 @@
                     },
                   '#withAuthenticationType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withAuthenticationType(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          custom_connector+: {
-                            authentication_type: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        custom_connector+: {
+                          authentication_type: value,
                         },
                       },
                     },
                   },
                   '#withBasic': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withBasic(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          custom_connector+: {
-                            basic: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        custom_connector+: {
+                          basic: value,
                         },
                       },
                     },
                   },
                   '#withBasicMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withBasicMixin(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          custom_connector+: {
-                            basic+: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        custom_connector+: {
+                          basic+: value,
                         },
                       },
                     },
@@ -237,13 +196,11 @@
                     {
                       '#withPassword': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                       withPassword(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              custom_connector+: {
-                                basic+: {
-                                  password: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            custom_connector+: {
+                              basic+: {
+                                password: value,
                               },
                             },
                           },
@@ -251,13 +208,11 @@
                       },
                       '#withUsername': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                       withUsername(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              custom_connector+: {
-                                basic+: {
-                                  username: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            custom_connector+: {
+                              basic+: {
+                                username: value,
                               },
                             },
                           },
@@ -266,24 +221,20 @@
                     },
                   '#withCustom': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withCustom(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          custom_connector+: {
-                            custom: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        custom_connector+: {
+                          custom: value,
                         },
                       },
                     },
                   },
                   '#withCustomMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withCustomMixin(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          custom_connector+: {
-                            custom+: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        custom_connector+: {
+                          custom+: value,
                         },
                       },
                     },
@@ -292,13 +243,11 @@
                     {
                       '#withCredentialsMap': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                       withCredentialsMap(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              custom_connector+: {
-                                custom+: {
-                                  credentials_map: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            custom_connector+: {
+                              custom+: {
+                                credentials_map: value,
                               },
                             },
                           },
@@ -306,13 +255,11 @@
                       },
                       '#withCredentialsMapMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                       withCredentialsMapMixin(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              custom_connector+: {
-                                custom+: {
-                                  credentials_map+: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            custom_connector+: {
+                              custom+: {
+                                credentials_map+: value,
                               },
                             },
                           },
@@ -320,13 +267,11 @@
                       },
                       '#withCustomAuthenticationType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                       withCustomAuthenticationType(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              custom_connector+: {
-                                custom+: {
-                                  custom_authentication_type: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            custom_connector+: {
+                              custom+: {
+                                custom_authentication_type: value,
                               },
                             },
                           },
@@ -335,24 +280,20 @@
                     },
                   '#withOauth2': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withOauth2(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          custom_connector+: {
-                            oauth2: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        custom_connector+: {
+                          oauth2: value,
                         },
                       },
                     },
                   },
                   '#withOauth2Mixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withOauth2Mixin(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          custom_connector+: {
-                            oauth2+: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        custom_connector+: {
+                          oauth2+: value,
                         },
                       },
                     },
@@ -361,13 +302,11 @@
                     {
                       '#withAccessToken': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                       withAccessToken(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              custom_connector+: {
-                                oauth2+: {
-                                  access_token: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            custom_connector+: {
+                              oauth2+: {
+                                access_token: value,
                               },
                             },
                           },
@@ -375,13 +314,11 @@
                       },
                       '#withClientId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                       withClientId(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              custom_connector+: {
-                                oauth2+: {
-                                  client_id: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            custom_connector+: {
+                              oauth2+: {
+                                client_id: value,
                               },
                             },
                           },
@@ -389,13 +326,11 @@
                       },
                       '#withClientSecret': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                       withClientSecret(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              custom_connector+: {
-                                oauth2+: {
-                                  client_secret: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            custom_connector+: {
+                              oauth2+: {
+                                client_secret: value,
                               },
                             },
                           },
@@ -403,13 +338,11 @@
                       },
                       '#withOauthRequest': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                       withOauthRequest(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              custom_connector+: {
-                                oauth2+: {
-                                  oauth_request: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            custom_connector+: {
+                              oauth2+: {
+                                oauth_request: value,
                               },
                             },
                           },
@@ -417,13 +350,11 @@
                       },
                       '#withOauthRequestMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                       withOauthRequestMixin(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              custom_connector+: {
-                                oauth2+: {
-                                  oauth_request+: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            custom_connector+: {
+                              oauth2+: {
+                                oauth_request+: value,
                               },
                             },
                           },
@@ -433,14 +364,12 @@
                         {
                           '#withAuthCode': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                           withAuthCode(value): {
-                            spec+: {
-                              connector_profile_config+: {
-                                connector_profile_credentials+: {
-                                  custom_connector+: {
-                                    oauth2+: {
-                                      oauth_request+: {
-                                        auth_code: value,
-                                      },
+                            connector_profile_config+: {
+                              connector_profile_credentials+: {
+                                custom_connector+: {
+                                  oauth2+: {
+                                    oauth_request+: {
+                                      auth_code: value,
                                     },
                                   },
                                 },
@@ -449,14 +378,12 @@
                           },
                           '#withRedirectUri': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                           withRedirectUri(value): {
-                            spec+: {
-                              connector_profile_config+: {
-                                connector_profile_credentials+: {
-                                  custom_connector+: {
-                                    oauth2+: {
-                                      oauth_request+: {
-                                        redirect_uri: value,
-                                      },
+                            connector_profile_config+: {
+                              connector_profile_credentials+: {
+                                custom_connector+: {
+                                  oauth2+: {
+                                    oauth_request+: {
+                                      redirect_uri: value,
                                     },
                                   },
                                 },
@@ -466,13 +393,11 @@
                         },
                       '#withRefreshToken': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                       withRefreshToken(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              custom_connector+: {
-                                oauth2+: {
-                                  refresh_token: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            custom_connector+: {
+                              oauth2+: {
+                                refresh_token: value,
                               },
                             },
                           },
@@ -482,21 +407,17 @@
                 },
               '#withDatadog': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withDatadog(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      datadog: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    datadog: value,
                   },
                 },
               },
               '#withDatadogMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withDatadogMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      datadog+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    datadog+: value,
                   },
                 },
               },
@@ -504,24 +425,20 @@
                 {
                   '#withApiKey': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withApiKey(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          datadog+: {
-                            api_key: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        datadog+: {
+                          api_key: value,
                         },
                       },
                     },
                   },
                   '#withApplicationKey': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withApplicationKey(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          datadog+: {
-                            application_key: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        datadog+: {
+                          application_key: value,
                         },
                       },
                     },
@@ -529,21 +446,17 @@
                 },
               '#withDynatrace': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withDynatrace(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      dynatrace: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    dynatrace: value,
                   },
                 },
               },
               '#withDynatraceMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withDynatraceMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      dynatrace+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    dynatrace+: value,
                   },
                 },
               },
@@ -551,12 +464,10 @@
                 {
                   '#withApiToken': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withApiToken(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          dynatrace+: {
-                            api_token: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        dynatrace+: {
+                          api_token: value,
                         },
                       },
                     },
@@ -564,21 +475,17 @@
                 },
               '#withGoogleAnalytics': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withGoogleAnalytics(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      google_analytics: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    google_analytics: value,
                   },
                 },
               },
               '#withGoogleAnalyticsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withGoogleAnalyticsMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      google_analytics+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    google_analytics+: value,
                   },
                 },
               },
@@ -586,60 +493,50 @@
                 {
                   '#withAccessToken': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withAccessToken(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          google_analytics+: {
-                            access_token: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        google_analytics+: {
+                          access_token: value,
                         },
                       },
                     },
                   },
                   '#withClientId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withClientId(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          google_analytics+: {
-                            client_id: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        google_analytics+: {
+                          client_id: value,
                         },
                       },
                     },
                   },
                   '#withClientSecret': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withClientSecret(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          google_analytics+: {
-                            client_secret: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        google_analytics+: {
+                          client_secret: value,
                         },
                       },
                     },
                   },
                   '#withOauthRequest': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withOauthRequest(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          google_analytics+: {
-                            oauth_request: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        google_analytics+: {
+                          oauth_request: value,
                         },
                       },
                     },
                   },
                   '#withOauthRequestMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withOauthRequestMixin(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          google_analytics+: {
-                            oauth_request+: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        google_analytics+: {
+                          oauth_request+: value,
                         },
                       },
                     },
@@ -648,13 +545,11 @@
                     {
                       '#withAuthCode': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                       withAuthCode(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              google_analytics+: {
-                                oauth_request+: {
-                                  auth_code: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            google_analytics+: {
+                              oauth_request+: {
+                                auth_code: value,
                               },
                             },
                           },
@@ -662,13 +557,11 @@
                       },
                       '#withRedirectUri': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                       withRedirectUri(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              google_analytics+: {
-                                oauth_request+: {
-                                  redirect_uri: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            google_analytics+: {
+                              oauth_request+: {
+                                redirect_uri: value,
                               },
                             },
                           },
@@ -677,12 +570,10 @@
                     },
                   '#withRefreshToken': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withRefreshToken(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          google_analytics+: {
-                            refresh_token: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        google_analytics+: {
+                          refresh_token: value,
                         },
                       },
                     },
@@ -690,21 +581,17 @@
                 },
               '#withHoneycode': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withHoneycode(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      honeycode: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    honeycode: value,
                   },
                 },
               },
               '#withHoneycodeMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withHoneycodeMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      honeycode+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    honeycode+: value,
                   },
                 },
               },
@@ -712,36 +599,30 @@
                 {
                   '#withAccessToken': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withAccessToken(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          honeycode+: {
-                            access_token: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        honeycode+: {
+                          access_token: value,
                         },
                       },
                     },
                   },
                   '#withOauthRequest': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withOauthRequest(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          honeycode+: {
-                            oauth_request: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        honeycode+: {
+                          oauth_request: value,
                         },
                       },
                     },
                   },
                   '#withOauthRequestMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withOauthRequestMixin(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          honeycode+: {
-                            oauth_request+: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        honeycode+: {
+                          oauth_request+: value,
                         },
                       },
                     },
@@ -750,13 +631,11 @@
                     {
                       '#withAuthCode': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                       withAuthCode(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              honeycode+: {
-                                oauth_request+: {
-                                  auth_code: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            honeycode+: {
+                              oauth_request+: {
+                                auth_code: value,
                               },
                             },
                           },
@@ -764,13 +643,11 @@
                       },
                       '#withRedirectUri': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                       withRedirectUri(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              honeycode+: {
-                                oauth_request+: {
-                                  redirect_uri: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            honeycode+: {
+                              oauth_request+: {
+                                redirect_uri: value,
                               },
                             },
                           },
@@ -779,12 +656,10 @@
                     },
                   '#withRefreshToken': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withRefreshToken(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          honeycode+: {
-                            refresh_token: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        honeycode+: {
+                          refresh_token: value,
                         },
                       },
                     },
@@ -792,21 +667,17 @@
                 },
               '#withInforNexus': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withInforNexus(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      infor_nexus: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    infor_nexus: value,
                   },
                 },
               },
               '#withInforNexusMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withInforNexusMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      infor_nexus+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    infor_nexus+: value,
                   },
                 },
               },
@@ -814,48 +685,40 @@
                 {
                   '#withAccessKeyId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withAccessKeyId(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          infor_nexus+: {
-                            access_key_id: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        infor_nexus+: {
+                          access_key_id: value,
                         },
                       },
                     },
                   },
                   '#withDatakey': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withDatakey(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          infor_nexus+: {
-                            datakey: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        infor_nexus+: {
+                          datakey: value,
                         },
                       },
                     },
                   },
                   '#withSecretAccessKey': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withSecretAccessKey(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          infor_nexus+: {
-                            secret_access_key: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        infor_nexus+: {
+                          secret_access_key: value,
                         },
                       },
                     },
                   },
                   '#withUserId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withUserId(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          infor_nexus+: {
-                            user_id: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        infor_nexus+: {
+                          user_id: value,
                         },
                       },
                     },
@@ -863,21 +726,17 @@
                 },
               '#withMarketo': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withMarketo(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      marketo: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    marketo: value,
                   },
                 },
               },
               '#withMarketoMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withMarketoMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      marketo+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    marketo+: value,
                   },
                 },
               },
@@ -885,60 +744,50 @@
                 {
                   '#withAccessToken': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withAccessToken(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          marketo+: {
-                            access_token: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        marketo+: {
+                          access_token: value,
                         },
                       },
                     },
                   },
                   '#withClientId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withClientId(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          marketo+: {
-                            client_id: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        marketo+: {
+                          client_id: value,
                         },
                       },
                     },
                   },
                   '#withClientSecret': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withClientSecret(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          marketo+: {
-                            client_secret: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        marketo+: {
+                          client_secret: value,
                         },
                       },
                     },
                   },
                   '#withOauthRequest': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withOauthRequest(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          marketo+: {
-                            oauth_request: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        marketo+: {
+                          oauth_request: value,
                         },
                       },
                     },
                   },
                   '#withOauthRequestMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withOauthRequestMixin(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          marketo+: {
-                            oauth_request+: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        marketo+: {
+                          oauth_request+: value,
                         },
                       },
                     },
@@ -947,13 +796,11 @@
                     {
                       '#withAuthCode': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                       withAuthCode(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              marketo+: {
-                                oauth_request+: {
-                                  auth_code: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            marketo+: {
+                              oauth_request+: {
+                                auth_code: value,
                               },
                             },
                           },
@@ -961,13 +808,11 @@
                       },
                       '#withRedirectUri': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                       withRedirectUri(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              marketo+: {
-                                oauth_request+: {
-                                  redirect_uri: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            marketo+: {
+                              oauth_request+: {
+                                redirect_uri: value,
                               },
                             },
                           },
@@ -977,21 +822,17 @@
                 },
               '#withRedshift': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withRedshift(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      redshift: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    redshift: value,
                   },
                 },
               },
               '#withRedshiftMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withRedshiftMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      redshift+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    redshift+: value,
                   },
                 },
               },
@@ -999,24 +840,20 @@
                 {
                   '#withPassword': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withPassword(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          redshift+: {
-                            password: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        redshift+: {
+                          password: value,
                         },
                       },
                     },
                   },
                   '#withUsername': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withUsername(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          redshift+: {
-                            username: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        redshift+: {
+                          username: value,
                         },
                       },
                     },
@@ -1024,21 +861,17 @@
                 },
               '#withSalesforce': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withSalesforce(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      salesforce: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    salesforce: value,
                   },
                 },
               },
               '#withSalesforceMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withSalesforceMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      salesforce+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    salesforce+: value,
                   },
                 },
               },
@@ -1046,72 +879,60 @@
                 {
                   '#withAccessToken': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withAccessToken(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          salesforce+: {
-                            access_token: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        salesforce+: {
+                          access_token: value,
                         },
                       },
                     },
                   },
                   '#withClientCredentialsArn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withClientCredentialsArn(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          salesforce+: {
-                            client_credentials_arn: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        salesforce+: {
+                          client_credentials_arn: value,
                         },
                       },
                     },
                   },
                   '#withJwtToken': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withJwtToken(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          salesforce+: {
-                            jwt_token: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        salesforce+: {
+                          jwt_token: value,
                         },
                       },
                     },
                   },
                   '#withOauth2GrantType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withOauth2GrantType(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          salesforce+: {
-                            oauth2_grant_type: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        salesforce+: {
+                          oauth2_grant_type: value,
                         },
                       },
                     },
                   },
                   '#withOauthRequest': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withOauthRequest(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          salesforce+: {
-                            oauth_request: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        salesforce+: {
+                          oauth_request: value,
                         },
                       },
                     },
                   },
                   '#withOauthRequestMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withOauthRequestMixin(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          salesforce+: {
-                            oauth_request+: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        salesforce+: {
+                          oauth_request+: value,
                         },
                       },
                     },
@@ -1120,13 +941,11 @@
                     {
                       '#withAuthCode': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                       withAuthCode(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              salesforce+: {
-                                oauth_request+: {
-                                  auth_code: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            salesforce+: {
+                              oauth_request+: {
+                                auth_code: value,
                               },
                             },
                           },
@@ -1134,13 +953,11 @@
                       },
                       '#withRedirectUri': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                       withRedirectUri(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              salesforce+: {
-                                oauth_request+: {
-                                  redirect_uri: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            salesforce+: {
+                              oauth_request+: {
+                                redirect_uri: value,
                               },
                             },
                           },
@@ -1149,12 +966,10 @@
                     },
                   '#withRefreshToken': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withRefreshToken(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          salesforce+: {
-                            refresh_token: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        salesforce+: {
+                          refresh_token: value,
                         },
                       },
                     },
@@ -1162,21 +977,17 @@
                 },
               '#withSapoData': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withSapoData(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      sapo_data: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    sapo_data: value,
                   },
                 },
               },
               '#withSapoDataMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withSapoDataMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      sapo_data+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    sapo_data+: value,
                   },
                 },
               },
@@ -1184,24 +995,20 @@
                 {
                   '#withBasicAuthCredentials': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withBasicAuthCredentials(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          sapo_data+: {
-                            basic_auth_credentials: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        sapo_data+: {
+                          basic_auth_credentials: value,
                         },
                       },
                     },
                   },
                   '#withBasicAuthCredentialsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withBasicAuthCredentialsMixin(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          sapo_data+: {
-                            basic_auth_credentials+: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        sapo_data+: {
+                          basic_auth_credentials+: value,
                         },
                       },
                     },
@@ -1210,13 +1017,11 @@
                     {
                       '#withPassword': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                       withPassword(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              sapo_data+: {
-                                basic_auth_credentials+: {
-                                  password: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            sapo_data+: {
+                              basic_auth_credentials+: {
+                                password: value,
                               },
                             },
                           },
@@ -1224,13 +1029,11 @@
                       },
                       '#withUsername': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                       withUsername(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              sapo_data+: {
-                                basic_auth_credentials+: {
-                                  username: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            sapo_data+: {
+                              basic_auth_credentials+: {
+                                username: value,
                               },
                             },
                           },
@@ -1239,24 +1042,20 @@
                     },
                   '#withOauthCredentials': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withOauthCredentials(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          sapo_data+: {
-                            oauth_credentials: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        sapo_data+: {
+                          oauth_credentials: value,
                         },
                       },
                     },
                   },
                   '#withOauthCredentialsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withOauthCredentialsMixin(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          sapo_data+: {
-                            oauth_credentials+: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        sapo_data+: {
+                          oauth_credentials+: value,
                         },
                       },
                     },
@@ -1265,13 +1064,11 @@
                     {
                       '#withAccessToken': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                       withAccessToken(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              sapo_data+: {
-                                oauth_credentials+: {
-                                  access_token: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            sapo_data+: {
+                              oauth_credentials+: {
+                                access_token: value,
                               },
                             },
                           },
@@ -1279,13 +1076,11 @@
                       },
                       '#withClientId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                       withClientId(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              sapo_data+: {
-                                oauth_credentials+: {
-                                  client_id: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            sapo_data+: {
+                              oauth_credentials+: {
+                                client_id: value,
                               },
                             },
                           },
@@ -1293,13 +1088,11 @@
                       },
                       '#withClientSecret': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                       withClientSecret(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              sapo_data+: {
-                                oauth_credentials+: {
-                                  client_secret: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            sapo_data+: {
+                              oauth_credentials+: {
+                                client_secret: value,
                               },
                             },
                           },
@@ -1307,13 +1100,11 @@
                       },
                       '#withOauthRequest': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                       withOauthRequest(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              sapo_data+: {
-                                oauth_credentials+: {
-                                  oauth_request: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            sapo_data+: {
+                              oauth_credentials+: {
+                                oauth_request: value,
                               },
                             },
                           },
@@ -1321,13 +1112,11 @@
                       },
                       '#withOauthRequestMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                       withOauthRequestMixin(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              sapo_data+: {
-                                oauth_credentials+: {
-                                  oauth_request+: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            sapo_data+: {
+                              oauth_credentials+: {
+                                oauth_request+: value,
                               },
                             },
                           },
@@ -1337,14 +1126,12 @@
                         {
                           '#withAuthCode': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                           withAuthCode(value): {
-                            spec+: {
-                              connector_profile_config+: {
-                                connector_profile_credentials+: {
-                                  sapo_data+: {
-                                    oauth_credentials+: {
-                                      oauth_request+: {
-                                        auth_code: value,
-                                      },
+                            connector_profile_config+: {
+                              connector_profile_credentials+: {
+                                sapo_data+: {
+                                  oauth_credentials+: {
+                                    oauth_request+: {
+                                      auth_code: value,
                                     },
                                   },
                                 },
@@ -1353,14 +1140,12 @@
                           },
                           '#withRedirectUri': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                           withRedirectUri(value): {
-                            spec+: {
-                              connector_profile_config+: {
-                                connector_profile_credentials+: {
-                                  sapo_data+: {
-                                    oauth_credentials+: {
-                                      oauth_request+: {
-                                        redirect_uri: value,
-                                      },
+                            connector_profile_config+: {
+                              connector_profile_credentials+: {
+                                sapo_data+: {
+                                  oauth_credentials+: {
+                                    oauth_request+: {
+                                      redirect_uri: value,
                                     },
                                   },
                                 },
@@ -1370,13 +1155,11 @@
                         },
                       '#withRefreshToken': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                       withRefreshToken(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              sapo_data+: {
-                                oauth_credentials+: {
-                                  refresh_token: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            sapo_data+: {
+                              oauth_credentials+: {
+                                refresh_token: value,
                               },
                             },
                           },
@@ -1386,21 +1169,17 @@
                 },
               '#withServiceNow': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withServiceNow(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      service_now: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    service_now: value,
                   },
                 },
               },
               '#withServiceNowMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withServiceNowMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      service_now+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    service_now+: value,
                   },
                 },
               },
@@ -1408,24 +1187,20 @@
                 {
                   '#withPassword': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withPassword(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          service_now+: {
-                            password: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        service_now+: {
+                          password: value,
                         },
                       },
                     },
                   },
                   '#withUsername': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withUsername(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          service_now+: {
-                            username: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        service_now+: {
+                          username: value,
                         },
                       },
                     },
@@ -1433,21 +1208,17 @@
                 },
               '#withSingular': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withSingular(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      singular: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    singular: value,
                   },
                 },
               },
               '#withSingularMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withSingularMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      singular+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    singular+: value,
                   },
                 },
               },
@@ -1455,12 +1226,10 @@
                 {
                   '#withApiKey': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withApiKey(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          singular+: {
-                            api_key: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        singular+: {
+                          api_key: value,
                         },
                       },
                     },
@@ -1468,21 +1237,17 @@
                 },
               '#withSlack': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withSlack(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      slack: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    slack: value,
                   },
                 },
               },
               '#withSlackMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withSlackMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      slack+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    slack+: value,
                   },
                 },
               },
@@ -1490,60 +1255,50 @@
                 {
                   '#withAccessToken': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withAccessToken(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          slack+: {
-                            access_token: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        slack+: {
+                          access_token: value,
                         },
                       },
                     },
                   },
                   '#withClientId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withClientId(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          slack+: {
-                            client_id: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        slack+: {
+                          client_id: value,
                         },
                       },
                     },
                   },
                   '#withClientSecret': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withClientSecret(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          slack+: {
-                            client_secret: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        slack+: {
+                          client_secret: value,
                         },
                       },
                     },
                   },
                   '#withOauthRequest': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withOauthRequest(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          slack+: {
-                            oauth_request: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        slack+: {
+                          oauth_request: value,
                         },
                       },
                     },
                   },
                   '#withOauthRequestMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withOauthRequestMixin(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          slack+: {
-                            oauth_request+: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        slack+: {
+                          oauth_request+: value,
                         },
                       },
                     },
@@ -1552,13 +1307,11 @@
                     {
                       '#withAuthCode': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                       withAuthCode(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              slack+: {
-                                oauth_request+: {
-                                  auth_code: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            slack+: {
+                              oauth_request+: {
+                                auth_code: value,
                               },
                             },
                           },
@@ -1566,13 +1319,11 @@
                       },
                       '#withRedirectUri': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                       withRedirectUri(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              slack+: {
-                                oauth_request+: {
-                                  redirect_uri: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            slack+: {
+                              oauth_request+: {
+                                redirect_uri: value,
                               },
                             },
                           },
@@ -1582,21 +1333,17 @@
                 },
               '#withSnowflake': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withSnowflake(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      snowflake: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    snowflake: value,
                   },
                 },
               },
               '#withSnowflakeMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withSnowflakeMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      snowflake+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    snowflake+: value,
                   },
                 },
               },
@@ -1604,24 +1351,20 @@
                 {
                   '#withPassword': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withPassword(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          snowflake+: {
-                            password: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        snowflake+: {
+                          password: value,
                         },
                       },
                     },
                   },
                   '#withUsername': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withUsername(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          snowflake+: {
-                            username: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        snowflake+: {
+                          username: value,
                         },
                       },
                     },
@@ -1629,21 +1372,17 @@
                 },
               '#withTrendmicro': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withTrendmicro(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      trendmicro: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    trendmicro: value,
                   },
                 },
               },
               '#withTrendmicroMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withTrendmicroMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      trendmicro+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    trendmicro+: value,
                   },
                 },
               },
@@ -1651,12 +1390,10 @@
                 {
                   '#withApiSecretKey': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withApiSecretKey(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          trendmicro+: {
-                            api_secret_key: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        trendmicro+: {
+                          api_secret_key: value,
                         },
                       },
                     },
@@ -1664,21 +1401,17 @@
                 },
               '#withVeeva': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withVeeva(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      veeva: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    veeva: value,
                   },
                 },
               },
               '#withVeevaMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withVeevaMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      veeva+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    veeva+: value,
                   },
                 },
               },
@@ -1686,24 +1419,20 @@
                 {
                   '#withPassword': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withPassword(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          veeva+: {
-                            password: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        veeva+: {
+                          password: value,
                         },
                       },
                     },
                   },
                   '#withUsername': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withUsername(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          veeva+: {
-                            username: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        veeva+: {
+                          username: value,
                         },
                       },
                     },
@@ -1711,21 +1440,17 @@
                 },
               '#withZendesk': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withZendesk(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      zendesk: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    zendesk: value,
                   },
                 },
               },
               '#withZendeskMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withZendeskMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_credentials+: {
-                      zendesk+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_credentials+: {
+                    zendesk+: value,
                   },
                 },
               },
@@ -1733,60 +1458,50 @@
                 {
                   '#withAccessToken': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withAccessToken(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          zendesk+: {
-                            access_token: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        zendesk+: {
+                          access_token: value,
                         },
                       },
                     },
                   },
                   '#withClientId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withClientId(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          zendesk+: {
-                            client_id: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        zendesk+: {
+                          client_id: value,
                         },
                       },
                     },
                   },
                   '#withClientSecret': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withClientSecret(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          zendesk+: {
-                            client_secret: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        zendesk+: {
+                          client_secret: value,
                         },
                       },
                     },
                   },
                   '#withOauthRequest': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withOauthRequest(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          zendesk+: {
-                            oauth_request: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        zendesk+: {
+                          oauth_request: value,
                         },
                       },
                     },
                   },
                   '#withOauthRequestMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withOauthRequestMixin(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_credentials+: {
-                          zendesk+: {
-                            oauth_request+: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_credentials+: {
+                        zendesk+: {
+                          oauth_request+: value,
                         },
                       },
                     },
@@ -1795,13 +1510,11 @@
                     {
                       '#withAuthCode': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                       withAuthCode(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              zendesk+: {
-                                oauth_request+: {
-                                  auth_code: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            zendesk+: {
+                              oauth_request+: {
+                                auth_code: value,
                               },
                             },
                           },
@@ -1809,13 +1522,11 @@
                       },
                       '#withRedirectUri': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                       withRedirectUri(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_credentials+: {
-                              zendesk+: {
-                                oauth_request+: {
-                                  redirect_uri: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_credentials+: {
+                            zendesk+: {
+                              oauth_request+: {
+                                redirect_uri: value,
                               },
                             },
                           },
@@ -1826,59 +1537,47 @@
             },
           '#withConnectorProfileProperties': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withConnectorProfileProperties(value): {
-            spec+: {
-              connector_profile_config+: {
-                connector_profile_properties: value,
-              },
+            connector_profile_config+: {
+              connector_profile_properties: value,
             },
           },
           '#withConnectorProfilePropertiesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withConnectorProfilePropertiesMixin(value): {
-            spec+: {
-              connector_profile_config+: {
-                connector_profile_properties+: value,
-              },
+            connector_profile_config+: {
+              connector_profile_properties+: value,
             },
           },
           connector_profile_properties+:
             {
               '#withAmplitude': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withAmplitude(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      amplitude: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    amplitude: value,
                   },
                 },
               },
               '#withAmplitudeMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withAmplitudeMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      amplitude+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    amplitude+: value,
                   },
                 },
               },
               '#withCustomConnector': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withCustomConnector(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      custom_connector: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    custom_connector: value,
                   },
                 },
               },
               '#withCustomConnectorMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withCustomConnectorMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      custom_connector+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    custom_connector+: value,
                   },
                 },
               },
@@ -1886,24 +1585,20 @@
                 {
                   '#withOauth2Properties': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withOauth2Properties(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          custom_connector+: {
-                            oauth2_properties: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        custom_connector+: {
+                          oauth2_properties: value,
                         },
                       },
                     },
                   },
                   '#withOauth2PropertiesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withOauth2PropertiesMixin(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          custom_connector+: {
-                            oauth2_properties+: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        custom_connector+: {
+                          oauth2_properties+: value,
                         },
                       },
                     },
@@ -1912,13 +1607,11 @@
                     {
                       '#withOauth2GrantType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                       withOauth2GrantType(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_properties+: {
-                              custom_connector+: {
-                                oauth2_properties+: {
-                                  oauth2_grant_type: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_properties+: {
+                            custom_connector+: {
+                              oauth2_properties+: {
+                                oauth2_grant_type: value,
                               },
                             },
                           },
@@ -1926,13 +1619,11 @@
                       },
                       '#withTokenUrl': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                       withTokenUrl(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_properties+: {
-                              custom_connector+: {
-                                oauth2_properties+: {
-                                  token_url: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_properties+: {
+                            custom_connector+: {
+                              oauth2_properties+: {
+                                token_url: value,
                               },
                             },
                           },
@@ -1940,13 +1631,11 @@
                       },
                       '#withTokenUrlCustomProperties': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                       withTokenUrlCustomProperties(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_properties+: {
-                              custom_connector+: {
-                                oauth2_properties+: {
-                                  token_url_custom_properties: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_properties+: {
+                            custom_connector+: {
+                              oauth2_properties+: {
+                                token_url_custom_properties: value,
                               },
                             },
                           },
@@ -1954,13 +1643,11 @@
                       },
                       '#withTokenUrlCustomPropertiesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                       withTokenUrlCustomPropertiesMixin(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_properties+: {
-                              custom_connector+: {
-                                oauth2_properties+: {
-                                  token_url_custom_properties+: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_properties+: {
+                            custom_connector+: {
+                              oauth2_properties+: {
+                                token_url_custom_properties+: value,
                               },
                             },
                           },
@@ -1969,24 +1656,20 @@
                     },
                   '#withProfileProperties': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withProfileProperties(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          custom_connector+: {
-                            profile_properties: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        custom_connector+: {
+                          profile_properties: value,
                         },
                       },
                     },
                   },
                   '#withProfilePropertiesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withProfilePropertiesMixin(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          custom_connector+: {
-                            profile_properties+: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        custom_connector+: {
+                          profile_properties+: value,
                         },
                       },
                     },
@@ -1994,21 +1677,17 @@
                 },
               '#withDatadog': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withDatadog(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      datadog: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    datadog: value,
                   },
                 },
               },
               '#withDatadogMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withDatadogMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      datadog+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    datadog+: value,
                   },
                 },
               },
@@ -2016,12 +1695,10 @@
                 {
                   '#withInstanceUrl': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withInstanceUrl(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          datadog+: {
-                            instance_url: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        datadog+: {
+                          instance_url: value,
                         },
                       },
                     },
@@ -2029,21 +1706,17 @@
                 },
               '#withDynatrace': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withDynatrace(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      dynatrace: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    dynatrace: value,
                   },
                 },
               },
               '#withDynatraceMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withDynatraceMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      dynatrace+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    dynatrace+: value,
                   },
                 },
               },
@@ -2051,12 +1724,10 @@
                 {
                   '#withInstanceUrl': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withInstanceUrl(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          dynatrace+: {
-                            instance_url: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        dynatrace+: {
+                          instance_url: value,
                         },
                       },
                     },
@@ -2064,61 +1735,49 @@
                 },
               '#withGoogleAnalytics': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withGoogleAnalytics(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      google_analytics: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    google_analytics: value,
                   },
                 },
               },
               '#withGoogleAnalyticsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withGoogleAnalyticsMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      google_analytics+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    google_analytics+: value,
                   },
                 },
               },
               '#withHoneycode': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withHoneycode(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      honeycode: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    honeycode: value,
                   },
                 },
               },
               '#withHoneycodeMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withHoneycodeMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      honeycode+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    honeycode+: value,
                   },
                 },
               },
               '#withInforNexus': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withInforNexus(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      infor_nexus: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    infor_nexus: value,
                   },
                 },
               },
               '#withInforNexusMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withInforNexusMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      infor_nexus+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    infor_nexus+: value,
                   },
                 },
               },
@@ -2126,12 +1785,10 @@
                 {
                   '#withInstanceUrl': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withInstanceUrl(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          infor_nexus+: {
-                            instance_url: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        infor_nexus+: {
+                          instance_url: value,
                         },
                       },
                     },
@@ -2139,21 +1796,17 @@
                 },
               '#withMarketo': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withMarketo(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      marketo: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    marketo: value,
                   },
                 },
               },
               '#withMarketoMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withMarketoMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      marketo+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    marketo+: value,
                   },
                 },
               },
@@ -2161,12 +1814,10 @@
                 {
                   '#withInstanceUrl': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withInstanceUrl(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          marketo+: {
-                            instance_url: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        marketo+: {
+                          instance_url: value,
                         },
                       },
                     },
@@ -2174,21 +1825,17 @@
                 },
               '#withRedshift': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withRedshift(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      redshift: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    redshift: value,
                   },
                 },
               },
               '#withRedshiftMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withRedshiftMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      redshift+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    redshift+: value,
                   },
                 },
               },
@@ -2196,84 +1843,70 @@
                 {
                   '#withBucketName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withBucketName(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          redshift+: {
-                            bucket_name: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        redshift+: {
+                          bucket_name: value,
                         },
                       },
                     },
                   },
                   '#withBucketPrefix': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withBucketPrefix(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          redshift+: {
-                            bucket_prefix: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        redshift+: {
+                          bucket_prefix: value,
                         },
                       },
                     },
                   },
                   '#withClusterIdentifier': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withClusterIdentifier(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          redshift+: {
-                            cluster_identifier: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        redshift+: {
+                          cluster_identifier: value,
                         },
                       },
                     },
                   },
                   '#withDataApiRoleArn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withDataApiRoleArn(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          redshift+: {
-                            data_api_role_arn: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        redshift+: {
+                          data_api_role_arn: value,
                         },
                       },
                     },
                   },
                   '#withDatabaseName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withDatabaseName(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          redshift+: {
-                            database_name: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        redshift+: {
+                          database_name: value,
                         },
                       },
                     },
                   },
                   '#withDatabaseUrl': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withDatabaseUrl(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          redshift+: {
-                            database_url: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        redshift+: {
+                          database_url: value,
                         },
                       },
                     },
                   },
                   '#withRoleArn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withRoleArn(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          redshift+: {
-                            role_arn: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        redshift+: {
+                          role_arn: value,
                         },
                       },
                     },
@@ -2281,21 +1914,17 @@
                 },
               '#withSalesforce': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withSalesforce(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      salesforce: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    salesforce: value,
                   },
                 },
               },
               '#withSalesforceMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withSalesforceMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      salesforce+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    salesforce+: value,
                   },
                 },
               },
@@ -2303,36 +1932,30 @@
                 {
                   '#withInstanceUrl': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withInstanceUrl(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          salesforce+: {
-                            instance_url: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        salesforce+: {
+                          instance_url: value,
                         },
                       },
                     },
                   },
                   '#withIsSandboxEnvironment': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
                   withIsSandboxEnvironment(value=true): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          salesforce+: {
-                            is_sandbox_environment: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        salesforce+: {
+                          is_sandbox_environment: value,
                         },
                       },
                     },
                   },
                   '#withUsePrivatelinkForMetadataAndAuthorization': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
                   withUsePrivatelinkForMetadataAndAuthorization(value=true): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          salesforce+: {
-                            use_privatelink_for_metadata_and_authorization: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        salesforce+: {
+                          use_privatelink_for_metadata_and_authorization: value,
                         },
                       },
                     },
@@ -2340,21 +1963,17 @@
                 },
               '#withSapoData': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withSapoData(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      sapo_data: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    sapo_data: value,
                   },
                 },
               },
               '#withSapoDataMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withSapoDataMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      sapo_data+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    sapo_data+: value,
                   },
                 },
               },
@@ -2362,72 +1981,60 @@
                 {
                   '#withApplicationHostUrl': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withApplicationHostUrl(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          sapo_data+: {
-                            application_host_url: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        sapo_data+: {
+                          application_host_url: value,
                         },
                       },
                     },
                   },
                   '#withApplicationServicePath': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withApplicationServicePath(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          sapo_data+: {
-                            application_service_path: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        sapo_data+: {
+                          application_service_path: value,
                         },
                       },
                     },
                   },
                   '#withClientNumber': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withClientNumber(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          sapo_data+: {
-                            client_number: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        sapo_data+: {
+                          client_number: value,
                         },
                       },
                     },
                   },
                   '#withLogonLanguage': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withLogonLanguage(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          sapo_data+: {
-                            logon_language: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        sapo_data+: {
+                          logon_language: value,
                         },
                       },
                     },
                   },
                   '#withOauthProperties': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withOauthProperties(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          sapo_data+: {
-                            oauth_properties: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        sapo_data+: {
+                          oauth_properties: value,
                         },
                       },
                     },
                   },
                   '#withOauthPropertiesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withOauthPropertiesMixin(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          sapo_data+: {
-                            oauth_properties+: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        sapo_data+: {
+                          oauth_properties+: value,
                         },
                       },
                     },
@@ -2436,13 +2043,11 @@
                     {
                       '#withAuthCodeUrl': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                       withAuthCodeUrl(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_properties+: {
-                              sapo_data+: {
-                                oauth_properties+: {
-                                  auth_code_url: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_properties+: {
+                            sapo_data+: {
+                              oauth_properties+: {
+                                auth_code_url: value,
                               },
                             },
                           },
@@ -2450,16 +2055,14 @@
                       },
                       '#withOauthScopes': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
                       withOauthScopes(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_properties+: {
-                              sapo_data+: {
-                                oauth_properties+: {
-                                  oauth_scopes:
-                                    (if std.isArray(value)
-                                     then value
-                                     else [value]),
-                                },
+                        connector_profile_config+: {
+                          connector_profile_properties+: {
+                            sapo_data+: {
+                              oauth_properties+: {
+                                oauth_scopes:
+                                  (if std.isArray(value)
+                                   then value
+                                   else [value]),
                               },
                             },
                           },
@@ -2467,16 +2070,14 @@
                       },
                       '#withOauthScopesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
                       withOauthScopesMixin(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_properties+: {
-                              sapo_data+: {
-                                oauth_properties+: {
-                                  oauth_scopes+:
-                                    (if std.isArray(value)
-                                     then value
-                                     else [value]),
-                                },
+                        connector_profile_config+: {
+                          connector_profile_properties+: {
+                            sapo_data+: {
+                              oauth_properties+: {
+                                oauth_scopes+:
+                                  (if std.isArray(value)
+                                   then value
+                                   else [value]),
                               },
                             },
                           },
@@ -2484,13 +2085,11 @@
                       },
                       '#withTokenUrl': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                       withTokenUrl(value): {
-                        spec+: {
-                          connector_profile_config+: {
-                            connector_profile_properties+: {
-                              sapo_data+: {
-                                oauth_properties+: {
-                                  token_url: value,
-                                },
+                        connector_profile_config+: {
+                          connector_profile_properties+: {
+                            sapo_data+: {
+                              oauth_properties+: {
+                                token_url: value,
                               },
                             },
                           },
@@ -2499,24 +2098,20 @@
                     },
                   '#withPortNumber': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
                   withPortNumber(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          sapo_data+: {
-                            port_number: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        sapo_data+: {
+                          port_number: value,
                         },
                       },
                     },
                   },
                   '#withPrivateLinkServiceName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withPrivateLinkServiceName(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          sapo_data+: {
-                            private_link_service_name: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        sapo_data+: {
+                          private_link_service_name: value,
                         },
                       },
                     },
@@ -2524,21 +2119,17 @@
                 },
               '#withServiceNow': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withServiceNow(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      service_now: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    service_now: value,
                   },
                 },
               },
               '#withServiceNowMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withServiceNowMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      service_now+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    service_now+: value,
                   },
                 },
               },
@@ -2546,12 +2137,10 @@
                 {
                   '#withInstanceUrl': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withInstanceUrl(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          service_now+: {
-                            instance_url: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        service_now+: {
+                          instance_url: value,
                         },
                       },
                     },
@@ -2559,41 +2148,33 @@
                 },
               '#withSingular': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withSingular(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      singular: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    singular: value,
                   },
                 },
               },
               '#withSingularMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withSingularMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      singular+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    singular+: value,
                   },
                 },
               },
               '#withSlack': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withSlack(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      slack: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    slack: value,
                   },
                 },
               },
               '#withSlackMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withSlackMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      slack+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    slack+: value,
                   },
                 },
               },
@@ -2601,12 +2182,10 @@
                 {
                   '#withInstanceUrl': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withInstanceUrl(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          slack+: {
-                            instance_url: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        slack+: {
+                          instance_url: value,
                         },
                       },
                     },
@@ -2614,21 +2193,17 @@
                 },
               '#withSnowflake': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withSnowflake(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      snowflake: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    snowflake: value,
                   },
                 },
               },
               '#withSnowflakeMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withSnowflakeMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      snowflake+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    snowflake+: value,
                   },
                 },
               },
@@ -2636,84 +2211,70 @@
                 {
                   '#withAccountName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withAccountName(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          snowflake+: {
-                            account_name: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        snowflake+: {
+                          account_name: value,
                         },
                       },
                     },
                   },
                   '#withBucketName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withBucketName(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          snowflake+: {
-                            bucket_name: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        snowflake+: {
+                          bucket_name: value,
                         },
                       },
                     },
                   },
                   '#withBucketPrefix': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withBucketPrefix(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          snowflake+: {
-                            bucket_prefix: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        snowflake+: {
+                          bucket_prefix: value,
                         },
                       },
                     },
                   },
                   '#withPrivateLinkServiceName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withPrivateLinkServiceName(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          snowflake+: {
-                            private_link_service_name: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        snowflake+: {
+                          private_link_service_name: value,
                         },
                       },
                     },
                   },
                   '#withRegion': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withRegion(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          snowflake+: {
-                            region: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        snowflake+: {
+                          region: value,
                         },
                       },
                     },
                   },
                   '#withStage': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withStage(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          snowflake+: {
-                            stage: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        snowflake+: {
+                          stage: value,
                         },
                       },
                     },
                   },
                   '#withWarehouse': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withWarehouse(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          snowflake+: {
-                            warehouse: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        snowflake+: {
+                          warehouse: value,
                         },
                       },
                     },
@@ -2721,41 +2282,33 @@
                 },
               '#withTrendmicro': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withTrendmicro(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      trendmicro: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    trendmicro: value,
                   },
                 },
               },
               '#withTrendmicroMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withTrendmicroMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      trendmicro+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    trendmicro+: value,
                   },
                 },
               },
               '#withVeeva': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withVeeva(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      veeva: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    veeva: value,
                   },
                 },
               },
               '#withVeevaMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withVeevaMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      veeva+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    veeva+: value,
                   },
                 },
               },
@@ -2763,12 +2316,10 @@
                 {
                   '#withInstanceUrl': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withInstanceUrl(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          veeva+: {
-                            instance_url: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        veeva+: {
+                          instance_url: value,
                         },
                       },
                     },
@@ -2776,21 +2327,17 @@
                 },
               '#withZendesk': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withZendesk(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      zendesk: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    zendesk: value,
                   },
                 },
               },
               '#withZendeskMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withZendeskMixin(value): {
-                spec+: {
-                  connector_profile_config+: {
-                    connector_profile_properties+: {
-                      zendesk+: value,
-                    },
+                connector_profile_config+: {
+                  connector_profile_properties+: {
+                    zendesk+: value,
                   },
                 },
               },
@@ -2798,12 +2345,10 @@
                 {
                   '#withInstanceUrl': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withInstanceUrl(value): {
-                    spec+: {
-                      connector_profile_config+: {
-                        connector_profile_properties+: {
-                          zendesk+: {
-                            instance_url: value,
-                          },
+                    connector_profile_config+: {
+                      connector_profile_properties+: {
+                        zendesk+: {
+                          instance_url: value,
                         },
                       },
                     },
@@ -2813,311 +2358,242 @@
         },
       '#withConnectorType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withConnectorType(value): {
-        spec+: {
-          connector_type: value,
-        },
+        connector_type: value,
       },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withCredentialsArn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withCredentialsArn(value): {
-        spec+: {
-          credentials_arn: value,
-        },
+        credentials_arn: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withKmsArn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withKmsArn(value): {
-        spec+: {
-          kms_arn: value,
-        },
+        kms_arn: value,
       },
       '#withLifecycle': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withLifecycle(value): {
-        spec+: {
-          lifecycle: value,
-        },
+        lifecycle: value,
       },
       '#withLifecycleMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withLifecycleMixin(value): {
-        spec+: {
-          lifecycle+: value,
-        },
+        lifecycle+: value,
       },
       lifecycle+:
         {
           '#withCreateBeforeDestroy': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
           withCreateBeforeDestroy(value=true): {
-            spec+: {
-              lifecycle+: {
-                create_before_destroy: value,
-              },
+            lifecycle+: {
+              create_before_destroy: value,
             },
           },
           '#withIgnoreChanges': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withIgnoreChanges(value): {
-            spec+: {
-              lifecycle+: {
-                ignore_changes:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              ignore_changes:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           '#withIgnoreChangesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withIgnoreChangesMixin(value): {
-            spec+: {
-              lifecycle+: {
-                ignore_changes+:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              ignore_changes+:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           '#withPostcondition': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPostcondition(value): {
-            spec+: {
-              lifecycle+: {
-                postcondition: value,
-              },
+            lifecycle+: {
+              postcondition: value,
             },
           },
           '#withPostconditionMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPostconditionMixin(value): {
-            spec+: {
-              lifecycle+: {
-                postcondition+: value,
-              },
+            lifecycle+: {
+              postcondition+: value,
             },
           },
           postcondition+:
             {
               '#withCondition': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
               withCondition(value=true): {
-                spec+: {
-                  lifecycle+: {
-                    postcondition+: {
-                      condition: value,
-                    },
+                lifecycle+: {
+                  postcondition+: {
+                    condition: value,
                   },
                 },
               },
               '#withErrorMessage': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withErrorMessage(value): {
-                spec+: {
-                  lifecycle+: {
-                    postcondition+: {
-                      error_message: value,
-                    },
+                lifecycle+: {
+                  postcondition+: {
+                    error_message: value,
                   },
                 },
               },
             },
           '#withPrecondition': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPrecondition(value): {
-            spec+: {
-              lifecycle+: {
-                precondition: value,
-              },
+            lifecycle+: {
+              precondition: value,
             },
           },
           '#withPreconditionMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPreconditionMixin(value): {
-            spec+: {
-              lifecycle+: {
-                precondition+: value,
-              },
+            lifecycle+: {
+              precondition+: value,
             },
           },
           precondition+:
             {
               '#withCondition': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
               withCondition(value=true): {
-                spec+: {
-                  lifecycle+: {
-                    precondition+: {
-                      condition: value,
-                    },
+                lifecycle+: {
+                  precondition+: {
+                    condition: value,
                   },
                 },
               },
               '#withErrorMessage': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withErrorMessage(value): {
-                spec+: {
-                  lifecycle+: {
-                    precondition+: {
-                      error_message: value,
-                    },
+                lifecycle+: {
+                  precondition+: {
+                    error_message: value,
                   },
                 },
               },
             },
           '#withPreventDestroy': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
           withPreventDestroy(value=true): {
-            spec+: {
-              lifecycle+: {
-                prevent_destroy: value,
-              },
+            lifecycle+: {
+              prevent_destroy: value,
             },
           },
           '#withReplaceTriggeredBy': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withReplaceTriggeredBy(value): {
-            spec+: {
-              lifecycle+: {
-                replace_triggered_by:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              replace_triggered_by:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           '#withReplaceTriggeredByMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withReplaceTriggeredByMixin(value): {
-            spec+: {
-              lifecycle+: {
-                replace_triggered_by+:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              replace_triggered_by+:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
         },
       '#withName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withName(value): {
-        spec+: {
-          name: value,
-        },
+        name: value,
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withProvisioner': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withProvisioner(value): {
-        spec+: {
-          provisioner:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        provisioner:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withProvisionerMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withProvisionerMixin(value): {
-        spec+: {
-          provisioner+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        provisioner+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
     },
   aws_appflow_flow:
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'destination_flow_config', type: 'array' }, { default: null, enums: null, name: 'name', type: 'string' }, { default: null, enums: null, name: 'source_flow_config', type: 'object' }, { default: null, enums: null, name: 'task', type: 'array' }, { default: null, enums: null, name: 'trigger_config', type: 'object' }], help: '' } },
       new(tf_resource_key, destination_flow_config, name, source_flow_config, task, trigger_config):
-        {
-          local this = self,
-          resource: {
-            aws_appflow_flow: {
-              [this.tf_resource_key]: this.spec,
-            },
-          },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
+        self.withTfResourceKey(tf_resource_key)
         + self.withDestinationFlowConfig(destination_flow_config)
         + self.withName(name)
         + self.withSourceFlowConfig(source_flow_config)
         + self.withTask(task)
         + self.withTriggerConfig(trigger_config),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+      withTfResourceKey(tf_resource_key):
+        {
+          local this = self,
+          _manifest():: {
+            resource: {
+              aws_appflow_flow: {
+                [tf_resource_key]: this,
+              },
+            },
+          },
+        },
       '#withArn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withArn(value): {
-        spec+: {
-          arn: value,
-        },
+        arn: value,
       },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDescription': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withDescription(value): {
-        spec+: {
-          description: value,
-        },
+        description: value,
       },
       '#withDestinationFlowConfig': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDestinationFlowConfig(value): {
-        spec+: {
-          destination_flow_config:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        destination_flow_config:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDestinationFlowConfigMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDestinationFlowConfigMixin(value): {
-        spec+: {
-          destination_flow_config+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        destination_flow_config+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       destination_flow_config+:
         {
@@ -4412,234 +3888,182 @@
         },
       '#withFlowStatus': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withFlowStatus(value): {
-        spec+: {
-          flow_status: value,
-        },
+        flow_status: value,
       },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withKmsArn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withKmsArn(value): {
-        spec+: {
-          kms_arn: value,
-        },
+        kms_arn: value,
       },
       '#withLifecycle': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withLifecycle(value): {
-        spec+: {
-          lifecycle: value,
-        },
+        lifecycle: value,
       },
       '#withLifecycleMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withLifecycleMixin(value): {
-        spec+: {
-          lifecycle+: value,
-        },
+        lifecycle+: value,
       },
       lifecycle+:
         {
           '#withCreateBeforeDestroy': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
           withCreateBeforeDestroy(value=true): {
-            spec+: {
-              lifecycle+: {
-                create_before_destroy: value,
-              },
+            lifecycle+: {
+              create_before_destroy: value,
             },
           },
           '#withIgnoreChanges': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withIgnoreChanges(value): {
-            spec+: {
-              lifecycle+: {
-                ignore_changes:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              ignore_changes:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           '#withIgnoreChangesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withIgnoreChangesMixin(value): {
-            spec+: {
-              lifecycle+: {
-                ignore_changes+:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              ignore_changes+:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           '#withPostcondition': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPostcondition(value): {
-            spec+: {
-              lifecycle+: {
-                postcondition: value,
-              },
+            lifecycle+: {
+              postcondition: value,
             },
           },
           '#withPostconditionMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPostconditionMixin(value): {
-            spec+: {
-              lifecycle+: {
-                postcondition+: value,
-              },
+            lifecycle+: {
+              postcondition+: value,
             },
           },
           postcondition+:
             {
               '#withCondition': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
               withCondition(value=true): {
-                spec+: {
-                  lifecycle+: {
-                    postcondition+: {
-                      condition: value,
-                    },
+                lifecycle+: {
+                  postcondition+: {
+                    condition: value,
                   },
                 },
               },
               '#withErrorMessage': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withErrorMessage(value): {
-                spec+: {
-                  lifecycle+: {
-                    postcondition+: {
-                      error_message: value,
-                    },
+                lifecycle+: {
+                  postcondition+: {
+                    error_message: value,
                   },
                 },
               },
             },
           '#withPrecondition': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPrecondition(value): {
-            spec+: {
-              lifecycle+: {
-                precondition: value,
-              },
+            lifecycle+: {
+              precondition: value,
             },
           },
           '#withPreconditionMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withPreconditionMixin(value): {
-            spec+: {
-              lifecycle+: {
-                precondition+: value,
-              },
+            lifecycle+: {
+              precondition+: value,
             },
           },
           precondition+:
             {
               '#withCondition': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
               withCondition(value=true): {
-                spec+: {
-                  lifecycle+: {
-                    precondition+: {
-                      condition: value,
-                    },
+                lifecycle+: {
+                  precondition+: {
+                    condition: value,
                   },
                 },
               },
               '#withErrorMessage': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withErrorMessage(value): {
-                spec+: {
-                  lifecycle+: {
-                    precondition+: {
-                      error_message: value,
-                    },
+                lifecycle+: {
+                  precondition+: {
+                    error_message: value,
                   },
                 },
               },
             },
           '#withPreventDestroy': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
           withPreventDestroy(value=true): {
-            spec+: {
-              lifecycle+: {
-                prevent_destroy: value,
-              },
+            lifecycle+: {
+              prevent_destroy: value,
             },
           },
           '#withReplaceTriggeredBy': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withReplaceTriggeredBy(value): {
-            spec+: {
-              lifecycle+: {
-                replace_triggered_by:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              replace_triggered_by:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
           '#withReplaceTriggeredByMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
           withReplaceTriggeredByMixin(value): {
-            spec+: {
-              lifecycle+: {
-                replace_triggered_by+:
-                  (if std.isArray(value)
-                   then value
-                   else [value]),
-              },
+            lifecycle+: {
+              replace_triggered_by+:
+                (if std.isArray(value)
+                 then value
+                 else [value]),
             },
           },
         },
       '#withMetadataCatalogConfig': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withMetadataCatalogConfig(value): {
-        spec+: {
-          metadata_catalog_config: value,
-        },
+        metadata_catalog_config: value,
       },
       '#withMetadataCatalogConfigMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withMetadataCatalogConfigMixin(value): {
-        spec+: {
-          metadata_catalog_config+: value,
-        },
+        metadata_catalog_config+: value,
       },
       metadata_catalog_config+:
         {
           '#withGlueDataCatalog': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withGlueDataCatalog(value): {
-            spec+: {
-              metadata_catalog_config+: {
-                glue_data_catalog: value,
-              },
+            metadata_catalog_config+: {
+              glue_data_catalog: value,
             },
           },
           '#withGlueDataCatalogMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withGlueDataCatalogMixin(value): {
-            spec+: {
-              metadata_catalog_config+: {
-                glue_data_catalog+: value,
-              },
+            metadata_catalog_config+: {
+              glue_data_catalog+: value,
             },
           },
           glue_data_catalog+:
             {
               '#withDatabaseName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withDatabaseName(value): {
-                spec+: {
-                  metadata_catalog_config+: {
-                    glue_data_catalog+: {
-                      database_name: value,
-                    },
+                metadata_catalog_config+: {
+                  glue_data_catalog+: {
+                    database_name: value,
                   },
                 },
               },
               '#withRoleArn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withRoleArn(value): {
-                spec+: {
-                  metadata_catalog_config+: {
-                    glue_data_catalog+: {
-                      role_arn: value,
-                    },
+                metadata_catalog_config+: {
+                  glue_data_catalog+: {
+                    role_arn: value,
                   },
                 },
               },
               '#withTablePrefix': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withTablePrefix(value): {
-                spec+: {
-                  metadata_catalog_config+: {
-                    glue_data_catalog+: {
-                      table_prefix: value,
-                    },
+                metadata_catalog_config+: {
+                  glue_data_catalog+: {
+                    table_prefix: value,
                   },
                 },
               },
@@ -4647,136 +4071,104 @@
         },
       '#withName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withName(value): {
-        spec+: {
-          name: value,
-        },
+        name: value,
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withProvisioner': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withProvisioner(value): {
-        spec+: {
-          provisioner:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        provisioner:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withProvisionerMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withProvisionerMixin(value): {
-        spec+: {
-          provisioner+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        provisioner+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withSourceFlowConfig': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withSourceFlowConfig(value): {
-        spec+: {
-          source_flow_config: value,
-        },
+        source_flow_config: value,
       },
       '#withSourceFlowConfigMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withSourceFlowConfigMixin(value): {
-        spec+: {
-          source_flow_config+: value,
-        },
+        source_flow_config+: value,
       },
       source_flow_config+:
         {
           '#withApiVersion': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
           withApiVersion(value): {
-            spec+: {
-              source_flow_config+: {
-                api_version: value,
-              },
+            source_flow_config+: {
+              api_version: value,
             },
           },
           '#withConnectorProfileName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
           withConnectorProfileName(value): {
-            spec+: {
-              source_flow_config+: {
-                connector_profile_name: value,
-              },
+            source_flow_config+: {
+              connector_profile_name: value,
             },
           },
           '#withConnectorType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
           withConnectorType(value): {
-            spec+: {
-              source_flow_config+: {
-                connector_type: value,
-              },
+            source_flow_config+: {
+              connector_type: value,
             },
           },
           '#withIncrementalPullConfig': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withIncrementalPullConfig(value): {
-            spec+: {
-              source_flow_config+: {
-                incremental_pull_config: value,
-              },
+            source_flow_config+: {
+              incremental_pull_config: value,
             },
           },
           '#withIncrementalPullConfigMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withIncrementalPullConfigMixin(value): {
-            spec+: {
-              source_flow_config+: {
-                incremental_pull_config+: value,
-              },
+            source_flow_config+: {
+              incremental_pull_config+: value,
             },
           },
           incremental_pull_config+:
             {
               '#withDatetimeTypeFieldName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
               withDatetimeTypeFieldName(value): {
-                spec+: {
-                  source_flow_config+: {
-                    incremental_pull_config+: {
-                      datetime_type_field_name: value,
-                    },
+                source_flow_config+: {
+                  incremental_pull_config+: {
+                    datetime_type_field_name: value,
                   },
                 },
               },
             },
           '#withSourceConnectorProperties': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withSourceConnectorProperties(value): {
-            spec+: {
-              source_flow_config+: {
-                source_connector_properties: value,
-              },
+            source_flow_config+: {
+              source_connector_properties: value,
             },
           },
           '#withSourceConnectorPropertiesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withSourceConnectorPropertiesMixin(value): {
-            spec+: {
-              source_flow_config+: {
-                source_connector_properties+: value,
-              },
+            source_flow_config+: {
+              source_connector_properties+: value,
             },
           },
           source_connector_properties+:
             {
               '#withAmplitude': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withAmplitude(value): {
-                spec+: {
-                  source_flow_config+: {
-                    source_connector_properties+: {
-                      amplitude: value,
-                    },
+                source_flow_config+: {
+                  source_connector_properties+: {
+                    amplitude: value,
                   },
                 },
               },
               '#withAmplitudeMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withAmplitudeMixin(value): {
-                spec+: {
-                  source_flow_config+: {
-                    source_connector_properties+: {
-                      amplitude+: value,
-                    },
+                source_flow_config+: {
+                  source_connector_properties+: {
+                    amplitude+: value,
                   },
                 },
               },
@@ -4784,12 +4176,10 @@
                 {
                   '#withObject': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withObject(value): {
-                    spec+: {
-                      source_flow_config+: {
-                        source_connector_properties+: {
-                          amplitude+: {
-                            object: value,
-                          },
+                    source_flow_config+: {
+                      source_connector_properties+: {
+                        amplitude+: {
+                          object: value,
                         },
                       },
                     },
@@ -4797,21 +4187,17 @@
                 },
               '#withCustomConnector': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withCustomConnector(value): {
-                spec+: {
-                  source_flow_config+: {
-                    source_connector_properties+: {
-                      custom_connector: value,
-                    },
+                source_flow_config+: {
+                  source_connector_properties+: {
+                    custom_connector: value,
                   },
                 },
               },
               '#withCustomConnectorMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withCustomConnectorMixin(value): {
-                spec+: {
-                  source_flow_config+: {
-                    source_connector_properties+: {
-                      custom_connector+: value,
-                    },
+                source_flow_config+: {
+                  source_connector_properties+: {
+                    custom_connector+: value,
                   },
                 },
               },
@@ -4819,36 +4205,30 @@
                 {
                   '#withCustomProperties': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withCustomProperties(value): {
-                    spec+: {
-                      source_flow_config+: {
-                        source_connector_properties+: {
-                          custom_connector+: {
-                            custom_properties: value,
-                          },
+                    source_flow_config+: {
+                      source_connector_properties+: {
+                        custom_connector+: {
+                          custom_properties: value,
                         },
                       },
                     },
                   },
                   '#withCustomPropertiesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withCustomPropertiesMixin(value): {
-                    spec+: {
-                      source_flow_config+: {
-                        source_connector_properties+: {
-                          custom_connector+: {
-                            custom_properties+: value,
-                          },
+                    source_flow_config+: {
+                      source_connector_properties+: {
+                        custom_connector+: {
+                          custom_properties+: value,
                         },
                       },
                     },
                   },
                   '#withEntityName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withEntityName(value): {
-                    spec+: {
-                      source_flow_config+: {
-                        source_connector_properties+: {
-                          custom_connector+: {
-                            entity_name: value,
-                          },
+                    source_flow_config+: {
+                      source_connector_properties+: {
+                        custom_connector+: {
+                          entity_name: value,
                         },
                       },
                     },
@@ -4856,21 +4236,17 @@
                 },
               '#withDatadog': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withDatadog(value): {
-                spec+: {
-                  source_flow_config+: {
-                    source_connector_properties+: {
-                      datadog: value,
-                    },
+                source_flow_config+: {
+                  source_connector_properties+: {
+                    datadog: value,
                   },
                 },
               },
               '#withDatadogMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withDatadogMixin(value): {
-                spec+: {
-                  source_flow_config+: {
-                    source_connector_properties+: {
-                      datadog+: value,
-                    },
+                source_flow_config+: {
+                  source_connector_properties+: {
+                    datadog+: value,
                   },
                 },
               },
@@ -4878,12 +4254,10 @@
                 {
                   '#withObject': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withObject(value): {
-                    spec+: {
-                      source_flow_config+: {
-                        source_connector_properties+: {
-                          datadog+: {
-                            object: value,
-                          },
+                    source_flow_config+: {
+                      source_connector_properties+: {
+                        datadog+: {
+                          object: value,
                         },
                       },
                     },
@@ -4891,21 +4265,17 @@
                 },
               '#withDynatrace': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withDynatrace(value): {
-                spec+: {
-                  source_flow_config+: {
-                    source_connector_properties+: {
-                      dynatrace: value,
-                    },
+                source_flow_config+: {
+                  source_connector_properties+: {
+                    dynatrace: value,
                   },
                 },
               },
               '#withDynatraceMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withDynatraceMixin(value): {
-                spec+: {
-                  source_flow_config+: {
-                    source_connector_properties+: {
-                      dynatrace+: value,
-                    },
+                source_flow_config+: {
+                  source_connector_properties+: {
+                    dynatrace+: value,
                   },
                 },
               },
@@ -4913,12 +4283,10 @@
                 {
                   '#withObject': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withObject(value): {
-                    spec+: {
-                      source_flow_config+: {
-                        source_connector_properties+: {
-                          dynatrace+: {
-                            object: value,
-                          },
+                    source_flow_config+: {
+                      source_connector_properties+: {
+                        dynatrace+: {
+                          object: value,
                         },
                       },
                     },
@@ -4926,21 +4294,17 @@
                 },
               '#withGoogleAnalytics': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withGoogleAnalytics(value): {
-                spec+: {
-                  source_flow_config+: {
-                    source_connector_properties+: {
-                      google_analytics: value,
-                    },
+                source_flow_config+: {
+                  source_connector_properties+: {
+                    google_analytics: value,
                   },
                 },
               },
               '#withGoogleAnalyticsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withGoogleAnalyticsMixin(value): {
-                spec+: {
-                  source_flow_config+: {
-                    source_connector_properties+: {
-                      google_analytics+: value,
-                    },
+                source_flow_config+: {
+                  source_connector_properties+: {
+                    google_analytics+: value,
                   },
                 },
               },
@@ -4948,12 +4312,10 @@
                 {
                   '#withObject': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withObject(value): {
-                    spec+: {
-                      source_flow_config+: {
-                        source_connector_properties+: {
-                          google_analytics+: {
-                            object: value,
-                          },
+                    source_flow_config+: {
+                      source_connector_properties+: {
+                        google_analytics+: {
+                          object: value,
                         },
                       },
                     },
@@ -4961,21 +4323,17 @@
                 },
               '#withInforNexus': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withInforNexus(value): {
-                spec+: {
-                  source_flow_config+: {
-                    source_connector_properties+: {
-                      infor_nexus: value,
-                    },
+                source_flow_config+: {
+                  source_connector_properties+: {
+                    infor_nexus: value,
                   },
                 },
               },
               '#withInforNexusMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withInforNexusMixin(value): {
-                spec+: {
-                  source_flow_config+: {
-                    source_connector_properties+: {
-                      infor_nexus+: value,
-                    },
+                source_flow_config+: {
+                  source_connector_properties+: {
+                    infor_nexus+: value,
                   },
                 },
               },
@@ -4983,12 +4341,10 @@
                 {
                   '#withObject': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withObject(value): {
-                    spec+: {
-                      source_flow_config+: {
-                        source_connector_properties+: {
-                          infor_nexus+: {
-                            object: value,
-                          },
+                    source_flow_config+: {
+                      source_connector_properties+: {
+                        infor_nexus+: {
+                          object: value,
                         },
                       },
                     },
@@ -4996,21 +4352,17 @@
                 },
               '#withMarketo': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withMarketo(value): {
-                spec+: {
-                  source_flow_config+: {
-                    source_connector_properties+: {
-                      marketo: value,
-                    },
+                source_flow_config+: {
+                  source_connector_properties+: {
+                    marketo: value,
                   },
                 },
               },
               '#withMarketoMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withMarketoMixin(value): {
-                spec+: {
-                  source_flow_config+: {
-                    source_connector_properties+: {
-                      marketo+: value,
-                    },
+                source_flow_config+: {
+                  source_connector_properties+: {
+                    marketo+: value,
                   },
                 },
               },
@@ -5018,12 +4370,10 @@
                 {
                   '#withObject': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withObject(value): {
-                    spec+: {
-                      source_flow_config+: {
-                        source_connector_properties+: {
-                          marketo+: {
-                            object: value,
-                          },
+                    source_flow_config+: {
+                      source_connector_properties+: {
+                        marketo+: {
+                          object: value,
                         },
                       },
                     },
@@ -5031,21 +4381,17 @@
                 },
               '#withS3': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withS3(value): {
-                spec+: {
-                  source_flow_config+: {
-                    source_connector_properties+: {
-                      s3: value,
-                    },
+                source_flow_config+: {
+                  source_connector_properties+: {
+                    s3: value,
                   },
                 },
               },
               '#withS3Mixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withS3Mixin(value): {
-                spec+: {
-                  source_flow_config+: {
-                    source_connector_properties+: {
-                      s3+: value,
-                    },
+                source_flow_config+: {
+                  source_connector_properties+: {
+                    s3+: value,
                   },
                 },
               },
@@ -5053,48 +4399,40 @@
                 {
                   '#withBucketName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withBucketName(value): {
-                    spec+: {
-                      source_flow_config+: {
-                        source_connector_properties+: {
-                          s3+: {
-                            bucket_name: value,
-                          },
+                    source_flow_config+: {
+                      source_connector_properties+: {
+                        s3+: {
+                          bucket_name: value,
                         },
                       },
                     },
                   },
                   '#withBucketPrefix': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withBucketPrefix(value): {
-                    spec+: {
-                      source_flow_config+: {
-                        source_connector_properties+: {
-                          s3+: {
-                            bucket_prefix: value,
-                          },
+                    source_flow_config+: {
+                      source_connector_properties+: {
+                        s3+: {
+                          bucket_prefix: value,
                         },
                       },
                     },
                   },
                   '#withS3InputFormatConfig': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withS3InputFormatConfig(value): {
-                    spec+: {
-                      source_flow_config+: {
-                        source_connector_properties+: {
-                          s3+: {
-                            s3_input_format_config: value,
-                          },
+                    source_flow_config+: {
+                      source_connector_properties+: {
+                        s3+: {
+                          s3_input_format_config: value,
                         },
                       },
                     },
                   },
                   '#withS3InputFormatConfigMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withS3InputFormatConfigMixin(value): {
-                    spec+: {
-                      source_flow_config+: {
-                        source_connector_properties+: {
-                          s3+: {
-                            s3_input_format_config+: value,
-                          },
+                    source_flow_config+: {
+                      source_connector_properties+: {
+                        s3+: {
+                          s3_input_format_config+: value,
                         },
                       },
                     },
@@ -5103,13 +4441,11 @@
                     {
                       '#withS3InputFileType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                       withS3InputFileType(value): {
-                        spec+: {
-                          source_flow_config+: {
-                            source_connector_properties+: {
-                              s3+: {
-                                s3_input_format_config+: {
-                                  s3_input_file_type: value,
-                                },
+                        source_flow_config+: {
+                          source_connector_properties+: {
+                            s3+: {
+                              s3_input_format_config+: {
+                                s3_input_file_type: value,
                               },
                             },
                           },
@@ -5119,21 +4455,17 @@
                 },
               '#withSalesforce': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withSalesforce(value): {
-                spec+: {
-                  source_flow_config+: {
-                    source_connector_properties+: {
-                      salesforce: value,
-                    },
+                source_flow_config+: {
+                  source_connector_properties+: {
+                    salesforce: value,
                   },
                 },
               },
               '#withSalesforceMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withSalesforceMixin(value): {
-                spec+: {
-                  source_flow_config+: {
-                    source_connector_properties+: {
-                      salesforce+: value,
-                    },
+                source_flow_config+: {
+                  source_connector_properties+: {
+                    salesforce+: value,
                   },
                 },
               },
@@ -5141,48 +4473,40 @@
                 {
                   '#withDataTransferApi': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withDataTransferApi(value): {
-                    spec+: {
-                      source_flow_config+: {
-                        source_connector_properties+: {
-                          salesforce+: {
-                            data_transfer_api: value,
-                          },
+                    source_flow_config+: {
+                      source_connector_properties+: {
+                        salesforce+: {
+                          data_transfer_api: value,
                         },
                       },
                     },
                   },
                   '#withEnableDynamicFieldUpdate': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
                   withEnableDynamicFieldUpdate(value=true): {
-                    spec+: {
-                      source_flow_config+: {
-                        source_connector_properties+: {
-                          salesforce+: {
-                            enable_dynamic_field_update: value,
-                          },
+                    source_flow_config+: {
+                      source_connector_properties+: {
+                        salesforce+: {
+                          enable_dynamic_field_update: value,
                         },
                       },
                     },
                   },
                   '#withIncludeDeletedRecords': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
                   withIncludeDeletedRecords(value=true): {
-                    spec+: {
-                      source_flow_config+: {
-                        source_connector_properties+: {
-                          salesforce+: {
-                            include_deleted_records: value,
-                          },
+                    source_flow_config+: {
+                      source_connector_properties+: {
+                        salesforce+: {
+                          include_deleted_records: value,
                         },
                       },
                     },
                   },
                   '#withObject': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withObject(value): {
-                    spec+: {
-                      source_flow_config+: {
-                        source_connector_properties+: {
-                          salesforce+: {
-                            object: value,
-                          },
+                    source_flow_config+: {
+                      source_connector_properties+: {
+                        salesforce+: {
+                          object: value,
                         },
                       },
                     },
@@ -5190,21 +4514,17 @@
                 },
               '#withSapoData': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withSapoData(value): {
-                spec+: {
-                  source_flow_config+: {
-                    source_connector_properties+: {
-                      sapo_data: value,
-                    },
+                source_flow_config+: {
+                  source_connector_properties+: {
+                    sapo_data: value,
                   },
                 },
               },
               '#withSapoDataMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withSapoDataMixin(value): {
-                spec+: {
-                  source_flow_config+: {
-                    source_connector_properties+: {
-                      sapo_data+: value,
-                    },
+                source_flow_config+: {
+                  source_connector_properties+: {
+                    sapo_data+: value,
                   },
                 },
               },
@@ -5212,36 +4532,30 @@
                 {
                   '#withObjectPath': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withObjectPath(value): {
-                    spec+: {
-                      source_flow_config+: {
-                        source_connector_properties+: {
-                          sapo_data+: {
-                            object_path: value,
-                          },
+                    source_flow_config+: {
+                      source_connector_properties+: {
+                        sapo_data+: {
+                          object_path: value,
                         },
                       },
                     },
                   },
                   '#withPaginationConfig': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withPaginationConfig(value): {
-                    spec+: {
-                      source_flow_config+: {
-                        source_connector_properties+: {
-                          sapo_data+: {
-                            pagination_config: value,
-                          },
+                    source_flow_config+: {
+                      source_connector_properties+: {
+                        sapo_data+: {
+                          pagination_config: value,
                         },
                       },
                     },
                   },
                   '#withPaginationConfigMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withPaginationConfigMixin(value): {
-                    spec+: {
-                      source_flow_config+: {
-                        source_connector_properties+: {
-                          sapo_data+: {
-                            pagination_config+: value,
-                          },
+                    source_flow_config+: {
+                      source_connector_properties+: {
+                        sapo_data+: {
+                          pagination_config+: value,
                         },
                       },
                     },
@@ -5250,13 +4564,11 @@
                     {
                       '#withMaxPageSize': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
                       withMaxPageSize(value): {
-                        spec+: {
-                          source_flow_config+: {
-                            source_connector_properties+: {
-                              sapo_data+: {
-                                pagination_config+: {
-                                  max_page_size: value,
-                                },
+                        source_flow_config+: {
+                          source_connector_properties+: {
+                            sapo_data+: {
+                              pagination_config+: {
+                                max_page_size: value,
                               },
                             },
                           },
@@ -5265,24 +4577,20 @@
                     },
                   '#withParallelismConfig': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withParallelismConfig(value): {
-                    spec+: {
-                      source_flow_config+: {
-                        source_connector_properties+: {
-                          sapo_data+: {
-                            parallelism_config: value,
-                          },
+                    source_flow_config+: {
+                      source_connector_properties+: {
+                        sapo_data+: {
+                          parallelism_config: value,
                         },
                       },
                     },
                   },
                   '#withParallelismConfigMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
                   withParallelismConfigMixin(value): {
-                    spec+: {
-                      source_flow_config+: {
-                        source_connector_properties+: {
-                          sapo_data+: {
-                            parallelism_config+: value,
-                          },
+                    source_flow_config+: {
+                      source_connector_properties+: {
+                        sapo_data+: {
+                          parallelism_config+: value,
                         },
                       },
                     },
@@ -5291,13 +4599,11 @@
                     {
                       '#withMaxPageSize': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
                       withMaxPageSize(value): {
-                        spec+: {
-                          source_flow_config+: {
-                            source_connector_properties+: {
-                              sapo_data+: {
-                                parallelism_config+: {
-                                  max_page_size: value,
-                                },
+                        source_flow_config+: {
+                          source_connector_properties+: {
+                            sapo_data+: {
+                              parallelism_config+: {
+                                max_page_size: value,
                               },
                             },
                           },
@@ -5307,21 +4613,17 @@
                 },
               '#withServiceNow': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withServiceNow(value): {
-                spec+: {
-                  source_flow_config+: {
-                    source_connector_properties+: {
-                      service_now: value,
-                    },
+                source_flow_config+: {
+                  source_connector_properties+: {
+                    service_now: value,
                   },
                 },
               },
               '#withServiceNowMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withServiceNowMixin(value): {
-                spec+: {
-                  source_flow_config+: {
-                    source_connector_properties+: {
-                      service_now+: value,
-                    },
+                source_flow_config+: {
+                  source_connector_properties+: {
+                    service_now+: value,
                   },
                 },
               },
@@ -5329,12 +4631,10 @@
                 {
                   '#withObject': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withObject(value): {
-                    spec+: {
-                      source_flow_config+: {
-                        source_connector_properties+: {
-                          service_now+: {
-                            object: value,
-                          },
+                    source_flow_config+: {
+                      source_connector_properties+: {
+                        service_now+: {
+                          object: value,
                         },
                       },
                     },
@@ -5342,21 +4642,17 @@
                 },
               '#withSingular': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withSingular(value): {
-                spec+: {
-                  source_flow_config+: {
-                    source_connector_properties+: {
-                      singular: value,
-                    },
+                source_flow_config+: {
+                  source_connector_properties+: {
+                    singular: value,
                   },
                 },
               },
               '#withSingularMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withSingularMixin(value): {
-                spec+: {
-                  source_flow_config+: {
-                    source_connector_properties+: {
-                      singular+: value,
-                    },
+                source_flow_config+: {
+                  source_connector_properties+: {
+                    singular+: value,
                   },
                 },
               },
@@ -5364,12 +4660,10 @@
                 {
                   '#withObject': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withObject(value): {
-                    spec+: {
-                      source_flow_config+: {
-                        source_connector_properties+: {
-                          singular+: {
-                            object: value,
-                          },
+                    source_flow_config+: {
+                      source_connector_properties+: {
+                        singular+: {
+                          object: value,
                         },
                       },
                     },
@@ -5377,21 +4671,17 @@
                 },
               '#withSlack': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withSlack(value): {
-                spec+: {
-                  source_flow_config+: {
-                    source_connector_properties+: {
-                      slack: value,
-                    },
+                source_flow_config+: {
+                  source_connector_properties+: {
+                    slack: value,
                   },
                 },
               },
               '#withSlackMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withSlackMixin(value): {
-                spec+: {
-                  source_flow_config+: {
-                    source_connector_properties+: {
-                      slack+: value,
-                    },
+                source_flow_config+: {
+                  source_connector_properties+: {
+                    slack+: value,
                   },
                 },
               },
@@ -5399,12 +4689,10 @@
                 {
                   '#withObject': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withObject(value): {
-                    spec+: {
-                      source_flow_config+: {
-                        source_connector_properties+: {
-                          slack+: {
-                            object: value,
-                          },
+                    source_flow_config+: {
+                      source_connector_properties+: {
+                        slack+: {
+                          object: value,
                         },
                       },
                     },
@@ -5412,21 +4700,17 @@
                 },
               '#withTrendmicro': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withTrendmicro(value): {
-                spec+: {
-                  source_flow_config+: {
-                    source_connector_properties+: {
-                      trendmicro: value,
-                    },
+                source_flow_config+: {
+                  source_connector_properties+: {
+                    trendmicro: value,
                   },
                 },
               },
               '#withTrendmicroMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withTrendmicroMixin(value): {
-                spec+: {
-                  source_flow_config+: {
-                    source_connector_properties+: {
-                      trendmicro+: value,
-                    },
+                source_flow_config+: {
+                  source_connector_properties+: {
+                    trendmicro+: value,
                   },
                 },
               },
@@ -5434,12 +4718,10 @@
                 {
                   '#withObject': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withObject(value): {
-                    spec+: {
-                      source_flow_config+: {
-                        source_connector_properties+: {
-                          trendmicro+: {
-                            object: value,
-                          },
+                    source_flow_config+: {
+                      source_connector_properties+: {
+                        trendmicro+: {
+                          object: value,
                         },
                       },
                     },
@@ -5447,21 +4729,17 @@
                 },
               '#withVeeva': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withVeeva(value): {
-                spec+: {
-                  source_flow_config+: {
-                    source_connector_properties+: {
-                      veeva: value,
-                    },
+                source_flow_config+: {
+                  source_connector_properties+: {
+                    veeva: value,
                   },
                 },
               },
               '#withVeevaMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withVeevaMixin(value): {
-                spec+: {
-                  source_flow_config+: {
-                    source_connector_properties+: {
-                      veeva+: value,
-                    },
+                source_flow_config+: {
+                  source_connector_properties+: {
+                    veeva+: value,
                   },
                 },
               },
@@ -5469,60 +4747,50 @@
                 {
                   '#withDocumentType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withDocumentType(value): {
-                    spec+: {
-                      source_flow_config+: {
-                        source_connector_properties+: {
-                          veeva+: {
-                            document_type: value,
-                          },
+                    source_flow_config+: {
+                      source_connector_properties+: {
+                        veeva+: {
+                          document_type: value,
                         },
                       },
                     },
                   },
                   '#withIncludeAllVersions': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
                   withIncludeAllVersions(value=true): {
-                    spec+: {
-                      source_flow_config+: {
-                        source_connector_properties+: {
-                          veeva+: {
-                            include_all_versions: value,
-                          },
+                    source_flow_config+: {
+                      source_connector_properties+: {
+                        veeva+: {
+                          include_all_versions: value,
                         },
                       },
                     },
                   },
                   '#withIncludeRenditions': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
                   withIncludeRenditions(value=true): {
-                    spec+: {
-                      source_flow_config+: {
-                        source_connector_properties+: {
-                          veeva+: {
-                            include_renditions: value,
-                          },
+                    source_flow_config+: {
+                      source_connector_properties+: {
+                        veeva+: {
+                          include_renditions: value,
                         },
                       },
                     },
                   },
                   '#withIncludeSourceFiles': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
                   withIncludeSourceFiles(value=true): {
-                    spec+: {
-                      source_flow_config+: {
-                        source_connector_properties+: {
-                          veeva+: {
-                            include_source_files: value,
-                          },
+                    source_flow_config+: {
+                      source_connector_properties+: {
+                        veeva+: {
+                          include_source_files: value,
                         },
                       },
                     },
                   },
                   '#withObject': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withObject(value): {
-                    spec+: {
-                      source_flow_config+: {
-                        source_connector_properties+: {
-                          veeva+: {
-                            object: value,
-                          },
+                    source_flow_config+: {
+                      source_connector_properties+: {
+                        veeva+: {
+                          object: value,
                         },
                       },
                     },
@@ -5530,21 +4798,17 @@
                 },
               '#withZendesk': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withZendesk(value): {
-                spec+: {
-                  source_flow_config+: {
-                    source_connector_properties+: {
-                      zendesk: value,
-                    },
+                source_flow_config+: {
+                  source_connector_properties+: {
+                    zendesk: value,
                   },
                 },
               },
               '#withZendeskMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withZendeskMixin(value): {
-                spec+: {
-                  source_flow_config+: {
-                    source_connector_properties+: {
-                      zendesk+: value,
-                    },
+                source_flow_config+: {
+                  source_connector_properties+: {
+                    zendesk+: value,
                   },
                 },
               },
@@ -5552,12 +4816,10 @@
                 {
                   '#withObject': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withObject(value): {
-                    spec+: {
-                      source_flow_config+: {
-                        source_connector_properties+: {
-                          zendesk+: {
-                            object: value,
-                          },
+                    source_flow_config+: {
+                      source_connector_properties+: {
+                        zendesk+: {
+                          object: value,
                         },
                       },
                     },
@@ -5567,45 +4829,33 @@
         },
       '#withTags': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTags(value): {
-        spec+: {
-          tags: value,
-        },
+        tags: value,
       },
       '#withTagsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTagsMixin(value): {
-        spec+: {
-          tags+: value,
-        },
+        tags+: value,
       },
       '#withTagsAll': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTagsAll(value): {
-        spec+: {
-          tags_all: value,
-        },
+        tags_all: value,
       },
       '#withTagsAllMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTagsAllMixin(value): {
-        spec+: {
-          tags_all+: value,
-        },
+        tags_all+: value,
       },
       '#withTask': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withTask(value): {
-        spec+: {
-          task:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        task:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withTaskMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withTaskMixin(value): {
-        spec+: {
-          task+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        task+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       task+:
         {
@@ -5725,53 +4975,41 @@
         },
       '#withTriggerConfig': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTriggerConfig(value): {
-        spec+: {
-          trigger_config: value,
-        },
+        trigger_config: value,
       },
       '#withTriggerConfigMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
       withTriggerConfigMixin(value): {
-        spec+: {
-          trigger_config+: value,
-        },
+        trigger_config+: value,
       },
       trigger_config+:
         {
           '#withTriggerProperties': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withTriggerProperties(value): {
-            spec+: {
-              trigger_config+: {
-                trigger_properties: value,
-              },
+            trigger_config+: {
+              trigger_properties: value,
             },
           },
           '#withTriggerPropertiesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withTriggerPropertiesMixin(value): {
-            spec+: {
-              trigger_config+: {
-                trigger_properties+: value,
-              },
+            trigger_config+: {
+              trigger_properties+: value,
             },
           },
           trigger_properties+:
             {
               '#withScheduled': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withScheduled(value): {
-                spec+: {
-                  trigger_config+: {
-                    trigger_properties+: {
-                      scheduled: value,
-                    },
+                trigger_config+: {
+                  trigger_properties+: {
+                    scheduled: value,
                   },
                 },
               },
               '#withScheduledMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
               withScheduledMixin(value): {
-                spec+: {
-                  trigger_config+: {
-                    trigger_properties+: {
-                      scheduled+: value,
-                    },
+                trigger_config+: {
+                  trigger_properties+: {
+                    scheduled+: value,
                   },
                 },
               },
@@ -5779,84 +5017,70 @@
                 {
                   '#withDataPullMode': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withDataPullMode(value): {
-                    spec+: {
-                      trigger_config+: {
-                        trigger_properties+: {
-                          scheduled+: {
-                            data_pull_mode: value,
-                          },
+                    trigger_config+: {
+                      trigger_properties+: {
+                        scheduled+: {
+                          data_pull_mode: value,
                         },
                       },
                     },
                   },
                   '#withFirstExecutionFrom': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withFirstExecutionFrom(value): {
-                    spec+: {
-                      trigger_config+: {
-                        trigger_properties+: {
-                          scheduled+: {
-                            first_execution_from: value,
-                          },
+                    trigger_config+: {
+                      trigger_properties+: {
+                        scheduled+: {
+                          first_execution_from: value,
                         },
                       },
                     },
                   },
                   '#withScheduleEndTime': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withScheduleEndTime(value): {
-                    spec+: {
-                      trigger_config+: {
-                        trigger_properties+: {
-                          scheduled+: {
-                            schedule_end_time: value,
-                          },
+                    trigger_config+: {
+                      trigger_properties+: {
+                        scheduled+: {
+                          schedule_end_time: value,
                         },
                       },
                     },
                   },
                   '#withScheduleExpression': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withScheduleExpression(value): {
-                    spec+: {
-                      trigger_config+: {
-                        trigger_properties+: {
-                          scheduled+: {
-                            schedule_expression: value,
-                          },
+                    trigger_config+: {
+                      trigger_properties+: {
+                        scheduled+: {
+                          schedule_expression: value,
                         },
                       },
                     },
                   },
                   '#withScheduleOffset': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
                   withScheduleOffset(value): {
-                    spec+: {
-                      trigger_config+: {
-                        trigger_properties+: {
-                          scheduled+: {
-                            schedule_offset: value,
-                          },
+                    trigger_config+: {
+                      trigger_properties+: {
+                        scheduled+: {
+                          schedule_offset: value,
                         },
                       },
                     },
                   },
                   '#withScheduleStartTime': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withScheduleStartTime(value): {
-                    spec+: {
-                      trigger_config+: {
-                        trigger_properties+: {
-                          scheduled+: {
-                            schedule_start_time: value,
-                          },
+                    trigger_config+: {
+                      trigger_properties+: {
+                        scheduled+: {
+                          schedule_start_time: value,
                         },
                       },
                     },
                   },
                   '#withTimezone': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withTimezone(value): {
-                    spec+: {
-                      trigger_config+: {
-                        trigger_properties+: {
-                          scheduled+: {
-                            timezone: value,
-                          },
+                    trigger_config+: {
+                      trigger_properties+: {
+                        scheduled+: {
+                          timezone: value,
                         },
                       },
                     },
@@ -5865,10 +5089,8 @@
             },
           '#withTriggerType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
           withTriggerType(value): {
-            spec+: {
-              trigger_config+: {
-                trigger_type: value,
-              },
+            trigger_config+: {
+              trigger_type: value,
             },
           },
         },

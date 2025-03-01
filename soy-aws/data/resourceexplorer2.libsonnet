@@ -8,79 +8,62 @@
     {
       '#new': { 'function': { args: [{ default: null, enums: null, name: 'tf_resource_key', type: 'string' }, { default: null, enums: null, name: 'query_string', type: 'string' }], help: '' } },
       new(tf_resource_key, query_string):
+        self.withTfResourceKey(tf_resource_key)
+        + self.withQueryString(query_string),
+      withTfResourceKey(tf_resource_key):
         {
           local this = self,
-          data: {
-            aws_resourceexplorer2_search: {
-              [this.tf_resource_key]: this.spec,
+          _manifest():: {
+            data: {
+              aws_resourceexplorer2_search: {
+                [tf_resource_key]: this,
+              },
             },
           },
-          spec:: {},
-        }
-        + self.withTfResourceKey(tf_resource_key)
-        + self.withQueryString(query_string),
-      withTfResourceKey(tf_resource_key): {
-        tf_resource_key:: tf_resource_key,
-      },
+        },
       '#withCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
       withCount(value): {
-        spec+: {
-          count: value,
-        },
+        count: value,
       },
       '#withDependsOn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOn(value): {
-        spec+: {
-          depends_on:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withDependsOnMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withDependsOnMixin(value): {
-        spec+: {
-          depends_on+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        depends_on+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withId(value): {
-        spec+: {
-          id: value,
-        },
+        id: value,
       },
       '#withProvider': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withProvider(value): {
-        spec+: {
-          provider: value,
-        },
+        provider: value,
       },
       '#withQueryString': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withQueryString(value): {
-        spec+: {
-          query_string: value,
-        },
+        query_string: value,
       },
       '#withResourceCount': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withResourceCount(value): {
-        spec+: {
-          resource_count:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        resource_count:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withResourceCountMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withResourceCountMixin(value): {
-        spec+: {
-          resource_count+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        resource_count+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       resource_count+:
         {
@@ -96,21 +79,17 @@
         },
       '#withResources': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withResources(value): {
-        spec+: {
-          resources:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        resources:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       '#withResourcesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
       withResourcesMixin(value): {
-        spec+: {
-          resources+:
-            (if std.isArray(value)
-             then value
-             else [value]),
-        },
+        resources+:
+          (if std.isArray(value)
+           then value
+           else [value]),
       },
       resources+:
         {
@@ -172,9 +151,7 @@
         },
       '#withViewArn': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withViewArn(value): {
-        spec+: {
-          view_arn: value,
-        },
+        view_arn: value,
       },
     },
 }
