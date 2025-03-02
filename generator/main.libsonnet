@@ -1,4 +1,4 @@
-local soy = import 'github.com/Duologic/soysonnet/main.libsonnet';
+local soygen = import 'github.com/Duologic/soysonnet/soy-gen/main.libsonnet';
 local a = import 'github.com/crdsonnet/astsonnet/main.libsonnet';
 local autils = import 'github.com/crdsonnet/astsonnet/utils.libsonnet';
 
@@ -6,7 +6,7 @@ local resourceMods = import './resourse_mods.libsonnet';
 
 {
   new(name, source, version, schema):
-    local aws = soy.new(
+    local aws = soygen.new(
       name,
       source,
       version,

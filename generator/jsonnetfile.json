@@ -5,7 +5,16 @@
       "source": {
         "git": {
           "remote": "https://github.com/Duologic/soysonnet.git",
-          "subdir": ""
+          "subdir": "soy-common"
+        }
+      },
+      "version": "main"
+    },
+    {
+      "source": {
+        "git": {
+          "remote": "https://github.com/Duologic/soysonnet.git",
+          "subdir": "soy-gen"
         }
       },
       "version": "main"

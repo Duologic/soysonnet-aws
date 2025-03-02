@@ -8,7 +8,7 @@ generator/terraform.tf.json:
 		-A name=${NAME} \
 		-A source=${SOURCE} \
 		-A version=${VERSION} \
-		-e "(import 'soysonnet/soy-common/main.libsonnet').requiredProvider" \
+		-e "(import 'github.com/Duologic/soysonnet/soy-common/main.libsonnet').requiredProvider" \
 		> generator/terraform.tf.json
 
 generator/schema.json: generator/terraform.tf.json
